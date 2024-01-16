@@ -56,9 +56,13 @@ Verbs:
 - do not show number, person, gender agreement
 - volitive or involitive
 - past and non past tense
-- aspect: perfective, resultative, completive
+- aspect: perfective, resultative, completive, inchoactive, processive, progressive, inceptive
 
 
+-----------TO DO-----------
+1. update references with proper citations
+2. Change example numbers
+3. go back to resultative and other aspects/tenses
 
 ---------QUESTIONS---------
 1. Should we handle gender? a lot of changes are morphological, but this isn't with regards to agreement -- I don't think so...
@@ -80,3 +84,7 @@ but please discuss this in your write up."
 of these..
 
 6. Our determiners are affixes so that is morphological, right? How should we account for that?
+
+7. What feature code for auxiliaries?
+
+8.
