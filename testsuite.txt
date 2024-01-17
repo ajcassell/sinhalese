@@ -190,6 +190,9 @@ bat dalla-wə ka-nəwa
 rice dog.ACC eat.IND
 `The rice eats the dog`
 
+# we also need more case examples 
+# I think we are okay on acc
+
 ////// wh-?s
 # 2 WH-question sentence-final, focus shift
 Source: author
@@ -299,15 +302,17 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Tense Aspect Mood}
+dalla bat kanəwa
 dalla bat ka-nə-wa
 dog rice eat.NPST.IND
 'The dog eats rice'
 
-#2 non-past tense (wrong tense, indicative present tense only)
+#2 past tense (wrong tense, indicative present tense only)
 Source: author
 Vetted: f
-Judgement: g
+Judgement: u
 Phenomena: {Tense Aspect Mood}
+dalla bat kææwa
 dalla bat kææ-wa
 dog rice eat.PST.IND
 'The dog ate rice'
@@ -317,6 +322,6 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Tense Aspect Mood}
-dalla bat kææwa
-dog rice eat.PST
+dalla bat kææ-wa
+dog rice eat-PST
 'The dog ate rice'
