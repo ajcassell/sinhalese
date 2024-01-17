@@ -276,15 +276,6 @@ dalla bat ka-laa tie-nəwa
 dog rice eat.PP be.IND
 `The dog has eaten the rice`
 
-# 2 resultative??????????? go back to this
-Source: author
-Vetted: s
-Judgement: g
-Phenomena: {Tense Aspect Mood}
-dalla bat ka-laa tie-nəwa
-dog rice eat.PP be.IND
-`The dog has eaten the rice`
-
 # 2 completive (perceived completion, like in the future) daa is an aux
 Source: author
 Vetted: s
