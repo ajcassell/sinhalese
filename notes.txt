@@ -26,6 +26,7 @@ Nouns:
 - only animate has acc, but otherwise 5 cases (nom, gen/loc, dat, acc, instrumental).. ablative??
 - specific suffixes per case ending/animacy
 - exist mass nouns - take plural form
+- plural form of inanimate removes final vowel, inanimate takes different change
 
 NP
 - definitiveness: INDF ending, otherwise naturally definite ("the"), but these are morphological/affixes, not determiners
@@ -63,6 +64,8 @@ Verbs:
 1. update references with proper citations
 2. Change example numbers
 3. go back to resultative and other aspects/tenses
+4. figure out how to handle non-ASCII
+5. question about the focus case option
 
 ---------QUESTIONS---------
 1. Should we handle gender? a lot of changes are morphological, but this isn't with regards to agreement -- I don't think so...
@@ -80,11 +83,19 @@ adjuncts (topics, etc.) with the valence requirements of the verb being filled b
 to fall into this type, you should still try to find examples with full NPs illustrating where they can occur,
 but please discuss this in your write up."
 
-5. Are you just looking for personal pronouns of demontrative ones as well like "this/that/those" etc. Our language has 24
+5. Are you just looking for personal pronouns of demonstrative ones as well like "this/that/those" etc. Our language has 24
 of these..
 
 6. Our determiners are affixes so that is morphological, right? How should we account for that?
 
 7. What feature code for auxiliaries?
 
-8.
+
+
+
+
+
+8. Not sure about this: Complements: The complements of auxiliaries are:
+saturated sentences
+VPs, raising the subject
+Vs, raising all of its arguments (argument composition)
