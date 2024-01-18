@@ -388,6 +388,7 @@ Phenomena: {Tense Aspect Mood}
 dalla bat kææwa
 dalla bat kææ-wa
 dog rice eat.PST-IND
+`The dog ate rice`
 
 #2 past tense
 Source: author
@@ -395,3 +396,4 @@ Vetted: f
 Judgement: g
 Phenomena: {Tense Aspect Mood}
 dalla bat kææwa
+`The dog ate rice`
