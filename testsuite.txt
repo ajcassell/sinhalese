@@ -302,7 +302,7 @@ Phenomena: {Tense Aspect Mood}
 dalla bat kanəwa
 dalla bat ka-nə-wa
 dog rice eat.NPST.IND
-`The dog eats rice`
+'The dog eats rice'
 
 #2 past tense (wrong tense, indicative present tense only)
 Source: author
@@ -311,8 +311,8 @@ Judgement: u
 Phenomena: {Tense Aspect Mood}
 dalla bat kææwa
 dalla bat kææ-wa
-dog rice eat.PSTIND
-`The dog ate rice`
+dog rice eat.PST-IND
+'The dog ate rice'
 
 #2 past tense
 Source: author
@@ -322,4 +322,4 @@ Phenomena: {Tense Aspect Mood}
 dalla bat kææwa
 dalla bat kææ-wa
 dog rice eat-PST
-`The dog ate rice`
+'The dog ate rice'
