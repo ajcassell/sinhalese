@@ -190,9 +190,6 @@ bat dalla-wə ka-nəwa
 rice dog.ACC eat.IND
 `The rice eats the dog`
 
-# we also need more case examples 
-# I think we are okay on acc
-
 ////// wh-?s
 # 2 WH-question sentence-final, focus shift
 Source: author
@@ -322,6 +319,7 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Tense Aspect Mood}
+dalla bat kææwa
 dalla bat kææ-wa
 dog rice eat-PST
 'The dog ate rice'
