@@ -1,0 +1,410 @@
+Language: Sinhalese
+Language code: sin
+Lines: orth orth-seg gloss translat
+Author: Alexandra Cassell, Melody Bechler
+Date: January 15, 2024
+Source a: Chandralal (need proper citation)
+Source b: <Reference to grammar/web page>
+Source c: https://www.linguistics.ucsb.edu/sites/secure.lsit.ucsb.edu.ling.d7/files/sitefiles/research/papers/17/Jany_vol17.pdf
+
+### Word order
+
+# 1 SOV Word Order
+Source: author
+Vetted:
+Judgement: g
+Phenomena: {Word order, Tense Aspect Mood}
+dalla bat kan2wa
+dalla bat ka-n2wa
+dog.NOM rice.NOM eat-IND
+`The dog eats the rice`
+
+# 2 SVO Word Order
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Word order, Tense Aspect Mood}
+dalla kan2wa bat
+dalla ka-n2wa bat
+dog.NOM eat-IND rice.NOM
+`The dog eats the rice`
+
+# 3 OSV Word Order
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Word order, Tense Aspect Mood}
+bat dalla kan2wa
+bat dalla ka-n2wa
+rice.NOM dog.NOM eat-IND
+`The dog eats the rice`
+
+# 4 OVS Word Order
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Word order, Tense Aspect Mood}
+bat kan2wa dalla
+bat ka-n2wa dalla
+rice.NOM eat-IND dog.NOM
+`The dog eats the rice`
+
+# 5 VOS Word Order
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Word order, Tense Aspect Mood}
+kan2wa bat dalla
+ka-n2wa bat dalla
+eat-IND rice.NOM dog.NOM
+`The dog eats the rice`
+
+# 6 VSO Word Order
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Word order, Tense Aspect Mood}
+kan2wa dalla bat
+ka-n2wa dalla bat
+eat-IND dog.NOM rice.NOM
+`The dog eats the rice`
+
+# 7 AUX following verb
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Tense Aspect Mood}
+dalla bat kalaa tiyen2wa
+dalla bat ka-laa tiyen2wa
+dog.NOM rice.NOM eat-PP has
+`The dog has eaten the rice`
+
+# 8 AUX preceding verb
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Tense Aspect Mood}
+dalla bat tiyen2wa kalaa
+dalla bat tiyen2wa ka-laa
+dog.NOM rice.NOM has eat-PP
+`The dog has eaten the rice`
+
+### Pronouns
+
+# 1 1pl personal pronoun
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Pronouns, Tense Aspect Mood}
+api bat kan2wa
+api bat ka-n2wa
+We rice.NOM eat-IND
+`We eat rice`
+
+# 2 1sg personal pronoun
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Pronouns, Tense Aspect Mood}
+mam2 bat kan2wa
+mam2 bat ka-n2wa
+I rice.NOM eat-IND
+`I eat rice`
+
+# 3 3sg personal pronoun
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Pronouns, Tense Aspect Mood}
+eyaa bat kan2wa
+eyaa bat ka-n2wa
+She/he/it rice.NOM eat-IND
+`She/he/it eats rice`
+
+# 4 3pl personal pronoun
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Pronouns, Tense Aspect Mood}
+eyaala bat kan2wa
+eyaa-la bat ka-n2wa
+They.3-PL rice.NOM eat-IND
+`They eat rice`
+
+# 5 2sg personal pronoun
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Pronouns, Tense Aspect Mood}
+oyaa bat kan2wa
+oyaa bat ka-n2wa
+You rice.NOM eat-IND
+`You eat rice`
+
+# 6 2pl personal pronoun
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Pronouns, Tense Aspect Mood}
+oyaala bat kan2wa
+oyaa-la bat ka-n2wa
+You.2-PL rice.NOM eat-IND
+`You (all) eat rice`
+
+# 7 Nominative case pronoun
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Pronouns, Tense Aspect Mood, Case}
+mam2 bat kan2wa
+ma-m2 bat ka-n2wa
+I.1sg-NOM rice.NOM eat-IND
+`I eat rice`
+
+# 8 Accusative case pronoun
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Pronouns, Tense Aspect Mood, Case}
+maaw2 bat kan2wa
+ma-aw2 bat ka-n2wa
+I.1sg-ACC rice.NOM eat-IND
+`I eat rice`
+
+# 9 Dative case pronoun
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Pronouns, Tense Aspect Mood, Case}
+mam2 ma12 pot2 gatta
+ma-m2 ma-12 pot2 gatta
+I.1sg-NOM I.1sg-DAT book.NOM buy.PAST
+`I bought the book for me`
+
+# 10 Accusative case pronoun, incorrect casing
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Pronouns, Tense Aspect Mood, Case}
+mam2 maaw2 pot2 gatta
+ma-m2 ma-aw2 pot2 gatta
+I.1sg-NOM I.1sg-ACC book.NOM buy.PAST
+`I bought the book for me`
+
+### Case
+
+# 1 Accusative case common noun
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Case, Tense Aspect Mood}
+dalla batw2 kan2wa
+dalla bat-w2 ka-n2wa
+dog.NOM rice-ACC eat-IND
+`The dog eats rice`
+
+# 2 Optional accusative case common noun
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Case, Tense Aspect Mood}
+dalla bat kan2wa
+dalla bat ka-n2wa
+dog.NOM rice.NOM eat-IND
+`The dog eats rice`
+
+# 3 Dative case subject, involitive verb
+Source: c:73
+Vetted: s
+Judgement: g
+Phenomena: {Case, Tense Aspect Mood}
+ma12 sindu æhen2wa
+ma-12 sindu æhe-n2wa
+I.1sg-DAT music.NOM hear.INVOL-IMPF
+`I hear music`
+
+### wh-?s
+
+# 1 WH-question sentence-final, focus shift
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Matrix wh questions, Tense Aspect Mood}
+mam2 yanne kohed2
+ma-m2 ya-nn-e kohe-d2
+I.1sg-NOM go-NPT-FOC where-Q
+`Where do I go?`
+
+# 2 WH-question sentence-final, no verb
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Matrix wh questions, Tense Aspect Mood}
+dalla kohed2
+dalla kohe-d2
+dog.NOM where-Q
+`Where is the dog?`
+
+# 3 Yes-or-no question constituent, no focus shift
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Matrix wh questions, Tense Aspect Mood, Case}
+mam2 kadeet2 yan2wa d2
+ma-m2 kadee-t2 ya-n2-wa d2
+I-NOM shop-DAT go-NPT-IND Q
+`Do I go to the shop?`
+
+# 4 WH-question, focus shift
+Source: a:12
+Vetted: s
+Judgement: g
+Phenomena: {Matrix wh questions, Tense Aspect Mood, Case}
+kadeet2 yanne kaud2
+kadee-t2 ya-nn-e kau-d2
+shop-DAT go-NPT-FOC who-Q
+`Who goes to the shop?`
+
+# 5 WH-question, focus shift, wrong wh-word
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Matrix wh questions, Tense Aspect Mood, Case}
+kadeet2 yanne kohed2
+kadee-t2 ya-nn-e kohe-d2
+shop-DAT go-NPT-FOC where-Q
+`Where goes to the shop?`
+
+# 6 WH-question, focus shift
+Source: a:135
+Vetted: s
+Judgement: g
+Phenomena: {Matrix wh questions, Tense Aspect Mood}
+bat kanne kaud2
+bat ka-nn-e kau-d2
+rice.NOM eat-NPT-FOC who-Q
+`Who eats rice?`
+
+# 7 WH-question, sentence-initial, focus shift
+Source: a:135
+Vetted: s
+Judgement: g
+Phenomena: {Matrix wh questions, Tense Aspect Mood}
+kaud2 bat kanne
+kau-d2 bat ka-nn-e
+who-Q rice.NOM eat-NPT-FOC
+`Who eats rice?`
+
+# 8 Response to WH-question
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Case, Tense Aspect Mood}
+mam2 kaddet2 yan2wa
+ma-m2 kadee-t2 ya-n2-wa
+I-NOM shop-DAT go-NPT-IND
+`I go to the shop`
+
+# 9 Yes-or-no question in declarative form, no focus shift
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Case, Tense Aspect Mood}
+mam2 kaddet2 yan2wa
+ma-m2 kadee-t2 ya-n2-wa
+I-NOM shop-DAT go-NPT-IND
+`I go to the shop?`
+
+### The Rest of the NP
+
+# 1 Quantifier "several/a few" follows plural noun
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Tense Aspect Mood}
+mam2 pot keep2yak gatta
+ma-m2 pot keep2yak gatta
+I-NOM book.PL several buy.PAST
+`I bought several books`
+
+# 2 Quantifier "some" follows plural noun
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Tense Aspect Mood}
+mam2 pot sem2harak gatta
+ma-m2 pot sam2harak gatta
+I-NOM book.PL some buy.PAST
+`I bought some books`
+
+# 3 Quantifier "some" precedes plural noun
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Tense Aspect Mood}
+mam2 sam2harak pot gatta
+ma-m2 sam2harak pot gatta
+I-NOM some book.PL buy.PAST
+`I bought some books`
+
+# 4 Quantifier "some", singular noun
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Tense Aspect Mood}
+mam2 pot2 sem2harak gatta
+ma-m2 pot2 sam2harak gatta
+I-NOM book.SG some buy.PAST
+`I bought some book`
+
+### Tense/Aspect
+
+# 1 Perfective Aspect
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Tense Aspect Mood}
+dalla bat kalaa tien2wa
+dalla bat ka-laa tie-n2wa
+dog.NOM rice.NOM eat-PP be-IND
+`The dog has eaten the rice`
+
+# 2 Completive Aspect (perceived completion, like in the future), daa is an aux
+Source: author
+Vetted: s
+Judgement: g
+Phenomena: {Tense Aspect Mood}
+dalla bat kalaa daan2wa
+dalla bat ka-laa daa-n2wa
+dog.NOM rice.NOM eat-PP daa-IND
+`The dog will eat the rice completely`
+
+# 3 non-past tense
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Tense Aspect Mood}
+dalla bat kan2wa
+dalla bat ka-n2-wa
+dog.NOM rice.NOM eat-NPT-IND
+`The dog eats rice`
+
+# 4 non-past tense (wrong tense, indicative present tense only)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Tense Aspect Mood}
+dalla bat kææwa
+dalla bat kææ-wa
+dog.NOM rice.NOM eat.PST-IND
+`The dog ate rice`
+
+# 5 past tense
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Tense Aspect Mood}
+dalla bat kææwa
+dalla bat kææwa
+dog.NOM rice.NOM eat.PST
+`The dog ate rice`
