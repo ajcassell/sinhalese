@@ -5,6 +5,7 @@ Author: Alexandra Cassell, Melody Bechler
 Date: January 15, 2024
 Source a: Chandralal (need proper citation)
 Source b: <Reference to grammar/web page>
+Source c: https://www.linguistics.ucsb.edu/sites/secure.lsit.ucsb.edu.ling.d7/files/sitefiles/research/papers/17/Jany_vol17.pdf
 
 ### Word order
 
@@ -126,7 +127,7 @@ Vetted: f
 Judgement: g
 Phenomena: {Pronouns, Tense Aspect Mood}
 eyaala bat kanəwa
-eyaala bat ka-nəwa
+eyaa-la bat ka-nəwa
 They rice.NOM eat-IND
 `They eat rice`
 
@@ -146,7 +147,7 @@ Vetted: f
 Judgement: g
 Phenomena: {Pronouns, Tense Aspect Mood}
 oyaala bat kanəwa
-oyaala bat ka-nəwa
+oyaa-la bat ka-nəwa
 You rice.NOM eat-IND
 `You (all) eat rice`
 
@@ -207,12 +208,20 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Case, Tense Aspect Mood}
-dalla batwə kanəwa
+dalla bat kanəwa
 dalla bat ka-nəwa
 dog.NOM rice.NOM eat-IND
 `The dog eats rice`
 
-
+# 3 Dative case subject, involitive verb
+Source: c:73
+Vetted: s
+Judgement: g
+Phenomena: {Case, Tense Aspect Mood}
+maṭə sindu æhenəwa
+ma-ṭə sindu æhe-nəwa
+I.DAT music.NOM hear.INVOL-IMPF
+`I hear music`
 
 ### wh-?s
 
@@ -338,7 +347,7 @@ ma-mə saməharak pot gatta
 I.NOM some book.PL buy.PAST-IND
 `I bought some books`
 
-# 2 Quantifier "some", singular noun
+# 4 Quantifier "some", singular noun
 Source: author
 Vetted: f
 Judgement: u
@@ -370,31 +379,31 @@ dalla bat ka-laa daa-nəwa
 dog.NOM rice.NOM eat.PP daa-IND
 `The dog will eat the rice completely`
 
-# 2 non-past tense
+# 3 non-past tense
 Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Tense Aspect Mood}
 dalla bat kanəwa
 dalla bat ka-nə-wa
-dog rice eat.NPT-IND
+dog.NOM rice.NOM eat.NPT-IND
 `The dog eats rice`
 
-#2 non-past tense (wrong tense, indicative present tense only)
+# 4 non-past tense (wrong tense, indicative present tense only)
 Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Tense Aspect Mood}
 dalla bat kææwa
 dalla bat kææ-wa
-dog rice eat.PST-IND
+dog.NOM rice.NOM eat.PST-IND
 `The dog ate rice`
 
-#2 past tense
+# 5 past tense
 Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Tense Aspect Mood}
 dalla bat kææwa
-dog rice eat.PST
+dog.NOM rice.NOM eat.PST
 `The dog ate rice`
