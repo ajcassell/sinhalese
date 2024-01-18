@@ -3,9 +3,9 @@ Language code: sin
 Lines: orth orth-seg gloss translat
 Author: Alexandra Cassell, Melody Bechler
 Date: January 15, 2024
-Source a: Chandralal (need proper citation)
+Source a: Chandralal, D. (2010). Sinhala (Vol. 15). John Benjamins Pub. https://theswissbay.ch/pdf/Books/Linguistics/Mega%20linguistics%20pack/Indo-European/Indo-Aryan/Sinhalese%3B%20Sinhala%20%28Chandralal%29.pdf
 Source b: <Reference to grammar/web page>
-Source c: https://www.linguistics.ucsb.edu/sites/secure.lsit.ucsb.edu.ling.d7/files/sitefiles/research/papers/17/Jany_vol17.pdf
+Source c: Jany, Carmen. (2005). THE RELATIONSHIP BETWEEN CASE MARKING AND S, A, AND O IN SPOKEN SINHALA.
 
 ### Word order
 
@@ -222,6 +222,56 @@ ma12 sindu æhen2wa
 ma-12 sindu æhe-n2wa
 I.1sg-DAT music.NOM hear.INVOL-IMPF
 `I hear music`
+
+# 4 Dative case subject, involitive verb (incorrect case subject, dative only on animate args with involitive verb stem)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Case, Tense Aspect Mood}
+malbandunaṭə sindu æhenəwa
+malbanduna-ṭə sindu æhe-nəwa
+vase.SG-DAT music.NOM hear.INVOL-IMPF
+`The vase hears music`
+
+# 5 Nom subject, involitive verb
+Source: c:72
+Vetted: s
+Judgement: g
+Phenomena: {Case, Tense Aspect Mood}
+malbanduna kæduna
+malbanduna kædun-a
+vase.SG.DEF.NOM break.INVOL-PST
+`The vase broke`
+
+# 6 Accusative subject, involitive verb (inanimates can only be marked with nominative case)
+Source: c:72
+Vetted: s
+Judgement: u
+Phenomena: {Case, Tense Aspect Mood}
+malbandunawə kæduna
+malbanduna-wə kædun-a
+vase.SG.DEF-ACC break.INVOL-PST
+`The vase broke`
+
+#7 Genitive/Locative
+Source: a:103
+Vetted: s
+Judgement: g
+Phenomena: {Case, Tense Aspect Mood}
+warədə mage atee
+warədə ma-ge at-ee
+fault I-GEN hand-LOC
+`The fault lies with me`
+
+#8 Ablative
+Source: a:115
+Vetted: s
+Judgement: g
+Phenomena: {Case, Tense Aspect Mood}
+api mee kaɖen baɖu gannəwa
+api mee kaɖ-en baɖu gan-nəwa
+we this shop-ABL commodities buy-IND
+'We buy things from this shop'
 
 ### wh-?s
 
