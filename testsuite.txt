@@ -392,7 +392,7 @@ dog.NOM rice.NOM eat.NPT-IND
 # 4 non-past tense (wrong tense, indicative present tense only)
 Source: author
 Vetted: f
-Judgement: g
+Judgement: u
 Phenomena: {Tense Aspect Mood}
 dalla bat kææwa
 dalla bat kææ-wa
