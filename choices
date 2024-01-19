@@ -1,0 +1,255 @@
+
+version=34
+
+section=general
+language=Sinhalese
+iso-code=sin
+punctuation-chars=keep-list
+punctuation-chars-list=!#$%&'()*+,./:;<=>?@[]^_`{|}~\
+archive=yes
+email=alexj385@uw.edu
+affiliation=University of Washington
+motivation=LING567 Grammar Engineering course
+vcs=git
+
+section=word-order
+word-order=free
+has-dets=yes
+noun-det-order=det-noun
+has-aux=no
+aux-comp-order=after
+aux-comp=s
+multiple-aux=yes
+subord-word-order=same
+
+section=number
+  number1_name=singular
+  number2_name=plural
+
+section=person
+person=1-2-3
+first-person=none
+
+section=gender
+  gender1_name=animate
+    gender1_supertype1_name=gender
+  gender2_name=inanimate
+    gender2_supertype1_name=gender
+  gender3_name=feminine
+    gender3_supertype1_name=animate
+  gender4_name=masculine
+    gender4_supertype1_name=animate
+
+section=case
+case-marking=split-s
+split-s-a-case-name=nominative
+split-s-o-case-name=accusative
+  case1_name=genitive
+  case2_name=vocative
+  case3_name=instrumental
+
+section=adnom-poss
+
+section=direct-inverse
+
+section=tense-aspect-mood
+
+section=evidentials
+
+section=other-features
+form-fin-nf=on
+
+section=sentential-negation
+
+section=coordination
+
+section=matrix-yes-no
+
+section=wh-q
+wh-q-inter-verbs=on
+
+section=info-str
+
+section=arg-opt
+
+section=nominalclause
+
+section=clausal-comp
+
+section=clausalmods
+
+section=lexicon
+  noun1_name=nominative-noun
+  noun1_det=opt
+    noun1_stem1_orth=bat
+    noun1_stem1_pred=_rice_n_rel
+    noun1_stem2_orth=dalla
+    noun1_stem2_pred=_dog_n_rel
+    noun1_stem3_orth=pot2
+    noun1_stem3_pred=_book_n_rel
+    noun1_stem4_orth=sindu
+    noun1_stem4_pred=_music_n_rel
+    noun1_stem5_orth=malbanduna
+    noun1_stem5_pred=_vase_n_rel
+    noun1_stem6_orth=war2d2
+    noun1_stem6_pred=_fault_n_rel
+  noun2_name=accusative-noun
+  noun2_det=opt
+    noun2_stem1_orth=batw2
+    noun2_stem1_pred=_rice_n_rel
+    noun2_stem2_orth=ba3u
+    noun2_stem2_pred=_things_n_rel
+  noun3_name=dative-noun
+  noun3_det=opt
+    noun3_stem1_orth=ka3eet2
+    noun3_stem1_pred=_shop_n_rel
+  noun4_name=accusative-pronoun
+  noun4_supertypes=noun2
+  noun4_pron=on
+    noun4_feat1_name=number
+    noun4_feat1_value=singular
+    noun4_feat2_name=person
+    noun4_feat2_value=1st
+    noun4_feat3_name=gender
+    noun4_feat3_value=animate
+  noun4_det=imp
+    noun4_stem1_orth=maaw2
+    noun4_stem1_pred=_I_n_rel
+  noun5_name=nominative-pronoun
+  noun5_supertypes=noun1
+    noun5_feat1_name=number
+    noun5_feat1_value=singular
+    noun5_feat2_name=person
+    noun5_feat2_value=1st
+    noun5_feat3_name=gender
+    noun5_feat3_value=animate
+  noun5_det=imp
+    noun5_stem1_orth=mam2
+    noun5_stem1_pred=_I_n_rel
+    noun5_stem2_orth=api
+    noun5_stem2_pred=_we_n_rel
+  noun6_name=dative-pronoun
+  noun6_supertypes=noun3
+  noun6_pron=on
+    noun6_feat1_name=number
+    noun6_feat1_value=singular
+    noun6_feat2_name=person
+    noun6_feat2_value=1st
+    noun6_feat3_name=gender
+    noun6_feat3_value=animate
+  noun6_det=imp
+    noun6_stem1_orth=ma12
+    noun6_stem1_pred=_I_n_rel
+  noun7_name=genitive-pronoun
+  noun7_pron=on
+  noun7_det=imp
+  noun8_name=ablative-noun
+  noun8_det=opt
+    noun8_stem1_orth=ka3en
+    noun8_stem1_pred=_shop_n_rel
+  verb1_name=transitive-verb
+  verb1_valence=a_case-o_case
+    verb1_stem1_orth=ka
+    verb1_stem1_pred=_eat_v_rel
+    verb1_stem2_orth=gatt2
+    verb1_stem2_pred=_buy_v_rel
+    verb1_stem3_orth=kan2wa
+    verb1_stem3_pred=_eat_v_rel
+    verb1_stem4_orth=atee
+    verb1_stem4_pred=_lies_v_rel
+    verb1_stem5_orth=gann2wa
+    verb1_stem5_pred=_buy_v_rel
+  verb2_name=intransitive-verb
+  verb2_valence=a_case
+    verb2_stem1_orth=ya
+    verb2_stem1_pred=_go_v_rel
+    verb2_stem2_orth=yanne
+    verb2_stem2_pred=_go_v_rel
+  verb3_name=transitive-verb-dative-subject
+  verb3_valence=trans
+    verb3_stem1_orth=æhen2wa
+    verb3_stem1_pred=_hear_v_rel
+    verb3_stem2_orth=kæduna
+    verb3_stem2_pred=_break_v_rel
+  qverb1_name=where
+  qverb1_predtype=loc
+    qverb1_stem1_orth=kohed2
+    qverb1_stem1_verbpred=_where_n_rel
+    qverb1_stem1_nounpred=place
+  qverb2_name=who
+  qverb2_predtype=ref
+    qverb2_stem1_orth=kaud2
+    qverb2_stem1_verbpred=_who_n_rel
+    qverb2_stem1_nounpred=thing
+  det1_name=quantifier
+    det1_stem1_orth=sem2harak
+    det1_stem1_pred=_some_q_rel
+    det1_stem2_orth=keep2yak
+    det1_stem2_pred=_several_q_rel
+
+section=morphology
+
+section=toolbox-import
+
+section=test-sentences
+  sentence1_orth=dalla bat kan2wa
+  sentence2_orth=dalla kan2wa bat
+  sentence3_orth=bat dalla kan2wa
+  sentence4_orth=bat kan2wa dalla
+  sentence5_orth=kan2wa bat dalla
+  sentence6_orth=kan2wa dalla bat
+  sentence7_orth=dalla bat kalaa tiyen2wa
+  sentence8_orth=dalla bat tiyen2wa kalaa
+  sentence8_star=on
+  sentence9_orth=api bat kan2wa
+  sentence10_orth=mam2 bat kan2wa
+  sentence11_orth=eyaa bat kan2wa
+  sentence12_orth=eyaala bat kan2wa
+  sentence13_orth=oyaa bat kan2wa
+  sentence14_orth=oyaala bat kan2wa
+  sentence15_orth=mam2 bat kan2wa
+  sentence16_orth=maaw2 bat kan2wa
+  sentence17_orth=mam2 ma12 pot2 gatta
+  sentence18_orth=ma12 maaw2 pot2 gatta
+  sentence19_orth=dalla batw2 kan2wa
+  sentence20_orth=dalla bat kan2wa
+  sentence21_orth=ma12 sindu æhen2wa
+  sentence22_orth=mam2 yanne kohed2
+  sentence23_orth=dalla kohed2
+  sentence24_orth=mam2 kadeet2 yan2wa d2
+  sentence25_orth=kadeet2 yanne kaud2
+  sentence26_orth=kadeet2 yanne kohed2
+  sentence26_star=on
+  sentence27_orth=bat kanne kaud2
+  sentence28_orth=kaud2 bat kanne
+  sentence29_orth=mam2 kaddet2 yan2wa
+  sentence30_orth=mam2 kaddet2 yan2wa
+  sentence31_orth=mam2 pot keep2yak gatta
+  sentence32_orth=mam2 pot sem2harak gatta
+  sentence32_star=on
+  sentence33_orth=mam2 sam2harak pot gatta
+  sentence34_orth=mam2 pot2 sem2harak gatta
+  sentence35_orth=dalla bat kalaa tien2wa
+  sentence36_orth=dalla bat kalaa daan2wa
+  sentence37_orth=dalla bat kan2wa
+  sentence38_orth=dalla bat kææwa
+  sentence39_orth=dalla bat kææwa
+  sentence40_orth=malbanduna12 sindu æhen2wa
+  sentence40_star=on
+  sentence41_orth=malbanduna kæduna
+  sentence42_orth=malbandunaw2 kæduna
+  sentence42_star=on
+  sentence43_orth=war2d2 mage atee
+  sentence44_orth=war2d2 mam2 atee
+  sentence44_star=on
+  sentence45_orth=war2d2 mage atwe
+  sentence45_star=on
+  sentence46_orth=api mee ka3en ba3u gann2wa
+  sentence47_orth=api mee ka3eet2 ba3u gann2wa
+  sentence47_star=on
+  sentence48_orth=api mee ka3gen ba3u gann2wa
+  sentence48_star=on
+
+section=gen-options
+
+section=ToolboxLexicon
