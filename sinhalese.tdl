@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Sinhalese
 ;;; created at:
-;;;     Fri Jan 19 04:52:08 UTC 2024
+;;;     Fri Jan 19 05:24:47 UTC 2024
 ;;; based on Matrix customization system version of:
 ;;;     Fri 27 Oct 2023 04:16:13 PM UTC
 ;;;
@@ -95,6 +95,7 @@ acc := case.  ; accusative
 gen := case.  ; genitive
 voc := case.  ; vocative
 ins := case.  ; instrumental
+dat := case.  ; dative
 
 ;;; Form
 
