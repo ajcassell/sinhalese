@@ -1,0 +1,336 @@
+Lab 2 Writeup
+LING 567
+Sinhala/Sinhalese Grammar
+January 19, 2024
+Melody Bechler, Alexandra Cassell
+
+Our language has several non-ASCII characters. We have assigned numbers to these characters as
+follows: ṭ = 1, ə = 2, ɖ = 3.
+
+Please note the source, vetted, and phenomena fields have been left out of the provided examples below
+for the sole purpose of space. They remain in the testsuite file. Also, the example numbers match those in
+the testsuite.
+
+One more note about submission - the tsdb/home shows a package which I think is what was expected
+for the results of tsdb. In the results file it looks like there was only 39 instances if I'm reading
+correctly, but I kept rerunning and regenerating this package with 48 examples. Hopefully,
+I am misunderstanding something. 
+
+1./2. Below are descriptions of the phenomena seen in Sinhalese. These include the word order, noun casing,
+structure of WH-questions, the use of quantifiers, and a few options for verb aspect.
+
+Word order in Sinhalese is free word order, although the natural word order is commonly SOV. To capture
+free word order in the testsuite, we included each of the six possible word orders, all of which are grammatical.
+Our resource show that colloquial Sinhalese tends towards the SOV order but that the other 5 forms cannot be
+ruled ungrammatical so we have chosen to follow free word order, with preference for SOV. The following is
+one example of SOV. The rest can be found in the testsuite. Sinhalese also includes auxiliary verbs and
+these have fixed word order following the main verb shown in example 7 below, whereas example 8 is ungrammatical.
+
+# 1 SOV Word Order
+Judgement: g
+dalla bat kan2wa
+dalla bat ka-n2wa
+dog.NOM rice.NOM eat-IND
+`The dog eats the rice`
+
+# 7 AUX following verb
+Judgement: g
+dalla bat kalaa tiyen2wa
+dalla bat ka-laa tiyen2wa
+dog.NOM rice.NOM eat-PP has
+`The dog has eaten the rice`
+
+# 8 AUX preceding verb
+Judgement: u
+dalla bat tiyen2wa kalaa
+dalla bat tiyen2wa ka-laa
+dog.NOM rice.NOM has eat-PP
+`The dog has eaten the rice`
+
+To model word order in the customization matrix, we chose free word order and included auxiliaries
+that appear after the verb. We noted there can be more than one auxiliary in a clause and the
+complements of auxiliaries are saturated sentences.
+
+In Sinhalese, number includes singular and plural. There are first, second, and third persons and
+there are four genders in this language: animate, inanimate, feminine, and masculine. Feminine and masculine
+are subtypes of animate. Second person pronouns have three variations depending on level of respect
+(vulgar, ordinary, respect) which are mentioned at the end of this write-up. Examples of 1pl and 3sg are below
+but the other 4 can be found in the testsuite.
+
+# 1 1pl personal pronoun
+Judgement: g
+api bat kan2wa
+api bat ka-n2wa
+We rice.NOM eat-IND
+`We eat rice`
+
+# 3 3sg personal pronoun
+Judgement: g
+eyaa bat kan2wa
+eyaa bat ka-n2wa
+She/he/it rice.NOM eat-IND
+`She/he/it eats rice`
+
+To model this in the matrix, we added singular (number1) and plural (number2) for number. For person,
+we chose first, second, and third, with no subtypes distinguished in the first person.
+We added two gender supertypes: animate and inanimate. Masculine and feminine are subtypes of the animate gender only.
+Our resources briefly mention the distinction between animate and inanimate, along with masculine and feminine as
+animate subtypes, but they do not provide concrete examples regarding usage. Therefore, we have not yet included
+any examples in the testsuite.
+
+In Sinhalese, there are 6 cases: nominative, accusative, dative, instrumental/ablative, genitive/locative, and vocative.
+Grammatical relations do not determine case in this language. Instead, lexical and semantic principles such as definiteness,
+animacy, volitivity, and semantic roles determine case. When a subject acts as an experiencer, the dative case is
+required on the subject, but dative case is only found on animate arguments with involitive verb stems.
+Inanimates may only be marked with nominative case on S arguments, rendering examples like #6 below ungrammatical.
+Genitive is imperative when indicating possession. Examples such as #7 and #8 below reflect this as the use of
+nominative makes #8 ungrammatical. Case is considered a Split-S system in this language.
+
+# 3 Dative case subject, involitive verb
+Judgement: g
+ma12 sindu æhen2wa
+ma-12 sindu æhe-n2wa
+I.1sg-DAT music.NOM hear.INVOL-IMPF
+`I hear music`
+
+# 6 Accusative subject, involitive verb (inanimates can only be marked with nominative case)
+Judgement: u
+malbandunaw2 kæduna
+malbanduna-w2 kædun-a
+vase.SG.DEF-ACC break.INVOL-PST
+`The vase broke`
+
+#7 Genitive/Locative
+Judgement: g
+war2d2 mage atee
+war2d2 ma-ge at-ee
+fault I-GEN hand-LOC
+`The fault lies with me`
+
+#8 Genitive/Locative - incorrect, missing GEN on pronoun (indicates possession)
+Judgement: u
+war2d2 mam2 atee
+war2d2 ma-m2 at-ee
+fault I-NOM hand-LOC
+`The fault lies with me`
+
+To capture this, we chose split-S in the customization system, stating A takes nominative while O
+takes accusative. Additionally, we added four additional cases: genitive, vocative, instrumental, and dative.
+Within the lexicon, we stored these cases within the noun supertypes and subtypes. Thus, there are noun types
+for each case that we found noun examples for, as well as pronoun subtypes for different cases since Sinhalese
+pronouns vary in case the same way common nouns do. We also created a transitive verb type that takes a
+dative subject instead of accusative, but this is not configured yet correctly.
+
+Sinhalese does not use separate words for determiners. Instead, there are affixes to represent
+indefiniteness. However, this language uses plural quantifiers like ‘keep2yak’ and ‘sam2harak’ to
+express incomplete or indefinite quantities, like ‘several’ and ‘some’, respectively.
+‘Keep2yak’ can only be used with inanimate nouns. If ‘keep2yak’ is used with animate nouns,
+it must be used with animate classifiers such as ‘denaa’ or ‘denek’. Both ‘keep2yak’ and ‘sam2harak’
+generally follow plural common nouns. One exception to this is ‘sam2harak’ which may precede a common
+plural noun. An example of this is shown below.
+
+# 2 Quantifier "some" follows plural noun
+Judgement: g
+mam2 pot sam2harak gatta
+ma-m2 pot sam2harak gatta
+I-NOM book.PL some buy.PAST
+`I bought some books`
+
+# 3 Quantifier "some" precedes plural noun
+Judgement: g
+mam2 sam2harak pot gatta
+ma-m2 sam2harak pot gatta
+I-NOM some book.PL buy.PAST
+`I bought some books`
+
+In the customization matrix, we chose to add a type under determiner called ‘quantifier’.
+We then added both ‘keep2yak’ and ‘sam2harak’ as stems under quantifier (det1).
+
+The phenomena "Direct Inverse" is not applicable to Sinhalese.
+
+3. So far, we have not implemented WH-questions, binary yes-or-no questions and tense/aspect in the customization system.
+Sinhalese verbs inflect for non-past and past tense. They are composed of a stem and inflectional suffixes.
+For example, ‘kan2wa’ (eat) is composed of the stem ‘ka’ and two inflectional suffixes, ‘n2’ for non-past tense
+followed by ‘wa’ for indicative form. Additionally, verbs are assigned three types: active, passive, and causative.
+All verbs belong to at least one of these types, while some verbs may belong to more. All verbs in the passive
+type are intransitive, while verbs in the active type can be transitive and intransitive. The transitive verb
+type includes: ‘ka’ (eat), ‘gatta’ (buy), ‘kan2wa’ (eat), ‘atee’ (lies), and ‘gann2wa’ (buy). The intransitive
+verb type includes: ‘ya’ (go) and ‘yanne’ (go). We also created a unique transitive-verb-dative-subject
+category that captures the existence of verbs that co-occur with a dative subject. This includes ‘æhen2wa’ (hear).
+This is a unique subject verb case pattern and it can only occur with animate arguments with an involitive
+verb stem as shown in the two testsuite examples below.
+
+# 3 Dative case subject, involitive verb
+Judgement: g
+ma12 sindu æhen2wa
+ma-12 sindu æhe-n2wa
+I.1sg-DAT music.NOM hear.INVOL-IMPF
+`I hear music`
+
+# 4 Dative case subject, involitive verb (incorrect case subject, dative only on animate args with involitive verb stem)
+Judgement: u
+malbanduna12 sindu æhen2wa
+malbanduna-12 sindu æhe-n2wa
+vase.SG-DAT music.NOM hear.INVOL-IMPF
+`The vase hears music`
+
+Sinhala has two tenses: past and non-past. Non-past includes both present or future and is expressed with the standard
+verb form/stem. Past tense is expressed using inflectional forms depending on conjugation.
+
+# 3 non-past tense
+Judgement: g
+dalla bat kan2wa
+dalla bat ka-n2-wa
+dog.NOM rice.NOM eat-NPT-IND
+`The dog eats rice`
+
+# 5 past tense
+Judgement: g
+dalla bat kææwa
+dalla bat kææwa
+dog.NOM rice.NOM eat.PST
+`The dog ate rice`
+
+In addition to past/non-past tenses, Sinhala has seven aspects: perfective, completive, inchoative,
+processive, progressive, inceptive, and resultative but we chose to limit these, per recommendation,
+to just perfective and completive (perceived future completion) in our testsuite.  Perfective aspect is
+expressed using a perfect participle along with the auxiliary ‘tien2wa’, meaning ‘be’.
+Completive aspect represents perceived completion of an action. This aspect occurs only with active verbs,
+therefore inactive involitive verbs will not occur in the completive aspect. Below are the respective two examples.
+
+# 1 Perfective Aspect
+Judgement: g
+dalla bat kalaa tien2wa
+dalla bat ka-laa tie-n2wa
+dog.NOM rice.NOM eat-PP be-IND
+`The dog has eaten the rice`
+
+# 2 Completive Aspect (perceived completion, like in the future), daa is an aux
+Judgement: g
+dalla bat kalaa daan2wa
+dalla bat ka-laa daa-n2wa
+dog.NOM rice.NOM eat-PP daa-IND
+`The dog will eat the rice completely`
+
+Tense and aspect were not added to the starter grammar this week, other than defining in
+the customization system that our language has finite/non-finite FORM distinction.
+
+We also included question verb types in our testsuite (and the lexicon). ‘Kohed2’ (where) specifies place and ‘kaud2’
+(who) specifies a thing, and ‘d2’ is the interrogative/question marker. Interrogative words are generally
+sentence-initial, but Sinhala’s free word order allows for optional movement. 'Kohed2' and 'kaud2' are in fact the roots
+for 'where' and 'who' with the 'd2' question affix making the phrase a sentence. These words were added to the lexicon
+in the customization system, but no options were selected for them so they are not yet generating parses.
+
+In Sinhalese, yes-no questions are formed by adding ‘d2’, a question particle, to the sentence-final position of declarative sentences.
+This is exhibited in the following example:
+
+# 3 Yes-or-no question constituent, no focus shift
+Judgement: g
+mam2 ka3eet2 yan2wa d2
+ma-m2 ka3ee-t2 ya-n2-wa d2
+I-NOM shop-DAT go-NPT-IND Q
+`Do I go to the shop?`
+
+When using an interrogative, questions adhere to a focus sentence pattern. A focus marker ‘-e’ is added to the verbal predicate
+to reflect a focused sentence pattern. The question marker ‘d2’ is also added. Additionally, the interrogative
+can be sentence-final or sentence-initial position as a result of Sinhala’s free word order. The two examples
+below exhibit the focal marker added to the verbal predicate, the question marker on the interrogative, and both the
+sentence-initial and sentence-final interrogative variations.
+
+# 6 WH-question, with focus shift
+Judgement: g
+bat kanne kaud2
+bat ka-nn-e kau-d2
+rice.NOM eat-NPT-FOC who-Q
+`Who eats rice?`
+
+# 7 WH-question, sentence-initial, with focus shift
+Judgement: g
+kaud2 bat kanne
+kau-d2 bat ka-nn-e
+who-Q rice.NOM eat-NPT-FOC
+`Who eats rice?`
+
+These yes/no and wh-questions were not added to the starter grammar this week. The concept of focus is also
+seen elsewhere in our resources so will require more investigating.
+
+4. Our grammar thus far achieves a coverage of 50% over our 48 testsuite example sentences which accounts for
+19 of those examples.
+
+18 out of the 19 sentences that were parsed result in two readings, each of which are identical other than a
+VP node being swapped for a V node. The other constituents of the parse remain the same. It is our guess
+that this is due to something in the customization matrix and how the starter grammar rules were created.
+For example the sentence below produces the following two parses.
+dalla bat kan2wa
+dalla bat ka-n2-wa
+dog.NOM rice.NOM eat-NPT-IND
+`The dog eats rice`
+
+[S [NP [N [dalla]]] [V [NP [N [bat]]] V [kan2wa]]]
+[S [NP [N [dalla]]] [VP [NP [N [bat]]] V [kan2wa]]]
+
+The one sentence that resulted in a unique singular reading was the following:
+dalla kohed2
+dalla kohe-d2
+dog.NOM where-Q
+`Where is the dog?`
+
+Our assumption for this producing a singular result is the lack of verb present
+in the sentence. Sinhalese does not require an existence verb like "is" in English in
+both declarative and interrogative phrases. Consequentially, there is no VP or V
+in the parse for this sentence, which rules out the reasoning for double parses
+mentioned above.
+
+The first sentence that did not parse is:
+mam2 ma12 pot2 gatta
+ma-m2 ma-12 pot2 gatta
+I.1sg-NOM I.1sg-DAT book.NOM buy.PAST
+`I bought the book for me`
+The parse chart shows that that "pot2 gatta" becomes a constituent but the subject
+I and the dative I (recipient of the object) are not accounted for. We believe
+this has to do with how the dative case is set up in our grammar. We have added
+dative as a case type in our grammar customization but in no other rules or lexical
+types do we define how dative case nouns are found in a grammatical sentence.
+
+Other sentences that did not product a parse are due to the lexicon not containing
+every entry in our testsuite. We managed to include the majority of the lexical
+items, including varying cases on nouns and pronouns but missed a few. Words in
+our testsuite that were not included are "mage" (line 261), "atwe" (line 281),
+"me" (lines 291, 301, 311) so 5 examples were not potentially parsed because of this miss.
+
+All (6) but 1 of our WH-question examples was not parsed. Looking through the
+parse charts individually, the noun and verb constituents are always joined into
+an S consitutent. However, the question word (kaud2 or kohed2) or the question marker
+(d2) are isolated and not able to play a role in the sentence parsing. This is
+because we did not describe the WH-question functionality in the grammar
+customization step. This does not explain why the unique parsing for "dalla kohed2",
+mentioned above was able to parse.
+
+We did not include the auxiliary "tiyen2wa" in our lexicon yet, so the sentence
+examples #7 and #8 in the Word Order section of our test suite were not parsed.
+
+It is also important to note that although we only have 50% coverage, no
+ungrammatical sentences in the testsuite were inaccurately parsed.
+
+Our grammar achieves a 10.0% overgeneration rate.
+
+5. So far, we have not found anything in the customization system that seems unable to cope with the properties of
+our language. However, we did have difficulties with the case system of our language. We have hypothesized
+Sinhalese as a Split-S language where the standard transitive relationship is nominative-accusative
+but then also the instances of dative-subject verb argument structures when the verb is of an
+involuntary type such that the subject is experiencing something, even though this is not visible in the English translation.
+For example, our sentence below shows the involuntary verb hear in the sense that the sound is like the subject and the hearer
+is the experiencer:
+ma12 sindu æhen2wa
+ma-12 sindu æhe-n2wa
+I.1sg-DAT music.NOM hear.INVOL-IMPF
+`I hear music`
+This example was mentioned previously with regards to case but we are re-exploring it here to indicate that we
+are unsure how to use the customization system to account for dative subjects. The constraint options in the
+system did not allow for constraints on the subject's case. If this option exists, we were unable to find
+it and include it in this first pass of grammar generation.
+
+Another limitation (as far as we can tell) regards the pronouns. Sinhalese has multiple varieties of
+second person personal pronouns. These include the ordinary form, a respect form, and a vulgar form.
+We included the ordinary form in our lexicon and lexical types for personal pronouns, but are unsure
+how and when to include these varying degrees of respect when addressing the second person.

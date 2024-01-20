@@ -49,6 +49,22 @@ api := nominative-pronoun-noun-lex &
   [ STEM < "api" >,
     SYNSEM.LKEYS.KEYREL.PRED "_we_n_rel" ].
 
+eyaa := nominative-pronoun-noun-lex &
+  [ STEM < "eyaa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_she_n_rel" ].
+
+eyaala := nominative-pronoun-noun-lex &
+  [ STEM < "eyaala" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_they_n_rel" ].
+
+oyaa := nominative-pronoun-noun-lex &
+  [ STEM < "oyaa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_you_n_rel" ].
+
+oyaala := nominative-pronoun-noun-lex &
+  [ STEM < "oyaala" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_you_n_rel" ].
+
 ma12 := dative-pronoun-noun-lex &
   [ STEM < "ma12" >,
     SYNSEM.LKEYS.KEYREL.PRED "_I_n_rel" ].
@@ -65,8 +81,8 @@ ka := transitive-verb-verb-lex &
   [ STEM < "ka" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
-gatt2 := transitive-verb-verb-lex &
-  [ STEM < "gatt2" >,
+gatta := transitive-verb-verb-lex &
+  [ STEM < "gatta" >,
     SYNSEM.LKEYS.KEYREL.PRED "_buy_v_rel" ].
 
 kan2wa := transitive-verb-verb-lex &
