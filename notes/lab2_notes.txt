@@ -10,7 +10,7 @@ verbal modifiers are introduced
 for verbal clauses, the verb changes to FOC
 - Sentential adverbs (ie. fortunately) are sentence-initial, otherwise just left of predicate
 - aux verbs (ie. has, must, may) directly follow the associated verb
--vpg 12 Sinhalese (Chandralal): compound verbal predicates showing speaker's attiude - aux verb also follows main verb
+- pg 12 Sinhalese (Chandralal): compound verbal predicates showing speaker's attiude - aux verb also follows main verb
 - sometimes S and O can be omitted.. "bought?" for "did you buy it" or "I bought it" or if S is speaker "hungry".
 - can also omit V "no, father home no"
 

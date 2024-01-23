@@ -14,8 +14,8 @@ Source: author
 Vetted:
 Judgement: g
 Phenomena: {Word order, Tense Aspect Mood}
-dalla bat kan2wa
-dalla bat ka-n2wa
+balla bat kan2wa
+balla bat ka-n2wa
 dog.NOM rice.NOM eat-IND
 `The dog eats the rice`
 
@@ -24,8 +24,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Word order, Tense Aspect Mood}
-dalla kan2wa bat
-dalla ka-n2wa bat
+balla kan2wa bat
+balla ka-n2wa bat
 dog.NOM eat-IND rice.NOM
 `The dog eats the rice`
 
@@ -34,8 +34,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Word order, Tense Aspect Mood}
-bat dalla kan2wa
-bat dalla ka-n2wa
+bat balla kan2wa
+bat balla ka-n2wa
 rice.NOM dog.NOM eat-IND
 `The dog eats the rice`
 
@@ -44,8 +44,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Word order, Tense Aspect Mood}
-bat kan2wa dalla
-bat ka-n2wa dalla
+bat kan2wa balla
+bat ka-n2wa balla
 rice.NOM eat-IND dog.NOM
 `The dog eats the rice`
 
@@ -54,8 +54,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Word order, Tense Aspect Mood}
-kan2wa bat dalla
-ka-n2wa bat dalla
+kan2wa bat balla
+ka-n2wa bat balla
 eat-IND rice.NOM dog.NOM
 `The dog eats the rice`
 
@@ -64,8 +64,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Word order, Tense Aspect Mood}
-kan2wa dalla bat
-ka-n2wa dalla bat
+kan2wa balla bat
+ka-n2wa balla bat
 eat-IND dog.NOM rice.NOM
 `The dog eats the rice`
 
@@ -74,8 +74,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Tense Aspect Mood}
-dalla bat kalaa tiyen2wa
-dalla bat ka-laa tiyen2wa
+balla bat kalaa tiyen2wa
+balla bat ka-laa tiyen2wa
 dog.NOM rice.NOM eat-PP has
 `The dog has eaten the rice`
 
@@ -83,9 +83,9 @@ dog.NOM rice.NOM eat-PP has
 Source: author
 Vetted: f
 Judgement: u
-Phenomena: {Tense Aspect Mood}
-dalla bat tiyen2wa kalaa
-dalla bat tiyen2wa ka-laa
+Phenomena: {Word order}
+balla bat tiyen2wa kalaa
+balla bat tiyen2wa ka-laa
 dog.NOM rice.NOM has eat-PP
 `The dog has eaten the rice`
 
@@ -198,8 +198,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Case, Tense Aspect Mood}
-dalla batw2 kan2wa
-dalla bat-w2 ka-n2wa
+balla batw2 kan2wa
+balla bat-w2 ka-n2wa
 dog.NOM rice-ACC eat-IND
 `The dog eats rice`
 
@@ -208,8 +208,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Case, Tense Aspect Mood}
-dalla bat kan2wa
-dalla bat ka-n2wa
+balla bat kan2wa
+balla bat ka-n2wa
 dog.NOM rice.NOM eat-IND
 `The dog eats rice`
 
@@ -227,7 +227,7 @@ I.1sg-DAT music.NOM hear.INVOL-IMPF
 Source: author
 Vetted: f
 Judgement: u
-Phenomena: {Case, Tense Aspect Mood}
+Phenomena: {Case}
 malbanduna12 sindu æhen2wa
 malbanduna-12 sindu æhe-n2wa
 vase.SG-DAT music.NOM hear.INVOL-IMPF
@@ -247,7 +247,7 @@ vase.SG.DEF.NOM break.INVOL-PST
 Source: c:72
 Vetted: s
 Judgement: u
-Phenomena: {Case, Tense Aspect Mood}
+Phenomena: {Case}
 malbandunaw2 kæduna
 malbanduna-w2 kædun-a
 vase.SG.DEF-ACC break.INVOL-PST
@@ -267,7 +267,7 @@ fault I-GEN hand-LOC
 Source: author
 Vetted: f
 Judgement: u
-Phenomena: {Case, Tense Aspect Mood}
+Phenomena: {Case}
 war2d2 mam2 atee
 war2d2 ma-m2 at-ee
 fault I-NOM hand-LOC
@@ -277,7 +277,7 @@ fault I-NOM hand-LOC
 Source: author
 Vetted: f
 Judgement: u
-Phenomena: {Case, Tense Aspect Mood}
+Phenomena: {Case}
 war2d2 mage atwe
 war2d2 ma-ge at-we
 fault I-GEN hand-LOC
@@ -297,7 +297,7 @@ we this shop-ABL commodities buy-IND
 Source: author
 Vetted: f
 Judgement: u
-Phenomena: {Case, Tense Aspect Mood}
+Phenomena: {Case}
 api mee ka3eet2 ba3u gann2wa
 api mee ka3ee-t2 ba3u gan-n2wa
 we this shop-DAT commodities buy-IND
@@ -307,7 +307,7 @@ we this shop-DAT commodities buy-IND
 Source: author
 Vetted: f
 Judgement: u
-Phenomena: {Case, Tense Aspect Mood}
+Phenomena: {Case}
 api mee ka3gen ba3u gann2wa
 api mee ka3-gen ba3u gan-n2wa
 we this shop-GEN commodities buy-IND
@@ -330,8 +330,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Matrix wh questions, Tense Aspect Mood}
-dalla kohed2
-dalla kohe-d2
+balla kohed2
+balla kohe-d2
 dog.NOM where-Q
 `Where is the dog?`
 
@@ -359,7 +359,7 @@ shop-DAT go-NPT-FOC who-Q
 Source: author
 Vetted: f
 Judgement: u
-Phenomena: {Matrix wh questions, Tense Aspect Mood, Case}
+Phenomena: {Matrix wh questions}
 ka3eet2 yanne kohed2
 ka3ee-t2 ya-nn-e kohe-d2
 shop-DAT go-NPT-FOC where-Q
@@ -411,7 +411,7 @@ I-NOM shop-DAT go-NPT-IND
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Tense Aspect Mood}
+Phenomena: {Determiners, Tense Aspect Mood}
 mam2 pot keep2yak gatta
 ma-m2 pot keep2yak gatta
 I-NOM book.PL several buy.PAST
@@ -421,7 +421,7 @@ I-NOM book.PL several buy.PAST
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Tense Aspect Mood}
+Phenomena: {Determiners, Tense Aspect Mood}
 mam2 pot sam2harak gatta
 ma-m2 pot sam2harak gatta
 I-NOM book.PL some buy.PAST
@@ -431,7 +431,7 @@ I-NOM book.PL some buy.PAST
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Tense Aspect Mood}
+Phenomena: {Determiners, Tense Aspect Mood}
 mam2 sam2harak pot gatta
 ma-m2 sam2harak pot gatta
 I-NOM some book.PL buy.PAST
@@ -441,7 +441,7 @@ I-NOM some book.PL buy.PAST
 Source: author
 Vetted: f
 Judgement: u
-Phenomena: {Tense Aspect Mood}
+Phenomena: {Determiners}
 mam2 pot2 sam2harak gatta
 ma-m2 pot2 sam2harak gatta
 I-NOM book.SG some buy.PAST
@@ -453,9 +453,9 @@ I-NOM book.SG some buy.PAST
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Tense Aspect Mood}
-dalla bat kalaa tien2wa
-dalla bat ka-laa tie-n2wa
+Phenomena: {Case, Tense Aspect Mood}
+balla bat kalaa tien2wa
+balla bat ka-laa tie-n2wa
 dog.NOM rice.NOM eat-PP be-IND
 `The dog has eaten the rice`
 
@@ -463,9 +463,9 @@ dog.NOM rice.NOM eat-PP be-IND
 Source: author
 Vetted: s
 Judgement: g
-Phenomena: {Tense Aspect Mood}
-dalla bat kalaa daan2wa
-dalla bat ka-laa daa-n2wa
+Phenomena: {Case, Tense Aspect Mood}
+balla bat kalaa daan2wa
+balla bat ka-laa daa-n2wa
 dog.NOM rice.NOM eat-PP daa-IND
 `The dog will eat the rice completely`
 
@@ -473,9 +473,9 @@ dog.NOM rice.NOM eat-PP daa-IND
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Tense Aspect Mood}
-dalla bat kan2wa
-dalla bat ka-n2-wa
+Phenomena: {Case, Tense Aspect Mood}
+balla bat kan2wa
+balla bat ka-n2-wa
 dog.NOM rice.NOM eat-NPT-IND
 `The dog eats rice`
 
@@ -484,8 +484,8 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Tense Aspect Mood}
-dalla bat kææwa
-dalla bat kææ-wa
+balla bat kææwa
+balla bat kææ-wa
 dog.NOM rice.NOM eat.PST-IND
 `The dog ate rice`
 
@@ -493,8 +493,549 @@ dog.NOM rice.NOM eat.PST-IND
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Tense Aspect Mood}
-dalla bat kææwa
-dalla bat kææwa
+Phenomena: {Case, Tense Aspect Mood}
+balla bat kææwa
+balla bat kææwa
 dog.NOM rice.NOM eat.PST
 `The dog ate rice`
+
+### Negation
+# 1 nææ verbal negator
+Source: author # modified from a:13
+Vetted: s
+Judgement: g
+Phenomena: {Case, Negation, Tense Aspect Mood}
+balla ka3eet2 yanne nææ
+balla ka3ee-t2 ya-nn-e nææ
+dog.NOM shop-DAT go-NPT-FOC no
+`The dog does not go to the shop`
+# Lit. 'The dog is going to the shop, not'
+
+# 2 nææ verbal negator, missing FOC aspect
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Negation}
+balla ka3eet2 yan2wa nææ
+balla ka3ee-t2 ya-n2-wa nææ
+dog.NOM shop-DAT go-NPT-IND no
+`The dog does not go to the shop`
+# Lit. 'The dog is going to the shop, not'
+
+# 3 nææ verbal negator, preceding verb
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Negation}
+balla ka3eet2 nææ yanne
+balla ka3ee-t2 nææ ya-nn-e
+dog.NOM shop-DAT no go-NPT-FOC
+`The dog does not go to the shop`
+# Lit. 'The dog is going to the shop, not'
+
+# 4 newei focus negator
+Source: a:13
+Vetted: s
+Judgement: g
+Phenomena: {Negation, Pronouns, Tense Aspect Mood}
+eyaa guruw2r2yek newei
+eyaa guruw2r2y-ek newei
+he teacher-INDF not
+`He is not a teacher`
+
+# 5 newei focus negator, wrong position
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Negation}
+newei eyaa guruw2r2yek
+newei eyaa guruw2r2y-ek
+not he teacher-INDF
+`He is not a teacher`
+
+# 6 newei focus negator
+Source: author # modified from a:13
+Vetted: s
+Judgement: g
+Phenomena: {Case, Negation, Pronouns}
+balla ka3eet2 yan2wa newei
+balla ka3ee-t2 ya-n2-wa newei
+dog.NOM shop-DAT go-NPT-IND not
+`The dog is not going to the shop, ...`
+# Lit. '(That) the dog is going to the shop is not'
+
+# 7 newei focus negator, implying alternative
+Source: a:13
+Vetted: s
+Judgement: g
+Phenomena: {Negation, Tense Aspect Mood}
+miniha kan2wa newei, gilin2wa
+miniha ka-n2-wa newei, gili-n2wa
+man eat-NPT-IND not devour-IND
+`The man is not eating, he's devouring`
+
+# 8 newei focus negator, disjunction
+Source: author # modified from a:186
+Vetted: s
+Judgement: g
+Phenomena: {Negation, Tense Aspect Mood}
+balla piduru kann2t nææ gonaa42 kann2 dennet nææ
+balla piduru ka-nn2-t nææ gonaa-42 ka-nn2 de-nne-t nææ
+dog hay eat-NPT.FOC-CONJ no bull-OAT eat-INF give-NPT.FOC-CONJ no
+`The dog neither eats hay nor allows the bull to eat it`
+# neither nor situation appends -t/CONJ to focus verb
+
+# 9 nææ verbal negator
+Source: author # modified from a:13
+Vetted: s
+Judgement: g
+Phenomena: {Negation, Tense Aspect Mood}
+balla bonne nææ
+balla bo-nne nææ
+dog drink-NPT.FOC no
+`The dog does not drink`
+
+# 10 nææ verbal negator
+Source: author # modified from a:223
+Vetted: s
+Judgement: g
+Phenomena: {Negation, Tense Aspect Mood}
+balla wiiduru2 binde nææ
+balla wiiduru2 binde nææ
+dog glass break.PST.FOC no
+`The dog did not break the glass`
+
+# 11 nemei focus negator
+Source: author # modified from a:223
+Vetted: s
+Judgement: g
+Phenomena: {Negation, Tense Aspect Mood}
+mee pot2 itihaase gaen2 nemei
+mee pot2 itihaase gaen2 nemei
+this book history about no
+`This book is not about history`
+
+# 9 can only be nemei with postpositional or nominal equational sentences
+Source: author # modified from a:223
+Vetted: s
+Judgement: u
+Phenomena: {Negation}
+mee pot2 itihaase gaen2 nææ
+mee pot2 itihaase gaen2 nææ
+this book history about no
+`This book is not about history`
+
+### Coordination
+
+# 1 Collateral coordination - phrases with shared missing piece (i.e subject dog)
+Source: author # modified from a:181
+Vetted: s
+Judgement: g
+Phenomena: {Coordination, Tense Aspect Mood}
+balla ged2r2 en2wa bat kan2wa 1iiwee bal2n2wa
+balla ged2r2 e-n2wa bat ka-n2wa 1iiwee bal2-n2wa
+dog home come-IND rice eat-IND TV watch-IND
+`The dog comes home, has a meal and watches TV`
+
+# 2 Conjunctive coordination - clitic -i affixed to units of coordination
+Source: a:183
+Vetted: s
+Judgement: g
+Phenomena: {Coordination, Tense Aspect Mood}
+guruw2rui demaupiyoi lam2inui paar2 sudd2 k2laa
+guruw2ru-i demaupiyo-i lam2inu-i paar2 sudd2 k2laa
+teachers-CONJ parents-CONJ children-CONJ road clean.PAST
+`The teachers, parents and children cleaned the road`
+
+# 3 Conjunctive coordination - clitic -i affixed to units of coordination
+Source: author, missing clitic on first argument
+Vetted: f
+Judgement: u
+Phenomena: {Coordination}
+guruw2ru demaupiyoi lam2inui paar2 sudd2 k2laa
+guruw2ru demaupiyo-i lam2inu-i paar2 sudd2 k2laa
+teachers parents-CONJ children-CONJ road clean.PAST
+`The teachers, parents and children cleaned the road`
+
+# 4 Conjunctive coordination - clitic -i affixed to units of coordination
+Source: author, missing clitic on second argument
+Vetted: f
+Judgement: u
+Phenomena: {Coordination}
+guruw2rui demaupiyo lam2inui paar2 sudd2 k2laa
+guruw2ru-i demaupiyo lam2inu-i paar2 sudd2 k2laa
+teachers-CONJ parents children-CONJ road clean.PAST
+`The teachers, parents and children cleaned the road`
+
+# 5 Conjunctive coordination - clitic -i affixed to units of coordination
+Source: author, missing clitic on third argument
+Vetted: f
+Judgement: u
+Phenomena: {Coordination}
+guruw2rui demaupiyoi lam2inu paar2 sudd2 k2laa
+guruw2ru-i demaupiyo-i lam2inu paar2 sudd2 k2laa
+teachers-CONJ parents-CONJ children road clean.PAST
+`The teachers, parents and children cleaned the road`
+
+# 6 Conjunctive coordination - clitic -i affixed to units of coordination
+Source: author # modified from a:183
+Vetted: s
+Judgement: g
+Phenomena: {Coordination, Tense Aspect Mood}
+amma balla12 kamisekui balla12 gaum2kui ara4 dunna
+amma balla-12 kamiseku-i balla-12 gaum2ku-i ara4 dunna
+mother dog-DAT shilt.INDP-CONJ dog-DAT gown.INDF-CONJ buy.PP give.PAST
+`Mother bought a shirt for the dog and a gown for the dog`
+
+# 7 Conjunctive coordination - missing clitic
+Source: author # modified from a:183
+Vetted: f
+Judgement: u
+Phenomena: {Coordination, Tense Aspect Mood}
+amma balla12 kamisekui balla12 gaum2ku ara4 dunna
+amma balla-12 kamiseku-i balla-12 gaum2ku ara4 dunna
+mother dog-DAT shilt.INDP-CONJ dog-DAT gown.INDF buy.PP give.PAST
+`Mother bought a shirt for the dog and a gown for the dog`
+
+# 8 Conjunctive coordination - saha noun-coordinator
+Source: author # based on a:182
+Vetted: f
+Judgement: g
+Phenomena: {Case, Coordination, Tense Aspect Mood}
+mam2 bat saha amma bat kan2wa
+mam2 bat saha amma bat ka-n2wa
+1SG.NOM rice.NOM and mother rice.NOM eat-IND
+`I eat rice and mother eats rice`
+
+# 9 Conjunctive coordination - saha cannot coordinate clauses
+Source: author # based on a:182
+Vetted: f
+Judgement: u
+Phenomena: {Coordination}
+mam2 bat kan2wa saha amma bat kan2wa
+mam2 bat ka-n2wa saha amma bat ka-n2wa
+1SG.NOM rice.NOM eat-IND and mother rice.NOM eat-IND
+`I eat rice and mother eats rice`
+
+# 10 Participle coordination - final event is PST, preceding
+# events are past participles
+Source: b:84
+Vetted: s
+Judgement: g
+Phenomena: {Case, Coordination, Pronouns, Tense Aspect Mood}
+mam2 ged2r2 gihilla kææm2 kææwa
+mam2 ged2r2 gihilla kææm2 kææwa
+1SG.NOM house.ACC go.PST.PTCP food.ACC eat.PST
+`I went home and ate`
+
+# 11 Participle coordination - final event is PST, preceding
+# events are past participles
+Source: author # modified from b:85
+Vetted: s
+Judgement: g
+Phenomena: {Case, Coordination, Pronouns, Tense Aspect Mood}
+balla ged2r2 gihilla, mam2 kææm2 kææwa
+balla ged2r2 gihilla, mam2 kææm2 kææwa
+dog.NOM house.ACC go.PST.PTCP, 1SG.NOM food.ACC eat.PST
+`The dog went home and I ate`
+
+# 12 Participle coordination - first event is not PST.PTCP
+Source: author # modified from b:85
+Vetted: f
+Judgement: u
+Phenomena: {Coordination}
+balla ged2r2 yan2wa, mam2 kææm2 kææwa
+balla ged2r2 ya-n2-wa, mam2 kææm2 kææwa
+dog.NOM house.ACC go-NPT-IND, 1SG.NOM food.ACC eat.PST
+`The dog went home and I ate`
+
+# 13 Participle coordination - final event is PST, preceding
+# events are past participles, PTCP has a lexical NP (dog)
+Source: author # modified from b:84
+Vetted: s
+Judgement: u
+Phenomena: {Coordination}
+mam2 balla ged2r2 gihilla kææm2 kææwa
+mam2 balla ged2r2 gihilla kææm2 kææwa
+1SG.NOM dog.NOM house.ACC go.PST.PTCP food.ACC eat.PST
+`The dog went home and I ate`
+
+# 14 Participle coordination - final event is PST, preceding
+# events are past participles, subject case is not shared
+Source: b:84
+Vetted: s
+Judgement: u
+Phenomena: {Coordination}
+mam2 ma12 sadd2yak aehila diwwa
+mam2 ma12 sadd2yak aehila diwwa
+1SG.NOM 1SG.DAT noise.IND.ACC hear.INV.PST.PTCP run.PST
+`I heard a sound and ran`
+
+### Agreement
+
+# 1 SV inanimate nominative subject, volitive verb
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Agreement, Case, Tense Aspect Mood}
+pot2 diuwa
+pot2 diuw-a
+book.NOM run-PST
+`The book ran`
+
+# 2 SV inanimate nominative subject, involitive verb
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Agreement, Case, Tense Aspect Mood}
+pot2 diuna
+pot2 diun-a
+book.NOM run.INVOL-PST
+`The book ran`
+
+# 3 SV inanimate subject, non-nominative case
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Agreement}
+pot2 diuna
+pot2 diun-a
+book.ACC run.INVOL-PST
+`The book ran`
+
+# 4 SV animate nominative subject, volitive verb
+Source: c:71
+Vetted: s
+Judgement: g
+Phenomena: {Agreement, Pronouns, Case, Tense Aspect Mood}
+ma4 diuwa
+ma4 diuw-a
+1SG.NOM run-PST
+`I ran`
+
+# 5 SV animate non-nominative subject, volitive verb
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Agreement}
+maaw2 diuwa
+maaw2 diuw-a
+1SG.ACC run-PST
+`I ran`
+
+# 6 SV animate non-nominative subject, volitive verb
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Agreement}
+ma12 diuwa
+ma12 diuw-a
+1SG.DAT run-PST
+`I ran`
+
+# 7 SV animate accusative subject, involitive verb
+Source: c:71
+Vetted: s
+Judgement: g
+Phenomena: {Coordination, Pronouns, Case, Tense Aspect Mood}
+maaw2 diuna
+maaw2 diun-a
+1SG.ACC run.INVOL-PST
+`I ran` # involuntarily/something made me run
+
+# 8 SV animate dative subject, involitive verb
+Source: c:71
+Vetted: s
+Judgement: g
+Phenomena: {Coordination, Pronouns, Case, Tense Aspect Mood}
+ma12 næ1una
+ma-12 næ1un-a
+1SG-DAT dance.INVOL-PST
+`I danced` # for some external reason, such as being possessed by a spirit
+
+# 9 AV inanimate nominative subject, volitive verb
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Agreement, Case, Tense Aspect Mood}
+pot2 kan2wa
+pot2 ka-n2wa
+book.NOM eat-IND
+`The book eats`
+
+# 10 AV inanimate accusative subject, volitive verb
+# inanimate nouns do not have accusative case
+
+# 11 AV inanimate dative subject, volitive verb
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Agreement}
+ka3eet2 kan2wa
+ka3ee-t2 ka-n2wa
+shop-DAT eat-IND
+`The shop eats`
+
+# 12 AV inanimate nominative subject, involitive verb
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Agreement, Case, Tense Aspect Mood}
+pot2 æhen2wa
+pot2 æhe-n2wa
+book.NOM hear.INVOL-IMPF
+`The book hears`
+
+# 13 AV inanimate accusative subject, involitive verb
+# inanimate nouns do not have accusative case
+
+# 14 AV inanimate dative subject, involitive verb
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Agreement}
+ka3eet2 æhen2wa
+ka3ee-t2 æhe-n2wa
+shop-DAT hear.INVOL-IMPF
+`The shop hears`
+
+# 15 AV animate nominative subject, volitive verb
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Agreement, Case, Tense Aspect Mood}
+balla kan2wa
+balla ka-n2wa
+dog.NOM eat-IND
+`The dog eats`
+
+# 16 AV animate accusative subject, volitive verb
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Agreement}
+maaw2 kan2wa
+ma-aw2 ka-n2wa
+1SG.ACC eat-IND
+`I eat`
+
+# 17 AV animate dative subject, volitive verb
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Agreement}
+ma12 kan2wa
+ma12 ka-n2wa
+1SG.DAT eat-IND
+`I eat`
+
+# 18 AV animate dative subject, involitive verb
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Agreement, Case, Tense Aspect Mood}
+balla æhen2wa
+balla æhe-n2wa
+dog.NOM hear.INVOL-IMPF
+`The dog hears`
+
+# 19 AV animate accusative subject, involitive verb
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Agreement}
+ma12 æhen2wa
+ma12 æhe-n2wa
+1SG.ACC hear.INVOL-IMPF
+`I hear`
+
+# 20 AV animate nominative subject, involitive verb
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Agreement}
+mam2 æhen2wa
+ma-m2 æhe-n2wa
+1SG.NOM hear.INVOL-IMPF
+`I hear`
+
+# 21 OV inanimate nominative object, volitive verb
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Agreement}
+balla bat kan2wa
+balla bat ka-n2wa
+dog.NOM rice.NOM eat-IND
+`The dog eats rice`
+
+# 22 OV inanimate nominative object, involitive verb
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Agreement}
+balla sindu æhen2wa
+balla sindu æhe-n2wa
+dog.NOM music.NOM hear.INVOL-IMPF
+`The dog hears music`
+
+# 23 OV animate nominative indefinite object, volitive verb
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Agreement}
+balla eluvek kan2wa
+balla eluv-ek ka-n2wa
+dog.NOM goat.SG.NOM-INDF eat-IND
+`The dog hears a goat`
+
+# 24 OV animate nominative indefinite object, involitive verb
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Agreement}
+balla eluvek æhen2wa
+balla eluv-ek æhe-n2wa
+dog.NOM goat.SG.NOM-INDF hear.INVOL-IMPF
+`The dog hears a goat`
+
+# 25 OV animate accusative definite object, volitive verb
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Agreement}
+balla maaw2 kan2wa
+balla maaw2 ka-n2wa
+dog.NOM 1SG.ACC eat-IND
+`The dog eats me`
+
+# 26 OV animate accusative definite object, involitive verb
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Agreement}
+balla maaw2 æhen2wa
+balla maaw2 æhe-n2wa
+dog.NOM 1SG.ACC hear.INVOL-IMPF
+`The dog hears me`
+
+
+#### The next two I'm struggling with finding accusative indefinite combos...
+# need help with the morphology
+# 27 OV animate accusative indefinite object, volitive verb
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Agreement}
+balla potak kan2wa
+balla pot-ak ka-n2wa
+dog.NOM book-INDF eat-IND......
+
+# 28 OV animate accusative indefinite object, involitive verb
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Agreement}
+balla potak æhen2wa
+balla potak æhe-n2wa
+dog.NOM book-INDF hear.INVOL-IMPF.....

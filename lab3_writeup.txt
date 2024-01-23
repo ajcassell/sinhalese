@@ -1,0 +1,13 @@
+Lab 3 Writeup
+LING 567
+Sinhala/Sinhalese Grammar
+January 26, 2024
+Melody Bechler, Alexandra Cassell
+
+Curly t is same as t with dot under it
+New letter curly n is 4
+
+Source c puts a y before clitic i for conjunctive coordination, but I am following source a
+
+
+# go back and look at pronoun cases - or .
