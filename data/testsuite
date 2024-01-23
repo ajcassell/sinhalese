@@ -178,7 +178,7 @@ Judgement: g
 Phenomena: {Pronouns, Tense Aspect Mood, Case}
 mam2 ma12 pot2 gatta
 ma-m2 ma-12 pot2 gatta
-I.1sg-NOM I.1sg-DAT book.NOM buy.PAST
+I.1sg-NOM I.1sg-DAT book.NOM buy.PST
 `I bought the book for me`
 
 # 10 Accusative case pronoun, incorrect casing
@@ -188,7 +188,7 @@ Judgement: g
 Phenomena: {Pronouns, Tense Aspect Mood, Case}
 mam2 maaw2 pot2 gatta
 ma-m2 ma-aw2 pot2 gatta
-I.1sg-NOM I.1sg-ACC book.NOM buy.PAST
+I.1sg-NOM I.1sg-ACC book.NOM buy.PST
 `I bought the book for me`
 
 ### Case
@@ -414,7 +414,7 @@ Judgement: g
 Phenomena: {Tense Aspect Mood}
 mam2 pot keep2yak gatta
 ma-m2 pot keep2yak gatta
-I-NOM book.PL several buy.PAST
+I-NOM book.PL several buy.PST
 `I bought several books`
 
 # 2 Quantifier "some" follows plural noun
@@ -424,7 +424,7 @@ Judgement: g
 Phenomena: {Tense Aspect Mood}
 mam2 pot sam2harak gatta
 ma-m2 pot sam2harak gatta
-I-NOM book.PL some buy.PAST
+I-NOM book.PL some buy.PST
 `I bought some books`
 
 # 3 Quantifier "some" precedes plural noun
@@ -434,7 +434,7 @@ Judgement: g
 Phenomena: {Tense Aspect Mood}
 mam2 sam2harak pot gatta
 ma-m2 sam2harak pot gatta
-I-NOM some book.PL buy.PAST
+I-NOM some book.PL buy.PST
 `I bought some books`
 
 # 4 Quantifier "some", singular noun, incorrect quantifier
@@ -444,7 +444,7 @@ Judgement: u
 Phenomena: {Tense Aspect Mood}
 mam2 pot2 sam2harak gatta
 ma-m2 pot2 sam2harak gatta
-I-NOM book.SG some buy.PAST
+I-NOM book.SG some buy.PST
 `I bought some book`
 
 ### Tense/Aspect
@@ -498,3 +498,229 @@ dalla bat kææwa
 dalla bat kææwa
 dog.NOM rice.NOM eat.PST
 `The dog ate rice`
+
+### Agreement in Coordinated NPs
+
+# 1 NP Coordination
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Coordination Agreement}
+Ranjitui Chitrai bat kan2wa
+Ranjitu-i Chitra-i bat ka-n2-wa
+Ranjit.INDF-CONJ Chitra-CONJ rice eat-NPT-IND
+`Ranjit and Chitra eat rice`
+
+# 2 NP Coordination, incorrect missing junction vowel 'u' following final consonant
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Coordination Agreement}
+Ranjiti Chitrai bat kan2wa
+Ranjit-i Chitra-i bat ka-n2-wa
+Ranjit-CONJ Chitra-CONJ rice eat-NPT-IND
+`Ranjit and Chitra eat rice`
+
+# 3 NP Coordination
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Coordination Agreement}
+amma kamisekui gaum2kui gatta
+amma kamiseku-i gaum2ku-i gatta
+mother shirt.INDF-CONJ gown.INDF-CONJ buy.PST
+`Mother bought a shirt and a gown`
+
+# 4 NP Coordination, 3 conjuncts
+Source: author
+Vetted: s
+Judgement: g
+Phenomena: {Coordination Agreement}
+guruw2rui demaupiyoi lam2inui kææwa
+guruw2ru-i demaupiyo-i lam2inu-i kææwa
+teachers-CONJ parents-CONJ children-CONJ eat.PST
+`The teachers, parents and children ate`
+
+### Attributive Adjectives
+
+# 1 Attributive Adjective
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Adjectives}
+loku dalla bat kan2wa
+loku dalla bat ka-n2-wa
+big dog.NOM rice.NOM eats-NPT-IND
+`The big dog eats rice`
+
+# 2 Attributive Adjective, incorrect adjective placement (following noun)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Adjectives}
+dalla loku bat kan2wa
+dalla loku bat ka-n2-wa
+dog.NOM big rice.NOM eats-NPT-IND
+`The dog big eats rice`
+
+# 3 Attributive adjective
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Adjectives}
+mam2 loku pot2 gatta
+ma-m2 loku pot2 gatta
+I-NOM big book buy.PST
+`The bought the big book`
+
+# 4 Cardinal numeral adjective, cardinal 'one' preceding noun
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Adjectives}
+mam2 ek2 pot2 gatta
+ma-m2 ek2 pot2 gatta
+I-NOM one book.SG buy.PST
+`I bought one book`
+
+# 5 Cardinal numeral adjective, incorrect cardinal 'one' location
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Adjectives}
+mam2 pot2 ek2 gatta
+ma-m2 pot2 ek2 gatta
+I-NOM book.SG one buy.PST
+`I bought book one`
+
+# 6  Indefinite Adjective
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Adjectives}
+sam2har2 guruw2ru kææwa
+sam2har2 guruw2ru kææwa
+some teachers.PL eat.PST
+`Some teachers eat`
+
+# 7 Indefinite Adjective, incorrect - adjective follows noun
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Adjectives}
+guruw2ru sam2har2 bat kææwa
+guruw2ru sam2har2 bat kææwa
+teachers.PL some rice eat.PST
+`Teachers some ate rice`
+
+# 8 Cardinal Numeral Adjective, cardinal noun follows adjective
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Adjective}
+mam2 gas dek2 gatta
+ma-m2 gas dek2 gatta
+I-NOM trees.PL two buy.PST
+I bought 2 trees
+
+# 9 Cardinal Numeral Adjective, incorrect cardinal order, cardinal noun precedes
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Adjective}
+mam2 dek2 gas gatta
+ma-m2 dek2 gas gatta
+I-NOM two trees.PL buy.PST
+I bought 2 trees
+
+### Non-Verbal Predicates
+
+# 1 Dative nominal predicate
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Non-Verbal Predicates}
+dalla oyaa12
+dalla oyaa-12
+dog you-DAT
+`The dog is for you`
+
+# 2 Dative nominal predicate, missing dative marker
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Non-Verbal Predicates}
+dalla oyaa
+dalla oyaa
+dog you
+`The dog is you`
+
+# 3 Adjectival Predicate, with vowel-final adjective with assertion marker
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Non-Verbal Predicates}
+bat rasai
+bat rasa-i
+rice delicious-AM
+`The rice is delicious`
+
+# 4 Adjectival Predicate, vowel-final adjective, missing assertion marker
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Non-Verbal Predicates}
+bat rasa
+bat rasa
+rice delicious
+`The rice is delicious`
+
+# 5 Adjectival Predicate, consonant-final adjective
+Source: author
+Vetted: s
+Judgement: g
+Phenomena: {Non-Verbal Predicates}
+pot2 alut
+pot2 alut
+book.SG new
+`The book is new`
+
+# 6 Adjectival Predicate, vowel-final adjective with assertion marker
+Source: author
+Vetted: s
+Judgement: g
+Phenomena: {Non-Verbal Predicates}
+pot2 lokui
+pot2 loku-i
+book.SG big-AM
+`The book is big`
+
+# 7 Adjectival Predicate, missing vowel-final assertion marker
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Non-Verbal Predicates}
+pot2 loku
+pot2 loku
+book.SG big
+`The book is big`
+
+# 8 Nominal Predicate
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Non-Verbal Predicates}
+eyaa guruw2r2ek
+eyaa guruw2r2-ek
+She/he teacher-INDF
+`She is a teacher`
+
+# 9 Nominal Predicate, missing indefinite marker on noun
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Non-Verbal Predicates}
+eyaa guruw2r2
+eyaa guruw2r2
+She/he teacher
+`She is teacher`
