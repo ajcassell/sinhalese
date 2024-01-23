@@ -505,27 +505,27 @@ dog.NOM rice.NOM eat.PST
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Coordination Agreement}
-Ranjitui Chitrai bat kan2wa
-Ranjitu-i Chitra-i bat ka-n2-wa
-Ranjit.INDF-CONJ Chitra-CONJ rice eat-NPT-IND
-`Ranjit and Chitra eat rice`
+Phenomena: {Coordination Agreement, Tense Aspect Mood}
+ballai puusai bat pukan2wa
+balla-i puusa-i bat ka-n2-wa
+dog-CONJ cat-CONJ rice eat-NPT-IND
+`The dog and the cat eat rice`
 
 # 2 NP Coordination, incorrect missing junction vowel 'u' following final consonant
 Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Coordination Agreement}
-Ranjiti Chitrai bat kan2wa
-Ranjit-i Chitra-i bat ka-n2-wa
-Ranjit-CONJ Chitra-CONJ rice eat-NPT-IND
-`Ranjit and Chitra eat rice`
+guruw2r2eki bat kan2wa
+guruw2r2ek-i bat ka-n2-wa
+teacher-CONJ rice eat-NPT-IND
+`A teacher eats rice`
 
 # 3 NP Coordination
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Coordination Agreement}
+Phenomena: {Coordination Agreement, Tense Aspect Mood}
 amma kamisekui gaum2kui gatta
 amma kamiseku-i gaum2ku-i gatta
 mother shirt.INDF-CONJ gown.INDF-CONJ buy.PST
@@ -535,7 +535,7 @@ mother shirt.INDF-CONJ gown.INDF-CONJ buy.PST
 Source: author
 Vetted: s
 Judgement: g
-Phenomena: {Coordination Agreement}
+Phenomena: {Coordination Agreement, Tense Aspect Mood}
 guruw2rui demaupiyoi lam2inui kææwa
 guruw2ru-i demaupiyo-i lam2inu-i kææwa
 teachers-CONJ parents-CONJ children-CONJ eat.PST
@@ -547,10 +547,10 @@ teachers-CONJ parents-CONJ children-CONJ eat.PST
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Adjectives}
-loku dalla bat kan2wa
-loku dalla bat ka-n2-wa
-big dog.NOM rice.NOM eats-NPT-IND
+Phenomena: {Adjectives, Tense Aspect Mood}
+loku balla bat kan2wa
+loku balla bat ka-n2-wa
+big dog.NOM rice.NOM eat-NPT-IND
 `The big dog eats rice`
 
 # 2 Attributive Adjective, incorrect adjective placement (following noun)
@@ -558,16 +558,16 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Adjectives}
-dalla loku bat kan2wa
-dalla loku bat ka-n2-wa
-dog.NOM big rice.NOM eats-NPT-IND
+balla loku bat kan2wa
+balla loku bat ka-n2-wa
+dog.NOM big rice.NOM eat-NPT-IND
 `The dog big eats rice`
 
 # 3 Attributive adjective
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Adjectives}
+Phenomena: {Adjectives, Tense Aspect Mood}
 mam2 loku pot2 gatta
 ma-m2 loku pot2 gatta
 I-NOM big book buy.PST
@@ -577,7 +577,7 @@ I-NOM big book buy.PST
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Adjectives}
+Phenomena: {Adjectives, Tense Aspect Mood}
 mam2 ek2 pot2 gatta
 ma-m2 ek2 pot2 gatta
 I-NOM one book.SG buy.PST
@@ -597,7 +597,7 @@ I-NOM book.SG one buy.PST
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Adjectives}
+Phenomena: {Adjectives, Tense Aspect Mood}
 sam2har2 guruw2ru kææwa
 sam2har2 guruw2ru kææwa
 some teachers.PL eat.PST
@@ -617,7 +617,7 @@ teachers.PL some rice eat.PST
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Adjective}
+Phenomena: {Adjective, Tense Aspect Mood}
 mam2 gas dek2 gatta
 ma-m2 gas dek2 gatta
 I-NOM trees.PL two buy.PST
@@ -631,7 +631,7 @@ Phenomena: {Adjective}
 mam2 dek2 gas gatta
 ma-m2 dek2 gas gatta
 I-NOM two trees.PL buy.PST
-I bought 2 trees
+I bought two trees
 
 ### Non-Verbal Predicates
 
@@ -640,8 +640,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Non-Verbal Predicates}
-dalla oyaa12
-dalla oyaa-12
+balla oyaa12
+balla oyaa-12
 dog you-DAT
 `The dog is for you`
 
@@ -650,8 +650,8 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Non-Verbal Predicates}
-dalla oyaa
-dalla oyaa
+balla oyaa
+balla oyaa
 dog you
 `The dog is you`
 
@@ -682,7 +682,7 @@ Judgement: g
 Phenomena: {Non-Verbal Predicates}
 pot2 alut
 pot2 alut
-book.SG new
+book.SG.NOM new
 `The book is new`
 
 # 6 Adjectival Predicate, vowel-final adjective with assertion marker
@@ -692,7 +692,7 @@ Judgement: g
 Phenomena: {Non-Verbal Predicates}
 pot2 lokui
 pot2 loku-i
-book.SG big-AM
+book.SG.NOM big-AM
 `The book is big`
 
 # 7 Adjectival Predicate, missing vowel-final assertion marker
@@ -702,7 +702,7 @@ Judgement: u
 Phenomena: {Non-Verbal Predicates}
 pot2 loku
 pot2 loku
-book.SG big
+book.SG.NOM big
 `The book is big`
 
 # 8 Nominal Predicate
@@ -723,4 +723,4 @@ Phenomena: {Non-Verbal Predicates}
 eyaa guruw2r2
 eyaa guruw2r2
 She/he teacher
-`She is teacher`
+`She is teachers`
