@@ -511,7 +511,17 @@ balla-i puusa-i bat ka-n2-wa
 dog-CONJ cat-CONJ rice eat-NPT-IND
 `The dog and the cat eat rice`
 
-# 2 NP Coordination, incorrect missing junction vowel 'u' following final consonant on bat
+# 2 NP coordination, epenthetic vowel present following consonant-final noun
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Coordination Agreement, Tense Aspect Mood}
+amma batui ge3i2i gatta
+amma batu-i ge3i2-i gatta
+mother rice-CONJ fruit-CONJ buy.PST
+`Mother bought the rice and the fruit`
+
+# 3 NP Coordination, incorrect missing epenthetic vowel 'u' following final consonant on bat
 Source: author
 Vetted: f
 Judgement: u
@@ -521,7 +531,7 @@ amma bat-i ge3i2-i gatta
 mother rice-CONJ fruit-CONJ buy.PST
 `Mother bought the rice and the fruit`
 
-# 3 NP Coordination
+# 4 NP Coordination
 Source: author
 Vetted: f
 Judgement: g
@@ -531,7 +541,7 @@ amma kamiseku-i gaum2ku-i gatta
 mother shirt.INDF-CONJ gown.INDF-CONJ buy.PST
 `Mother bought a shirt and a gown`
 
-# 4 NP Coordination, 3 conjuncts
+# 5 NP Coordination, 3 conjuncts
 Source: author
 Vetted: s
 Judgement: g
@@ -543,7 +553,7 @@ teachers-CONJ parents-CONJ children-CONJ eat.PST
 
 ### Attributive Adjectives
 
-# 1 Attributive Adjective
+# 1 Qualitative Adjective
 Source: author
 Vetted: f
 Judgement: g
@@ -553,7 +563,7 @@ loku balla bat ka-n2-wa
 big dog.NOM rice.NOM eat-NPT-IND
 `The big dog eats rice`
 
-# 2 Attributive Adjective, incorrect adjective placement (following noun)
+# 2 Qualitative Adjective, incorrect adjective placement (following noun)
 Source: author
 Vetted: f
 Judgement: u
@@ -563,7 +573,7 @@ balla loku bat ka-n2-wa
 dog.NOM big rice.NOM eat-NPT-IND
 `The dog big eats rice`
 
-# 3 Attributive adjective
+# 3 Qualitative Adjective
 Source: author
 Vetted: f
 Judgement: g
@@ -571,7 +581,7 @@ Phenomena: {Adjectives, Tense Aspect Mood}
 mam2 loku pot2 gatta
 ma-m2 loku pot2 gatta
 I-NOM big book buy.PST
-`The bought the big book`
+`I bought the big book`
 
 # 4 Cardinal numeral adjective, cardinal 'one' preceding noun
 Source: author
@@ -724,3 +734,23 @@ eyaa guruw2r2
 eyaa guruw2r2
 She/he teacher
 `She is teachers`
+
+# 10 Non-Equational
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Non-Verbal Predicates}
+bat mage
+bat ma-ge
+rice I-GEN
+`The rice is mine`
+
+# 11 Non-Equational, incorrect - missing genitive marker
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Non-Verbal Predicates}
+bat ma
+bat ma
+rice I
+`The rice is I`
