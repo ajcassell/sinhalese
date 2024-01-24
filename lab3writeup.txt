@@ -61,9 +61,11 @@ sam2har2 guruw2ru kææwa
 some teachers.PL eat.PST
 `Some teachers eat`
 
-***add info about customization matrix here
-
-
+In the customization matrix, attributive adjectives were added with a type name of regular-attr. We
+labelled these adjectives as attributive only, since we are not adding non-verbal predicates to
+our starter grammar this week. These adjectives modify item immediately after the adjective.
+Additionally, given we are skipping non-verbal predicates, we chose "impossibly" when asked about
+adjective behaving predicatively and appearing as the complement of the copula.
 
 
 Non-Verbal Predicates:
