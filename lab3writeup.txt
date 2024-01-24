@@ -1,0 +1,97 @@
+Lab 3 Writeup
+LING 567
+January 26, 2024
+Melody Bechler and Alexandra Cassell
+
+Agreement in NP Coordination:
+In Sinhala, NPs and NOMs are conjoined by a noun coordinating particle ‘i’, which is considered
+a clitic in this context . Every item that enters coordination has ‘i’ affixed to the end of the
+word. For consonant-final nouns, ‘u’ is added as an epenthetic vowel after the final consonant
+but before the clitic. These are some examples representing both the clitic and epenthetic usage.
+
+# 2 NP coordination, epenthetic vowel present following consonant-final noun
+amma batui ge3i2i gatta
+amma batu-i ge3i2-i gatta
+mother rice-CONJ fruit-CONJ buy.PST
+`Mother bought the rice and the fruit`
+
+#3 NP Coordination, incorrect missing junction vowel 'u' following final consonant on bat
+amma bati ge3i2i gatta
+amma bat-i ge3i2-i gatta
+mother rice-CONJ fruit-CONJ buy.PST
+`Mother bought the rice and the fruit`
+
+In the customization matrix, NP coordination is labelled omnisyndeton, since all coordinands
+must have the clitic. We then chose the affix option with 'i' occuring after the
+coordinand.
+
+
+Attributive Adjectives:
+Sinhala classifies adjectives into three classes: nominal, verbal, and descriptive.
+Descriptive adjectives are the only adjectives considered to be pure adjectives, since nominal
+and verbal adjectives have unclear boundaries and can appear identically to nouns and verbs.
+Descriptive adjectives occurring attributively precede nouns and they are also divided into subclasses.
+These subclasses include: qualitative, demonstrative, and quantitative adjectives. Quantitative
+adjectives describe the quantity of a noun or descriptive adjective and include several subtypes:
+cardinal numeral, indefinite numeral, and non-numeral adjectives. Cardinal numeral adjectives, except
+‘ek2’ (one), follow the noun. ‘ek2’ can only precede a noun. Animacy determines whether a connective is
+required with the numeral. Animate nouns required a numeral plus the connective, while inanimate nouns
+do not require the connective. (52---not sure if I should keep this or what—there are not any solid
+examples.) Indefinite numeral adjectives include: ‘sam2har2’ (some) and ‘okkoma2’ (all). Non-numeral
+quantitative adjectives include examples such as 'loku wædi'(too big), which form adjectival phrases.
+Sentences with this construction, as well as demonstrative adjectives, are not maximally simple sentences
+for the purposes of our project. Adjectives do not agree in case, number, or gender, with the exception of
+cardinal numeral adjectives as previously described.
+
+# 1 Qualitative Adjective
+loku balla bat kan2wa
+loku balla bat ka-n2-wa
+big dog.NOM rice.NOM eat-NPT-IND
+`The big dog eats rice`
+
+# 4 Cardinal numeral adjective, cardinal 'one' preceding noun
+mam2 ek2 pot2 gatta
+ma-m2 ek2 pot2 gatta
+I-NOM one book.SG buy.PST
+`I bought one book`
+
+# 6  Indefinite Adjective
+sam2har2 guruw2ru kææwa
+sam2har2 guruw2ru kææwa
+some teachers.PL eat.PST
+`Some teachers eat`
+
+***add info about customization matrix here
+
+
+
+
+Non-Verbal Predicates:
+In Sinhala, predicates are divided into two categories: verbal and non-verbal. In the non-verbal
+category, non-verbal clauses are subdivided into equational and non-equational sentences. Equational
+sentences include a topic (a nominal) and an adjectival or nominal predicate. The predicate describes
+the topic’s quality, category, or characteristics. Non-equational sentences consist of NPs marked with
+dative, genitive, ablative, or locative case as predicates. Non-verbal predicates do not require a copula
+to combine the subject and the predicate. In adjectival predicates, an assertion mark ‘i’ is required for
+vowel final adjectives when they appear as a predicate. This morpheme is not required when consonant-final
+adjectives are the predicate or with negative forms.
+
+# 3 Adjectival Predicate, with vowel-final adjective with assertion marker
+bat rasai
+bat rasa-i
+rice delicious-AM
+`The rice is delicious`
+
+# 8 Nominal Predicate
+eyaa guruw2r2ek
+eyaa guruw2r2-ek
+She/he teacher-INDF
+`She is a teacher`
+
+# 10 Non-Equational
+bat mage
+bat ma-ge
+rice I-GEN
+`The rice is mine
+
+This phenomena was not included in the test suite this week.
