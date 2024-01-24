@@ -23,7 +23,7 @@ dog.NOM rice.NOM eat-IND
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Word order, Tense Aspect Mood}
+Phenomena: {Word order, Tense Aspect Mood, Case}
 balla kan2wa bat
 balla ka-n2wa bat
 dog.NOM eat-IND rice.NOM
@@ -33,7 +33,7 @@ dog.NOM eat-IND rice.NOM
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Word order, Tense Aspect Mood}
+Phenomena: {Word order, Tense Aspect Mood, Case}
 bat balla kan2wa
 bat balla ka-n2wa
 rice.NOM dog.NOM eat-IND
@@ -43,7 +43,7 @@ rice.NOM dog.NOM eat-IND
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Word order, Tense Aspect Mood}
+Phenomena: {Word order, Tense Aspect Mood, Case}
 bat kan2wa balla
 bat ka-n2wa balla
 rice.NOM eat-IND dog.NOM
@@ -53,7 +53,7 @@ rice.NOM eat-IND dog.NOM
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Word order, Tense Aspect Mood}
+Phenomena: {Word order, Tense Aspect Mood, Case}
 kan2wa bat balla
 ka-n2wa bat balla
 eat-IND rice.NOM dog.NOM
@@ -63,7 +63,7 @@ eat-IND rice.NOM dog.NOM
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Word order, Tense Aspect Mood}
+Phenomena: {Word order, Tense Aspect Mood, Case}
 kan2wa balla bat
 ka-n2wa balla bat
 eat-IND dog.NOM rice.NOM
@@ -73,7 +73,7 @@ eat-IND dog.NOM rice.NOM
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Tense Aspect Mood}
+Phenomena: {Tense Aspect Mood, Case}
 balla bat kalaa tiyen2wa
 balla bat ka-laa tiyen2wa
 dog.NOM rice.NOM eat-PP has
@@ -95,7 +95,7 @@ dog.NOM rice.NOM has eat-PP
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Pronouns, Tense Aspect Mood}
+Phenomena: {Pronouns, Case, Tense Aspect Mood}
 api bat kan2wa
 api bat ka-n2wa
 We rice.NOM eat-IND
@@ -105,7 +105,7 @@ We rice.NOM eat-IND
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Pronouns, Tense Aspect Mood}
+Phenomena: {Pronouns, Case, Tense Aspect Mood}
 mam2 bat kan2wa
 mam2 bat ka-n2wa
 I rice.NOM eat-IND
@@ -115,7 +115,7 @@ I rice.NOM eat-IND
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Pronouns, Tense Aspect Mood}
+Phenomena: {Pronouns, Case, Tense Aspect Mood}
 eyaa bat kan2wa
 eyaa bat ka-n2wa
 She/he/it rice.NOM eat-IND
@@ -125,7 +125,7 @@ She/he/it rice.NOM eat-IND
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Pronouns, Tense Aspect Mood}
+Phenomena: {Pronouns, Case, Tense Aspect Mood}
 eyaala bat kan2wa
 eyaa-la bat ka-n2wa
 They.3-PL rice.NOM eat-IND
@@ -135,7 +135,7 @@ They.3-PL rice.NOM eat-IND
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Pronouns, Tense Aspect Mood}
+Phenomena: {Pronouns, Case, Tense Aspect Mood}
 oyaa bat kan2wa
 oyaa bat ka-n2wa
 You rice.NOM eat-IND
@@ -145,7 +145,7 @@ You rice.NOM eat-IND
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Pronouns, Tense Aspect Mood}
+Phenomena: {Pronouns, Case, Tense Aspect Mood}
 oyaala bat kan2wa
 oyaa-la bat ka-n2wa
 You.2-PL rice.NOM eat-IND
@@ -178,7 +178,7 @@ Judgement: g
 Phenomena: {Pronouns, Tense Aspect Mood, Case}
 mam2 ma12 pot2 gatta
 ma-m2 ma-12 pot2 gatta
-I.1sg-NOM I.1sg-DAT book.NOM buy.PAST
+I.1sg-NOM I.1sg-DAT book.NOM buy.PST
 `I bought the book for me`
 
 # 10 Accusative case pronoun, incorrect casing
@@ -188,7 +188,7 @@ Judgement: g
 Phenomena: {Pronouns, Tense Aspect Mood, Case}
 mam2 maaw2 pot2 gatta
 ma-m2 ma-aw2 pot2 gatta
-I.1sg-NOM I.1sg-ACC book.NOM buy.PAST
+I.1sg-NOM I.1sg-ACC book.NOM buy.PST
 `I bought the book for me`
 
 ### Case
@@ -319,7 +319,7 @@ we this shop-GEN commodities buy-IND
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Matrix wh questions, Tense Aspect Mood}
+Phenomena: {Case, Matrix wh questions, Tense Aspect Mood}
 mam2 yanne kohed2
 ma-m2 ya-nn-e kohe-d2
 I.1sg-NOM go-NPT-FOC where-Q
@@ -329,7 +329,7 @@ I.1sg-NOM go-NPT-FOC where-Q
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Matrix wh questions, Tense Aspect Mood}
+Phenomena: {Case, Matrix wh questions, Tense Aspect Mood}
 balla kohed2
 balla kohe-d2
 dog.NOM where-Q
@@ -369,7 +369,7 @@ shop-DAT go-NPT-FOC where-Q
 Source: a:135
 Vetted: s
 Judgement: g
-Phenomena: {Matrix wh questions, Tense Aspect Mood}
+Phenomena: {Case, Matrix wh questions, Tense Aspect Mood}
 bat kanne kaud2
 bat ka-nn-e kau-d2
 rice.NOM eat-NPT-FOC who-Q
@@ -379,7 +379,7 @@ rice.NOM eat-NPT-FOC who-Q
 Source: a:135
 Vetted: s
 Judgement: g
-Phenomena: {Matrix wh questions, Tense Aspect Mood}
+Phenomena: {Case, Matrix wh questions, Tense Aspect Mood}
 kaud2 bat kanne
 kau-d2 bat ka-nn-e
 who-Q rice.NOM eat-NPT-FOC
@@ -411,30 +411,30 @@ I-NOM shop-DAT go-NPT-IND
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Determiners, Tense Aspect Mood}
+Phenomena: {Case, Determiners, Tense Aspect Mood}
 mam2 pot keep2yak gatta
 ma-m2 pot keep2yak gatta
-I-NOM book.PL several buy.PAST
+I-NOM book.PL several buy.PST
 `I bought several books`
 
 # 2 Quantifier "some" follows plural noun
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Determiners, Tense Aspect Mood}
+Phenomena: {Case, Determiners, Tense Aspect Mood}
 mam2 pot sam2harak gatta
 ma-m2 pot sam2harak gatta
-I-NOM book.PL some buy.PAST
+I-NOM book.PL some buy.PST
 `I bought some books`
 
 # 3 Quantifier "some" precedes plural noun
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Determiners, Tense Aspect Mood}
+Phenomena: {Case, Determiners, Tense Aspect Mood}
 mam2 sam2harak pot gatta
 ma-m2 sam2harak pot gatta
-I-NOM some book.PL buy.PAST
+I-NOM some book.PL buy.PST
 `I bought some books`
 
 # 4 Quantifier "some", singular noun, incorrect quantifier
@@ -444,7 +444,7 @@ Judgement: u
 Phenomena: {Determiners}
 mam2 pot2 sam2harak gatta
 ma-m2 pot2 sam2harak gatta
-I-NOM book.SG some buy.PAST
+I-NOM book.SG some buy.PST
 `I bought some book`
 
 ### Tense/Aspect
@@ -581,7 +581,7 @@ Judgement: g
 Phenomena: {Negation, Tense Aspect Mood}
 balla piduru kann2t nææ gonaa42 kann2 dennet nææ
 balla piduru ka-nn2-t nææ gonaa-42 ka-nn2 de-nne-t nææ
-dog hay eat-NPT.FOC-CONJ no bull-OAT eat-INF give-NPT.FOC-CONJ no
+dog hay eat-NPT.FOC-CONJ no bull-DAT eat-INF give-NPT.FOC-CONJ no
 `The dog neither eats hay nor allows the bull to eat it`
 # neither nor situation appends -t/CONJ to focus verb
 
@@ -644,7 +644,7 @@ Judgement: g
 Phenomena: {Coordination, Tense Aspect Mood}
 guruw2rui demaupiyoi lam2inui paar2 sudd2 k2laa
 guruw2ru-i demaupiyo-i lam2inu-i paar2 sudd2 k2laa
-teachers-CONJ parents-CONJ children-CONJ road clean.PAST
+teachers-CONJ parents-CONJ children-CONJ road clean.PST
 `The teachers, parents and children cleaned the road`
 
 # 3 Conjunctive coordination - clitic -i affixed to units of coordination
@@ -654,7 +654,7 @@ Judgement: u
 Phenomena: {Coordination}
 guruw2ru demaupiyoi lam2inui paar2 sudd2 k2laa
 guruw2ru demaupiyo-i lam2inu-i paar2 sudd2 k2laa
-teachers parents-CONJ children-CONJ road clean.PAST
+teachers parents-CONJ children-CONJ road clean.PST
 `The teachers, parents and children cleaned the road`
 
 # 4 Conjunctive coordination - clitic -i affixed to units of coordination
@@ -664,7 +664,7 @@ Judgement: u
 Phenomena: {Coordination}
 guruw2rui demaupiyo lam2inui paar2 sudd2 k2laa
 guruw2ru-i demaupiyo lam2inu-i paar2 sudd2 k2laa
-teachers-CONJ parents children-CONJ road clean.PAST
+teachers-CONJ parents children-CONJ road clean.PST
 `The teachers, parents and children cleaned the road`
 
 # 5 Conjunctive coordination - clitic -i affixed to units of coordination
@@ -674,27 +674,27 @@ Judgement: u
 Phenomena: {Coordination}
 guruw2rui demaupiyoi lam2inu paar2 sudd2 k2laa
 guruw2ru-i demaupiyo-i lam2inu paar2 sudd2 k2laa
-teachers-CONJ parents-CONJ children road clean.PAST
+teachers-CONJ parents-CONJ children road clean.PST
 `The teachers, parents and children cleaned the road`
 
 # 6 Conjunctive coordination - clitic -i affixed to units of coordination
 Source: author # modified from a:183
 Vetted: s
 Judgement: g
-Phenomena: {Coordination, Tense Aspect Mood}
+Phenomena: {Case, Coordination, Tense Aspect Mood}
 amma balla12 kamisekui balla12 gaum2kui ara4 dunna
 amma balla-12 kamiseku-i balla-12 gaum2ku-i ara4 dunna
-mother dog-DAT shilt.INDP-CONJ dog-DAT gown.INDF-CONJ buy.PP give.PAST
+mother dog-DAT shirt.INDF-CONJ dog-DAT gown.INDF-CONJ buy.PP give.PST
 `Mother bought a shirt for the dog and a gown for the dog`
 
 # 7 Conjunctive coordination - missing clitic
 Source: author # modified from a:183
 Vetted: f
 Judgement: u
-Phenomena: {Coordination, Tense Aspect Mood}
+Phenomena: {Coordination}
 amma balla12 kamisekui balla12 gaum2ku ara4 dunna
 amma balla-12 kamiseku-i balla-12 gaum2ku ara4 dunna
-mother dog-DAT shilt.INDP-CONJ dog-DAT gown.INDF buy.PP give.PAST
+mother dog-DAT shirt.INDF-CONJ dog-DAT gown.INDF buy.PP give.PST
 `Mother bought a shirt for the dog and a gown for the dog`
 
 # 8 Conjunctive coordination - saha noun-coordinator
