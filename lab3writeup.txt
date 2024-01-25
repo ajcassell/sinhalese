@@ -3,7 +3,8 @@ LING 567
 January 26, 2024
 Melody Bechler and Alexandra Cassell
 
-Agreement in NP Coordination:
+
+Coordination:
 In Sinhala, NPs and NOMs are conjoined by a noun coordinating particle ‘i’, which is considered
 a clitic in this context . Every item that enters coordination has ‘i’ affixed to the end of the
 word. For consonant-final nouns, ‘u’ is added as an epenthetic vowel after the final consonant
@@ -21,10 +22,15 @@ amma bat-i ge3i2-i gatta
 mother rice-CONJ fruit-CONJ buy.PST
 `Mother bought the rice and the fruit`
 
-In the customization matrix, NP coordination is labelled omnisyndeton, since all coordinands
-must have the clitic. We then chose the affix option with 'i' occuring after the
-coordinand.
+In the customization matrix, we added three coordination strategies. Coordination strategy 1 corresponds
+to noun coordination and is labelled omnisyndeton, since all coordinands
+must have the clitic 'i'. We then chose the affix option with 'i' occuring after the
+coordinand. Coordination Strategy 2 represents noun and NP coordiantion as polsyndeton. The word 'saha'
+appears before every coordinand, except the first. Coordination strategy 3 corresponds to a asyndeton pattern
+of noun and NP coordination.
 
+Agreement in NP Coordination:
+Sinhala does not have agreement in NP Coordination.
 
 Attributive Adjectives:
 Sinhala classifies adjectives into three classes: nominal, verbal, and descriptive.
@@ -61,8 +67,10 @@ sam2har2 guruw2ru kææwa
 some teachers.PL eat.PST
 `Some teachers eat`
 
-In the customization matrix, attributive adjectives were added with a type name of regular-attr. We
-labelled these adjectives as attributive only, since we are not adding non-verbal predicates to
+In the customization matrix, attributive adjectives were added with a type names of regular-attr
+and cardinal-except-attr. Adjectives in cardinal-except-attr reflect how the adjective modifies items
+immediately before the adjective. Attributive adjectives modify items immediately after the adjective.
+We labelled these adjectives as attributive only, since we are not adding non-verbal predicates to
 our starter grammar this week. These adjectives modify item immediately after the adjective.
 Additionally, given we are skipping non-verbal predicates, we chose "impossibly" when asked about
 adjective behaving predicatively and appearing as the complement of the copula.
@@ -96,4 +104,36 @@ bat ma-ge
 rice I-GEN
 `The rice is mine
 
-This phenomena was not included in the test suite this week.
+This phenomena was not included in the starter grammar this week.
+
+
+Customization System:
+
+Tense and Aspect:
+
+Sinhala has two tenses: past and non-past. In the matrix, we selected these two common hierarchy element and
+added subtypes under past, which included perfect-participle and past-participle. While there are seven aspects
+in Sinhala, we are only modeling perfective and completive in our grammar. We opted to create our own hierarchy
+of values for aspect and added perfective and completive here.
+
+Word Order:
+
+In the word order section, we added auxiliary verbs. We specified that auxiliaries appear after the complement.
+Auxiliary complements are VPs, raising subject and more than one auxiliary can be present in a clause. We did
+have the auxiliary sectioned completed for Lab 2, but the auxiliary verb radio button was set to no.
+
+Lexicon:
+
+For auxiliary verbs, three auxiliary features were defined: neg, perf-part-aux, and future-aux. The neg auxiliary
+type contributes an independent predicate and takes a noun phrase bearing the case the verbal complement assigns
+to its subject as the subject type. We also added a complement feature with a value of finite, nonfinite. Perf-part-
+aux is a perfect participle auxiliary that does not contribute a predicate. The subject type is a also a NP bearing
+the case the verbal complement assigns to its subject. We added two complement features, one with a value of finite
+nonfinite and the second is a tense feature with the value past. Lastly, the future-aux type does not contribute a
+predicate and takes the same subject type as the prior auxiliary types. We added two complement features, including
+one with finite/nonfinite values and the second as a tense feature with a nonpast value.
+
+Adjectives were described above for the matrix.
+
+
+*need to add nouns and verbs once we straighten out the parsing
