@@ -23,11 +23,12 @@ mother rice-CONJ fruit-CONJ buy.PST
 `Mother bought the rice and the fruit`
 
 In the customization matrix, we added three coordination strategies. Coordination strategy 1 corresponds
-to noun coordination and is labelled omnisyndeton, since all coordinands
-must have the clitic 'i'. We then chose the affix option with 'i' occuring after the
-coordinand. Coordination Strategy 2 represents noun and NP coordiantion as polsyndeton. The word 'saha'
-appears before every coordinand, except the first. Coordination strategy 3 corresponds to a asyndeton pattern
-of noun and NP coordination.
+to noun coordination and is labelled omnisyndeton, since all coordinands must have the clitic 'i'. We then
+chose the affix option with 'i' occurring after the coordinand. Coordination Strategy 2 represents noun and
+NP coordiantion as polsyndeton. The word 'saha' appears before every coordinand, except the first. Coordination
+strategy 3 was originally an asyndeton pattern for nouns and NPs, but this caused an excessive number of parse
+results per test sentence. Instead, we changed Coordination Strategy 3 to reflect VPs and sentences marked with
+an asyndeton pattern, which subsequently reduced the number of parses per sentence.
 
 Agreement in NP Coordination:
 Sinhala does not have agreement in NP Coordination.
@@ -114,7 +115,21 @@ Tense and Aspect:
 Sinhala has two tenses: past and non-past. In the matrix, we selected these two common hierarchy element and
 added subtypes under past, which included perfect-participle and past-participle. While there are seven aspects
 in Sinhala, we are only modeling perfective and completive in our grammar. We opted to create our own hierarchy
-of values for aspect and added perfective and completive here.
+of values for aspect and added perfective and completive here. Auxiliaries are also components of aspect, as shown
+in these examples:
+
+# 1 Perfective Aspect
+dalla bat kalaa tien2wa
+dalla bat ka-laa tie-n2wa
+dog.NOM rice.NOM eat-PP be-IND
+`The dog has eaten the rice`
+
+# 2 Completive Aspect (perceived completion, like in the future), daa is an aux
+dalla bat kalaa daan2wa
+dalla bat ka-laa daa-n2wa
+dog.NOM rice.NOM eat-PP daa-IND
+`The dog will eat the rice completely`
+
 
 Word Order:
 
@@ -135,5 +150,77 @@ one with finite/nonfinite values and the second as a tense feature with a nonpas
 
 Adjectives were described above for the matrix.
 
+For nouns, we largely attempted to use existing items in our lexicon, but we did add a few nouns for some of our
+more complicated testsuite examples like coordination. We restructured our noun types based on animacy (animate vs
+inanimate), number, and irregularity, which differs from the case-based type system we were using last week. We also
+removed indefinite, plural, and case affixes from the nouns since this will now be resolved in morphology. Only the
+stem forms of these nouns remain, which is most evident in our pronoun types.
 
-*need to add nouns and verbs once we straighten out the parsing
+Like with nouns, we attempted to use existing verbs in our lexicon, while only adding a few. We added four new
+verb types: involitive, irreg-trans-pst, irreg-trans-pp, and irreg-intrans-pst. Involitive replaces the
+transitive-verb-dative-subject type we had in lab 2. Irreg-trans-pst and irreg-intrans-pst house their respective
+irregular transitive or intransitive past tense verb respectively. Irreg-trans-pp holds participle verbs with the value
+past-part, a component added in syntactic FORM feature for verbs. This FORM feature distinction is new for lab 3.
+Lastly, we removed non-past and perfect participle affixes from the verbs since this will now be resolved in morphology.
+This leaves only the stem form on these verbs.
+
+
+Differentiation between lab 2 and lab 3, not previously mentioned:
+While some auxiliaries were already included in our testsuite in lab2, we added them to the matrix this week. Auxiliaries
+are also a component of Tense/Aspect as previously mentioned. Here is an example from our testsuite.
+
+# 7 AUX following verb
+dalla bat kalaa tiyen2wa
+dalla bat ka-laa tiyen2wa
+dog.NOM rice.NOM eat-PP has
+`The dog has eaten the rice`
+
+We removed question verb types from the matrix since this is not yet relevant. We also defined definiteness under "Other
+Syntactic and Semantic Features" as a semantic feature for nominal categories, whose values use bool as an existing
+value type. Here is an example of definiteness from our testsuite:
+
+# 8 Nominal Predicate
+eyaa guruw2r2ek
+eyaa guruw2r2-ek
+She/he teacher-INDF
+`She is a teacher`
+
+We also changed the ash character to 5. We continue to have issues with this character on our personal devices and
+within the lkb. Our choices file often adds extra characters and replaces the ash with a different character. These
+problems have become more prominent with this lab and we decided it would be best to replace it.
+
+Lastly, we updated the choices file with our new test sentences.
+
+
+4. Issues:
+
+For adjectives, an example of a sentence that should not have parsed is "mam2 dek2 gas gatta", shown below.
+
+# 9 Cardinal Numeral Adjective, incorrect cardinal order, cardinal number precedes noun
+mam2 dek2 gas gatta
+ma-m2 dek2 gas gatta
+I-NOM two trees.PL buy.PST
+`I bought two trees`
+
+Since "dek2" (two) is a cardinal adjective in the cardinal-except-attr type, the adjective must occur after the noun it
+modifies. In the lexicon, we specified this adjective modifies items immediately before the adjective in an attempt to
+capture this unique property. Due to the combination of Sinhala's free word order and "mam2" being noun, this sentence can parse. The
+resulting parse tree shows the adjective modifying mam2 and ignoring "gas" completely. This situation also applies to
+our regular-attr type. The sentence, shown below, "balla loku bat kan2wa" should not have parsed because the attributive adjective
+follows the noun it modifies.
+
+# 2 Qualitative Adjective, incorrect adjective placement (following noun)
+balla loku bat kan2wa
+balla loku bat ka-n2-wa
+dog.NOM big rice.NOM eat-NPT-IND
+`The dog eats big rice`
+
+This sentence has four parse trees, all showing the adjective modifying "bat" (rice). Again, the relatively free word order
+of Sinhala combined with the existence of another nearby noun the adjective can modify results in ungrammatical parses.
+Additionally, some of the "loku bat" NPs were generated by an adjective head rule followed by the bare NP, while the "balla" NP
+was correctly generated by the bare NP but has an additional parse for the nominative lexical rule we created. In evaluating the
+results for the grammatical sentence "loku balla bat kan2wa", the parse trees were created via the same rules applying to the
+ungrammatical parses. To eliminate the ungrammatical parses and to reduce total number of parses, we think we may need a rule that
+prevents cardinal adjectives from modifying the subject when cardinals incorrectly follow the subject. We may need a second rule
+targeting attributive adjectives that incorrectly follow the subject but modify the object. Lastly, we may need to modify our
+nominative lexical rule so it does not erroneously apply.
