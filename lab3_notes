@@ -93,6 +93,11 @@ negative focus marker. On the other hand, nææ negates locative/existential cla
 which is it a negative predicate, as well as being the negator for verbal and adjectival
 sentences, in which it is a negative marker.
 
+
+** Think nææ is a negative auxiliary verb because it affects the verb morphology and is in the
+same position as other auxiliary verbs
+** Think nemei is an independent adverb that goes after the VP
+
 ---------
 AGREEMENT
 ----------
@@ -272,7 +277,65 @@ when both, acceptable order is [definiteness]-[ case].
 
 Nouns:
 base + definiteness + case (both optional)
-stem + -ak/-ek + case 
+stem + -ak/-ek + case
+
+ka3ee-12 (shop-DAT)
+gonaa-12 (bull-DAT)
+ma12 (1SG.DAT)
+ap212 (1PL.DAT)
+ged2r2-12 (house.DAT)
+
+balla (dog.NOM)
+bat (rice.NOM)
+sindu (music.NOM)
+eluv (goat.SG.NOM)
+pot2 (book.NOM)
+gee (house.NOM)
+war2d2 (fault.NOM)
+miniha (man.NOM)
+
+ged2r2 (house.ACC)
+kææm2 (food.ACC)
+ba3u (commodities.ACC/NOM)
+-- can't find many ACC but probably because it can also be as NOM
+
+pot-ak (pot-INDF)
+guruw2r2y-ek (teacher-INDF)
+
+Sinhala has a rare subtractive system in nominal morphology, where inanimate
+plural forms are derived by deleting the final vowel of the singular counterparts, at
+least in their nominative and accusative form
+
+pot (book.PL)
+
+pot-2k-212 (book-INDF-DAT)
+sadd2yak (noise.INDF.ACC)
+kæm2 (food.DEF.ACC?)
+
+pot-ee (book-LOC)
+ged2r2 (house.LOC)
+at-ee(hand-LOC)
+
+ka3-en (shop-ABL)
+
+
+Pronouns:
+Q: wondering if we should put these as lexical entries??
+Since we don't have enough evidence about them iini other
+cases?
+api (1PL.NOM)
+mam2 (1SG.NOM)
+ma4 (1SG.NOM)
+eyaa (3SG.NOM)
+eyaa-la (3.NOM-PL)
+oyaa (2SG.NOM)
+oyaa-la (2.NOM-PL)
+
+ma-12 (1SG-DAT)
+ap212 (1PL.DAT)
+eyaa-12 (3SG.DAT)
+
+ma-ge (I-GEN)
 
 BELOW is not accurate
 
@@ -296,11 +359,85 @@ Genitive/Loc. -we      -w2l2    -w2k2
 Rules for any other affixes that are required so you get fully inflected forms
 
 
+
+- do we gloss AND or CONJ? - CONJ is fine
+
 -----------------------
 
 **** TO DO: LEXICON ***** update the lexicon to have only stem forms!
 
 Stem forms (rather than full forms) for any words where this is relevant
-Auxilairies, if necessary
+Auxiliaries, if necessary
 Additional nouns/verbs if you have expanded the vocabulary in your testsuite
 Adjectives
+
+
+- Things to mention:
+- removed "question" verbs for now
+- VPs asyndeton and then update TDL later
+- did not make a rule for single nouns because agreement doesn't matter
+- we put two auxes possible to become NPT/IND - think these are supposed to be handled differently but didn't get to that
+
+
+- made a rule for plural pronouns
+
+- Questions to write:
+- how to deal with vowel endings that require another letter
+such as guruw2r2y - y for before another vowel
+- participle coordination in system?
+- didn't get to FOC part, wth -nne suffix
+
+
+
+
+- neg aux form finite and non-finite? overgeneration
+- perf part aux form/tense?
+
+- we put auxes in full form without IND
+
+- coordination - in -i
+sadd2yak - indf acc
+pot2 / pot-ak??
+
+- go back to transitive verb dative subject. get rid?
+
+Auxiliaries select for verbs in specific inflected forms
+Other features - make other nonfinite forms
+Add an auxiliary - make complement feature have form of whatever I made above ^
+Then need to make the morph rules be finite for other verbs so that aux cannot combine with them?
+
+Should see N ADJ to become NOM
+
+Might not yet be in the matrix system yet to require a certain tense on the verb complement of the negation adverb (do it in TDL editing later)
+- CAN do it with auxiliaries though
+
+Need long skinny trees to go through each of the position classes
+
+Mention where genders are marked, if not in the 3sg pronoun
+Explain the affixes for definiteness
+
+Indicative is a mood - should we add that?
+
+
+QUESTIONS!
+
+1. For the negative auxiliary verb, the examples are
+"can" and "be" for contributing an independent predicate (with semantics) or
+not, respectively. For a negative auxiliary, is negating contributing semantics?
+
+2. Making a lexical rule type for definiteness. We have a
+position class for indefiniteness suffix on all nouns
+We also have the lexical rule instances for the two different
+suffixes. What goes in the lexical rule type features? It doesn't
+apply to any of the features listed.
+
+3. I'm still very confused about morphology in the customization system so I'm going
+to try to break down how I think it works and hope for feedback. In the lexicon,
+should we replace our lab2 noun types per case in favor of a single noun type
+(either nominative or root form?)? Then in morphology, I created 2 position classes,
+one for definiteness (mentioned above) and another called case-position-class.
+Case-position-class can be applied as a suffix to any noun and has a lexical rule type
+per case, each of which has a feature for that respective case on itself and includes
+the lexical rule instance for the affix. And since the definiteness is an optional
+pc, followed by the case, definiteness-pc would be the input type to case-pc.
+Is that the correct process?

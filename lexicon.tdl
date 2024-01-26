@@ -1,109 +1,177 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Nouns
 
-bat := nominative-noun-noun-lex &
+bat := inanimate-noun-noun-lex &
   [ STEM < "bat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_rice_n_rel" ].
 
-dalla := nominative-noun-noun-lex &
-  [ STEM < "dalla" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
-
-pot2 := nominative-noun-noun-lex &
+pot2 := inanimate-noun-noun-lex &
   [ STEM < "pot2" >,
     SYNSEM.LKEYS.KEYREL.PRED "_book_n_rel" ].
 
-sindu := nominative-noun-noun-lex &
+sindu := inanimate-noun-noun-lex &
   [ STEM < "sindu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_music_n_rel" ].
 
-malbanduna := nominative-noun-noun-lex &
+malbanduna := inanimate-noun-noun-lex &
   [ STEM < "malbanduna" >,
     SYNSEM.LKEYS.KEYREL.PRED "_vase_n_rel" ].
 
-war2d2 := nominative-noun-noun-lex &
+war2d2 := inanimate-noun-noun-lex &
   [ STEM < "war2d2" >,
     SYNSEM.LKEYS.KEYREL.PRED "_fault_n_rel" ].
 
-batw2 := accusative-noun-noun-lex &
-  [ STEM < "batw2" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_rice_n_rel" ].
+gee := inanimate-noun-noun-lex &
+  [ STEM < "gee" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_house_n_rel" ].
 
-ba3u := accusative-noun-noun-lex &
+ba3u := inanimate-noun-noun-lex &
   [ STEM < "ba3u" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_things_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_commodities_n_rel" ].
 
-ka3eet2 := dative-noun-noun-lex &
-  [ STEM < "ka3eet2" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_shop_n_rel" ].
+paar2 := inanimate-noun-noun-lex &
+  [ STEM < "paar2" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_road_n_rel" ].
 
-maaw2 := accusative-pronoun-noun-lex &
-  [ STEM < "maaw2" >,
+pot_1 := inanimate-noun-noun-lex &
+  [ STEM < "pot" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_book_n_rel" ].
+
+balla := animate-noun-noun-lex &
+  [ STEM < "balla" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
+
+eluv := animate-noun-noun-lex &
+  [ STEM < "eluv" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_goat_n_rel" ].
+
+miniha := animate-noun-noun-lex &
+  [ STEM < "miniha" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_man_n_rel" ].
+
+guruw2r2y := animate-noun-noun-lex &
+  [ STEM < "guruw2r2y" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_teacher_n_rel" ].
+
+amma := animate-noun-noun-lex &
+  [ STEM < "amma" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mother_n_rel" ].
+
+at := animate-noun-noun-lex &
+  [ STEM < "at" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hand_n_rel" ].
+
+gonaa := animate-noun-noun-lex &
+  [ STEM < "gonaa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bull_n_rel" ].
+
+ma := 1sg-pronoun-noun-lex &
+  [ STEM < "ma" >,
     SYNSEM.LKEYS.KEYREL.PRED "_I_n_rel" ].
 
-mam2 := nominative-pronoun-noun-lex &
-  [ STEM < "mam2" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_I_n_rel" ].
-
-api := nominative-pronoun-noun-lex &
+api := 1pl-pronoun-noun-lex &
   [ STEM < "api" >,
     SYNSEM.LKEYS.KEYREL.PRED "_we_n_rel" ].
 
-eyaa := nominative-pronoun-noun-lex &
-  [ STEM < "eyaa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_she_n_rel" ].
-
-eyaala := nominative-pronoun-noun-lex &
-  [ STEM < "eyaala" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_they_n_rel" ].
-
-oyaa := nominative-pronoun-noun-lex &
+oyaa := 2sg-pronoun-noun-lex &
   [ STEM < "oyaa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_you_n_rel" ].
 
-oyaala := nominative-pronoun-noun-lex &
-  [ STEM < "oyaala" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_you_n_rel" ].
+eyaa := 3sg-pronoun-noun-lex &
+  [ STEM < "eyaa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_it_n_rel" ].
 
-ma12 := dative-pronoun-noun-lex &
-  [ STEM < "ma12" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_I_n_rel" ].
+ged2r2 := irreg-acc-noun-noun-lex &
+  [ STEM < "ged2r2" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_house_n_rel" ].
 
-ka3en := ablative-noun-noun-lex &
-  [ STEM < "ka3en" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_shop_n_rel" ].
+kææm2 := irreg-acc-noun-noun-lex &
+  [ STEM < "kææm2" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_food_n_rel" ].
+
+sadd2y := irreg-acc-noun-noun-lex &
+  [ STEM < "sadd2y" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_noise_n_rel" ].
+
+guruw2ru := irreg-plural-noun-noun-lex &
+  [ STEM < "guruw2ru" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_teacher_n_rel" ].
+
+demaupiyo := irreg-plural-noun-noun-lex &
+  [ STEM < "demaupiyo" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_parent_n_rel" ].
+
+lam2inu := irreg-plural-noun-noun-lex &
+  [ STEM < "lam2inu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
+
+pot_2 := irreg-plural-noun-noun-lex &
+  [ STEM < "pot" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_book_n_rel" ].
+
+kamiseku := irreg-indef-noun-noun-lex &
+  [ STEM < "kamiseku" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_shirt_n_rel" ].
+
+gaum2ku := irreg-indef-noun-noun-lex &
+  [ STEM < "gaum2ku" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_gown_n_rel" ].
 
 ;;; Adjectives
 
+loku := regular-attr-adj-lex &
+  [ STEM < "loku" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_big_a_rel" ].
+
+ek2 := regular-attr-adj-lex &
+  [ STEM < "ek2" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_one_a_rel" ].
+
+rasa := regular-attr-adj-lex &
+  [ STEM < "rasa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_delicious_a_rel" ].
+
+alut := regular-attr-adj-lex &
+  [ STEM < "alut" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_new_a_rel" ].
+
+sam2har2 := regular-attr-adj-lex &
+  [ STEM < "sam2har2" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_some_a_rel" ].
+
+dek2 := cardinal-except-attr-adj-lex &
+  [ STEM < "dek2" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_two_a_rel" ].
+
 ;;; Verbs
 
-ka := transitive-verb-verb-lex &
+ka_1 := transitive-verb-verb-lex &
   [ STEM < "ka" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
-gatta := transitive-verb-verb-lex &
-  [ STEM < "gatta" >,
+gan := transitive-verb-verb-lex &
+  [ STEM < "gan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_buy_v_rel" ].
 
-kan2wa := transitive-verb-verb-lex &
-  [ STEM < "kan2wa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
-
-atee := transitive-verb-verb-lex &
-  [ STEM < "atee" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_lies_v_rel" ].
-
-gann2wa := transitive-verb-verb-lex &
-  [ STEM < "gann2wa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_buy_v_rel" ].
+bal2 := transitive-verb-verb-lex &
+  [ STEM < "bal2" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_watch_v_rel" ].
 
 ya := intransitive-verb-verb-lex &
   [ STEM < "ya" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
 
-yanne := intransitive-verb-verb-lex &
-  [ STEM < "yanne" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
+ka_2 := intransitive-verb-verb-lex &
+  [ STEM < "ka" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
+
+e := intransitive-verb-verb-lex &
+  [ STEM < "e" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_e_v_rel" ].
+
+gili := intransitive-verb-verb-lex &
+  [ STEM < "gili" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_devour_v_rel" ].
 
 æhen2wa := transitive-verb-dative-subject-verb-lex &
   [ STEM < "æhen2wa" >,
@@ -112,6 +180,34 @@ yanne := intransitive-verb-verb-lex &
 kæduna := transitive-verb-dative-subject-verb-lex &
   [ STEM < "kæduna" >,
     SYNSEM.LKEYS.KEYREL.PRED "_break_v_rel" ].
+
+gatta := irreg-trans-pst-verb-verb-lex &
+  [ STEM < "gatta" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_buy_v_rel" ].
+
+dunna := irreg-trans-pst-verb-verb-lex &
+  [ STEM < "dunna" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_give_v_rel" ].
+
+sudd2k2laa := irreg-trans-pst-verb-verb-lex &
+  [ STEM < "sudd2k2laa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_clean_v_rel" ].
+
+gihilla := irreg-trans-ptcp-verb-verb-lex &
+  [ STEM < "gihilla" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
+
+ara4 := irreg-trans-pp-verb-verb-lex &
+  [ STEM < "ara4" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_buy_v_rel" ].
+
+næ1una := irreg-intrans-pst-verb-verb-lex &
+  [ STEM < "næ1una" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dance_v_rel" ].
+
+diwwa := irreg-intrans-pst-verb-verb-lex &
+  [ STEM < "diwwa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_run_v_rel" ].
 
 kohed2 := where-interrogative-verb-lex &
   [ STEM < "kohed2" >,
@@ -128,10 +224,22 @@ kaud2 := who-interrogative-verb-lex &
                                     [ ],
                                     [ PRED "_thing_n_rel" ] > ] ].
 
+;;; Auxiliaries
+
+nææ := neg-aux-lex &
+  [ STEM < "nææ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
+
+tien2wa := perf-part-aux-aux-lex &
+  [ STEM < "tien2wa" > ].
+
+daan2wa := future-aux-aux-lex &
+  [ STEM < "daan2wa" > ].
+
 ;;; Determiners
 
-sem2harak := quantifier-determiner-lex &
-  [ STEM < "sem2harak" >,
+sam2harak := quantifier-determiner-lex &
+  [ STEM < "sam2harak" >,
     SYNSEM.LKEYS.KEYREL.PRED "_some_q_rel" ].
 
 keep2yak := quantifier-determiner-lex &
@@ -139,3 +247,8 @@ keep2yak := quantifier-determiner-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_several_q_rel" ].
 
 ;;; Adverbs
+
+saha2 := conj-lex &
+  [ STEM < "saha" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
+    CFORM "2" ].

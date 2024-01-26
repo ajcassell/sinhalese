@@ -1,1 +1,50 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
+n1-bottom :=
+  %suffix (* i)
+  n1-bottom-coord-rule.
+
+n1-left :=
+  %suffix (* i)
+  n1-left-coord-rule.
+
+;;; Inflecting Lexical Rule Instances
+
+indefinite-rule-suffix1 :=
+%suffix (* -ak)
+indefinite-rule-lex-rule.
+
+indefinite-rule-suffix2 :=
+%suffix (* -ek)
+indefinite-rule-lex-rule.
+
+dative-rule-suffix :=
+%suffix (* -12)
+dative-rule-lex-rule.
+
+accusative-rule-suffix :=
+%suffix (* -w2)
+accusative-rule-lex-rule.
+
+genitive-rule-suffix1 :=
+%suffix (* -ee)
+genitive-rule-lex-rule.
+
+genitive-rule-suffix2 :=
+%suffix (* -ge)
+genitive-rule-lex-rule.
+
+nominative-pronoun-rule-suffix :=
+%suffix (* -m2)
+nominative-pronoun-rule-lex-rule.
+
+pl-pronoun-suffix :=
+%suffix (* -la)
+pl-pronoun-lex-rule.
+
+npt-suffix :=
+%suffix (* -n2wa)
+npt-lex-rule.
+
+perf-part-rule-suffix :=
+%suffix (* -laa)
+perf-part-rule-lex-rule.

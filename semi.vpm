@@ -56,9 +56,13 @@ PNG.GEND : PNG.GEND
   * <> *
 
 E.TENSE : E.TENSE
+  nonpast <> nonpast
+  past <> past
   * <> *
 
 E.ASPECT : E.ASPECT
+  Perfective <> Perfective
+  Completive <> Completive
   * <> *
 
 E.MOOD : E.MOOD

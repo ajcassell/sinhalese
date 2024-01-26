@@ -4,10 +4,275 @@ Sinhala/Sinhalese Grammar
 January 26, 2024
 Melody Bechler, Alexandra Cassell
 
-Curly t is same as t with dot under it
-New letter curly n is 4
+Our language has several non-ASCII characters. We have assigned numbers to these characters as
+follows: ṭ = ʈ = 1, ə = 2, ɖ = 3. In this lab, we are adding ŋ = 4.
+
+------
 
 Source c puts a y before clitic i for conjunctive coordination, but I am following source a
 
+--------
 
-# go back and look at pronoun cases - or .
+Please note the source, vetted, and phenomena fields have been left out of the provided examples below
+for the sole purpose of space. They remain in the testsuite file. Also, the example numbers match those in
+the testsuite.
+
+1./2.
+Below are descriptions of the phenomena seen in Sinhala. These include sentential negation, agreement,
+coordination, agreement in coordinated NPs, attributive predicates, and non-verbal predicates.
+
+Negation in Sinhala can be expressed in two forms. There is a verbal negator (`nææ`) and a focus negator
+(`newei`). Both immediately follow whatever predicate is to be negated. nææ can only be used for
+sentential negation whereas newei can be used for constituent negation as well.
+nææ requires the verb it is negating to be marked with the suffix -e, bringing it to the FOCUS aspect
+whereas newei occurs at the end of a focused constituent/predicate negating that constituent's/predicate's
+focus. In example 9, nææ negates the act of the dog drinking and requires the drink verb
+to be in focus. nææ could be replaced by newei in this example and remain grammatical.
+However, 4 and 13 show that only newei can be used in nominal predicates.
+Lastly, 14 shows that the negator must be directly after the verb for sentential
+negation and cannot appear elsewhere in the sentence.
+
+# 9 nææ verbal negator
+Judgement: g
+balla bonne nææ
+balla bo-nne nææ
+dog drink-NPT.FOC no
+`The dog does not drink`
+
+# 4 newei focus negator
+Judgement: g
+eyaa guruw2r2yek newei
+eyaa guruw2r2y-ek newei
+he teacher-INDF not
+`He is not a teacher`
+
+# 13 nææ verbal negator
+Judgement: u
+eyaa guruw2r2yek nææ
+eyaa guruw2r2y-ek nææ
+he teacher-INDF not
+`He is not a teacher`
+
+# 14 newei focus negator, wrong position
+Judgement: u
+eyaa newei guruw2r2yek
+eyaa newei guruw2r2y-ek
+he not teacher-INDF
+`He is not a teacher`
+
+In the customization system, we implemented newei as an independent
+adverb that appears after/modifies a VP, and nææ as a negative auxiliary
+verb because it appears in the same position as other auxiliary verbs
+and has a morphological effect on the verb by requiring it be in
+FOCUS with -e suffix.
+
+Sinhala does not show agreement in most item pairs. The verbs do not
+show number, person, or gender agreements with the subject except for
+the case of second person agreement with imperatives, but that is not
+covered here. The subject-verb agreement is only influenced by pragmatics
+like imperative phrases and this is not the case in literary Sinhala,
+only in colloquial Sinhala which is our focus.
+
+The following information is regarding what we thought was agreement between
+verbs and their subjects/objects/agents but upon further explanation,
+this is really just a matter of case constraints. Since they were
+missed in the previous lab, we include the discussion here.
+
+As mentioned ini the previous lab, Sinhala has a total of six cases:
+nominative, accusative, dative, genitive/locative, instrumental,
+and vocative. The distribution of these cases on a noun
+depends heavily on animacy. In spoken Sinhala, inanimate nouns
+can be nominative, genitive, dative, and instrumental. Animate nouns
+can be all 6 cases. There is some "agreement" for lack of a better
+word between verbs and S/A/O depending on the inherent volitility of a verb.
+This is a natural feature of different verbs, not a result of inflection.
+Essentially, involitive verbs correspond to involuntary - events without
+active agent participation.
+
+V without specification of volitivity means that either can apply.
+
+The following are constraints on S cases depending on the S animacy and the V volitivity:
+S.INAM.NOM V
+S.ANIM.NOM V.VOL
+S.ANIM.ACC V.INVOL
+S.ANIM.DAT V.INVOL
+(S.ANIM.NOM V.INVOL) - default NOM if ACC marker is dropped.
+
+The following are constraints on A cases depending on the A animacy and the V volitivity:
+A.INAM.NOM
+A.ANIM.NOM V.VOL
+A.ANIM.DAT V.INVOL (generally examples of cognition or sensation)
+
+The following are constraints on O cases depending on the O animacy and definiteness.
+The verb's involitivity is irrelevant here:
+O.INAM.NOM V
+O.ANIM.NOM-INDF V
+O.ANIM.ACC-INDF V
+O.ANIM.ACC V
+O.DAT V - occurs for specific lexically defined verbs
+
+In the testsuite under `### Case Constraints between SOV/AV`,
+there are 28 grammatical and ungrammatical examples covering every combination
+of animacy, case, and volitivity values. Some obvious examples have
+been covered in the Case section of lab 2.
+6 and 7 show the two variations of the verb `run` wherein the first
+example, the subject I is active in the running, whereas the interpretation
+for 7 suggests that the subject I is forced to run because of something.
+Both can take an animate subject, but the first is ungrammatical
+because the subject is non-nominative.
+
+# 6 SV animate non-nominative subject, volitive verb
+Judgement: u
+ma12 diuwa
+ma12 diuw-a
+1SG.DAT run-PST
+`I ran`
+
+# 7 SV animate accusative subject, involitive verb
+Judgement: g
+maaw2 diuna
+maaw2 diun-a
+1SG.ACC run.INVOL-PST
+`I ran` # involuntarily/something made me run
+
+Similarly 14 shows that the inanimate agent for an involitive verb
+cannot be dative.
+
+# 14 AV inanimate dative subject, involitive verb
+Judgement: u
+ka3eet2 æhen2wa
+ka3ee-12 æhe-n2wa
+shop-DAT hear.INVOL-IMPF
+`The shop hears`
+
+Finally a grammatical example of an animate nominative and indefinite object is:
+# 23 OV animate nominative indefinite object, volitive verb
+Judgement: g
+balla eluvek kan2wa
+balla eluv-ek ka-n2wa
+dog.NOM goat.SG.NOM-INDF eat-IND
+`The dog eats a goat`
+
+Back to agreement in other forms as requested, Sinhala shows
+no agreement between determiners and nouns. So far, we have only
+included non-numeral quantifiers as our determiners from lab2 and these
+do not have case, person, or gender agreement. Also, by nature these
+quantifiers representing `some/several/a few` quantify plural nouns only
+so they do not show any inflection between a singular and plural form
+depending on the noun.
+
+With respect to adjectives, they can show agreement in case with their
+associated NP. Otherwise, they do not inflect for number, gender, or
+definiteness. The gender distinction of feminine and masculine (not animacy)
+only affects singular suffixes on nouns.
+
+The following examples show that there is no gender inflection on the `tall` adjective.
+
+# 1 animate masculine
+Judgement: g
+us2 ekaa aawa
+us2 ekaa aawa
+tall one.ANIM came
+`The tall one came`
+
+# 2 animate female
+Judgement: g
+us2 ekii aawa
+us2 ek-ii aawa
+tall one-ANIM.FEM came
+`The tall one came`
+
+In the customization system, we therefore did not need to add
+any agreement constraints in our lexical rule/types. Instead,
+we added the many case constraints outlined into the ....
+
+Our lexical entries for nouns fall under two noun classes for
+animacy and inanimacy.
+
+
+-----
+COORDINATION
+
+Sinhala has multiple ways to express coordination.
+First, there is collateral coordination which is essentially
+linking together similar clauses that all share a constituent.
+For example, the following example shows one subject for
+three verb phrases.
+
+# 1 Collateral coordination - phrases with shared missing piece (i.e subject dog)
+Judgement: g
+balla ged2r2 en2wa bat kan2wa 1iiwee bal2n2wa
+balla ged2r2 e-n2wa bat ka-n2wa 1iiwee bal2-n2wa
+dog home come-IND rice eat-IND TV watch-IND
+`The dog comes home, has a meal and watches TV`
+
+The second type is conjunctive coordination which involves the clitic -i (or sometimes
+-t) added as suffixes to the units of coordination. Example 2 shows this clitic
+on three NPs whereas example 3 only shows 2, making it ungrammatical because all
+units must contain the clitic. This can also be used to coordinate more detailed
+NPs such as in #6 where the clitic is on the direct object i.e. "shirt" ("for the dog").
+
+# 2 Conjunctive coordination - clitic -i affixed to units of coordination
+Judgement: g
+guruw2rui demaupiyoi lam2inui paar2 sudd2 k2laa
+guruw2ru-i demaupiyo-i lam2inu-i paar2 sudd2 k2laa
+teachers-CONJ parents-CONJ children-CONJ road clean.PST
+`The teachers, parents and children cleaned the road`
+
+# 3 Conjunctive coordination - clitic -i affixed to units of coordination
+Judgement: u
+guruw2ru demaupiyoi lam2inui paar2 sudd2 k2laa
+guruw2ru demaupiyo-i lam2inu-i paar2 sudd2 k2laa
+teachers parents-CONJ children-CONJ road clean.PST
+`The teachers, parents and children cleaned the road`
+
+# 6 Conjunctive coordination - clitic -i affixed to units of coordination
+Judgement: g
+amma balla12 kamisekui balla12 gaum2kui ara4 dunna
+amma balla-12 kamiseku-i balla-12 gaum2ku-i ara4 dunna
+mother dog-DAT shirt.INDF-CONJ dog-DAT gown.INDF-CONJ buy.PP give.PST
+`Mother bought a shirt for the dog and a gown for the dog`
+
+Sinhala also has a noun-coordinating constituent `saha`. This can only be used
+to coordinate nouns, making example #9 ungrammatical.
+
+# 8 Conjunctive coordination - saha noun-coordinator
+Judgement: g
+mam2 bat saha amma bat kan2wa
+mam2 bat saha amma bat ka-n2wa
+1SG.NOM rice.NOM and mother rice.NOM eat-IND
+`I eat rice and mother eats rice`
+
+# 9 Conjunctive coordination - saha cannot coordinate clauses
+Judgement: u
+mam2 bat kan2wa saha amma bat kan2wa
+mam2 bat ka-n2wa saha amma bat ka-n2wa
+1SG.NOM rice.NOM eat-IND and mother rice.NOM eat-IND
+`I eat rice and mother eats rice`
+
+Lastly, we have participle coordination for series of verb events.
+In participle coordination, the final event in the series is form PST and
+all of the preceding events are past participles, like in #10.
+#12 is ungrammatical because the first event is not a past participle.
+
+# 10 Participle coordination
+Judgement: g
+mam2 ged2r2 gihilla kææm2 kææwa
+mam2 ged2r2 gihilla kææm2 kææwa
+1SG.NOM house.ACC go.PST.PTCP food.ACC eat.PST
+`I went home and ate`
+
+# 12 Participle coordination
+Judgement: u
+balla ged2r2 yan2wa, mam2 kææm2 kææwa
+balla ged2r2 ya-n2-wa, mam2 kææm2 kææwa
+dog.NOM house.ACC go-NPT-IND, 1SG.NOM food.ACC eat.PST
+`The dog went home and I ate`
+
+.....
+
+Morphology
+
+....
+
+Lastly, these are some notes in response to comments from Lab 2

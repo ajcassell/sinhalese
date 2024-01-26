@@ -1,4 +1,8 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
+head-adj := head-adj-int-phrase.
+
+adj-head := adj-head-int-phrase.
+
 head-comp := head-comp-phrase.
 
 head-subj := head-subj-phrase.
@@ -14,3 +18,23 @@ comp-head-2 := comp-head-phrase-2.
 head-spec := head-spec-phrase.
 
 bare-np := bare-np-phrase.
+
+n1-top-coord := n1-top-coord-rule.
+
+n1-mid-coord := n1-mid-coord-rule.
+
+n2-top-coord := n2-top-coord-rule.
+
+n2-bottom-coord := n2-bottom-coord-rule.
+
+np2-top-coord := np2-top-coord-rule.
+
+np2-bottom-coord := np2-bottom-coord-rule.
+
+n3-top-coord := n3-top-coord-rule.
+
+n3-bottom-coord := n3-bottom-coord-rule.
+
+np3-top-coord := np3-top-coord-rule.
+
+np3-bottom-coord := np3-bottom-coord-rule.
