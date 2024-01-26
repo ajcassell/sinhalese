@@ -125,6 +125,14 @@ gaum2ku := irreg-indef-noun-noun-lex &
   [ STEM < "gaum2ku" >,
     SYNSEM.LKEYS.KEYREL.PRED "_gown_n_rel" ].
 
+oyaala := 2pl-pronoun-noun-lex &
+  [ STEM < "oyaala" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_youall_n_rel" ].
+
+eyaala := 3pl-pronoun-noun-lex &
+  [ STEM < "eyaala" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_they_n_rel" ].
+
 ;;; Adjectives
 
 loku := regular-attr-adj-lex &
@@ -244,6 +252,10 @@ keep2yak := quantifier-determiner-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_several_q_rel" ].
 
 ;;; Adverbs
+
+newei := neg-adv-lex &
+  [ STEM < "newei" >,
+    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
 
 saha2 := conj-lex &
   [ STEM < "saha" >,

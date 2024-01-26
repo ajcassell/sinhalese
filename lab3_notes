@@ -364,57 +364,12 @@ Rules for any other affixes that are required so you get fully inflected forms
 
 -----------------------
 
-**** TO DO: LEXICON ***** update the lexicon to have only stem forms!
-
-Stem forms (rather than full forms) for any words where this is relevant
-Auxiliaries, if necessary
-Additional nouns/verbs if you have expanded the vocabulary in your testsuite
-Adjectives
+finite/past-part
+past-part for 59 subj-head
 
 
-- Things to mention:
-- removed "question" verbs for now
-- VPs asyndeton and then update TDL later
-- did not make a rule for single nouns because agreement doesn't matter
-- we put two aux, not neg, possible to become NPT/IND - think these are supposed to be handled differently but didn't get to that
 
-- made neg aux force VP comp to have focus form, NPT, and finite
-- made other two aux force PP on verb
-
-- made a rule for plural pronouns
-
-- Questions to write:
-- how to deal with vowel endings that require another letter
-such as guruw2r2y - y for before another vowel
-- participle coordination in system?
-- didn't get to FOC part, wth -nne suffix
-- Indicative is a mood - should we add that?
-
-- made past-part nonfinite form subtype (removed from tense section)
-
-
-- coordination - in -i
-sadd2yak - indf acc
-pot2 / pot-ak??
-
-
-Auxiliaries select for verbs in specific inflected forms
-Other features - make other nonfinite forms
-Add an auxiliary - make complement feature have form of whatever I made above ^
-Then need to make the morph rules be finite for other verbs so that aux cannot combine with them?
-
-Should see N ADJ to become NOM
-
-Might not yet be in the matrix system yet to require a certain tense on the verb complement of the negation adverb (do it in TDL editing later)
-- CAN do it with auxiliaries though
-
-Need long skinny trees to go through each of the position classes
-
-Mention where genders are marked, if not in the 3sg pronoun
-Explain the affixes for definiteness
-
-
-QUESTIONS!
+QUESTIONS! (answered)
 
 1. For the negative auxiliary verb, the examples are
 "can" and "be" for contributing an independent predicate (with semantics) or

@@ -2,11 +2,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Sinhalese
 ;;; created at:
-;;;     Fri Jan 26 06:31:52 UTC 2024
+;;;     Fri Jan 26 22:46:43 UTC 2024
 ;;; based on Matrix customization system version of:
 ;;;     Fri 27 Oct 2023 04:16:13 PM UTC
 ;;;
-;;;
+;;; 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Type assigning empty mod list. Added to basic types for nouns, verbs and determiners.
@@ -104,7 +104,7 @@ dat := case.  ; dative
 form := *top*.
 nonfinite := form.
 finite := form.
-past-part := nonfinite.
+past-part := finite.
 
 ;;; Tense
 
@@ -136,7 +136,7 @@ no-spr-noun-lex := noun-lex &
 ; Nouns which cannot take specifiers mark their SPR requirement
 ; as OPT +.  Making the non-head daughter OPT - in this rule
 ; keeps such nouns out.
-;
+; 
 ; Rules for building NPs.  Note that the Matrix uses SPR for
 ; the specifier of nouns and SUBJ for the subject (specifier) of verbs.
 
@@ -184,13 +184,25 @@ irreg-plural-noun-noun-lex := common-noun-noun-lex &
 irreg-indef-noun-noun-lex := noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.DEF - ].
 
+2pl-pronoun-noun-lex := pl-pronoun-noun-lex &
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG.PER 2nd ] ].
+
+3pl-pronoun-noun-lex := pl-pronoun-noun-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
+
 ;;; Verbs
 
-verb-lex := non-mod-lex-item &
-  [ SYNSEM [ LOCAL.CAT.HEAD verb,
-             L-QUE - ] ].
+; verb-lex is HC-LIGHT - to allow us to pick out
+; 
+;   lexical Vs for V-level attachment of negative adverbs.
 
-main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & npt-ind-pc-rule-dtr & perf-part-pc-rule-dtr &
+verb-lex := non-mod-lex-item &
+  [ SYNSEM [ L-QUE -,
+             LOCAL.CAT [ HEAD verb,
+                         HC-LIGHT - ] ] ].
+
+main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & npt-ind-pc-rule-dtr & past-part-pc-rule-dtr &
   [ SYNSEM [ L-QUE -,
              LOCAL [ CAT [ HEAD.AUX -,
                            VAL [ SPEC < >,
@@ -339,17 +351,32 @@ quantifier-determiner-lex := determiner-lex & no-icons-lex-item &
 
 ;;; Adverbs
 
+; Type for negative adverbs.
+; 
+; This adverb should go through a specialized phrase structure rule
+;                           included with this grammar.
+
+neg-adv-lex := basic-scopal-adverb-lex &
+  [ SYNSEM.LOCAL.CAT [ VAL [ SPR < >,
+                             COMPS < >,
+                             SUBJ < >,
+                             SPEC < > ],
+                       POSTHEAD +,
+                       HEAD.MOD < [ LOCAL.CAT [ HEAD verb,
+                                                VAL [ SUBJ cons,
+                                                      COMPS null ] ] ] > ] ].
+
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules
 ;;;;;;;;;;;;;;;;;;;
 
 ;;; Intermediate rule types
 
-plural-pc-rule-dtr := word-or-lexrule.
-perf-part-pc-rule-dtr := word-or-lexrule.
 indefiniteness-pc-rule-dtr := word-or-lexrule.
-case-pc-rule-dtr := word-or-lexrule.
 npt-ind-pc-rule-dtr := word-or-lexrule.
+plural-pc-rule-dtr := word-or-lexrule.
+case-pc-rule-dtr := word-or-lexrule.
+past-part-pc-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
@@ -381,7 +408,7 @@ plural-pc-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR plural-pc-rule-dtr ].
 
 pl-pronoun-lex-rule := plural-pc-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM singular ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM plural ].
 
 npt-ind-pc-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR npt-ind-pc-rule-dtr ].
@@ -390,10 +417,10 @@ npt-ind-lex-rule := npt-ind-pc-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
                    CAT.HEAD.FORM finite ] ].
 
-perf-part-pc-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR perf-part-pc-rule-dtr ].
+past-part-pc-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ DTR past-part-pc-rule-dtr ].
 
-past-part-rule-lex-rule := perf-part-pc-lex-rule-super &
+past-part-rule-lex-rule := past-part-pc-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.HEAD.FORM past-part ].
 
 ;;;;;;;;;;;;;;;;;;;

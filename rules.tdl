@@ -3,6 +3,15 @@ head-adj := head-adj-int-phrase.
 
 adj-head := adj-head-int-phrase.
 
+adj-head-scop := adj-head-scop-phrase.
+
+; Rule instances for head-modifier structures. Corresponding types
+; are defined in matrix.tdl.  The matrix customization script did
+; not need to add any further constraints, so no corresponding types
+; appear in sinhalese.tdl
+
+head-adj-scop := head-adj-scop-phrase.
+
 head-comp := head-comp-phrase.
 
 head-subj := head-subj-phrase.
