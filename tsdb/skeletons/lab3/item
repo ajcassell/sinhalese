@@ -4,101 +4,114 @@
 4@author@@@1@wo,tam,c@bat kan2wa balla@@@@1@3@rice.NOM eat-IND dog.NOM`The dog eats the rice`@alexandra cassell, melody bechler@january 15, 2024
 5@author@@@1@wo,tam,c@kan2wa bat balla@@@@1@3@eat-IND rice.NOM dog.NOM`The dog eats the rice`@alexandra cassell, melody bechler@january 15, 2024
 6@author@@@1@wo,tam,c@kan2wa balla bat@@@@1@3@eat-IND dog.NOM rice.NOM`The dog eats the rice`@alexandra cassell, melody bechler@january 15, 2024
-7@author@@@1@tam,c@balla bat kalaa tien2wa@@@@1@4@dog.NOM rice.NOM eat-PP has`The dog has eaten the rice`@alexandra cassell, melody bechler@january 15, 2024
-8@author@@@1@wo@balla bat tien2wa kalaa@@@@0@4@dog.NOM rice.NOM has eat-PP`The dog has eaten the rice`@alexandra cassell, melody bechler@january 15, 2024
-9@author@@@1@pn,c,tam@api bat kan2wa@@@@1@3@We rice.NOM eat-IND`We eat rice`@alexandra cassell, melody bechler@january 15, 2024
-10@author@@@1@pn,c,tam@mam2 bat kan2wa@@@@1@3@I rice.NOM eat-IND`I eat rice`@alexandra cassell, melody bechler@january 15, 2024
+7@author@@@1@tam,c@balla bat kalaa tien2wa@@@@1@4@dog.NOM rice.NOM eat-PP be-IND`The dog has eaten the rice`@alexandra cassell, melody bechler@january 15, 2024
+8@author@@@1@wo@balla bat tien2wa kalaa@@@@0@4@dog.NOM rice.NOM be-IND eat-PP`The dog has eaten the rice`@alexandra cassell, melody bechler@january 15, 2024
+9@author@@@1@pn,c,tam@api bat kan2wa@@@@1@3@1PL.NOM rice.NOM eat-IND`We eat rice`@alexandra cassell, melody bechler@january 15, 2024
+10@author@@@1@pn,c,tam@mam2 bat kan2wa@@@@1@3@1SG-NOM rice.NOM eat-IND`I eat rice`@alexandra cassell, melody bechler@january 15, 2024
 11@author@@@1@pn,c,tam@eyaa bat kan2wa@@@@1@3@She/he/it rice.NOM eat-IND`She/he/it eats rice`@alexandra cassell, melody bechler@january 15, 2024
-12@author@@@1@pn,c,tam@eyaala bat kan2wa@@@@1@3@They.3-PL rice.NOM eat-IND`They eat rice`@alexandra cassell, melody bechler@january 15, 2024
-13@author@@@1@pn,c,tam@oyaa bat kan2wa@@@@1@3@You rice.NOM eat-IND`You eat rice`@alexandra cassell, melody bechler@january 15, 2024
-14@author@@@1@pn,c,tam@oyaala bat kan2wa@@@@1@3@You.2-PL rice.NOM eat-IND`You (all) eat rice`@alexandra cassell, melody bechler@january 15, 2024
-15@author@@@1@pn,tam,c@mam2 bat kan2wa@@@@1@3@I.1sg-NOM rice.NOM eat-IND`I eat rice`@alexandra cassell, melody bechler@january 15, 2024
-16@author@@@1@pn,tam,c@maaw2 bat kan2wa@@@@1@3@I.1sg-ACC rice.NOM eat-IND`I eat rice`@alexandra cassell, melody bechler@january 15, 2024
-17@author@@@1@pn,tam,c@mam2 ma12 pot2 gatta@@@@1@4@I.1sg-NOM I.1sg-DAT book.NOM buy.PST`I bought the book for me`@alexandra cassell, melody bechler@january 15, 2024
-18@author@@@1@pn,tam,c@mam2 maaw2 pot2 gatta@@@@1@4@I.1sg-NOM I.1sg-ACC book.NOM buy.PST`I bought the book for me`@alexandra cassell, melody bechler@january 15, 2024
+12@author@@@1@pn,c,tam@eyaala bat kan2wa@@@@1@3@3.NOM-PL rice.NOM eat-IND`They eat rice`@alexandra cassell, melody bechler@january 15, 2024
+13@author@@@1@pn,c,tam@oyaa bat kan2wa@@@@1@3@2SG.NOM rice.NOM eat-IND`You eat rice`@alexandra cassell, melody bechler@january 15, 2024
+14@author@@@1@pn,c,tam@oyaala bat kan2wa@@@@1@3@2.NOM-PL rice.NOM eat-IND`You (all) eat rice`@alexandra cassell, melody bechler@january 15, 2024
+15@author@@@1@pn,tam,c@mam2 bat kan2wa@@@@1@3@1SG-NOM rice.NOM eat-IND`I eat rice`@alexandra cassell, melody bechler@january 15, 2024
+16@author@@@1@pn,tam,c@maaw2 bat kan2wa@@@@1@3@1SG-ACC rice.NOM eat-IND`I eat rice`@alexandra cassell, melody bechler@january 15, 2024
+17@author@@@1@pn,tam,c@mam2 ma12 pot2 gatta@@@@1@4@1SG-NOM 1SG-DAT book.NOM buy.PST`I bought the book for me`@alexandra cassell, melody bechler@january 15, 2024
+18@author@@@1@pn,tam,c@mam2 maaw2 pot2 gatta@@@@1@4@1SG-NOM 1SG-ACC book.NOM buy.PST`I bought the book for me`@alexandra cassell, melody bechler@january 15, 2024
 19@author@@@1@c,tam@balla batw2 kan2wa@@@@1@3@dog.NOM rice-ACC eat-IND`The dog eats rice`@alexandra cassell, melody bechler@january 15, 2024
 20@author@@@1@c,tam@balla bat kan2wa@@@@1@3@dog.NOM rice.NOM eat-IND`The dog eats rice`@alexandra cassell, melody bechler@january 15, 2024
-21@c:73@@@1@c,tam@ma12 sindu æhen2wa@@@@1@3@I.1sg-DAT music.NOM hear.INVOL-IMPF`I hear music`@alexandra cassell, melody bechler@january 15, 2024
-22@author@@@1@c@malbanduna12 sindu æhen2wa@@@@0@3@vase.SG-DAT music.NOM hear.INVOL-IMPF`The vase hears music`@alexandra cassell, melody bechler@january 15, 2024
-23@c:72@@@1@c,tam@malbanduna kæduna@@@@1@2@vase.SG.DEF.NOM break.INVOL-PST`The vase broke`@alexandra cassell, melody bechler@january 15, 2024
-24@c:72@@@1@c@malbandunaw2 kæduna@@@@0@2@vase.SG.DEF-ACC break.INVOL-PST`The vase broke`@alexandra cassell, melody bechler@january 15, 2024
-25@a:103@@@1@c,tam@war2d2 mage atee@@@@1@3@fault I-GEN hand-LOC`The fault lies with me`@alexandra cassell, melody bechler@january 15, 2024
-26@author@@@1@c@war2d2 mam2 atee@@@@0@3@fault I-NOM hand-LOC`The fault lies with me`@alexandra cassell, melody bechler@january 15, 2024
-27@author@@@1@c@war2d2 mage atwe@@@@0@3@fault I-GEN hand-LOC`The fault lies with me`@alexandra cassell, melody bechler@january 15, 2024
-28@a:115@@@1@c,tam@api mee ka3en ba3u gann2wa@@@@1@5@we this shop-ABL commodities buy-IND'We buy things from this shop'@alexandra cassell, melody bechler@january 15, 2024
-29@author@@@1@c@api mee ka3eet2 ba3u gann2wa@@@@0@5@we this shop-DAT commodities buy-IND'We buy things from this shop'@alexandra cassell, melody bechler@january 15, 2024
-30@author@@@1@c@api mee ka3gen ba3u gann2wa@@@@0@5@we this shop-GEN commodities buy-IND'We buy things from this shop'@alexandra cassell, melody bechler@january 15, 2024
-31@author@@@1@c,matrixwhquestions,tam@mam2 yanne kohed2@@@@1@3@I.1sg-NOM go-NPT-FOC where-Q`Where do I go?`@alexandra cassell, melody bechler@january 15, 2024
-32@author@@@1@c,matrixwhquestions,tam@balla kohed2@@@@1@2@dog.NOM where-Q`Where is the dog?`@alexandra cassell, melody bechler@january 15, 2024
-33@author@@@1@matrixwhquestions,tam,c@mam2 ka3eet2 yan2wa d2@@@@1@4@I-NOM shop-DAT go-NPT-IND Q`Do I go to the shop?`@alexandra cassell, melody bechler@january 15, 2024
-34@a:12@@@1@matrixwhquestions,tam,c@ka3eet2 yanne kaud2@@@@1@3@shop-DAT go-NPT-FOC who-Q`Who goes to the shop?`@alexandra cassell, melody bechler@january 15, 2024
-35@author@@@1@matrixwhquestions@ka3eet2 yanne kohed2@@@@0@3@shop-DAT go-NPT-FOC where-Q`Where goes to the shop?`@alexandra cassell, melody bechler@january 15, 2024
-36@a:135@@@1@c,matrixwhquestions,tam@bat kanne kaud2@@@@1@3@rice.NOM eat-NPT-FOC who-Q`Who eats rice?`@alexandra cassell, melody bechler@january 15, 2024
-37@a:135@@@1@c,matrixwhquestions,tam@kaud2 bat kanne@@@@1@3@who-Q rice.NOM eat-NPT-FOC`Who eats rice?`@alexandra cassell, melody bechler@january 15, 2024
-38@author@@@1@c,tam@mam2 ka3eet2 yan2wa@@@@1@3@I-NOM shop-DAT go-NPT-IND`I go to the shop`@alexandra cassell, melody bechler@january 15, 2024
-39@author@@@1@c,tam@mam2 ka3eet2 yan2wa@@@@1@3@I-NOM shop-DAT go-NPT-IND`I go to the shop?`@alexandra cassell, melody bechler@january 15, 2024
-40@author@@@1@c,det,tam@mam2 pot keep2yak gatta@@@@1@4@I-NOM book.PL several buy.PST`I bought several books`@alexandra cassell, melody bechler@january 15, 2024
-41@author@@@1@c,det,tam@mam2 pot sam2harak gatta@@@@1@4@I-NOM book.PL some buy.PST`I bought some books`@alexandra cassell, melody bechler@january 15, 2024
-42@author@@@1@c,det,tam@mam2 sam2harak pot gatta@@@@1@4@I-NOM some book.PL buy.PST`I bought some books`@alexandra cassell, melody bechler@january 15, 2024
-43@author@@@1@det@mam2 pot2 sam2harak gatta@@@@0@4@I-NOM book.SG some buy.PST`I bought some book`@alexandra cassell, melody bechler@january 15, 2024
-44@author@@@1@c,tam@balla bat kalaa tien2wa@@@@1@4@dog.NOM rice.NOM eat-PP be-IND`The dog has eaten the rice`@alexandra cassell, melody bechler@january 15, 2024
-45@author@@@1@c,tam@balla bat kalaa daan2wa@@@@1@4@dog.NOM rice.NOM eat-PP daa-IND`The dog will eat the rice completely`@alexandra cassell, melody bechler@january 15, 2024
-46@author@@@1@c,tam@balla bat kan2wa@@@@1@3@dog.NOM rice.NOM eat-NPT-IND`The dog eats rice`@alexandra cassell, melody bechler@january 15, 2024
-47@author@@@1@tam@balla bat kææwa@@@@0@3@dog.NOM rice.NOM eat.PST-IND`The dog ate rice`@alexandra cassell, melody bechler@january 15, 2024
-48@author@@@1@c,tam@balla bat kææwa@@@@1@3@dog.NOM rice.NOM eat.PST`The dog ate rice`@alexandra cassell, melody bechler@january 15, 2024
-49@author # modified from a:13@@@1@c,neg,tam@balla ka3eet2 yanne nææ@@@@1@4@dog.NOM shop-DAT go-NPT-FOC no`The dog does not go to the shop`@alexandra cassell, melody bechler@january 15, 2024
-50@author@@@1@neg@balla ka3eet2 yan2wa nææ@@@@0@4@dog.NOM shop-DAT go-NPT-IND no`The dog does not go to the shop`@alexandra cassell, melody bechler@january 15, 2024
-51@author@@@1@neg@balla ka3eet2 nææ yanne@@@@0@4@dog.NOM shop-DAT no go-NPT-FOC`The dog does not go to the shop`@alexandra cassell, melody bechler@january 15, 2024
-52@a:13@@@1@neg,pn,tam@eyaa guruw2r2yek newei@@@@1@3@he teacher-INDF not`He is not a teacher`@alexandra cassell, melody bechler@january 15, 2024
-53@author@@@1@neg@newei eyaa guruw2r2yek@@@@0@3@not he teacher-INDF`He is not a teacher`@alexandra cassell, melody bechler@january 15, 2024
-54@author # modified from a:13@@@1@c,neg,pn@balla ka3eet2 yan2wa newei@@@@1@4@dog.NOM shop-DAT go-NPT-IND not`The dog is not going to the shop, ...`@alexandra cassell, melody bechler@january 15, 2024
-55@a:13@@@1@neg,tam@miniha kan2wa newei, gilin2wa@@@@1@4@man eat-NPT-IND not devour-IND`The man is not eating, he's devouring`@alexandra cassell, melody bechler@january 15, 2024
-56@author # modified from a:186@@@1@neg,tam@balla piduru kann2t nææ gonaa12 kann2 dennet nææ@@@@1@8@dog hay eat-NPT.FOC-CONJ no bull-DAT eat-INF give-NPT.FOC-CONJ no`The dog neither eats hay nor allows the bull to eat it`@alexandra cassell, melody bechler@january 15, 2024
-57@author # modified from a:13@@@1@neg,tam@balla bonne nææ@@@@1@3@dog drink-NPT.FOC no`The dog does not drink`@alexandra cassell, melody bechler@january 15, 2024
-58@author # modified from a:223@@@1@neg,tam@balla wiiduru2 binde nææ@@@@1@4@dog glass break.PST.FOC no`The dog did not break the glass`@alexandra cassell, melody bechler@january 15, 2024
-59@author # modified from a:223@@@1@neg,tam@mee pot2 itihaase gaen2 newei@@@@1@5@this book history about no`This book is not about history`@alexandra cassell, melody bechler@january 15, 2024
-60@author # modified from a:223@@@1@neg@mee pot2 itihaase gaen2 nææ@@@@0@5@this book history about no`This book is not about history`@alexandra cassell, melody bechler@january 15, 2024
-61@author@@@1@neg@eyaa guruw2r2yek nææ@@@@0@3@he teacher-INDF not`He is not a teacher`@alexandra cassell, melody bechler@january 15, 2024
-62@author@@@1@neg@eyaa newei guruw2r2yek@@@@0@3@he not teacher-INDF`He is not a teacher`@alexandra cassell, melody bechler@january 15, 2024
-63@author # modified from a:181@@@1@crd,tam@balla ged2r2 en2wa bat kan2wa 1iiwee bal2n2wa@@@@1@7@dog home come-IND rice eat-IND TV watch-IND`The dog comes home, has a meal and watches TV`@alexandra cassell, melody bechler@january 15, 2024
-64@a:183@@@1@crd,tam@guruw2rui demaupiyoi lam2inui paar2 sudd2k2laa@@@@1@5@teachers-CONJ parents-CONJ children-CONJ road clean.PST`The teachers, parents and children cleaned the road`@alexandra cassell, melody bechler@january 15, 2024
-65@author, missing clitic on first argument@@@1@crd@guruw2ru demaupiyoi lam2inui paar2 sudd2k2laa@@@@0@5@teachers parents-CONJ children-CONJ road clean.PST`The teachers, parents and children cleaned the road`@alexandra cassell, melody bechler@january 15, 2024
-66@author, missing clitic on second argument@@@1@crd@guruw2rui demaupiyo lam2inui paar2 sudd2k2laa@@@@0@5@teachers-CONJ parents children-CONJ road clean.PST`The teachers, parents and children cleaned the road`@alexandra cassell, melody bechler@january 15, 2024
-67@author, missing clitic on third argument@@@1@crd@guruw2rui demaupiyoi lam2inu paar2 sudd2k2laa@@@@0@5@teachers-CONJ parents-CONJ children road clean.PST`The teachers, parents and children cleaned the road`@alexandra cassell, melody bechler@january 15, 2024
-68@author # modified from a:183@@@1@c,crd,tam@amma balla12 kamisekui balla12 gaum2kui ara4 dunna@@@@1@7@mother dog-DAT shirt.INDF-CONJ dog-DAT gown.INDF-CONJ buy.PP give.PST`Mother bought a shirt for the dog and a gown for the dog`@alexandra cassell, melody bechler@january 15, 2024
-69@author # modified from a:183@@@1@crd@amma balla12 kamisekui balla12 gaum2ku ara4 dunna@@@@0@7@mother dog-DAT shirt.INDF-CONJ dog-DAT gown.INDF buy.PP give.PST`Mother bought a shirt for the dog and a gown for the dog`@alexandra cassell, melody bechler@january 15, 2024
-70@author # based on a:182@@@1@c,crd,tam@mam2 bat saha amma bat kan2wa@@@@1@6@1SG.NOM rice.NOM and mother rice.NOM eat-IND`I and mother eat rice`@alexandra cassell, melody bechler@january 15, 2024
-71@author # based on a:182@@@1@crd@mam2 bat kan2wa saha amma bat kan2wa@@@@0@7@1SG.NOM rice.NOM eat-IND and mother rice.NOM eat-IND`I eat rice and mother eats rice`@alexandra cassell, melody bechler@january 15, 2024
-72@b:84@@@1@c,crd,pn,tam@mam2 ged2r2 gihilla kææm2 kææwa@@@@1@5@1SG.NOM house.ACC go.PST.PTCP food.ACC eat.PST`I went home and ate`@alexandra cassell, melody bechler@january 15, 2024
-73@author # modified from b:85@@@1@c,crd,pn,tam@balla ged2r2 gihilla, mam2 kææm2 kææwa@@@@1@6@dog.NOM house.ACC go.PST.PTCP, 1SG.NOM food.ACC eat.PST`The dog went home and I ate`@alexandra cassell, melody bechler@january 15, 2024
-74@author # modified from b:85@@@1@crd@balla ged2r2 yan2wa, mam2 kææm2 kææwa@@@@0@6@dog.NOM house.ACC go-NPT-IND, 1SG.NOM food.ACC eat.PST`The dog went home and I ate`@alexandra cassell, melody bechler@january 15, 2024
-75@author # modified from b:84@@@1@crd@mam2 balla ged2r2 gihilla kææm2 kææwa@@@@0@6@1SG.NOM dog.NOM house.ACC go.PST.PTCP food.ACC eat.PST`The dog went home and I ate`@alexandra cassell, melody bechler@january 15, 2024
-76@b:84@@@1@crd@mam2 ma12 sadd2yak aehila diwwa@@@@0@5@1SG.NOM 1SG.DAT noise.INDF.ACC hear.INV.PST.PTCP run.PST`I heard a sound and ran`@alexandra cassell, melody bechler@january 15, 2024
-77@author@@@1@agr,c,tam@pot2 diwwa@@@@1@2@book.NOM run-PST`The book ran`@alexandra cassell, melody bechler@january 15, 2024
-78@author@@@1@agr,c,tam@pot2 diuna@@@@1@2@book.NOM run.INVOL-PST`The book ran`@alexandra cassell, melody bechler@january 15, 2024
-79@author@@@1@agr@pot2 diuna@@@@0@2@book.ACC run.INVOL-PST`The book ran`@alexandra cassell, melody bechler@january 15, 2024
-80@c:71@@@1@agr,pn,c,tam@ma4 diwwa@@@@1@2@1SG.NOM run-PST`I ran`@alexandra cassell, melody bechler@january 15, 2024
-81@author@@@1@agr@maaw2 diuwa@@@@0@2@1SG.ACC run-PST`I ran`@alexandra cassell, melody bechler@january 15, 2024
-82@author@@@1@agr@ma12 diwwa@@@@0@2@1SG.DAT run-PST`I ran`@alexandra cassell, melody bechler@january 15, 2024
-83@c:71@@@1@crd,pn,c,tam@maaw2 diuna@@@@1@2@1SG.ACC run.INVOL-PST`I ran` # involuntarily/something made me run@alexandra cassell, melody bechler@january 15, 2024
-84@c:71@@@1@crd,pn,c,tam@ma12 næ1una@@@@1@2@1SG-DAT dance.INVOL-PST`I danced` # for some external reason, such as being possessed by a spirit@alexandra cassell, melody bechler@january 15, 2024
-85@author@@@1@agr,c,tam@pot2 kan2wa@@@@1@2@book.NOM eat-IND`The book eats`@alexandra cassell, melody bechler@january 15, 2024
-86@author@@@1@agr@ka3eet2 kan2wa@@@@0@2@shop-DAT eat-IND`The shop eats`@alexandra cassell, melody bechler@january 15, 2024
-87@author@@@1@agr,c,tam@pot2 æhen2wa@@@@1@2@book.NOM hear.INVOL-IMPF`The book hears`@alexandra cassell, melody bechler@january 15, 2024
-88@author@@@1@agr@ka3eet2 æhen2wa@@@@0@2@shop-DAT hear.INVOL-IMPF`The shop hears`@alexandra cassell, melody bechler@january 15, 2024
-89@author@@@1@agr,c,tam@balla kan2wa@@@@1@2@dog.NOM eat-IND`The dog eats`@alexandra cassell, melody bechler@january 15, 2024
-90@author@@@1@agr@maaw2 kan2wa@@@@0@2@1SG-ACC eat-IND`I eat`@alexandra cassell, melody bechler@january 15, 2024
-91@author@@@1@agr@ma12 kan2wa@@@@0@2@1SG.DAT eat-IND`I eat`@alexandra cassell, melody bechler@january 15, 2024
-92@author@@@1@agr,c,tam@balla æhen2wa@@@@1@2@dog.NOM hear.INVOL-IMPF`The dog hears`@alexandra cassell, melody bechler@january 15, 2024
-93@author@@@1@agr@ma12 æhen2wa@@@@0@2@1SG.ACC hear.INVOL-IMPF`I hear`@alexandra cassell, melody bechler@january 15, 2024
-94@author@@@1@agr@mam2 æhen2wa@@@@0@2@1SG-NOM hear.INVOL-IMPF`I hear`@alexandra cassell, melody bechler@january 15, 2024
-95@author@@@1@agr@balla bat kan2wa@@@@1@3@dog.NOM rice.NOM eat-IND`The dog eats rice`@alexandra cassell, melody bechler@january 15, 2024
-96@author@@@1@agr@balla sindu æhen2wa@@@@1@3@dog.NOM music.NOM hear.INVOL-IMPF`The dog hears music`@alexandra cassell, melody bechler@january 15, 2024
-97@author@@@1@agr@balla eluvek kan2wa@@@@1@3@dog.NOM goat.SG.NOM-INDF eat-IND`The dog eats a goat`@alexandra cassell, melody bechler@january 15, 2024
-98@author@@@1@agr@balla eluvek æhen2wa@@@@1@3@dog.NOM goat.SG.NOM-INDF hear.INVOL-IMPF`The dog hears a goat`@alexandra cassell, melody bechler@january 15, 2024
-99@author@@@1@agr@balla maaw2 kan2wa@@@@1@3@dog.NOM 1SG.ACC eat-IND`The dog eats me`@alexandra cassell, melody bechler@january 15, 2024
-100@author@@@1@agr@balla maaw2 æhen2wa@@@@1@3@dog.NOM 1SG.ACC hear.INVOL-IMPF`The dog hears me`@alexandra cassell, melody bechler@january 15, 2024
-101@author@@@1@agr@balla sadd2yak kan2wa@@@@1@3@dog.NOM noise.INDF.ACC eat-IND`The dog eats the a noise`@alexandra cassell, melody bechler@january 15, 2024
-102@author@@@1@agr@balla sadd2yak æhen2wa@@@@1@3@dog.NOM noise.INDF.ACC hear.INVOL-IMPF`The dog hears a noise`@alexandra cassell, melody bechler@january 15, 2024
-103@a:62@@@1@agr@us2 ekaa aawa@@@@1@3@tall one.ANIM came`The tall one came`@alexandra cassell, melody bechler@january 15, 2024
-104@a:62@@@1@agr@us2 ekii aawa@@@@1@3@tall one-ANIM.FEM came`The tall one came`@alexandra cassell, melody bechler@january 15, 2024
+21@c:73@@@1@c,tam@ma12 sindu 5hen2wa@@@@1@3@1SG-DAT music.NOM hear.INVOL-IMPF`I hear music`@alexandra cassell, melody bechler@january 15, 2024
+22@author@@@1@c@malbanduna12 sindu 5hen2wa@@@@0@3@vase.SG-DAT music.NOM hear.INVOL-IMPF`The vase hears music`@alexandra cassell, melody bechler@january 15, 2024
+23@c:72@@@1@c,tam@malbanduna k5duna@@@@1@2@vase.SG.DEF.NOM break.INVOL-PST`The vase broke`@alexandra cassell, melody bechler@january 15, 2024
+24@c:72@@@1@c@malbandunaw2 k5duna@@@@0@2@vase.SG.DEF-ACC break.INVOL-PST`The vase broke`@alexandra cassell, melody bechler@january 15, 2024
+25@a:103@@@1@c,tam@war2d2 mage atee@@@@1@3@fault.NOM 1SG-GEN hand-LOC`The fault lies with me`@alexandra cassell, melody bechler@january 15, 2024
+26@author@@@1@c@war2d2 mam2 atee@@@@0@3@fault.NOM 1SG-NOM hand-LOC`The fault lies with me`@alexandra cassell, melody bechler@january 15, 2024
+27@author@@@1@c@war2d2 mage atwe@@@@0@3@fault.NOM 1SG-GEN hand-LOC`The fault lies with me`@alexandra cassell, melody bechler@january 15, 2024
+28@a:115@@@1@c,tam@api mee ka3en ba3u gann2wa@@@@1@5@3PL.NOM this shop-ABL commodities buy-IND'We buy things from this shop'@alexandra cassell, melody bechler@january 15, 2024
+29@author@@@1@c@api mee ka3ee12 ba3u gann2wa@@@@0@5@3PL.NOM this shop-DAT commodities buy-IND'We buy things from this shop'@alexandra cassell, melody bechler@january 15, 2024
+30@author@@@1@c@api mee ka3gen ba3u gann2wa@@@@0@5@3PL.NOM this shop-GEN commodities buy-IND'We buy things from this shop'@alexandra cassell, melody bechler@january 15, 2024
+31@author@@@1@c,det,tam@mam2 pot keep2yak gatta@@@@1@4@1SG-NOM book.PL several.PL buy.PST`I bought several books`@alexandra cassell, melody bechler@january 15, 2024
+32@author@@@1@c,det,tam@mam2 pot sam2harak gatta@@@@1@4@1SG-NOM book.PL some.PL buy.PST`I bought some books`@alexandra cassell, melody bechler@january 15, 2024
+33@author@@@1@c,det,tam@mam2 sam2harak pot gatta@@@@1@4@1SG-NOM some.PL book.PL buy.PST`I bought some books`@alexandra cassell, melody bechler@january 15, 2024
+34@author@@@1@det@mam2 pot2 sam2harak gatta@@@@0@4@1SG-NOM book.SG some.PL buy.PST`I bought some book`@alexandra cassell, melody bechler@january 15, 2024
+35@author@@@1@c,tam@balla bat kalaa tien2wa@@@@1@4@dog.NOM rice.NOM eat-PP be-IND`The dog has eaten the rice`@alexandra cassell, melody bechler@january 15, 2024
+36@author@@@1@c,tam@balla bat kalaa daan2wa@@@@1@4@dog.NOM rice.NOM eat-PP daa-IND`The dog will eat the rice completely`@alexandra cassell, melody bechler@january 15, 2024
+37@author@@@1@c,tam@balla bat kan2wa@@@@1@3@dog.NOM rice.NOM eat-NPT-IND`The dog eats rice`@alexandra cassell, melody bechler@january 15, 2024
+38@author@@@1@tam@balla bat k55wa@@@@0@3@dog.NOM rice.NOM eat-PST`The dog ate rice`@alexandra cassell, melody bechler@january 15, 2024
+39@author@@@1@c,tam@balla bat k55wa@@@@1@3@dog.NOM rice.NOM eat-PST`The dog ate rice`@alexandra cassell, melody bechler@january 15, 2024
+40@author # modified from a:13@@@1@c,neg,tam@balla ka3ee12 yanne n55@@@@1@4@dog.NOM shop-DAT go-NPT-FOC no`The dog does not go to the shop`@alexandra cassell, melody bechler@january 15, 2024
+41@author@@@1@neg@balla ka3ee12 yan2wa n55@@@@0@4@dog.NOM shop-DAT go-NPT-IND no`The dog does not go to the shop`@alexandra cassell, melody bechler@january 15, 2024
+42@author@@@1@neg@balla ka3ee12 n55 yanne@@@@0@4@dog.NOM shop-DAT no go-NPT-FOC`The dog does not go to the shop`@alexandra cassell, melody bechler@january 15, 2024
+43@a:13@@@1@neg,pn,tam@eyaa guruw2r2yek newei@@@@1@3@3SG.NOM teacher-INDF not`He is not a teacher`@alexandra cassell, melody bechler@january 15, 2024
+44@author@@@1@neg@newei eyaa guruw2r2yek@@@@0@3@not 3SG.NOM teacher-INDF`He is not a teacher`@alexandra cassell, melody bechler@january 15, 2024
+45@author # modified from a:13@@@1@c,neg,pn@balla ka3ee12 yan2wa newei@@@@1@4@dog.NOM shop-DAT go-NPT-IND not`The dog is not going to the shop, ...`@alexandra cassell, melody bechler@january 15, 2024
+46@a:13@@@1@neg,tam@miniha kan2wa newei, gilin2wa@@@@1@4@man eat-NPT-IND not devour-IND`The man is not eating, he's devouring`@alexandra cassell, melody bechler@january 15, 2024
+47@author # modified from a:186@@@1@neg,tam@balla piduru kann2t n55 gonaa12 kann2 dennet n55@@@@1@8@dog hay eat-NPT.FOC-CONJ no bull-DAT eat-INF give-NPT.FOC-CONJ no`The dog neither eats hay nor allows the bull to eat it`@alexandra cassell, melody bechler@january 15, 2024
+48@author # modified from a:13@@@1@neg,tam@balla bonne n55@@@@1@3@dog drink-NPT-FOC no`The dog does not drink`@alexandra cassell, melody bechler@january 15, 2024
+49@author # modified from a:223@@@1@neg,tam@balla wiiduru2 binde n55@@@@1@4@dog glass break.PST.FOC no`The dog did not break the glass`@alexandra cassell, melody bechler@january 15, 2024
+50@author # modified from a:223@@@1@neg,tam@mee pot2 itihaase gaen2 newei@@@@1@5@this book history about no`This book is not about history`@alexandra cassell, melody bechler@january 15, 2024
+51@author # modified from a:223@@@1@neg@mee pot2 itihaase gaen2 n55@@@@0@5@this book history about no`This book is not about history`@alexandra cassell, melody bechler@january 15, 2024
+52@author@@@1@neg@eyaa guruw2r2yek n55@@@@0@3@3SG.NOM teacher-INDF not`He is not a teacher`@alexandra cassell, melody bechler@january 15, 2024
+53@author@@@1@neg@eyaa newei guruw2r2yek@@@@0@3@3SG.NOM not teacher-INDF`He is not a teacher`@alexandra cassell, melody bechler@january 15, 2024
+54@author@@@1@c,neg,tam@balla bat kan2wa n55@@@@1@4@dog.NOM rice eat-IND no`The dog does not eat the rice`@alexandra cassell, melody bechler@january 15, 2024
+55@author@@@1@neg@balla bat n55 kan2wa@@@@0@4@dog.NOM rice no eat-IND`The dog does not eat the rice`@alexandra cassell, melody bechler@january 15, 2024
+56@author # modified from a:181@@@1@crd,tam@balla ged2r2 en2wa bat kan2wa 1iiwee bal2n2wa@@@@1@7@dog home come-IND rice eat-IND TV watch-IND`The dog comes home, has a meal and watches TV`@alexandra cassell, melody bechler@january 15, 2024
+57@a:183@@@1@crd,tam@guruw2rui demaupiyoi lam2inui paar2 sudd2k2laa@@@@1@5@teacher.PL-CONJ parent.PL-CONJ child.PL-CONJ road clean-PST`The teachers, parents and children cleaned the road`@alexandra cassell, melody bechler@january 15, 2024
+58@author, missing clitic on first argument@@@1@crd@guruw2ru demaupiyoi lam2inui paar2 sudd2k2laa@@@@0@5@teacher.PL parent.PL-CONJ child.PL-CONJ road clean-PST`The teachers, parents and children cleaned the road`@alexandra cassell, melody bechler@january 15, 2024
+59@author, missing clitic on second argument@@@1@crd@guruw2rui demaupiyo lam2inui paar2 sudd2k2laa@@@@0@5@teacher.PL-CONJ parent.PL child.PL-CONJ road clean-PST`The teachers, parents and children cleaned the road`@alexandra cassell, melody bechler@january 15, 2024
+60@author, missing clitic on third argument@@@1@crd@guruw2rui demaupiyoi lam2inu paar2 sudd2k2laa@@@@0@5@teacher.PL-CONJ parent.PL-CONJ child.PL road clean-PST`The teachers, parents and children cleaned the road`@alexandra cassell, melody bechler@january 15, 2024
+61@author # modified from a:183@@@1@c,crd,tam@amma balla12 kamisekui balla12 gaum2kui ara4 dunna@@@@1@7@mother dog-DAT shirt.INDF-CONJ dog-DAT gown.INDF-CONJ buy.PP give.PST`Mother bought a shirt for the dog and a gown for the dog`@alexandra cassell, melody bechler@january 15, 2024
+62@author # modified from a:183@@@1@crd@amma balla12 kamisekui balla12 gaum2ku ara4 dunna@@@@0@7@mother dog-DAT shirt.INDF-CONJ dog-DAT gown.INDF buy.PP give.PST`Mother bought a shirt for the dog and a gown for the dog`@alexandra cassell, melody bechler@january 15, 2024
+63@author # based on a:182@@@1@c,crd,tam@mam2 bat saha amma bat kan2wa@@@@1@6@1SG.NOM rice.NOM and mother rice.NOM eat-IND`I and mother eat rice`@alexandra cassell, melody bechler@january 15, 2024
+64@author # based on a:182@@@1@crd@mam2 bat kan2wa saha amma bat kan2wa@@@@0@7@1SG.NOM rice.NOM eat-IND and mother rice.NOM eat-IND`I eat rice and mother eats rice`@alexandra cassell, melody bechler@january 15, 2024
+65@b:84 # modified pst.ptcp to pp@@@1@c,crd,pn,tam@mam2 ged2r2 gihilla k55m2 k55wa@@@@1@5@1SG-NOM house.ACC go.PP food.ACC eat.PST`I went home and ate`@alexandra cassell, melody bechler@january 15, 2024
+66@author # modified from b:85 pst.ptcp to pp@@@1@c,crd,pn,tam@balla ged2r2 gihilla, mam2 k55m2 k55wa@@@@1@6@dog.NOM house.ACC go.PP, 1SG.NOM food.ACC eat.PST`The dog went home and I ate`@alexandra cassell, melody bechler@january 15, 2024
+67@author # modified from b:85@@@1@crd@balla ged2r2 yan2wa, mam2 k55m2 k55wa@@@@0@6@dog.NOM house.ACC go-NPT-IND, 1SG-NOM food.ACC eat.PST`The dog went home and I ate`@alexandra cassell, melody bechler@january 15, 2024
+68@author # modified from b:84 pst.ptcp to pp@@@1@crd@mam2 balla ged2r2 gihilla k55m2 k55wa@@@@0@6@1SG-NOM dog.NOM house.ACC go.PP food.ACC eat.PST`The dog went home and I ate`@alexandra cassell, melody bechler@january 15, 2024
+69@author # modified from b:84 pst.ptcp to pp@@@1@crd@mam2 ma12 sadd2yak aehila diwwa@@@@0@5@1SG-NOM 1SG-DAT noise.INDF.ACC hear.INV.PP run.PST`I heard a sound and ran`@alexandra cassell, melody bechler@january 15, 2024
+70@author@@@1@agr,c,tam@pot2 diwwa@@@@1@2@book.NOM run-PST`The book ran`@alexandra cassell, melody bechler@january 15, 2024
+71@author@@@1@agr,c,tam@pot2 diuna@@@@1@2@book.NOM run.INVOL-PST`The book ran`@alexandra cassell, melody bechler@january 15, 2024
+72@author@@@1@agr@pot2 diuna@@@@0@2@book.ACC run.INVOL-PST`The book ran`@alexandra cassell, melody bechler@january 15, 2024
+73@c:71@@@1@agr,pn,c,tam@ma4 diwwa@@@@1@2@1SG.NOM run-PST`I ran`@alexandra cassell, melody bechler@january 15, 2024
+74@author@@@1@agr@maaw2 diuwa@@@@0@2@1SG-ACC run-PST`I ran`@alexandra cassell, melody bechler@january 15, 2024
+75@author@@@1@agr@ma12 diwwa@@@@0@2@1SG-DAT run-PST`I ran`@alexandra cassell, melody bechler@january 15, 2024
+76@c:71@@@1@crd,pn,c,tam@maaw2 diuna@@@@1@2@1SG-ACC run.INVOL-PST`I ran` # involuntarily/something made me run@alexandra cassell, melody bechler@january 15, 2024
+77@c:71@@@1@crd,pn,c,tam@ma12 n51una@@@@1@2@1SG-DAT dance.INVOL-PST`I danced` # for some external reason, such as being possessed by a spirit@alexandra cassell, melody bechler@january 15, 2024
+78@author@@@1@agr,c,tam@pot2 kan2wa@@@@1@2@book.NOM eat-IND`The book eats`@alexandra cassell, melody bechler@january 15, 2024
+79@author@@@1@agr@ka3ee12 kan2wa@@@@0@2@shop-DAT eat-IND`The shop eats`@alexandra cassell, melody bechler@january 15, 2024
+80@author@@@1@agr,c,tam@pot2 5hen2wa@@@@1@2@book.NOM hear.INVOL-IMPF`The book hears`@alexandra cassell, melody bechler@january 15, 2024
+81@author@@@1@agr@ka3ee12 5hen2wa@@@@0@2@shop-DAT hear.INVOL-IMPF`The shop hears`@alexandra cassell, melody bechler@january 15, 2024
+82@author@@@1@agr,c,tam@balla kan2wa@@@@1@2@dog.NOM eat-IND`The dog eats`@alexandra cassell, melody bechler@january 15, 2024
+83@author@@@1@agr@maaw2 kan2wa@@@@0@2@1SG-ACC eat-IND`I eat`@alexandra cassell, melody bechler@january 15, 2024
+84@author@@@1@agr@ma12 kan2wa@@@@0@2@1SG-DAT eat-IND`I eat`@alexandra cassell, melody bechler@january 15, 2024
+85@author@@@1@agr,c,tam@balla 5hen2wa@@@@1@2@dog.NOM hear.INVOL-IMPF`The dog hears`@alexandra cassell, melody bechler@january 15, 2024
+86@author@@@1@agr@ma12 5hen2wa@@@@0@2@1SG-ACC hear.INVOL-IMPF`I hear`@alexandra cassell, melody bechler@january 15, 2024
+87@author@@@1@agr@mam2 5hen2wa@@@@0@2@1SG-NOM hear.INVOL-IMPF`I hear`@alexandra cassell, melody bechler@january 15, 2024
+88@author@@@1@agr@balla bat kan2wa@@@@1@3@dog.NOM rice.NOM eat-IND`The dog eats rice`@alexandra cassell, melody bechler@january 15, 2024
+89@author@@@1@agr@balla sindu 5hen2wa@@@@1@3@dog.NOM music.NOM hear.INVOL-IMPF`The dog hears music`@alexandra cassell, melody bechler@january 15, 2024
+90@author@@@1@agr@balla eluvek kan2wa@@@@1@3@dog.NOM goat.SG.NOM-INDF eat-IND`The dog eats a goat`@alexandra cassell, melody bechler@january 15, 2024
+91@author@@@1@agr@balla eluvek 5hen2wa@@@@1@3@dog.NOM goat.SG.NOM-INDF hear.INVOL-IMPF`The dog hears a goat`@alexandra cassell, melody bechler@january 15, 2024
+92@author@@@1@agr@balla maaw2 kan2wa@@@@1@3@dog.NOM 1SG-ACC eat-IND`The dog eats me`@alexandra cassell, melody bechler@january 15, 2024
+93@author@@@1@agr@balla maaw2 5hen2wa@@@@1@3@dog.NOM 1SG-ACC hear.INVOL-IMPF`The dog hears me`@alexandra cassell, melody bechler@january 15, 2024
+94@author@@@1@agr@balla sadd2yak kan2wa@@@@1@3@dog.NOM noise.INDF.ACC eat-IND`The dog eats the a noise`@alexandra cassell, melody bechler@january 15, 2024
+95@author@@@1@agr@balla sadd2yak 5hen2wa@@@@1@3@dog.NOM noise.INDF.ACC hear.INVOL-IMPF`The dog hears a noise`@alexandra cassell, melody bechler@january 15, 2024
+96@author@@@1@adj,tam@loku balla bat kan2wa@@@@1@4@big dog.NOM rice.NOM eat-NPT-IND`The big dog eats rice`@alexandra cassell, melody bechler@january 15, 2024
+97@author@@@1@adj@balla loku bat kan2wa@@@@0@4@dog.NOM big rice.NOM eat-NPT-IND`The big dog eats rice`@alexandra cassell, melody bechler@january 15, 2024
+98@author@@@1@adj,tam@mam2 loku pot2 gatta@@@@1@4@1SG-NOM big book buy.PST`I bought the big book`@alexandra cassell, melody bechler@january 15, 2024
+99@author@@@1@adj,tam@mam2 ek2 pot2 gatta@@@@1@4@1SG-NOM one book.SG buy.PST`I bought one book`@alexandra cassell, melody bechler@january 15, 2024
+100@author@@@1@adj@mam2 pot2 ek2 gatta@@@@0@4@1SG-NOM book.SG one buy.PST`I bought one book`@alexandra cassell, melody bechler@january 15, 2024
+101@author@@@1@adj,tam@sam2har2 guruw2ru k55wa@@@@1@3@some teacher.PL eat.PST`Some teachers eat`@alexandra cassell, melody bechler@january 15, 2024
+102@author@@@1@adj@guruw2ru sam2har2 bat k55wa@@@@0@4@teacher.PL some rice eat.PST`Teachers some ate rice`@alexandra cassell, melody bechler@january 15, 2024
+103@author@@@1@adjective,tam@mam2 gas dek2 gatta@@@@1@4@1SG-NOM tree.PL two buy.PST`I bought 2 trees`@alexandra cassell, melody bechler@january 15, 2024
+104@author@@@1@adjective@mam2 dek2 gas gatta@@@@0@4@1SG-NOM two tree.PL buy.PSTI bought two trees@alexandra cassell, melody bechler@january 15, 2024
+105@author # modified from a:62@@@1@agr@us2 ekaa aawa@@@@1@3@tall one.ANIM came-PST`The tall one came`@alexandra cassell, melody bechler@january 15, 2024
+106@author # modified from a:62@@@1@agr@us2 ekii aawa@@@@1@3@tall one-ANIM.FEM came-PST`The tall one came`@alexandra cassell, melody bechler@january 15, 2024
+107@author@@@1@non-verbalpredicates@balla oyaa12@@@@1@2@dog you-DAT`The dog is for you`@alexandra cassell, melody bechler@january 15, 2024
+108@author@@@1@non-verbalpredicates@balla oyaa@@@@0@2@dog you`The dog is you`@alexandra cassell, melody bechler@january 15, 2024
+109@author@@@1@non-verbalpredicates@bat rasai@@@@1@2@rice delicious-AM`The rice is delicious`@alexandra cassell, melody bechler@january 15, 2024
+110@author@@@1@non-verbalpredicates@bat rasa@@@@0@2@rice delicious`The rice is delicious`@alexandra cassell, melody bechler@january 15, 2024
+111@author@@@1@non-verbalpredicates@pot2 alut@@@@1@2@book.SG.NOM new`The book is new`@alexandra cassell, melody bechler@january 15, 2024
+112@author@@@1@non-verbalpredicates@pot2 lokui@@@@1@2@book.SG.NOM big-AM`The book is big`@alexandra cassell, melody bechler@january 15, 2024
+113@author@@@1@non-verbalpredicates@pot2 loku@@@@0@2@book.SG.NOM big`The book is big`@alexandra cassell, melody bechler@january 15, 2024
+114@author@@@1@non-verbalpredicates@eyaa guruw2r2ek@@@@1@2@3SG.NOM teacher-INDF`She is a teacher`@alexandra cassell, melody bechler@january 15, 2024
+115@author@@@1@non-verbalpredicates@eyaa guruw2r2@@@@0@2@3SG.NOM teacher`She is teachers`@alexandra cassell, melody bechler@january 15, 2024
+116@author@@@1@non-verbalpredicates@bat mage@@@@1@2@rice I-GEN`The rice is mine`@alexandra cassell, melody bechler@january 15, 2024
+117@author@@@1@non-verbalpredicates@bat ma@@@@0@2@rice I`The rice is I`@alexandra cassell, melody bechler@january 15, 2024

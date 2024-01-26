@@ -218,8 +218,8 @@ Source: c:73
 Vetted: s
 Judgement: g
 Phenomena: {Case, Tense Aspect Mood}
-ma12 sindu æhen2wa
-ma-12 sindu æhe-n2wa
+ma12 sindu 5hen2wa
+ma-12 sindu 5he-n2wa
 1SG-DAT music.NOM hear.INVOL-IMPF
 `I hear music`
 
@@ -228,8 +228,8 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Case}
-malbanduna12 sindu æhen2wa
-malbanduna-12 sindu æhe-n2wa
+malbanduna12 sindu 5hen2wa
+malbanduna-12 sindu 5he-n2wa
 vase.SG-DAT music.NOM hear.INVOL-IMPF
 `The vase hears music`
 
@@ -238,8 +238,8 @@ Source: c:72
 Vetted: s
 Judgement: g
 Phenomena: {Case, Tense Aspect Mood}
-malbanduna kæduna
-malbanduna kædun-a
+malbanduna k5duna
+malbanduna k5dun-a
 vase.SG.DEF.NOM break.INVOL-PST
 `The vase broke`
 
@@ -248,8 +248,8 @@ Source: c:72
 Vetted: s
 Judgement: u
 Phenomena: {Case}
-malbandunaw2 kæduna
-malbanduna-w2 kædun-a
+malbandunaw2 k5duna
+malbanduna-w2 k5dun-a
 vase.SG.DEF-ACC break.INVOL-PST
 `The vase broke`
 
@@ -298,7 +298,7 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Case}
-api mee ka3eet2 ba3u gann2wa
+api mee ka3ee12 ba3u gann2wa
 api mee ka3ee-12 ba3u gan-n2wa
 3PL.NOM this shop-DAT commodities buy-IND
 'We buy things from this shop'
@@ -315,95 +315,95 @@ api mee ka3-gen ba3u gan-n2wa
 
 ### wh-?s
 
-# 1 WH-question sentence-final, with focus shift
-Source: author
-Vetted: f
-Judgement: g
-Phenomena: {Case, Matrix wh questions, Tense Aspect Mood}
-mam2 yanne kohed2
-ma-m2 ya-nn-e kohe-d2
-1SG-NOM go-NPT-FOC where-Q
-`Where do I go?`
+## 1 WH-question sentence-final, with focus shift
+#Source: author
+#Vetted: f
+#Judgement: g
+#Phenomena: {Case, Matrix wh questions, Tense Aspect Mood}
+#mam2 yanne kohed2
+#ma-m2 ya-nn-e kohe-d2
+#1SG-NOM go-NPT-FOC where-Q
+#`Where do I go?`
 
-# 2 WH-question sentence-final, verb not required
-Source: author
-Vetted: f
-Judgement: g
-Phenomena: {Case, Matrix wh questions, Tense Aspect Mood}
-balla kohed2
-balla kohe-d2
-dog.NOM where-Q
-`Where is the dog?`
+## 2 WH-question sentence-final, verb not required
+#Source: author
+#Vetted: f
+#Judgement: g
+#Phenomena: {Case, Matrix wh questions, Tense Aspect Mood}
+#balla kohed2
+#balla kohe-d2
+#dog.NOM where-Q
+#`Where is the dog?`
 
-# 3 Yes-or-no question constituent, no focus shift
-Source: author
-Vetted: f
-Judgement: g
-Phenomena: {Matrix wh questions, Tense Aspect Mood, Case}
-mam2 ka3eet2 yan2wa d2
-ma-m2 ka3ee-12 ya-n2-wa d2
-1SG-NOM shop-DAT go-NPT-IND Q
-`Do I go to the shop?`
+## 3 Yes-or-no question constituent, no focus shift
+#Source: author
+#Vetted: f
+#Judgement: g
+#Phenomena: {Matrix wh questions, Tense Aspect Mood, Case}
+#mam2 ka3ee12 yan2wa d2
+#ma-m2 ka3ee-12 ya-n2-wa d2
+#1SG-NOM shop-DAT go-NPT-IND Q
+#`Do I go to the shop?`
 
-# 4 WH-question, focus shift
-Source: a:12
-Vetted: s
-Judgement: g
-Phenomena: {Matrix wh questions, Tense Aspect Mood, Case}
-ka3eet2 yanne kaud2
-ka3ee-12 ya-nn-e kau-d2
-shop-DAT go-NPT-FOC who-Q
-`Who goes to the shop?`
+## 4 WH-question, focus shift
+#Source: a:12
+#Vetted: s
+#Judgement: g
+#Phenomena: {Matrix wh questions, Tense Aspect Mood, Case}
+#ka3ee12 yanne kaud2
+#ka3ee-12 ya-nn-e kau-d2
+#shop-DAT go-NPT-FOC who-Q
+#`Who goes to the shop?`
 
-# 5 WH-question, focus shift, wrong wh-word
-Source: author
-Vetted: f
-Judgement: u
-Phenomena: {Matrix wh questions}
-ka3eet2 yanne kohed2
-ka3ee-12 ya-nn-e kohe-d2
-shop-DAT go-NPT-FOC where-Q
-`Where goes to the shop?`
+## 5 WH-question, focus shift, wrong wh-word
+#Source: author
+#Vetted: f
+#Judgement: u
+#Phenomena: {Matrix wh questions}
+#ka3ee12 yanne kohed2
+#ka3ee-12 ya-nn-e kohe-d2
+#shop-DAT go-NPT-FOC where-Q
+#`Where goes to the shop?`
 
-# 6 WH-question, with focus shift
-Source: a:135
-Vetted: s
-Judgement: g
-Phenomena: {Case, Matrix wh questions, Tense Aspect Mood}
-bat kanne kaud2
-bat ka-nn-e kau-d2
-rice.NOM eat-NPT-FOC who-Q
-`Who eats rice?`
+## 6 WH-question, with focus shift
+#Source: a:135
+#Vetted: s
+#Judgement: g
+#Phenomena: {Case, Matrix wh questions, Tense Aspect Mood}
+#bat kanne kaud2
+#bat ka-nn-e kau-d2
+#rice.NOM eat-NPT-FOC who-Q
+#`Who eats rice?`
 
-# 7 WH-question, sentence-initial, with focus shift
-Source: a:135
-Vetted: s
-Judgement: g
-Phenomena: {Case, Matrix wh questions, Tense Aspect Mood}
-kaud2 bat kanne
-kau-d2 bat ka-nn-e
-who-Q rice.NOM eat-NPT-FOC
-`Who eats rice?`
+## 7 WH-question, sentence-initial, with focus shift
+#Source: a:135
+#Vetted: s
+#Judgement: g
+#Phenomena: {Case, Matrix wh questions, Tense Aspect Mood}
+#kaud2 bat kanne
+#kau-d2 bat ka-nn-e
+#who-Q rice.NOM eat-NPT-FOC
+#`Who eats rice?`
 
-# 8 Response to WH-question
-Source: author
-Vetted: f
-Judgement: g
-Phenomena: {Case, Tense Aspect Mood}
-mam2 ka3eet2 yan2wa
-ma-m2 ka3ee-12 ya-n2-wa
-1SG-NOM shop-DAT go-NPT-IND
-`I go to the shop`
+## 8 Response to WH-question
+#Source: author
+#Vetted: f
+#Judgement: g
+#Phenomena: {Case, Tense Aspect Mood}
+#mam2 ka3ee12 yan2wa
+#ma-m2 ka3ee-12 ya-n2-wa
+#1SG-NOM shop-DAT go-NPT-IND
+#`I go to the shop`
 
-# 9 Yes-or-no question in declarative form, no focus shift
-Source: author
-Vetted: f
-Judgement: g
-Phenomena: {Case, Tense Aspect Mood}
-mam2 ka3eet2 yan2wa
-ma-m2 ka3ee-12 ya-n2-wa
-1SG-NOM shop-DAT go-NPT-IND
-`I go to the shop?`
+## 9 Yes-or-no question in declarative form, no focus shift
+#Source: author
+#Vetted: f
+#Judgement: g
+#Phenomena: {Case, Tense Aspect Mood}
+#mam2 ka3ee12 yan2wa
+#ma-m2 ka3ee-12 ya-n2-wa
+#1SG-NOM shop-DAT go-NPT-IND
+#`I go to the shop?`
 
 ### The Rest of the NP
 
@@ -484,8 +484,8 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Tense Aspect Mood}
-balla bat kææwa
-balla bat kææ-wa
+balla bat k55wa
+balla bat k55-wa
 dog.NOM rice.NOM eat-PST
 `The dog ate rice`
 
@@ -494,42 +494,42 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Case, Tense Aspect Mood}
-balla bat kææwa
-balla bat kææ-wa
+balla bat k55wa
+balla bat k55-wa
 dog.NOM rice.NOM eat-PST
 `The dog ate rice`
 
 ### Negation
 
-# 1 nææ verbal negator
+# 1 n55 verbal negator
 Source: author # modified from a:13
 Vetted: s
 Judgement: g
 Phenomena: {Case, Negation, Tense Aspect Mood}
-balla ka3eet2 yanne nææ
-balla ka3ee-12 ya-nn-e nææ
+balla ka3ee12 yanne n55
+balla ka3ee-12 ya-nn-e n55
 dog.NOM shop-DAT go-NPT-FOC no
 `The dog does not go to the shop`
 # Lit. 'The dog is going to the shop, not'
 
-# 2 nææ verbal negator, missing FOC aspect
+# 2 n55 verbal negator, missing FOC aspect
 Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Negation}
-balla ka3eet2 yan2wa nææ
-balla ka3ee-12 ya-n2-wa nææ
+balla ka3ee12 yan2wa n55
+balla ka3ee-12 ya-n2-wa n55
 dog.NOM shop-DAT go-NPT-IND no
 `The dog does not go to the shop`
 # Lit. 'The dog is going to the shop, not'
 
-# 3 nææ verbal negator, preceding verb
+# 3 n55 verbal negator, preceding verb
 Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Negation}
-balla ka3eet2 nææ yanne
-balla ka3ee-12 nææ ya-nn-e
+balla ka3ee12 n55 yanne
+balla ka3ee-12 n55 ya-nn-e
 dog.NOM shop-DAT no go-NPT-FOC
 `The dog does not go to the shop`
 # Lit. 'The dog is going to the shop, not'
@@ -559,7 +559,7 @@ Source: author # modified from a:13
 Vetted: s
 Judgement: g
 Phenomena: {Case, Negation, Pronouns}
-balla ka3eet2 yan2wa newei
+balla ka3ee12 yan2wa newei
 balla ka3ee-12 ya-n2-wa newei
 dog.NOM shop-DAT go-NPT-IND not
 `The dog is not going to the shop, ...`
@@ -581,29 +581,29 @@ Source: author # modified from a:186
 Vetted: s
 Judgement: g
 Phenomena: {Negation, Tense Aspect Mood}
-balla piduru kann2t nææ gonaa12 kann2 dennet nææ
-balla piduru ka-nn2-t nææ gonaa-12 ka-nn2 de-nne-t nææ
+balla piduru kann2t n55 gonaa12 kann2 dennet n55
+balla piduru ka-nn2-t n55 gonaa-12 ka-nn2 de-nne-t n55
 dog hay eat-NPT.FOC-CONJ no bull-DAT eat-INF give-NPT.FOC-CONJ no
 `The dog neither eats hay nor allows the bull to eat it`
 # neither nor situation appends -t/CONJ to focus verb
 
-# 9 nææ verbal negator
+# 9 n55 verbal negator
 Source: author # modified from a:13
 Vetted: s
 Judgement: g
 Phenomena: {Negation, Tense Aspect Mood}
-balla bonne nææ
-balla bo-nn-e nææ
+balla bonne n55
+balla bo-nn-e n55
 dog drink-NPT-FOC no
 `The dog does not drink`
 
-# 10 nææ verbal negator
+# 10 n55 verbal negator
 Source: author # modified from a:223
 Vetted: s
 Judgement: g
 Phenomena: {Negation, Tense Aspect Mood}
-balla wiiduru2 binde nææ
-balla wiiduru2 binde nææ
+balla wiiduru2 binde n55
+balla wiiduru2 binde n55
 dog glass break.PST.FOC no
 `The dog did not break the glass`
 
@@ -622,18 +622,18 @@ Source: author # modified from a:223
 Vetted: s
 Judgement: u
 Phenomena: {Negation}
-mee pot2 itihaase gaen2 nææ
-mee pot2 itihaase gaen2 nææ
+mee pot2 itihaase gaen2 n55
+mee pot2 itihaase gaen2 n55
 this book history about no
 `This book is not about history`
 
-# 13 nææ verbal negator
+# 13 n55 verbal negator
 Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Negation}
-eyaa guruw2r2yek nææ
-eyaa guruw2r2y-ek nææ
+eyaa guruw2r2yek n55
+eyaa guruw2r2y-ek n55
 3SG.NOM teacher-INDF not
 `He is not a teacher`
 
@@ -646,6 +646,26 @@ eyaa newei guruw2r2yek
 eyaa newei guruw2r2y-ek
 3SG.NOM not teacher-INDF
 `He is not a teacher`
+
+# 15 n55 verbal negator with transitive verb, no dative
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Case, Negation, Tense Aspect Mood}
+balla bat kan2wa n55
+balla bat ka-n2wa n55
+dog.NOM rice eat-IND no
+`The dog does not eat the rice`
+
+# 16 n55 verbal negator, preceding verb
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Negation}
+balla bat n55 kan2wa
+balla bat n55 ka-n2wa
+dog.NOM rice no eat-IND
+`The dog does not eat the rice`
 
 ### Coordination
 
@@ -746,8 +766,8 @@ Source: b:84 # modified PST.PTCP to PP
 Vetted: s
 Judgement: g
 Phenomena: {Case, Coordination, Pronouns, Tense Aspect Mood}
-mam2 ged2r2 gihilla kææm2 kææwa
-ma-m2 ged2r2 gihilla kææm2 kææwa
+mam2 ged2r2 gihilla k55m2 k55wa
+ma-m2 ged2r2 gihilla k55m2 k55wa
 1SG-NOM house.ACC go.PP food.ACC eat.PST
 `I went home and ate`
 
@@ -757,8 +777,8 @@ Source: author # modified from b:85 PST.PTCP to PP
 Vetted: s
 Judgement: g
 Phenomena: {Case, Coordination, Pronouns, Tense Aspect Mood}
-balla ged2r2 gihilla, mam2 kææm2 kææwa
-balla ged2r2 gihilla, mam2 kææm2 kææwa
+balla ged2r2 gihilla, mam2 k55m2 k55wa
+balla ged2r2 gihilla, mam2 k55m2 k55wa
 dog.NOM house.ACC go.PP, 1SG.NOM food.ACC eat.PST
 `The dog went home and I ate`
 
@@ -767,8 +787,8 @@ Source: author # modified from b:85
 Vetted: f
 Judgement: u
 Phenomena: {Coordination}
-balla ged2r2 yan2wa, mam2 kææm2 kææwa
-balla ged2r2 ya-n2-wa, ma-m2 kææm2 kææwa
+balla ged2r2 yan2wa, mam2 k55m2 k55wa
+balla ged2r2 ya-n2-wa, ma-m2 k55m2 k55wa
 dog.NOM house.ACC go-NPT-IND, 1SG-NOM food.ACC eat.PST
 `The dog went home and I ate`
 
@@ -778,8 +798,8 @@ Source: author # modified from b:84 PST.PTCP to PP
 Vetted: s
 Judgement: u
 Phenomena: {Coordination}
-mam2 balla ged2r2 gihilla kææm2 kææwa
-ma-m2 balla ged2r2 gihilla kææm2 kææwa
+mam2 balla ged2r2 gihilla k55m2 k55wa
+ma-m2 balla ged2r2 gihilla k55m2 k55wa
 1SG-NOM dog.NOM house.ACC go.PP food.ACC eat.PST
 `The dog went home and I ate`
 
@@ -871,8 +891,8 @@ Source: c:71
 Vetted: s
 Judgement: g
 Phenomena: {Coordination, Pronouns, Case, Tense Aspect Mood}
-ma12 næ1una
-ma-12 næ1un-a
+ma12 n51una
+ma-12 n51un-a
 1SG-DAT dance.INVOL-PST
 `I danced` # for some external reason, such as being possessed by a spirit
 
@@ -894,7 +914,7 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Agreement}
-ka3eet2 kan2wa
+ka3ee12 kan2wa
 ka3ee-12 ka-n2wa
 shop-DAT eat-IND
 `The shop eats`
@@ -904,8 +924,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Agreement, Case, Tense Aspect Mood}
-pot2 æhen2wa
-pot2 æhe-n2wa
+pot2 5hen2wa
+pot2 5he-n2wa
 book.NOM hear.INVOL-IMPF
 `The book hears`
 
@@ -917,8 +937,8 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Agreement}
-ka3eet2 æhen2wa
-ka3ee-12 æhe-n2wa
+ka3ee12 5hen2wa
+ka3ee-12 5he-n2wa
 shop-DAT hear.INVOL-IMPF
 `The shop hears`
 
@@ -957,8 +977,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Agreement, Case, Tense Aspect Mood}
-balla æhen2wa
-balla æhe-n2wa
+balla 5hen2wa
+balla 5he-n2wa
 dog.NOM hear.INVOL-IMPF
 `The dog hears`
 
@@ -967,8 +987,8 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Agreement}
-ma12 æhen2wa
-ma-12 æhe-n2wa
+ma12 5hen2wa
+ma-12 5he-n2wa
 1SG-ACC hear.INVOL-IMPF
 `I hear`
 
@@ -977,8 +997,8 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Agreement}
-mam2 æhen2wa
-ma-m2 æhe-n2wa
+mam2 5hen2wa
+ma-m2 5he-n2wa
 1SG-NOM hear.INVOL-IMPF
 `I hear`
 
@@ -997,8 +1017,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Agreement}
-balla sindu æhen2wa
-balla sindu æhe-n2wa
+balla sindu 5hen2wa
+balla sindu 5he-n2wa
 dog.NOM music.NOM hear.INVOL-IMPF
 `The dog hears music`
 
@@ -1017,8 +1037,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Agreement}
-balla eluvek æhen2wa
-balla eluv-ek æhe-n2wa
+balla eluvek 5hen2wa
+balla eluv-ek 5he-n2wa
 dog.NOM goat.SG.NOM-INDF hear.INVOL-IMPF
 `The dog hears a goat`
 
@@ -1037,8 +1057,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Agreement}
-balla maaw2 æhen2wa
-balla maa-w2 æhe-n2wa
+balla maaw2 5hen2wa
+balla maa-w2 5he-n2wa
 dog.NOM 1SG-ACC hear.INVOL-IMPF
 `The dog hears me`
 
@@ -1057,8 +1077,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Agreement}
-balla sadd2yak æhen2wa
-balla sadd2yak æhe-n2wa
+balla sadd2yak 5hen2wa
+balla sadd2yak 5he-n2wa
 dog.NOM noise.INDF.ACC hear.INVOL-IMPF
 `The dog hears a noise`
 
@@ -1119,8 +1139,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Adjectives, Tense Aspect Mood}
-sam2har2 guruw2ru kææwa
-sam2har2 guruw2ru kææwa
+sam2har2 guruw2ru k55wa
+sam2har2 guruw2ru k55wa
 some teacher.PL eat.PST
 `Some teachers eat`
 
@@ -1129,8 +1149,8 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Adjectives}
-guruw2ru sam2har2 bat kææwa
-guruw2ru sam2har2 bat kææwa
+guruw2ru sam2har2 bat k55wa
+guruw2ru sam2har2 bat k55wa
 teacher.PL some rice eat.PST
 `Teachers some ate rice`
 

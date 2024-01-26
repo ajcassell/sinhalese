@@ -10,41 +10,41 @@ n1-left :=
 ;;; Inflecting Lexical Rule Instances
 
 indefinite-rule-suffix1 :=
-%suffix (* -ak)
+%suffix (* ak)
 indefinite-rule-lex-rule.
 
 indefinite-rule-suffix2 :=
-%suffix (* -ek)
+%suffix (* ek)
 indefinite-rule-lex-rule.
 
 dative-rule-suffix :=
-%suffix (* -12)
+%suffix (* 12)
 dative-rule-lex-rule.
 
 accusative-rule-suffix :=
-%suffix (* -w2)
+%suffix (* w2)
 accusative-rule-lex-rule.
 
 genitive-rule-suffix1 :=
-%suffix (* -ee)
+%suffix (* ee)
 genitive-rule-lex-rule.
 
 genitive-rule-suffix2 :=
-%suffix (* -ge)
+%suffix (* ge)
 genitive-rule-lex-rule.
 
 nominative-pronoun-rule-suffix :=
-%suffix (* -m2)
+%suffix (* m2)
 nominative-pronoun-rule-lex-rule.
 
 pl-pronoun-suffix :=
-%suffix (* -la)
+%suffix (* la)
 pl-pronoun-lex-rule.
 
-npt-suffix :=
-%suffix (* -n2wa)
-npt-lex-rule.
+npt-ind-suffix :=
+%suffix (* n2wa)
+npt-ind-lex-rule.
 
-perf-part-rule-suffix :=
-%suffix (* -laa)
-perf-part-rule-lex-rule.
+past-part-rule-suffix :=
+%suffix (* laa)
+past-part-rule-lex-rule.

@@ -5,7 +5,7 @@ January 26, 2024
 Melody Bechler, Alexandra Cassell
 
 Our language has several non-ASCII characters. We have assigned numbers to these characters as
-follows: ṭ = ʈ = 1, ə = 2, ɖ = 3. In this lab, we are adding ŋ = 4.
+follows: ṭ = ʈ = 1, ə = 2, ɖ = 3. In this lab, we are adding ŋ = 4 and æ = 5.
 
 ------
 
@@ -276,3 +276,52 @@ Morphology
 ....
 
 Lastly, these are some notes in response to comments from Lab 2
+
+
+
+
+
+
+PARSING
+mention that we have a big section on wh questions commented out
+
+sentences 1-6 all parse
+
+7 and 8 with the tien2wa aux work correctly!
+
+plural pronoun rule -- I had to change pl-pronoun-lex-rule := plural-pc-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM singular ]. to be singular... in sinhalese.tdl..
+
+maaw2 not found because maa stem change
+wh-questions will all fail
+focus will fail
+
+mam2 ka3eet2 yan2wa fails on comp-head rule because to the shop is dat and not an object of verb
+
+think because we have nom-acc set up, it's failing when objects are not accusative
+
+Are we handling PPs yet for "for me" dative?
+
+What kind of constituents are ablative and dative complements? NPs? from this shop, to the shop?
+
+balla yan2wa n55 - works without the "to the shop" dative case because it's an intransitive verb
+--> (15+16) same, like this works!: balla bat kan2wa n55 (transitive with acc noun)
+reversing the order of n55 fails.. because has to follow the verb.. though it does appear to do subj-head with bat?
+
+bug maybe?? the newei negation adverb shows in choices, but nowhere in lexicon...
+saha also doesn't show up...
+
+assuming participle coordination does not work yet
+
+the process of coordinating with -i seems to work, examples do not parse if missing -i
+
+Got mam2 ek2 pot2 gatta working, but not pot2 ek2 as it should not be
+
+How can you get up to an S or multiple but then have no parses? - getting that for initial coordination example
+
+A lot of multiple parses because N-N for optional nominative-lex-rule
+
+The fault lies with me examples are kinda like idioms and are non-verbal which are test-suite only examples for this lab
+
+Something that parses but shouldnt: mam2 pot2 sam2harak gatta (singular noun)
+-- needs some kind of head specifier num agreement?
