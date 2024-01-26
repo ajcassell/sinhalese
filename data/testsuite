@@ -742,27 +742,27 @@ mam2 bat ka-n2wa saha amma bat ka-n2wa
 
 # 10 Participle coordination - final event is PST, preceding
 # events are past participles
-Source: b:84
+Source: b:84 # modified PST.PTCP to PP
 Vetted: s
 Judgement: g
 Phenomena: {Case, Coordination, Pronouns, Tense Aspect Mood}
 mam2 ged2r2 gihilla kææm2 kææwa
 ma-m2 ged2r2 gihilla kææm2 kææwa
-1SG-NOM house.ACC go.PST.PTCP food.ACC eat.PST
+1SG-NOM house.ACC go.PP food.ACC eat.PST
 `I went home and ate`
 
 # 11 Participle coordination - final event is PST, preceding
 # events are past participles
-Source: author # modified from b:85
+Source: author # modified from b:85 PST.PTCP to PP
 Vetted: s
 Judgement: g
 Phenomena: {Case, Coordination, Pronouns, Tense Aspect Mood}
 balla ged2r2 gihilla, mam2 kææm2 kææwa
 balla ged2r2 gihilla, mam2 kææm2 kææwa
-dog.NOM house.ACC go.PST.PTCP, 1SG.NOM food.ACC eat.PST
+dog.NOM house.ACC go.PP, 1SG.NOM food.ACC eat.PST
 `The dog went home and I ate`
 
-# 12 Participle coordination - first event is not PST.PTCP
+# 12 Participle coordination - first event is not PP
 Source: author # modified from b:85
 Vetted: f
 Judgement: u
@@ -773,25 +773,25 @@ dog.NOM house.ACC go-NPT-IND, 1SG-NOM food.ACC eat.PST
 `The dog went home and I ate`
 
 # 13 Participle coordination - final event is PST, preceding
-# events are past participles, PTCP has a lexical NP (dog)
-Source: author # modified from b:84
+# events are past participles, PP has a lexical NP (dog)
+Source: author # modified from b:84 PST.PTCP to PP
 Vetted: s
 Judgement: u
 Phenomena: {Coordination}
 mam2 balla ged2r2 gihilla kææm2 kææwa
 ma-m2 balla ged2r2 gihilla kææm2 kææwa
-1SG-NOM dog.NOM house.ACC go.PST.PTCP food.ACC eat.PST
+1SG-NOM dog.NOM house.ACC go.PP food.ACC eat.PST
 `The dog went home and I ate`
 
 # 14 Participle coordination - final event is PST, preceding
 # events are past participles, subject case is not shared
-Source: aufhor # modified from b:84
+Source: author # modified from b:84 PST.PTCP to PP
 Vetted: s
 Judgement: u
 Phenomena: {Coordination}
 mam2 ma12 sadd2yak aehila diwwa
 ma-m2 ma-12 sadd2yak aehila diwwa
-1SG-NOM 1SG-DAT noise.INDF.ACC hear.INV.PST.PTCP run.PST
+1SG-NOM 1SG-DAT noise.INDF.ACC hear.INV.PP run.PST
 `I heard a sound and ran`
 
 ### Case Constraints between SOV/AV
@@ -1062,9 +1062,99 @@ balla sadd2yak æhe-n2wa
 dog.NOM noise.INDF.ACC hear.INVOL-IMPF
 `The dog hears a noise`
 
-### Adjectives
+### Attributive Adjectives
 
-# 1 animate masculine
+# 1 Qualitative Adjective
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Adjectives, Tense Aspect Mood}
+loku balla bat kan2wa
+loku balla bat ka-n2-wa
+big dog.NOM rice.NOM eat-NPT-IND
+`The big dog eats rice`
+
+# 2 Qualitative Adjective, incorrect adjective placement (following noun)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Adjectives}
+balla loku bat kan2wa
+balla loku bat ka-n2-wa
+dog.NOM big rice.NOM eat-NPT-IND
+`The big dog eats rice`
+
+# 3 Qualitative Adjective
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Adjectives, Tense Aspect Mood}
+mam2 loku pot2 gatta
+ma-m2 loku pot2 gatta
+1SG-NOM big book buy.PST
+`I bought the big book`
+
+# 4 Cardinal numeral adjective, cardinal 'one' preceding noun
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Adjectives, Tense Aspect Mood}
+mam2 ek2 pot2 gatta
+ma-m2 ek2 pot2 gatta
+1SG-NOM one book.SG buy.PST
+`I bought one book`
+
+# 5 Cardinal numeral adjective, incorrect cardinal 'one' location
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Adjectives}
+mam2 pot2 ek2 gatta
+ma-m2 pot2 ek2 gatta
+1SG-NOM book.SG one buy.PST
+`I bought one book`
+
+# 6 Indefinite Adjective
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Adjectives, Tense Aspect Mood}
+sam2har2 guruw2ru kææwa
+sam2har2 guruw2ru kææwa
+some teacher.PL eat.PST
+`Some teachers eat`
+
+# 7 Indefinite Adjective, incorrect - adjective follows noun
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Adjectives}
+guruw2ru sam2har2 bat kææwa
+guruw2ru sam2har2 bat kææwa
+teacher.PL some rice eat.PST
+`Teachers some ate rice`
+
+# 8 Cardinal Numeral Adjective, cardinal number follows noun
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Adjective, Tense Aspect Mood}
+mam2 gas dek2 gatta
+ma-m2 gas dek2 gatta
+1SG-NOM tree.PL two buy.PST
+`I bought 2 trees`
+
+# 9 Cardinal Numeral Adjective, incorrect cardinal order, cardinal number precedes noun
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Adjective}
+mam2 dek2 gas gatta
+ma-m2 dek2 gas gatta
+1SG-NOM two tree.PL buy.PST
+I bought two trees
+
+# 10 animate masculine
 Source: author # modified from a:62
 Vetted: f
 Judgement: g
@@ -1074,7 +1164,7 @@ us2 ekaa aa-wa
 tall one.ANIM came-PST
 `The tall one came`
 
-# 2 animate female
+# 11 animate female
 Source: author # modified from a:62
 Vetted: f
 Judgement: g
@@ -1083,3 +1173,115 @@ us2 ekii aawa
 us2 ek-ii aa-wa
 tall one-ANIM.FEM came-PST
 `The tall one came`
+
+### Non-Verbal Predicates
+
+# 1 Dative nominal predicate
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Non-Verbal Predicates}
+balla oyaa12
+balla oyaa-12
+dog you-DAT
+`The dog is for you`
+
+# 2 Dative nominal predicate, missing dative marker
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Non-Verbal Predicates}
+balla oyaa
+balla oyaa
+dog you
+`The dog is you`
+
+# 3 Adjectival Predicate, with vowel-final adjective with assertion marker
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Non-Verbal Predicates}
+bat rasai
+bat rasa-i
+rice delicious-AM
+`The rice is delicious`
+
+# 4 Adjectival Predicate, vowel-final adjective, missing assertion marker
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Non-Verbal Predicates}
+bat rasa
+bat rasa
+rice delicious
+`The rice is delicious`
+
+# 5 Adjectival Predicate, consonant-final adjective
+Source: author
+Vetted: s
+Judgement: g
+Phenomena: {Non-Verbal Predicates}
+pot2 alut
+pot2 alut
+book.SG.NOM new
+`The book is new`
+
+# 6 Adjectival Predicate, vowel-final adjective with assertion marker
+Source: author
+Vetted: s
+Judgement: g
+Phenomena: {Non-Verbal Predicates}
+pot2 lokui
+pot2 loku-i
+book.SG.NOM big-AM
+`The book is big`
+
+# 7 Adjectival Predicate, missing vowel-final assertion marker
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Non-Verbal Predicates}
+pot2 loku
+pot2 loku
+book.SG.NOM big
+`The book is big`
+
+# 8 Nominal Predicate
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Non-Verbal Predicates}
+eyaa guruw2r2ek
+eyaa guruw2r2-ek
+3SG.NOM teacher-INDF
+`She is a teacher`
+
+# 9 Nominal Predicate, missing indefinite marker on noun
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Non-Verbal Predicates}
+eyaa guruw2r2
+eyaa guruw2r2
+3SG.NOM teacher
+`She is teachers`
+
+# 10 Non-Equational
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Non-Verbal Predicates}
+bat mage
+bat ma-ge
+rice I-GEN
+`The rice is mine`
+
+# 11 Non-Equational, incorrect - missing genitive marker
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Non-Verbal Predicates}
+bat ma
+bat ma
+rice I
+`The rice is I`

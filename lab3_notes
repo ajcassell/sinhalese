@@ -376,8 +376,10 @@ Adjectives
 - removed "question" verbs for now
 - VPs asyndeton and then update TDL later
 - did not make a rule for single nouns because agreement doesn't matter
-- we put two auxes possible to become NPT/IND - think these are supposed to be handled differently but didn't get to that
+- we put two aux, not neg, possible to become NPT/IND - think these are supposed to be handled differently but didn't get to that
 
+- made neg aux force VP comp to have focus form, NPT, and finite
+- made other two aux force PP on verb
 
 - made a rule for plural pronouns
 
@@ -386,14 +388,13 @@ Adjectives
 such as guruw2r2y - y for before another vowel
 - participle coordination in system?
 - didn't get to FOC part, wth -nne suffix
+- Indicative is a mood - should we add that?
 
+- made past-part nonfinite form subtype (removed from tense section)
 
+TO DO:
+- combine her testsuite with mine
 
-
-- neg aux form finite and non-finite? overgeneration
-- perf part aux form/tense?
-
-- we put auxes in full form without IND
 
 - coordination - in -i
 sadd2yak - indf acc
@@ -415,8 +416,6 @@ Need long skinny trees to go through each of the position classes
 
 Mention where genders are marked, if not in the 3sg pronoun
 Explain the affixes for definiteness
-
-Indicative is a mood - should we add that?
 
 
 QUESTIONS!

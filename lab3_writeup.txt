@@ -168,14 +168,14 @@ only affects singular suffixes on nouns.
 
 The following examples show that there is no gender inflection on the `tall` adjective.
 
-# 1 animate masculine
+# 10 animate masculine
 Judgement: g
 us2 ekaa aawa
 us2 ekaa aawa
 tall one.ANIM came
 `The tall one came`
 
-# 2 animate female
+# 11 animate female
 Judgement: g
 us2 ekii aawa
 us2 ek-ii aawa
