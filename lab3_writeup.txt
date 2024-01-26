@@ -283,18 +283,10 @@ Lastly, these are some notes in response to comments from Lab 2
 
 
 PARSING
-mention that we have a big section on wh questions commented out
 
-sentences 1-6 all parse
-
-7 and 8 with the tien2wa aux work correctly!
 
 plural pronoun rule -- I had to change pl-pronoun-lex-rule := plural-pc-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM singular ]. to be singular... in sinhalese.tdl..
-
-maaw2 not found because maa stem change
-wh-questions will all fail
-focus will fail
 
 mam2 ka3eet2 yan2wa fails on comp-head rule because to the shop is dat and not an object of verb
 
@@ -311,13 +303,9 @@ reversing the order of n55 fails.. because has to follow the verb.. though it do
 bug maybe?? the newei negation adverb shows in choices, but nowhere in lexicon...
 saha also doesn't show up...
 
-assuming participle coordination does not work yet
 
-the process of coordinating with -i seems to work, examples do not parse if missing -i
 
 Got mam2 ek2 pot2 gatta working, but not pot2 ek2 as it should not be
-
-How can you get up to an S or multiple but then have no parses? - getting that for initial coordination example
 
 A lot of multiple parses because N-N for optional nominative-lex-rule
 
@@ -325,3 +313,105 @@ The fault lies with me examples are kinda like idioms and are non-verbal which a
 
 Something that parses but shouldnt: mam2 pot2 sam2harak gatta (singular noun)
 -- needs some kind of head specifier num agreement?
+
+
+
+4. First, please note we commented out the non-verbal predicate and
+wh-questions that are not covered in the customized grammar yet so as
+to have a clearer picture of how our grammar performs against the features
+we have tried implementing. That makes ____ sentences, for which ___ are covered
+giving us ____% coverage.
+
+We also have significant improvement from Lab2. All of our basic word order
+examples parse correctly, as well as our sentences with nominative pronouns that
+undergo inflection like:
+# 2 1sg personal pronoun
+Judgement: g
+mam2 bat kan2wa
+ma-m2 bat ka-n2wa
+1SG-NOM rice.NOM eat-IND
+`I eat rice`
+
+We were able to see correct inflection of pronouns into the dative case as well
+(though not a complete parse) but could not see this for the 1SG-ACC in # 8. This is
+because this is irregular and undergoes a somewhat different change than the
+other pronouns in that an additional a is added between the stem (ma) and the suffix (w2).
+# 8 Accusative case pronoun
+Judgement: g
+maaw2 bat kan2wa
+ma-aw2 bat ka-n2wa
+1SG-ACC rice.NOM eat-IND
+`I eat rice`
+
+Our test sentences showing our past-part auxiliiary and our
+future auxiliary also both parse, as well as correctly ruling ungrammatical
+the sentence # 8 where the auxiliary is in the wrong order.
+# 7 AUX following verb
+Judgement: g
+balla bat kalaa tien2wa
+balla bat ka-laa tie-n2wa
+dog.NOM rice.NOM eat-PP be-IND
+`The dog has eaten the rice`
+
+# 8 AUX preceding verb
+Judgement: u
+balla bat tien2wa kalaa
+balla bat tie-n2wa ka-laa
+dog.NOM rice.NOM be-IND eat-PP
+`The dog has eaten the rice`
+
+In terms of coordination, looking at parse charts show that
+the conjuctive coordination using the clitic -i seems to work, as
+a mother constituent joins the three NPs that we have in example
+# 2 and fail to do so when one is missing the clitic like in # 3.
+However, the parse chart shows 4 different possible S but generates no parses,
+despite what we believe the Subj-Head rule would do bringing together
+the coordinated NP subjects with the VP.
+# 2 Conjunctive coordination - clitic -i affixed to units of coordination
+Judgement: g
+guruw2rui demaupiyoi lam2inui paar2 sudd2k2laa
+guruw2ru-i demaupiyo-i lam2inu-i paar2 sudd2k2-laa
+teacher.PL-CONJ parent.PL-CONJ child.PL-CONJ road clean-PST
+`The teachers, parents and children cleaned the road`
+
+# 3 Conjunctive coordination - clitic -i affixed to units of coordination
+Judgement: u
+guruw2ru demaupiyoi lam2inui paar2 sudd2k2laa
+guruw2ru demaupiyo-i lam2inu-i paar2 sudd2k2-laa
+teacher.PL parent.PL-CONJ child.PL-CONJ road clean-PST
+`The teachers, parents and children cleaned the road`
+
+Participle coordination sentences do not parse yet, given that
+our implementation cannot yet be done in the matrix (mentioned in #5 below).
+
+Something else we didn't incorporate yet properly in the matrix
+is the concept of Focus which is a feature of verbs and can be changed
+with negation and wh-questions. We will need to work on this for next week.
+
+Our biggest problem remains with case.
+
+An example of a sentence that parsed but shouldn't (we think)
+is # 4. The quantifier sam2harak is to be used with only plural nouns
+and here we use the singular pot2. It is possible we need some kind of
+head-specifier number agreement constraint. However, you'll see that
+sam2har2 is also under the adjectives in our lexicon as an indefinite
+adjective but doesn't specify number either so we are wondering
+whether it is possible that this adjective could modify a singular noun,
+although it would need to undergo indefinite-pc to become sam2harak
+and that is not applicable to adjectives at the moment.
+# 4 Quantifier "some"
+Judgement: u
+mam2 pot2 sam2harak gatta
+ma-m2 pot2 sam2harak gatta
+1SG-NOM book.SG some.PL buy.PST
+`I bought some book`
+
+
+5. There are a few areas where the customization is not
+fully equipped to work on Sinhala. Firstly, the language
+shows coordination on VPs and S which we called
+participle coordination above. The matrix cannot specify
+specific inflected forms of the verb constituents in the
+coordination, so we will need to manually add this into
+the TDL files somehow later. For now it is marked as
+asyndetonic.

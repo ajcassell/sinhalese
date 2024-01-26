@@ -315,95 +315,95 @@ api mee ka3-gen ba3u gan-n2wa
 
 ### wh-?s
 
-## 1 WH-question sentence-final, with focus shift
-#Source: author
-#Vetted: f
-#Judgement: g
-#Phenomena: {Case, Matrix wh questions, Tense Aspect Mood}
-#mam2 yanne kohed2
-#ma-m2 ya-nn-e kohe-d2
-#1SG-NOM go-NPT-FOC where-Q
-#`Where do I go?`
+# 1 WH-question sentence-final, with focus shift
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Case, Matrix wh questions, Tense Aspect Mood}
+mam2 yanne kohed2
+ma-m2 ya-nn-e kohe-d2
+1SG-NOM go-NPT-FOC where-Q
+`Where do I go?`
 
-## 2 WH-question sentence-final, verb not required
-#Source: author
-#Vetted: f
-#Judgement: g
-#Phenomena: {Case, Matrix wh questions, Tense Aspect Mood}
-#balla kohed2
-#balla kohe-d2
-#dog.NOM where-Q
-#`Where is the dog?`
+# 2 WH-question sentence-final, verb not required
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Case, Matrix wh questions, Tense Aspect Mood}
+balla kohed2
+balla kohe-d2
+dog.NOM where-Q
+`Where is the dog?`
 
-## 3 Yes-or-no question constituent, no focus shift
-#Source: author
-#Vetted: f
-#Judgement: g
-#Phenomena: {Matrix wh questions, Tense Aspect Mood, Case}
-#mam2 ka3ee12 yan2wa d2
-#ma-m2 ka3ee-12 ya-n2-wa d2
-#1SG-NOM shop-DAT go-NPT-IND Q
-#`Do I go to the shop?`
+# 3 Yes-or-no question constituent, no focus shift
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Matrix wh questions, Tense Aspect Mood, Case}
+mam2 ka3ee12 yan2wa d2
+ma-m2 ka3ee-12 ya-n2-wa d2
+1SG-NOM shop-DAT go-NPT-IND Q
+`Do I go to the shop?`
 
-## 4 WH-question, focus shift
-#Source: a:12
-#Vetted: s
-#Judgement: g
-#Phenomena: {Matrix wh questions, Tense Aspect Mood, Case}
-#ka3ee12 yanne kaud2
-#ka3ee-12 ya-nn-e kau-d2
-#shop-DAT go-NPT-FOC who-Q
-#`Who goes to the shop?`
+# 4 WH-question, focus shift
+Source: a:12
+Vetted: s
+Judgement: g
+Phenomena: {Matrix wh questions, Tense Aspect Mood, Case}
+ka3ee12 yanne kaud2
+ka3ee-12 ya-nn-e kau-d2
+shop-DAT go-NPT-FOC who-Q
+`Who goes to the shop?`
 
-## 5 WH-question, focus shift, wrong wh-word
-#Source: author
-#Vetted: f
-#Judgement: u
-#Phenomena: {Matrix wh questions}
-#ka3ee12 yanne kohed2
-#ka3ee-12 ya-nn-e kohe-d2
-#shop-DAT go-NPT-FOC where-Q
-#`Where goes to the shop?`
+# 5 WH-question, focus shift, wrong wh-word
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Matrix wh questions}
+ka3ee12 yanne kohed2
+ka3ee-12 ya-nn-e kohe-d2
+shop-DAT go-NPT-FOC where-Q
+`Where goes to the shop?`
 
-## 6 WH-question, with focus shift
-#Source: a:135
-#Vetted: s
-#Judgement: g
-#Phenomena: {Case, Matrix wh questions, Tense Aspect Mood}
-#bat kanne kaud2
-#bat ka-nn-e kau-d2
-#rice.NOM eat-NPT-FOC who-Q
-#`Who eats rice?`
+# 6 WH-question, with focus shift
+Source: a:135
+Vetted: s
+Judgement: g
+Phenomena: {Case, Matrix wh questions, Tense Aspect Mood}
+bat kanne kaud2
+bat ka-nn-e kau-d2
+rice.NOM eat-NPT-FOC who-Q
+`Who eats rice?`
 
-## 7 WH-question, sentence-initial, with focus shift
-#Source: a:135
-#Vetted: s
-#Judgement: g
-#Phenomena: {Case, Matrix wh questions, Tense Aspect Mood}
-#kaud2 bat kanne
-#kau-d2 bat ka-nn-e
-#who-Q rice.NOM eat-NPT-FOC
-#`Who eats rice?`
+# 7 WH-question, sentence-initial, with focus shift
+Source: a:135
+Vetted: s
+Judgement: g
+Phenomena: {Case, Matrix wh questions, Tense Aspect Mood}
+kaud2 bat kanne
+kau-d2 bat ka-nn-e
+who-Q rice.NOM eat-NPT-FOC
+`Who eats rice?`
 
-## 8 Response to WH-question
-#Source: author
-#Vetted: f
-#Judgement: g
-#Phenomena: {Case, Tense Aspect Mood}
-#mam2 ka3ee12 yan2wa
-#ma-m2 ka3ee-12 ya-n2-wa
-#1SG-NOM shop-DAT go-NPT-IND
-#`I go to the shop`
+# 8 Response to WH-question
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Case, Tense Aspect Mood}
+mam2 ka3ee12 yan2wa
+ma-m2 ka3ee-12 ya-n2-wa
+1SG-NOM shop-DAT go-NPT-IND
+`I go to the shop`
 
-## 9 Yes-or-no question in declarative form, no focus shift
-#Source: author
-#Vetted: f
-#Judgement: g
-#Phenomena: {Case, Tense Aspect Mood}
-#mam2 ka3ee12 yan2wa
-#ma-m2 ka3ee-12 ya-n2-wa
-#1SG-NOM shop-DAT go-NPT-IND
-#`I go to the shop?`
+# 9 Yes-or-no question in declarative form, no focus shift
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Case, Tense Aspect Mood}
+mam2 ka3ee12 yan2wa
+ma-m2 ka3ee-12 ya-n2-wa
+1SG-NOM shop-DAT go-NPT-IND
+`I go to the shop?`
 
 ### The Rest of the NP
 
