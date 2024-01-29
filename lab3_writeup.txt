@@ -1,0 +1,661 @@
+Lab 3 Writeup
+LING 567
+Sinhala/Sinhalese Grammar
+January 26, 2024
+Melody Bechler, Alexandra Cassell
+
+Our language has several non-ASCII characters. We have assigned numbers to these characters as
+follows: ṭ = ʈ = 1, ə = 2, ɖ = 3. In this lab, we are adding ŋ = 4 and æ = 5.
+
+Please note the source, vetted, and phenomena fields have been left out of the provided examples below
+for the sole purpose of space. They remain in the testsuite file. Also, the example numbers match those in
+the testsuite.
+
+1./2.
+Below are descriptions of the phenomena seen in Sinhala. These include sentential negation, agreement,
+coordination, agreement in coordinated NPs, attributive predicates, and non-verbal predicates.
+
+Negation in Sinhala can be expressed in two forms. There is a verbal negator (`n55`) and a focus negator
+(`newei`). Both immediately follow whatever predicate is to be negated. n55 can only be used for
+sentential negation whereas newei can be used for constituent negation as well.
+nææ requires the verb it is negating to be marked with the suffix -e, bringing it to the FOCUS aspect
+whereas newei occurs at the end of a focused constituent/predicate negating that constituent's/predicate's
+focus. In example 9, nææ negates the act of the dog drinking and requires the drink verb
+to be in focus. nææ could be replaced by newei in this example and remain grammatical.
+However, 4 and 13 show that only newei can be used in nominal predicates.
+Lastly, 14 shows that the negator must be directly after the verb for sentential
+negation and cannot appear elsewhere in the sentence.
+
+# 9 n55 verbal negator
+Judgement: g
+balla bonne n55
+balla bo-nne n55
+dog drink-NPT.FOC no
+`The dog does not drink`
+
+# 4 newei focus negator
+Judgement: g
+eyaa guruw2r2yek newei
+eyaa guruw2r2y-ek newei
+he teacher-INDF not
+`He is not a teacher`
+
+# 13 n55 verbal negator
+Judgement: u
+eyaa guruw2r2yek n55
+eyaa guruw2r2y-ek n55
+he teacher-INDF not
+`He is not a teacher`
+
+# 14 newei focus negator, wrong position
+Judgement: u
+eyaa newei guruw2r2yek
+eyaa newei guruw2r2y-ek
+he not teacher-INDF
+`He is not a teacher`
+
+In the customization system, we implemented newei as an independent
+adverb that appears after/modifies a VP, and n55 as a negative auxiliary
+verb because it appears in the same position as other auxiliary verbs
+and has a morphological effect on the verb by requiring it be in
+FOCUS with -e suffix.
+
+Sinhala does not show agreement in most item pairs. The verbs do not
+show number, person, or gender agreements with the subject except for
+the case of second person agreement with imperatives, but that is not
+covered here. The subject-verb agreement is only influenced by pragmatics
+like imperative phrases and this is not the case in literary Sinhala,
+only in colloquial Sinhala which is our focus.
+
+The following information is regarding what we thought was agreement between
+verbs and their subjects/objects/agents but upon further explanation,
+this is really just a matter of case constraints. Since they were
+missed in the previous lab, we include the discussion here.
+
+As mentioned ini the previous lab, Sinhala has a total of six cases:
+nominative, accusative, dative, genitive/locative, instrumental,
+and vocative. The distribution of these cases on a noun
+depends heavily on animacy. In spoken Sinhala, inanimate nouns
+can be nominative, genitive, dative, and instrumental. Animate nouns
+can be all 6 cases. There is some "agreement" for lack of a better
+word between verbs and S/A/O depending on the inherent volitility of a verb.
+This is a natural feature of different verbs, not a result of inflection.
+Essentially, involitive verbs correspond to involuntary - events without
+active agent participation.
+
+V without specification of volitivity means that either can apply.
+
+The following are constraints on S cases depending on the S animacy and the V volitivity:
+S.INAM.NOM V
+S.ANIM.NOM V.VOL
+S.ANIM.ACC V.INVOL
+S.ANIM.DAT V.INVOL
+(S.ANIM.NOM V.INVOL) - default NOM if ACC marker is dropped.
+
+The following are constraints on A cases depending on the A animacy and the V volitivity:
+A.INAM.NOM
+A.ANIM.NOM V.VOL
+A.ANIM.DAT V.INVOL (generally examples of cognition or sensation)
+
+The following are constraints on O cases depending on the O animacy and definiteness.
+The verb's involitivity is irrelevant here:
+O.INAM.NOM V
+O.ANIM.NOM-INDF V
+O.ANIM.ACC-INDF V
+O.ANIM.ACC V
+O.DAT V - occurs for specific lexically defined verbs
+
+In the testsuite under `### Case Constraints between SOV/AV`,
+there are 28 grammatical and ungrammatical examples covering every combination
+of animacy, case, and volitivity values. Some obvious examples have
+been covered in the Case section of lab 2.
+6 and 7 show the two variations of the verb `run` wherein the first
+example, the subject I is active in the running, whereas the interpretation
+for 7 suggests that the subject I is forced to run because of something.
+Both can take an animate subject, but the first is ungrammatical
+because the subject is non-nominative.
+
+# 6 SV animate non-nominative subject, volitive verb
+Judgement: u
+ma12 diuwa
+ma12 diuw-a
+1SG.DAT run-PST
+`I ran`
+
+# 7 SV animate accusative subject, involitive verb
+Judgement: g
+maaw2 diuna
+maaw2 diun-a
+1SG.ACC run.INVOL-PST
+`I ran` # involuntarily/something made me run
+
+Similarly 14 shows that the inanimate agent for an involitive verb
+cannot be dative.
+
+# 14 AV inanimate dative subject, involitive verb
+Judgement: u
+ka3eet2 5hen2wa
+ka3ee-12 5he-n2wa
+shop-DAT hear.INVOL-IMPF
+`The shop hears`
+
+Finally a grammatical example of an animate nominative and indefinite object is:
+# 23 OV animate nominative indefinite object, volitive verb
+Judgement: g
+balla eluvek kan2wa
+balla eluv-ek ka-n2wa
+dog.NOM goat.SG.NOM-INDF eat-IND
+`The dog eats a goat`
+
+Back to agreement in other forms as requested, Sinhala shows
+no agreement between determiners and nouns. So far, we have only
+included non-numeral quantifiers as our determiners from lab2 and these
+do not have case, person, or gender agreement. Also, by nature these
+quantifiers representing `some/several/a few` quantify plural nouns only
+so they do not show any inflection between a singular and plural form
+depending on the noun.
+
+In the customization system, we therefore did not need to add
+any agreement constraints in our lexical rule/types. Instead,
+we need to account for the different subject and object cases
+allowed for involitive and volitive verbs. Per a Canvas discussion,
+this involves us making a specific category of verbs for involitive
+with an obligatory position class for the different non-affixing
+case subject requirements. We made the involitive class but did not have
+time to continue with this update and it is a priority for the upcoming week
+to sort out our case analysis/implementation.
+
+Our lexical entries for nouns fall under two noun classes for
+animacy and inanimacy.
+
+
+-----
+
+
+
+
+-------
+COORDINATION
+
+Sinhala has multiple ways to express coordination.
+First, there is collateral coordination which is essentially
+linking together similar clauses that all share a constituent.
+For example, the following example shows one subject for
+three verb phrases. After testing this, it was left out (for now) from the customization
+because it was generating very large numbers of parses (12-200+) because
+of the lack of case and agreement constraints on noun - thus every combination
+of NP was being coordinated.
+
+# 1 Collateral coordination - phrases with shared missing piece (i.e subject dog)
+Judgement: g
+balla ged2r2 en2wa bat kan2wa 1iiwee bal2n2wa
+balla ged2r2 e-n2wa bat ka-n2wa 1iiwee bal2-n2wa
+dog home come-IND rice eat-IND TV watch-IND
+`The dog comes home, has a meal and watches TV`
+
+The second type is conjunctive coordination which involves the clitic -i (or sometimes
+-t) added as suffixes to the units of coordination. This is used for NPs and NOMs.
+For consonant-final nouns, 'u' is added as an epenthetic vowel after the final consonant
+but before the clitic. Example 2 shows this clitic
+on three NPs whereas example 3 only shows 2, making it ungrammatical because all
+units must contain the clitic. This can also be used to coordinate more detailed
+NPs such as in #6 where the clitic is on the direct object i.e. "shirt" ("for the dog").
+
+# 2 Conjunctive coordination - clitic -i affixed to units of coordination
+Judgement: g
+guruw2rui demaupiyoi lam2inui paar2 sudd2 k2laa
+guruw2ru-i demaupiyo-i lam2inu-i paar2 sudd2 k2laa
+teachers-CONJ parents-CONJ children-CONJ road clean.PST
+`The teachers, parents and children cleaned the road`
+
+# 3 Conjunctive coordination - clitic -i affixed to units of coordination
+Judgement: u
+guruw2ru demaupiyoi lam2inui paar2 sudd2 k2laa
+guruw2ru demaupiyo-i lam2inu-i paar2 sudd2 k2laa
+teachers parents-CONJ children-CONJ road clean.PST
+`The teachers, parents and children cleaned the road`
+
+# 6 Conjunctive coordination - clitic -i affixed to units of coordination
+Judgement: g
+amma balla12 kamisekui balla12 gaum2kui ara4 dunna
+amma balla-12 kamiseku-i balla-12 gaum2ku-i ara4 dunna
+mother dog-DAT shirt.INDF-CONJ dog-DAT gown.INDF-CONJ buy.PP give.PST
+`Mother bought a shirt for the dog and a gown for the dog`
+
+An example with the epenthetic vowel is:
+Judgement: g
+amma batui ge3i2i gatta
+amma batu-i ge3i2-i gatta
+mother rice-CONJ fruit-CONJ buy.PST
+`Mother bought the rice and the fruit`
+
+Sinhala also has a noun-coordinating constituent `saha`. This can only be used
+to coordinate nouns, making example # 9 ungrammatical.
+
+# 8 Conjunctive coordination - saha noun-coordinator
+Judgement: g
+mam2 bat saha amma bat kan2wa
+mam2 bat saha amma bat ka-n2wa
+1SG.NOM rice.NOM and mother rice.NOM eat-IND
+`I eat rice and mother eats rice`
+
+# 9 Conjunctive coordination - saha cannot coordinate clauses
+Judgement: u
+mam2 bat kan2wa saha amma bat kan2wa
+mam2 bat ka-n2wa saha amma bat ka-n2wa
+1SG.NOM rice.NOM eat-IND and mother rice.NOM eat-IND
+`I eat rice and mother eats rice`
+
+Lastly, we have participle coordination for series of verb events.
+In participle coordination, the final event in the series is form PST and
+all of the preceding events are past participles, like in #10.
+# 12 is ungrammatical because the first event is not a past participle.
+
+# 10 Participle coordination
+Judgement: g
+mam2 ged2r2 gihilla k55m2 k55wa
+mam2 ged2r2 gihilla k55m2 k55wa
+1SG.NOM house.ACC go.PP food.ACC eat.PST
+`I went home and ate`
+
+# 12 Participle coordination
+Judgement: u
+balla ged2r2 yan2wa, mam2 k55m2 k55wa
+balla ged2r2 ya-n2-wa, mam2 k55m2 k55wa
+dog.NOM house.ACC go-NPT-IND, 1SG.NOM food.ACC eat.PST
+`The dog went home and I ate`
+
+In the customization matrix, we added three coordination strategies. Coordination strategy 1 corresponds
+to noun coordination and is labelled omnisyndeton, since all coordinands must have the clitic 'i'. We then
+chose the affix option with 'i' occurring after the coordinand. Coordination Strategy 2 represents noun and
+NP coordination as polsyndeton. The word 'saha' appears before every coordinand, except the first. Coordination
+strategy 3 was originally an asyndeton pattern for nouns and NPs, but this caused an excessive number of parse
+results per test sentence. Instead, we changed Coordination Strategy 3 to reflect VPs and sentences marked with
+an asyndeton pattern, which subsequently reduced the number of parses per sentence. Strategy 3
+will be updated later in the TDL files to account for this PP verb constraint.
+
+Agreement in NP Coordination:
+Sinhala does not have agreement in NP Coordination. There is no requirement for agreement
+between constituents of coordination. In terms of what the mother of the coordination rule
+has for values in agreement with the daughters, we found no discussion of that. It is our
+understanding since Sinhala does not have subject verb agreement, at least,
+that there is no requirement for the mother NP to be of a certain PNG since
+this does not affect the verb it can pair with.
+
+Attributive Adjectives:
+Sinhala classifies adjectives into three classes: nominal, verbal, and descriptive.
+Descriptive adjectives are the only adjectives considered to be pure adjectives, since nominal
+and verbal adjectives have unclear boundaries and can appear identically to nouns and verbs.
+Descriptive adjectives occurring attributively precede nouns and they are also divided into subclasses.
+These subclasses include: qualitative, demonstrative, and quantitative adjectives. Quantitative
+adjectives describe the quantity of a noun or descriptive adjective and include several subtypes:
+cardinal numeral, indefinite numeral, and non-numeral. Cardinal numeral adjectives, except
+‘ek2’ (one), follow the noun. ‘ek2’ can only precede a noun. Indefinite numeral adjectives include:
+‘sam2har2’ (some) and ‘okkoma2’ (all). Non-numeral quantitative adjectives include examples such as
+'loku w5di'(too big), which form adjectival phrases. Sentences with this construction, as well as
+demonstrative adjectives, are not maximally simple sentences for the purposes of our project.
+Adjectives do not agree in definiteness, number, or gender, with the exception of
+cardinal numeral adjectives as previously described. We did not find any examples
+where case matches, though it is stated that this is possible.
+
+# 1 Qualitative Adjective
+loku balla bat kan2wa
+loku balla bat ka-n2-wa
+big dog.NOM rice.NOM eat-NPT-IND
+`The big dog eats rice`
+
+# 4 Cardinal numeral adjective, cardinal 'one' preceding noun
+mam2 ek2 pot2 gatta
+ma-m2 ek2 pot2 gatta
+1SG-NOM one book.SG buy.PST
+`I bought one book`
+
+# 6  Indefinite Adjective
+sam2har2 guruw2ru k55wa
+sam2har2 guruw2ru k55wa
+some teacher.PL eat.PST
+`Some teachers eat`
+
+The following examples show that there is no gender inflection on the `tall` adjective.
+
+# 10 animate masculine
+Judgement: g
+us2 ekaa aawa
+us2 ekaa aawa
+tall one.ANIM came
+`The tall one came`
+
+# 11 animate female
+Judgement: g
+us2 ekii aawa
+us2 ek-ii aawa
+tall one-ANIM.FEM came
+`The tall one came`
+
+In the customization matrix, attributive adjectives were added with a type names of regular-attr
+and cardinal-except-attr. Adjectives in cardinal-except-attr reflect how the adjective modifies items
+immediately before the adjective. Attributive adjectives modify items immediately after the adjective.
+We labelled these adjectives as attributive only, since we are not adding non-verbal predicates to
+our starter grammar this week. These adjectives modify items immediately after the adjective.
+Additionally, given we are skipping non-verbal predicates, we chose "impossibly" when asked about
+adjective behaving predicatively and appearing as the complement of the copula.
+
+Non-Verbal Predicates:
+In Sinhala, predicates are divided into two categories: verbal and non-verbal. In the non-verbal
+category, non-verbal clauses are subdivided into equational and non-equational sentences. Equational
+sentences include a topic (a nominal) and an adjectival or nominal predicate. The predicate describes
+the topic’s quality, category, or characteristics. Non-equational sentences consist of NPs marked with
+dative, genitive, ablative, or locative case as predicates. Non-verbal predicates do not require a copula
+to combine the subject and the predicate. In adjectival predicates, an assertion mark ‘i’ is required for
+vowel final adjectives when they appear as a predicate. This morpheme is not required when consonant-final
+adjectives are the predicate or with negative forms.
+
+# 3 Adjectival Predicate, with vowel-final adjective with assertion marker
+Judgement: g
+bat rasai
+bat rasa-i
+rice delicious-AM
+`The rice is delicious`
+
+# 8 Nominal Predicate
+Judgement: g
+eyaa guruw2r2ek
+eyaa guruw2r2-ek
+3SG.NOM teacher-INDF
+`She is a teacher`
+
+# 10 Non-Equational
+Judgement: g
+bat mage
+bat ma-ge
+rice 1SG-GEN
+`The rice is mine
+
+This phenomena was not included in the starter grammar this week.
+
+Lastly, these are some responses to comments from Lab 2 as well as a
+discussion of our choices in the lexicon and morphology hierarchies.
+
+In order to account for verb constraints, casing and other affixes,
+we updated the lexicon and morphology to allow inflection.
+In terms of morphology, we included two verbal position classes.
+The first is for npt-ind (not past/indicative) which works on intransive,
+transitive, and auxiliary verbs (exception the negation one) by the suffix -n2wa.
+This actually needs to be further analyzed because some sources represent -n2 and -wa
+as different suffixes. The second is for past-part which adds the suffix -laa to
+any non-aux verb. For nouns, we have three position classes: indefiniteness which comes
+initially, case. Indefiniteness only works on common nouns
+(inanimate or animate) appending -ek or -ak, and for case there are rules for dative, accusative, genitive,
+nominative, and nominative-pronoun nouns. The case position class takes
+the indefiniteness-pc as input to follow the correct order of affixing.
+The nominative rule is a zero rule which has no affix but turns the base form
+into nominative casing. The nominative-pronoun rule was created because
+it was the only example we saw where nominative was marked with an affix.
+We had a plural rule that applied to only 2sg and 3sg because common nouns and 1sg
+do not show the same pattern, but we opted to have a fully formed lexicon instead
+so made individual types for these two personal pronouns.
+
+We also defined definiteness under "Other Syntactic and Semantic Features"
+as a semantic feature for nominal categories, whose values use bool as an existing
+value type. We have the indefinitness-pc to mark common nouns that are indefinite
+as seen in # 23. In Lab 2 these were a separate noun class.
+# 23 OV animate nominative indefinite object, volitive verb
+Judgement: g
+balla eluvek kan2wa
+balla eluv-ek ka-n2wa
+dog.NOM goat.SG.NOM-INDF eat-IND
+`The dog eats a goat`
+
+We restructured our noun types based on animacy (animate vs inanimate), number,
+and irregularity, which differs from the case-based type system we were using last week.
+We also removed indefinite, plural, and case affixes from the nouns since this will
+now be resolved in morphology. Only the stem forms of these nouns remain,
+which is most evident in our pronoun types.
+
+We have three irregular verb types that are in our testsuite but
+do not seemingly follow one of our morphological patterns.
+There is irreg-trans-pst, irreg-trans-pp, and irreg-intrans-pst. The same
+goes for our two irregular noun classes irreg-plural, irreg-indef, and
+irreg-acc. These are in forms that are close to but do not perfectly
+match with our other verbs and nouns that are inflected so for the time
+being they exist in their own category so that they do not undergo the same
+inflections. Involitive replaces the transitive-verb-dative-subject
+verb type we had in lab 2 and at the moment, just contains verbs that have this
+feature, though this has not been implemented in the customization system.
+
+For auxiliary verbs, three auxiliary features were defined: neg, past-part-aux, and future-aux. The neg auxiliary
+type contributes an independent predicate and takes a noun phrase bearing the case the verbal complement assigns
+to its subject. We also added the complement features of finite, nonpast, focus. Past-part-aux
+is a past participle auxiliary that does not contribute a predicate. The subject type is a also a NP bearing
+the case the verbal complement assigns. We added two complement features, one with a value of finite
+nonfinite and the second is a tense feature with the value past. Lastly, the future-aux type does not contribute a
+predicate and takes the same subject type as the prior auxiliary types (though we found it weird that it
+specifies past tense on the verb when it indicates the future). We added two complement features, including
+one with finite/nonfinite values and the second as a tense feature with a nonpast value.
+
+In the word order section, we added auxiliary verbs. We specified that auxiliaries appear after the complement.
+Auxiliary complements are VPs, raising subject and more than one auxiliary can be present in a clause. We did
+have the auxiliary sectioned completed for Lab 2, but the auxiliary verb radio button was set to no.
+
+Differentiation between lab 2 and lab 3, not previously mentioned:
+Auxiliaries were added to the matrix and we updated the incorrect
+gloss for tien2wa (used to be `has` which came from our source)
+
+# 7 AUX following verb
+dalla bat kalaa tien2wa
+dalla bat ka-laa tie-n2wa
+dog.NOM rice.NOM eat-PP be-IND
+`The dog has eaten the rice`
+
+We updated the grammar's tense system as well.
+Sinhala has two tenses: past and non-past. In the matrix, we selected these two common hierarchy element and
+added the past-participle subtype. The past-participle is a subtype of nonfinite
+though this will require more analysis as this prevented any S with a past participle
+VP to fail to parse because the form was not finite, but it was our understanding that
+it should be nonfinite. We changed to finite and were able to parse more of the sentences.
+
+While there are seven aspects in Sinhala, we are only modeling perfective and completive in our grammar.
+We opted to create our own hierarchy of values for aspect and added perfective and completive here.
+Auxiliaries are also components of aspect, as shown in these examples:
+
+# 1 Perfective Aspect
+dalla bat kalaa tien2wa
+dalla bat ka-laa tie-n2wa
+dog.NOM rice.NOM eat-PP be-IND
+`The dog has eaten the rice`
+
+# 2 Completive Aspect (perceived completion, like in the future), daa is an aux
+dalla bat kalaa daan2wa
+dalla bat ka-laa daa-n2wa
+dog.NOM rice.NOM eat-PP daa-IND
+`The dog will eat the rice completely`
+
+3. The properties of our language/testsuite not yet implemented have been sprinkled
+throughout this discussion, but these mainly include the FOCUS feature, IND mood,
+adjectival predicate rule "-AM", and participle coordination.
+
+4. First, please note that the sentences in our testsuite that we are not
+expecting to parse because they haven't been added to the grammar matrix are
+the wh-questions, non-verbal predicates, and participle coordination.
+We have a total of 126 sentences, for which 33 are correctly parsed
+giving us 39.8% coverage. Our grammar continues to generate multiple
+parses per sentence. In many cases, this is due to the ambiguity of
+subject and object casing as well as the optionality of the nominative-lex-rule
+on those subjects and objects. This leaves us with similar trees that have
+N-N branches where the rule applies and N when it doesn't.
+
+We also have significant improvement from Lab2. All of our basic word order
+examples parse correctly, as well as our sentences with nominative pronouns that
+undergo inflection like:
+# 2 1sg personal pronoun
+Judgement: g
+mam2 bat kan2wa
+ma-m2 bat ka-n2wa
+1SG-NOM rice.NOM eat-IND
+`I eat rice`
+
+We were able to see correct inflection of pronouns into the dative case as well
+(though not a complete parse) but could not see this for the 1SG-ACC in # 8. This is
+because this is irregular and undergoes a somewhat different change than the
+other pronouns in that an additional a is added between the stem (ma) and the suffix (w2).
+# 8 Accusative case pronoun
+Judgement: g
+maaw2 bat kan2wa
+ma-aw2 bat ka-n2wa
+1SG-ACC rice.NOM eat-IND
+`I eat rice`
+
+Our test sentences showing our past-part auxiliary and our
+future auxiliary also both parse, as well as correctly ruling ungrammatical
+the sentence # 8 where the auxiliary is in the wrong order.
+# 7 AUX following verb
+Judgement: g
+balla bat kalaa tien2wa
+balla bat ka-laa tie-n2wa
+dog.NOM rice.NOM eat-PP be-IND
+`The dog has eaten the rice`
+
+# 8 AUX preceding verb
+Judgement: u
+balla bat tien2wa kalaa
+balla bat tie-n2wa ka-laa
+dog.NOM rice.NOM be-IND eat-PP
+`The dog has eaten the rice`
+
+In terms of coordination, looking at parse charts show that
+the conjuctive coordination using the clitic -i seems to work, as
+a mother constituent joins the three NPs that we have in example
+# 2 and fail to do so when one is missing the clitic like in # 3.
+However, the parse chart shows 4 different possible S but generates no parses,
+despite what we believe the Subj-Head rule would do bringing together
+the coordinated NP subjects with the VP. (This issue was resolved due to a
+FORM mismatch).
+# 2 Conjunctive coordination - clitic -i affixed to units of coordination
+Judgement: g
+guruw2rui demaupiyoi lam2inui paar2 sudd2k2laa
+guruw2ru-i demaupiyo-i lam2inu-i paar2 sudd2k2-laa
+teacher.PL-CONJ parent.PL-CONJ child.PL-CONJ road clean-PST
+`The teachers, parents and children cleaned the road`
+
+# 3 Conjunctive coordination - clitic -i affixed to units of coordination
+Judgement: u
+guruw2ru demaupiyoi lam2inui paar2 sudd2k2laa
+guruw2ru demaupiyo-i lam2inu-i paar2 sudd2k2-laa
+teacher.PL parent.PL-CONJ child.PL-CONJ road clean-PST
+`The teachers, parents and children cleaned the road`
+
+Participle coordination sentences do not parse yet, given that
+our implementation cannot yet be done in the matrix (mentioned in #5 below).
+
+We have a couple of sentences that are non-verbal predicates (but translate like
+idioms) but show genitive/locative casing and these are not expected to work yet.
+#7 Genitive/Locative
+Judgement: g
+war2d2 mage atee
+war2d2 ma-ge at-ee
+fault.NOM 1SG-GEN hand-LOC
+`The fault lies with me`
+
+Something else we didn't incorporate yet properly in the matrix
+is the concept of Focus which is a feature of verbs and can be changed
+with negation and wh-questions. We will need to work on this for next week.
+
+So far, negation seems to be parsing correctly and rejecting incorrect order of the
+negation aux n55 seen below. However, the independent adverb newei is
+not recognizable in the lexicon and that is an issue we are looking into.
+# 15 n55 verbal negator with transitive verb, no dative
+Judgement: g
+balla bat kan2wa n55
+balla bat ka-n2wa n55
+dog.NOM rice eat-IND no
+`The dog does not eat the rice`
+
+# 16 n55 verbal negator, preceding verb
+Judgement: u
+balla bat n55 kan2wa
+balla bat n55 ka-n2wa
+dog.NOM rice no eat-IND
+`The dog does not eat the rice`
+
+Our biggest problem remains with case. We have implemented Sinhala as a split-S
+system and are able to accurately parse for nominative-accusative subject-object sentences.
+However, there are instances where the object can be another case, mentioned
+in 1./2. above. These sentences are failing because the object case is incorrect.
+
+Also, a lot of our test sentences that show dative and ablative casing are
+not necessarily on the verb's object, but what appears more like a prepositional
+phrase such as "to the shop" below.
+# 8
+Judgement: g
+mam2 ka3ee12 yan2wa
+ma-m2 ka3ee-12 ya-n2-wa
+1SG-NOM shop-DAT go-NPT-IND
+`I go to the shop`
+Removing the ka3ee-12 parses correctly since `ya` is an intransitive verb stem
+and doesn't require an object. Therefore, we need to figure out what
+implementation we are lacking for what seem like PPs. We tried unification
+with ka3ee12 and yan2wa but this failed on the COMP-HEAD rule because
+ka3ee12 is not an object of the verb.
+
+An example of a sentence that parsed but shouldn't (we think)
+is # 4. The quantifier sam2harak is to be used with only plural nouns
+and here we use the singular pot2. It is possible we need some kind of
+head-specifier number agreement constraint. However, you'll see that
+sam2har2 is also under the adjectives in our lexicon as an indefinite
+adjective but doesn't specify number either so we are wondering
+whether it is possible that this adjective could modify a singular noun,
+although it would need to undergo indefinite-pc to become sam2harak
+and that is not applicable to adjectives at the moment.
+# 4 Quantifier "some"
+Judgement: u
+mam2 pot2 sam2harak gatta
+ma-m2 pot2 sam2harak gatta
+1SG-NOM book.SG some.PL buy.PST
+`I bought some book`
+
+Another sentence that should not have parsed was
+# 9 Cardinal Numeral Adjective, incorrect cardinal order, cardinal number precedes noun
+mam2 dek2 gas gatta
+ma-m2 dek2 gas gatta
+1SG-NOM two tree.PL buy.PST
+`I bought two trees`
+
+Since "dek2" (two) is a cardinal adjective in the cardinal-except-attr type, the adjective must occur after the noun it
+modifies. In the lexicon, we specified this adjective modifies items immediately before the adjective in an attempt to
+capture this unique property. Due to the combination of Sinhala's free word order and "mam2" being noun, this sentence can parse. The
+resulting parse tree shows the adjective modifying mam2 and ignoring "gas" completely. This situation also applies to
+our regular-attr type. The sentence, shown below, "balla loku bat kan2wa" should not have parsed because the attributive adjective
+follows the noun it modifies.
+
+# 2 Qualitative Adjective, incorrect adjective placement (following noun)
+balla loku bat kan2wa
+balla loku bat ka-n2-wa
+dog.NOM big rice.NOM eat-NPT-IND
+`The dog eats big rice`
+
+This sentence has four parse trees, all showing the adjective modifying "bat" (rice). Again, the relatively free word order
+of Sinhala combined with the existence of another nearby noun the adjective can modify results in ungrammatical parses.
+Additionally, some of the "loku bat" NPs were generated by an adjective head rule followed by the bare NP, while the "balla" NP
+was correctly generated by the bare NP but has an additional parse for the nominative lexical rule we created. In evaluating the
+results for the grammatical sentence "loku balla bat kan2wa", the parse trees were created via the same rules applying to the
+ungrammatical parses. To eliminate the ungrammatical parses and to reduce total number of parses, we think we may need a rule that
+prevents cardinal adjectives from modifying the subject when cardinals incorrectly follow the subject. We may need a second rule
+targeting attributive adjectives that incorrectly follow the subject but modify the object. Lastly, we may need to modify our
+nominative lexical rule so it does not erroneously apply.
+
+5. There are a few areas where the customization is not
+fully equipped to work on Sinhala. Firstly, the language
+shows coordination on VPs and S which we called
+participle coordination above. The matrix cannot specify
+specific inflected forms of the verb constituents in the
+coordination, so we will need to manually add this into
+the TDL files somehow later. For now it is marked as
+asyndetonic. Second, we were unable to get the `saha` nominal coordination word
+to show up in the lexicon despite being included in the matrix. Instead
+it showed up as saha2.
+
+Extra Questions:
+1. Should we deal with words that behave differently whether they end
+with a vowel or not, thus requiring an extra letter before an affix?
+For example guruw2r2 requires a following y before a suffix because
+it ends in a vowel, so it does not behave the same as consonant ending nouns.

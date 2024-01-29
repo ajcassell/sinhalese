@@ -1,4 +1,17 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
+head-adj := head-adj-int-phrase.
+
+adj-head := adj-head-int-phrase.
+
+adj-head-scop := adj-head-scop-phrase.
+
+; Rule instances for head-modifier structures. Corresponding types
+; are defined in matrix.tdl.  The matrix customization script did
+; not need to add any further constraints, so no corresponding types
+; appear in sinhalese.tdl
+
+head-adj-scop := head-adj-scop-phrase.
+
 head-comp := head-comp-phrase.
 
 head-subj := head-subj-phrase.
@@ -14,3 +27,23 @@ comp-head-2 := comp-head-phrase-2.
 head-spec := head-spec-phrase.
 
 bare-np := bare-np-phrase.
+
+n1-top-coord := n1-top-coord-rule.
+
+n1-mid-coord := n1-mid-coord-rule.
+
+n2-top-coord := n2-top-coord-rule.
+
+n2-bottom-coord := n2-bottom-coord-rule.
+
+np2-top-coord := np2-top-coord-rule.
+
+np2-bottom-coord := np2-bottom-coord-rule.
+
+vp3-top-coord := vp3-top-coord-rule.
+
+vp3-bottom-coord := vp3-bottom-coord-rule.
+
+s3-top-coord := s3-top-coord-rule.
+
+s3-bottom-coord := s3-bottom-coord-rule.

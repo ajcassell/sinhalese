@@ -1,0 +1,88 @@
+--------------------------------------------------------
+Embedded Complement Clauses (declarative, interrogative)
+--------------------------------------------------------
+
+Complementizers - "formal nouns" like witti2, wag2 and baw2
+- ^ obligatory it seems
+Object complement is embedded between subject and predicate of main clause
+Identical subject deleted, otherwise complement precedes main
+Embedded clauses can also appear after or in the middle of main clauses, usually for pragmatics
+
+balla bat ka-n2wa baw2 kiiwa
+dog.NOM rice eat-IND QM say.PAST
+`The dog said "I eat rice."'
+
+mam2 bat ka-n2wa baw2 balla dan-n2wa
+1SG.NOM rice eat-NPT.IND QM dog.NOM know-IND
+`I know that the dog draws pictures`
+
+QM = quotative marker - used to embed reported speech or thought into the main clause (Direct Speech)
+(but goes in the exact same place and nothing else changes? - maybe only QM can also do interrogative and imperatives)
+
+mam2 bat ka-n2wa ki2la balla dan-n2wa
+1SG.NOM rice eat-NPT.IND QM dog.NOM know-IND
+`I know that the dog draws pictures`
+
+balla bat ka-n2wa ki2la kiiwa
+dog.NOM rice eat-IND QM say.PAST
+`The dog said "I eat rice."'
+
+mam2 balla-en (??) 5huwa bat ka-n2wa d2 ki2la
+1SG.NOM dog-ABL (??) ask.PST rice eat-IND Q QM
+
+Other verbs QM works with are shouted, requested, was worried, muttered, promised, doubted, believed
+
+
+---------------------------
+Adverbial Clausal Modifiers
+---------------------------
+
+Subordination occurs through verbal endings,
+inflectional form plus particles, and case markers.
+
+-ddi "while" attaches directly to verb root for unspecified time
+balla uya-ddi mam2 patt2ree bal2-n2wa
+balla cook-while ma-m2 newspaper read-IND
+`While the dog is cooking, I read a newspaper`
+
+particle kot2 (while/when) for time as well
+
+The tense of the unspecified temporal clauses in (78) is determined by the tense term
+of the main clause. (a:198 examples)
+
+gama4 (while/as soon as)
+while - if subordinate clause is non-past tense
+as soon as - if subordinate clause is past tense
+(examples a:199)
+
+All examples are showing the subordinate clause precede the regular clause
+
+Clauses of cause and reason are mainly formed with case markers and inflection plus particles
+hinda or nisaa. The case forms include the dative -12
+and the instrumental/ablative -in which are suffixed to the past or non--past form of
+the subordinate verb. The particles occur with past or non-past adjectival forms of the verb.
+
+Case on the VERB
+
+oyaa gee sudd2 k2r2-n2wa-12 eyaa gewa-nn2 oon5
+you house clean-IND-DAT he pay-INF must
+`He must pay you for your cleaning the house`
+
+ikm2n212 aawa-in no-temi beeruna
+quickly come.PAST-INS not-get wet.PP be saved.PAST
+`I was able to save myself without getting wet (from rain) since I came hurriedly`
+
+hinda/nisaa - subordinate verb gets inflected for adjectival form if dynamic verb, not stative
+
+Ranjit nidi hinda api kataa k2l-ee n55
+Ranjit asleep since we call.PT-Poc no
+`Since Ranjit was asleep we didn't call him`
+
+Also the past participle construction to show sequential relation of cause and effect (200)
+
+Also, conditional clauses (if), concession (although), purpose (to, infinitive), proportion, and manner
+
+
+--------------------
+Argument Optionality
+--------------------
