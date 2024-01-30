@@ -7,6 +7,9 @@ Complementizers - "formal nouns" like witti2, wag2 and baw2
 Object complement is embedded between subject and predicate of main clause
 Identical subject deleted, otherwise complement precedes main
 Embedded clauses can also appear after or in the middle of main clauses, usually for pragmatics
+- no special morphology on verb
+- word order same between matrix and embedded clauses
+- Are embedded clauses necessarily nominalized?? ----- my guess is no but idk what this means exactly
 
 balla bat ka-n2wa baw2 kiiwa
 dog.NOM rice eat-IND QM say.PAST
@@ -14,21 +17,22 @@ dog.NOM rice eat-IND QM say.PAST
 
 mam2 bat ka-n2wa baw2 balla dan-n2wa
 1SG.NOM rice eat-NPT.IND QM dog.NOM know-IND
-`I know that the dog draws pictures`
+`I know that the dog eats rice`
 
 QM = quotative marker - used to embed reported speech or thought into the main clause (Direct Speech)
 (but goes in the exact same place and nothing else changes? - maybe only QM can also do interrogative and imperatives)
 
 mam2 bat ka-n2wa ki2la balla dan-n2wa
 1SG.NOM rice eat-NPT.IND QM dog.NOM know-IND
-`I know that the dog draws pictures`
+`I know that the dog eats rice`
 
 balla bat ka-n2wa ki2la kiiwa
 dog.NOM rice eat-IND QM say.PAST
 `The dog said "I eat rice."'
 
-mam2 balla-en (??) 5huwa bat ka-n2wa d2 ki2la
-1SG.NOM dog-ABL (??) ask.PST rice eat-IND Q QM
+mam2 balla-gen 5huwa bat ka-n2wa d2 ki2la
+1SG.NOM dog-ABL ask.PST rice eat-IND Q QM
+`I asked the dog whether he eats rice`
 
 Other verbs QM works with are shouted, requested, was worried, muttered, promised, doubted, believed
 
@@ -55,12 +59,13 @@ while - if subordinate clause is non-past tense
 as soon as - if subordinate clause is past tense
 (examples a:199)
 
-All examples are showing the subordinate clause precede the regular clause
+All examples are showing the subordinate clause PRECEDES the regular clause
 
 Clauses of cause and reason are mainly formed with case markers and inflection plus particles
 hinda or nisaa. The case forms include the dative -12
 and the instrumental/ablative -in which are suffixed to the past or non--past form of
-the subordinate verb. The particles occur with past or non-past adjectival forms of the verb.
+the subordinate verb. (both tenses for both suffixes)
+The particles occur with past or non-past adjectival forms of the verb.
 
 Case on the VERB
 
@@ -80,9 +85,38 @@ Ranjit asleep since we call.PT-Poc no
 
 Also the past participle construction to show sequential relation of cause and effect (200)
 
+Not going to bring up ki2la
+
 Also, conditional clauses (if), concession (although), purpose (to, infinitive), proportion, and manner
 
 
 --------------------
 Argument Optionality
 --------------------
+
+Lexicon to add!!
+----------------
+baw2
+kiiwa
+dan
+ki2la
+5huwa
+d2
+-ddi
+bal2
+-ham2
+ko12
+k2r2
+-in
+hinda
+nissa
+.ADJ?
+
+
+
+***** go back to PST tense in subordination examples (8, 9, 3)
+** add examples of PST for 10 and 12
+
+Write up notes:
+Adverbial Clausal Modifiers:
+- more examples of while/as soon as/before until etc - didn't include this because they're extra and not enough time

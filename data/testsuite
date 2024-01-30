@@ -607,25 +607,25 @@ balla wiiduru2 binde n55
 dog glass break.PST.FOC no
 `The dog did not break the glass`
 
-# 11 newei focus negator
-Source: author # modified from a:223
-Vetted: s
-Judgement: g
-Phenomena: {Negation, Tense Aspect Mood}
-mee pot2 itihaase gaen2 newei
-mee pot2 itihaase gaen2 newei
-this book history about no
-`This book is not about history`
+## 11 newei focus negator
+#Source: author # modified from a:223
+#Vetted: s
+#Judgement: g
+#Phenomena: {Negation, Tense Aspect Mood}
+#mee pot2 itihaase gaen2 newei
+#mee pot2 itihaase gaen2 newei
+#this book history about no
+#`This book is not about history`
 
-# 12 can only be newei with postpositional or nominal equational sentences
-Source: author # modified from a:223
-Vetted: s
-Judgement: u
-Phenomena: {Negation}
-mee pot2 itihaase gaen2 n55
-mee pot2 itihaase gaen2 n55
-this book history about no
-`This book is not about history`
+## 12 can only be newei with postpositional or nominal equational sentences
+#Source: author # modified from a:223
+#Vetted: s
+#Judgement: u
+#Phenomena: {Negation}
+#mee pot2 itihaase gaen2 n55
+#mee pot2 itihaase gaen2 n55
+#this book history about no
+#`This book is not about history`
 
 # 13 n55 verbal negator
 Source: author
@@ -745,9 +745,9 @@ Source: author # based on a:182
 Vetted: f
 Judgement: g
 Phenomena: {Case, Coordination, Tense Aspect Mood}
-mam2 bat saha amma bat kan2wa
-mam2 bat saha amma bat ka-n2wa
-1SG.NOM rice.NOM and mother rice.NOM eat-IND
+mam2 saha amma bat kan2wa
+mam2 saha amma bat ka-n2wa
+1SG.NOM and mother rice.NOM eat-IND
 `I and mother eat rice`
 
 # 9 Conjunctive coordination - saha cannot coordinate clauses
@@ -759,6 +759,16 @@ mam2 bat kan2wa saha amma bat kan2wa
 mam2 bat ka-n2wa saha amma bat ka-n2wa
 1SG.NOM rice.NOM eat-IND and mother rice.NOM eat-IND
 `I eat rice and mother eats rice`
+
+## 9 Conjunctive coordination - saha *can* coordinate clauses IF verb is not repeated
+#Source: author # based on a:182!
+#Vetted: f
+#Judgement: u
+#Phenomena: {Coordination}
+#mam2 bat saha amma bat kan2wa
+#mam2 bat saha amma bat ka-n2wa
+#1SG.NOM rice.NOM and mother rice.NOM eat-IND
+#`I eat rice and mother eats rice`
 
 # 10 Participle coordination - final event is PST, preceding
 # events are past participles
@@ -1305,3 +1315,257 @@ bat ma
 bat ma
 rice I
 `The rice is I`
+
+### Embedded Complement Clauses
+
+# 1 Embedded Declarative with baw2 QM, "says/knows", object-position
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Case, Tense Aspect Mood, Embedded declaratives}
+balla bat kan2wa baw2 kiiwa
+balla bat ka-n2-wa baw2 kiiwa
+dog.NOM rice eat-NPT-IND QM say.PAST
+`The dog said "I eat rice."'
+
+# 2 Embedded Declarative with baw2 QM, "says/knows", complement precedes main
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Case, Pronouns, Tense Aspect Mood, Embedded declaratives}
+balla bat kan2wa baw2 mam2 dann2wa
+balla bat ka-n2-wa baw2 ma-m2 dan-n2-wa
+dog.NOM rice eat-NPT-IND QM 1SG-NOM know-NPT-IND
+`I know that the dog eats rice`
+
+# 3 Embedded Declarative with ki2la QM, "says/knows"
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Case, Tense Aspect Mood, Embedded declaratives}
+balla bat kan2wa ki2la mam2 dann2wa
+balla bat ka-n2-wa ki2la ma-m2 dan-n2-wa
+dog.NOM rice eat-NPT-IND QM 1SG-NOM know-NPT-IND
+`I know that the dog eats rice`
+
+# 4 Embedded Declarative with ki2la QM, "says/knows", object position
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Case, Tense Aspect Mood, Embedded declaratives}
+balla bat kan2wa ki2la kiiwa
+balla bat ka-n2-wa ki2la kiiwa
+dog.NOM rice eat-NPT-IND QM say.PAST
+`The dog said "I eat rice."'
+
+# 5 Embedded Interrogative, complement follows main clause
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Case, Tense Aspect Mood, Embedded questions}
+mam2 ballagen 5huwa bat kan2wa d2 ki2la
+ma-m2 balla-gen 5huwa bat ka-n2-wa d2 ki2la
+1SG-NOM dog-ABL ask.PST rice eat-NPT-IND Q QM
+`I asked the dog whether he eats rice`
+
+# 6 Embedded Declarative, missing QM
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Embedded declaratives}
+balla bat kan2wa kiiwa
+balla bat ka-n2-wa kiiwa
+dog.NOM rice eat-NPT-IND say.PAST
+`The dog said "I eat rice."'
+
+# 7 Embedded Declarative, missing QM
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Embedded questions}
+mam2 bat kan2wa balla dann2wa
+ma-m2 bat ka-n2-wa balla dan-n2wa
+1SG-NOM rice eat-NPT-IND dog.NOM know-IND
+`I know that the dog eats rice`
+
+# 8 Embedded Interrogative, missing Q
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Embedded questions}
+mam2 ballagen 5huwa bat kan2wa ki2la
+ma-m2 balla-gen 5huwa bat ka-n2-wa ki2la
+1SG-NOM dog-ABL ask.PST rice eat-NPT-IND QM
+`I asked the dog whether he eats rice`
+
+# 9 Embedded Interrogative, missing QM
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Embedded questions}
+mam2 ballagen 5huwa bat kan2wa d2
+ma-m2 balla-gen 5huwa bat ka-n2-wa d2
+1SG-NOM dog-ABL ask.PST rice eat-NPT-IND Q
+`I asked the dog whether he eats rice`
+
+# 10 Embedded Interrogative, missing Q and QM
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Embedded questions}
+mam2 ballagen 5huwa bat kan2wa
+ma-m2 balla-gen 5huwa bat ka-n2-wa
+1SG-NOM dog-ABL ask.PST rice eat-NPT-IND
+`I asked the dog whether he eats rice`
+
+# 11 Embedded Interrogative, complement precedes main
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Case, Tense Aspect Mood, Embedded questions}
+bat kan2wa d2 ki2la mam2 ballagen 5huwa
+bat ka-n2-wa d2 ki2la ma-m2 balla-gen 5huwa
+rice eat-NPT-IND Q QM 1SG-NOM dog-ABL ask.PST
+`I asked the dog whether he eats rice`
+
+### Adverbial Clausal Modifiers
+
+# 1 Subordination via verb ending -ddi
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Tense Aspect Mood, Clausal modifiers}
+balla kaddi mam2 pot2 bal2n2wa
+balla ka-ddi ma-m2 pot2 bal2-n2-wa
+balla eat-while ma-m2 book read-NPT-IND
+`While the dog is eating, I read the book`
+
+# 2 Subordination, missing verb ending
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Clausal modifiers}
+balla kan2wa mam2 pot2 bal2n2wa
+balla ka-n2-wa ma-m2 pot2 bal2-n2-wa
+balla eat-NPT-IND ma-m2 book read-NPT-IND
+`While the dog is eating, I read the book`
+
+# 3 Subordination via verb ending -ham2 + PST
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Tense Aspect Mood, Case, Clausal modifiers}
+mam2 bat bal2waham2, mam2 pot2 ka2n2wa
+ma-m2 pot2 bal2-wa-ham2, ma-m2 pot2 ka-n2-wa
+1SG-NOM book read-PST-while, 1SG-NOM rice eat-NPT-IND
+`When I read the book, I eat rice`
+
+# 4 Subordination via ko12 particle + Adjectival form
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Pronouns, Tense Aspect Mood, Case, Clausal modifiers}
+mam2 bal2n2 ko12, mam2 bat k55wa
+ma-m2 bal2-n2 ko12, ma-m2 bat k55-wa
+1SG-NOM read-NPT.ADJ when, 1SG-NOM rice eat-PST
+`While I was reading, I ate rice`
+
+# 5 Subordination missing ko12 particle
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Clausal modifiers}
+mam2 bal2n2, mam2 bat k55wa
+ma-m2 bal2-n2, ma-m2 bat k55-wa
+1SG-NOM read-NPT.ADJ, 1SG-NOM rice eat-PST
+`While I was reading, I ate rice`
+
+# 6 Subordination via dative verb casing + non-past subordinate verb
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Pronouns, Tense Aspect Mood, Case, Clausal modifiers}
+oyaa bat kan2wa12 mam2 k2r2n2wa
+oyaa bat ka-n2-wa-12 ma-m2 k2r2-n2-wa
+2SG.NOM rice eat-NPT-IND-DAT 1SG-NOM clean-NPT-IND
+`I clean because you eat rice`
+
+# 7 Subordination without dative verb casing
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Clausal modifiers}
+oyaa bat kan2wa mam2 k2r2n2wa
+oyaa bat ka-n2-wa ma-m2 k2r2-n2-wa
+2SG.NOM rice eat-NPT-IND 1SG-NOM clean-NPT-IND
+`I clean because you eat rice`
+
+# 8 Subordination with instrumental verb casing + past subordinate verb
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Pronouns, Tense Aspect Mood, Case, Clausal modifiers}
+oyaa pot2 bal2wain mam2 k2r2n2wa
+oyaa pot2 bal2-wa-in ma-m2 k2r2-n2-wa
+2SG.NOM book read-PST-INS 1SG-NOM clean-NPT-IND
+`I clean because you read the book`
+
+# 9 Subordination without instrumental verb casing
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Clausal modifiers}
+oyaa pot2 bal2wa mam2 k2r2n2wa
+oyaa pot2 bal2-wa ma-m2 k2r2-n2-wa
+2SG.NOM book read-PST 1SG-NOM clean-NPT-IND
+`I clean because you read the book`
+
+# 10 Subordination via particle hinda
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Tense Aspect Mood, Pronouns, Case, Clausal modifiers}
+oyaa bat kan2 hinda mam2 k2r2n2wa
+oyaa bat ka-n2 hinda ma-m2 k2r2-n2-wa
+2SG.NOM rice eat-NPT.ADJ since 1SG-NOM clean-NPT-IND
+`I clean because you eat rice`
+
+# 11 Subordination without particle hinda
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Clausal modifiers}
+oyaa bat kan2 mam2 k2r2n2wa
+oyaa bat ka-n2 ma-m2 k2r2-n2-wa
+2SG.NOM rice eat-NPT.ADJ 1SG-NOM clean-NPT-IND
+`I clean because you eat rice`
+
+# 12 Subordination via particle nissa
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Tense Aspect Mood, Pronouns, Case, Clausal modifiers}
+oyaa bat kan2 nissa mam2 k2r2n2wa
+oyaa bat ka-n2 nissa ma-m2 k2r2-n2-wa
+2SG.NOM rice eat-NPT.ADJ since 1SG-NOM clean-NPT-IND
+`I clean because you ate rice`
+
+# 13 Subordination without particle nissa
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Clausal modifiers}
+oyaa bat kan2 mam2 k2r2n2wa
+oyaa bat ka-n2 ma-m2 k2r2-n2-wa
+2SG.NOM rice eat-NPT.ADJ 1SG-NOM clean-NPT-IND
+`I clean because you ate rice`
+
+# 14 Subordination via PP construction
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Clausal modifiers}
+oyaa bat kalaa mam2 k2r2n2wa
+oyaa bat ka-laa ma-m2 k2r2-n2-wa
+2SG.NOM rice eat-PP 1SG-NOM clean-NPT-IND
+`I clean because you have eaten rice`

@@ -1,0 +1,89 @@
+TO DO:
+
+** Figure out tense (and form) system in general! Source literally says non-past and past.
+- future-aux goes with our Completive Aspect
+- Emily says past participles are FINITE.. and they represent FORM (the one used to make past tenses)
+
+- FOCUS
+  - -nne for present, -e for past
+  - When focus form is on verb, it means another constituent (not the verb) is focused
+  - newei is a focus particle -> immediately follows the verb of a neutral sentence (meaning verb is not
+  focus marked) or the focus of a focused sentence (tells what to negate or what to stress)
+- CASE (see below)
+
+
+Morphology:
+- update n2 to be suffix for NPT (and rules)
+- update wa to be suffix for IND mood (and rules)
+
+- update u to be suffix for PST
+- update la to be suffix for PP
+
+- restrict nominative-pronoun rule to pronouns only. "You could have it require the pronoun noun class as input, for example, or create a separate position class for it to reside in that takes pronouns as input (only)."
+- Make [ DEF + ] rule (with no affix) in the same position class, and you'll want the position class to be obligatory.
+- make nominative noun rule obligatory
+- change collateral coordination strategy to VPs, not NPs
+
+- Something that says that adjectives can't modify pronouns, actually. I'm not sure we can do this via the customization system, but in tdl editing you can add a feature [ PRON bool ] (which you might get from the adnominal possessives library anyway) and have the adjectives require their MOD to be [ PRON - ] while the pronouns say that they are [ PRON + ].
+- Make the plural determiners only apply to plural nouns
+
+- Adjective issue with ras2 vs rasa-i with nonverbal predicates
+
+Lexicon:
+- change sam2har2 and okkoma2 to be determiners instead of adjectives
+- Constraining sam2har2 to plural only -- that is certainly doable. If you keep sam2harak as an adjective, it can constrain its MOD to be [ NUM pl ]. If you make it a determiner, then it can constrain its SPEC to be [ NUM pl ].
+- Make different verb classes with different case frames (with case frames being sensitive to noun class)
+
+Features:
+- Make -i an actual clitic and deal with epenthetic vowel
+
+
+
+
+Optional:
+- commented out saha as clause coordinator possibility.. go back if time
+- commented out two newei examples for non-verbal predicates
+- you probably want to use the agreement mechanism to handle the matching of case across coordinated NPs. This brings up a really interesting question vis a vis the vol/invol verbs: What happens if you coordinate animate and inanimate subjects with a VOL intransitive verb? What case does each one take?
+---------------------------------------
+
+****** (S.ANIM.NOM V.INVOL) - default NOM if ACC marker is dropped ????????????
+
+O.DAT V - occurs for specific lexically defined verbs *****
+
+CASE:
+
+volitive verbs:
+s:  inam -> NOM
+    anim -> NPM
+o:  inam -> NOM
+    anim -> NOM INDEF or ACC INDEF or ACC DEF
+a:  inam -> NOM
+    anim -> NOM
+
+involitive verbs:
+s:  inam -> NOM
+    anim -> ACC or DAT (choosing to not put NOM* here)
+o:  inam -> NOM
+    anim -> NOM INDEF or ACC INDEF or ACC DEF
+a:  inam -> NOM
+    anim -> DAT
+
+---------------------------------------
+Questions:
+- for our irregular verbs like gihilla .. both of our sources show this as go.PP without any inflection. How
+are we supposed to assume a morphophonological analyzer on this if our sources don't show us any patterns or
+segmentation? Should we use different verbs?
+    - do we just put gihil in as the root, even though that might not be accurate but we aren't using it elsewhere?
+
+- The future-aux type does not contribute a predicate and takes the same subject type as the prior auxiliary types (though we found it weird that it
+specifies past tense on the verb when it indicates the future).
+EMB> Can you give me some IGT? What makes you say that it specifies past tense on the verb?
+
+- How do we know if nominal case is obligatory? A lot of our sources' IGT examples do not case mark a nominative subject, but
+then do show the NOM gloss in other areas and the spelling is the same, so we were under the assumption that they were
+just not being included. For that reason, we didn't make the nominative-case-rule obligatory but you are suggesting otherwise
+because it is giving us a lot of ambiguity.
+
+What to write up (on top of everything that changes from above.. add here incrementally):
+- Descriptive adjectives precede the noun
+- Discuss what it means without INDF marking
