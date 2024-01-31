@@ -12,17 +12,15 @@ TO DO:
 - CASE (see below)
 
 
+** move yes-no to yes-no section
+
+
 Morphology:
 - update n2 to be suffix for NPT (and rules)
 - update wa to be suffix for IND mood (and rules)
 
 - update u to be suffix for PST
-- update la to be suffix for PP
-
-- restrict nominative-pronoun rule to pronouns only. "You could have it require the pronoun noun class as input, for example, or create a separate position class for it to reside in that takes pronouns as input (only)."
-- Make [ DEF + ] rule (with no affix) in the same position class, and you'll want the position class to be obligatory.
-- make nominative noun rule obligatory
-- change collateral coordination strategy to VPs, not NPs
+- update laa to be suffix for PP and PST?
 
 - Something that says that adjectives can't modify pronouns, actually. I'm not sure we can do this via the customization system, but in tdl editing you can add a feature [ PRON bool ] (which you might get from the adnominal possessives library anyway) and have the adjectives require their MOD to be [ PRON - ] while the pronouns say that they are [ PRON + ].
 - Make the plural determiners only apply to plural nouns
@@ -66,7 +64,46 @@ s:  inam -> NOM
 o:  inam -> NOM
     anim -> NOM INDEF or ACC INDEF or ACC DEF
 a:  inam -> NOM
-    anim -> DAT
+    anim -> DAT ****????
+
+Singular a/aa (masc)
+inam (2, ee)
+
+Plural Nouns
+animate (seems to not distinguish...)
+- mas: o, u, laa
+- fem: o, u, laa
+inanimate: wal, n, nothing
+
+          PL          SING
+tree      gas         (gas2)
+book      pot         (pot2)
+teacher   guruw2ru    guruw2r2
+parent    demaupiyo
+child     lam2inu
+road                  paar2
+rice      bat
+dog                   balla
+shirt                 kamiseku
+gown                  gaum2ku
+house                 ged2r2
+food      k55m2(ACC)
+sound                 sadd2yak (INDF.ACC)
+shop                  ka3ee
+music    sindu
+one/person            ek?
+goat                  eluv
+man                   miniha
+Mother                amma
+hand                  at
+bull                  gonaa
+vase                  malbanduna
+commodities ba3u
+fault                 war2d2
+
+not sure which order
+I know definiteness, THEN case..
+but where does number go.... my instinct says first??
 
 ---------------------------------------
 Questions:
@@ -87,3 +124,12 @@ because it is giving us a lot of ambiguity.
 What to write up (on top of everything that changes from above.. add here incrementally):
 - Descriptive adjectives precede the noun
 - Discuss what it means without INDF marking
+- Discuss total overhaul of verbs/nouns
+
+- made separate pronoun-case-pc for 1sg nominative only
+- added definite-rule under indefiniteness-pc obligatory, no affix (when nominals appear unmarked, they assume definiteness)
+- made case-pc obligatory so that if nothing else, a noun is nominative
+- added indicative mood under TAM and updated -wa for ind-pc rule with feature mood=ind
+- changed asyndeton strategy to VPs and S
+- deleted plural-pc because we don't use it for pronouns anymore
+- added number-pc to put the plural endings, different per animacy
