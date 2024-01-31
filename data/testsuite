@@ -767,7 +767,7 @@ Judgement: g
 Phenomena: {Case, Coordination, Pronouns, Tense Aspect Mood}
 mam2 ged2r2 gihilla k55m2 k55wa
 ma-m2 ged2r-2 gihilla k55m-2 ka-u-wa
-1SG-NOM house.ACC-SG go.PP food.ACC.SG eat-PST-IND
+1SG-NOM house.ACC-SG go.PP food.ACC-SG eat-PST-IND
 `I went home and ate`
 
 # 11 Participle coordination - final event is PST, preceding
@@ -799,7 +799,7 @@ Judgement: u
 Phenomena: {Coordination}
 mam2 balla ged2r2 gihilla k55m2 k55wa
 ma-m2 ball-a ged2r-2 gihilla k55m-2 ka-u-wa
-1SG-NOM dog.NOM-SG house.ACC-SG go.PP food.ACC eat-PST-IND
+1SG-NOM dog.NOM-SG house.ACC-SG go.PP food-ACC eat-PST-IND
 `The dog went home and I ate`
 
 # 14 Participle coordination - final event is PST, preceding
@@ -1141,7 +1141,7 @@ Judgement: g
 Phenomena: {Adjectives, Tense Aspect Mood}
 sam2har2 guruw2ru k55wa
 sam2har guruw2r-u ka-u-wa
-some.PL teacher.NOM-PL eatPST-IND
+some.PL teacher.NOM-PL eat-PST-IND
 `Some teachers eat`
 
 # 7 Indefinite Adjective, incorrect - adjective follows noun
