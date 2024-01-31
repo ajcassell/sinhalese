@@ -36,6 +36,7 @@ mam2 balla-gen 5huwa bat ka-n2wa d2 ki2la
 
 Other verbs QM works with are shouted, requested, was worried, muttered, promised, doubted, believed
 
+You will need to specify the position classes for the verbal morphology in the Morphology section. You will need to specify which verbs can take which type of complement in the Lexicon section.
 
 ---------------------------
 Adverbial Clausal Modifiers
@@ -49,7 +50,9 @@ balla uya-ddi mam2 patt2ree bal2-n2wa
 balla cook-while ma-m2 newspaper read-IND
 `While the dog is cooking, I read a newspaper`
 
-particle kot2 (while/when) for time as well
+particle ko12 (while/when) for time as well
+
+-ham2 verb ending + PST
 
 The tense of the unspecified temporal clauses in (78) is determined by the tense term
 of the main clause. (a:198 examples)
