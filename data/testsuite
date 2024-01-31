@@ -74,8 +74,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Tense Aspect Mood, Case}
-balla bat kalaa tien2wa
-ball-a bat ka-laa tie-n2-wa
+balla bat kaala tien2wa
+ball-a bat ka-la tie-n2-wa
 dog.NOM-SG rice.NOM eat-PP be-NPT-IND
 `The dog has eaten the rice`
 
@@ -84,8 +84,8 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Word order}
-balla bat tien2wa kalaa
-ball-a bat tie-n2-wa ka-laa
+balla bat tien2wa kaala
+ball-a bat tie-n2-wa ka-la
 dog.NOM-SG rice.NOM be-NPT-IND eat-PP
 `The dog has eaten the rice`
 
@@ -455,8 +455,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Case, Tense Aspect Mood}
-balla bat kalaa tien2wa
-ball-a bat ka-laa tie-n2-wa
+balla bat kaala tien2wa
+ball-a bat ka-la tie-n2-wa
 dog.NOM-SG rice.NOM eat-PP be-NPT-IND
 `The dog has eaten the rice`
 
@@ -465,8 +465,8 @@ Source: author
 Vetted: s
 Judgement: g
 Phenomena: {Case, Tense Aspect Mood}
-balla bat kalaa daan2wa
-ball-a bat ka-laa daa-n2-wa
+balla bat kaala daan2wa
+ball-a bat ka-la daa-n2-wa
 dog.NOM-SG rice.NOM eat-PP daa-NPT-IND
 `The dog will eat the rice completely`
 
@@ -714,9 +714,9 @@ Source: author # modified from a:183
 Vetted: s
 Judgement: g
 Phenomena: {Case, Coordination, Tense Aspect Mood}
-eyaa balla12 kamisekui balla12 gaum2kui ara4 dunna
-eyaa ball-a-12 kamiseku i ball-a-12 gaum2ku i ara4 dun-u-wa
-3SG.NOM dog-SG-DAT shirt.INDF CONJ dog-SG-DAT gown.INDF CONJ buy.PP give-PST-IND
+eyaa balla12 kamisekui balla12 gaum2kui gatta dunna
+eyaa ball-a-12 kamiseku i ball-a-12 gaum2ku i gan-la dun-u-wa
+3SG.NOM dog-SG-DAT shirt.INDF CONJ dog-SG-DAT gown.INDF CONJ buy-PP give-PST-IND
 `He bought a shirt for the dog and a gown for the dog`
 
 # 7 Conjunctive coordination - missing clitic
@@ -724,9 +724,9 @@ Source: author # modified from a:183
 Vetted: f
 Judgement: u
 Phenomena: {Coordination}
-eyaa balla12 kamisekui balla12 gaum2ku ara4 dunna
-eyaa ball-a-12 kamiseku i ball-a-12 gaum2ku ara4 dun-u-wa
-3SG.NOM dog-SG-DAT shirt.INDF CONJ dog-SG-DAT gown.INDF buy.PP give-PST-IND
+eyaa balla12 kamisekui balla12 gaum2ku gatta dunna
+eyaa ball-a-12 kamiseku i ball-a-12 gaum2ku gan-la dun-u-wa
+3SG.NOM dog-SG-DAT shirt.INDF CONJ dog-SG-DAT gown.INDF buy-PP give-PST-IND
 `He bought a shirt for the dog and a gown for the dog`
 
 # 8 Conjunctive coordination - saha noun-coordinator
@@ -766,8 +766,8 @@ Vetted: s
 Judgement: g
 Phenomena: {Case, Coordination, Pronouns, Tense Aspect Mood}
 mam2 ged2r2 gihilla k55m2 k55wa
-ma-m2 ged2r-2 gihilla k55m-2 ka-u-wa
-1SG-NOM house.ACC-SG go.PP food.ACC-SG eat-PST-IND
+ma-m2 ged2r-2 ya-la k55m-2 ka-u-wa
+1SG-NOM house.ACC-SG go-PP food.ACC-SG eat-PST-IND
 `I went home and ate`
 
 # 11 Participle coordination - final event is PST, preceding
@@ -777,8 +777,8 @@ Vetted: s
 Judgement: g
 Phenomena: {Case, Coordination, Pronouns, Tense Aspect Mood}
 balla ged2r2 gihilla, mam2 k55m2 k55wa
-ball-a ged2r-2 gihilla, ma-m2 k55m-2 ka-u-wa
-dog.NOM-SG house.ACC-SG go.PP, 1SG-NOM food.ACC-SG eat-PST-IND
+ball-a ged2r-2 ya-la, ma-m2 k55m-2 ka-u-wa
+dog.NOM-SG house.ACC-SG go-PP, 1SG-NOM food.ACC-SG eat-PST-IND
 `The dog went home and I ate`
 
 # 12 Participle coordination - first event is not PP
@@ -798,8 +798,8 @@ Vetted: s
 Judgement: u
 Phenomena: {Coordination}
 mam2 balla ged2r2 gihilla k55m2 k55wa
-ma-m2 ball-a ged2r-2 gihilla k55m-2 ka-u-wa
-1SG-NOM dog.NOM-SG house.ACC-SG go.PP food-ACC eat-PST-IND
+ma-m2 ball-a ged2r-2 ya-la k55m-2 ka-u-wa
+1SG-NOM dog.NOM-SG house.ACC-SG go-PP food-ACC eat-PST-IND
 `The dog went home and I ate`
 
 # 14 Participle coordination - final event is PST, preceding
@@ -808,9 +808,9 @@ Source: author # modified from b:84 PST.PTCP to PP
 Vetted: s
 Judgement: u
 Phenomena: {Coordination}
-mam2 ma12 sadd2yak aehila diwwa
-ma-m2 ma-12 sadd2yak aehila di-u-wa
-1SG-NOM 1SG-DAT noise.INDF.ACC hear.INV.PP run-PST-IND
+mam2 ma12 sadd2yak 5hila diwwa
+ma-m2 ma-12 sadd2yak 5he-la di-u-wa
+1SG-NOM 1SG-DAT noise.INDF.ACC hear.INV-PP run-PST-IND
 `I heard a sound and ran`
 
 ### Case Constraints between SOV/AV
@@ -1180,8 +1180,8 @@ Vetted: f
 Judgement: g
 Phenomena: {Agreement}
 us2 ekaa aawa
-us2 ekaa aa-u-wa
-tall one.ANIM came-PST-IND
+us2 ekaa e-u-wa
+tall one.ANIM come-PST-IND
 `The tall one came`
 
 # 11 animate female
@@ -1190,8 +1190,8 @@ Vetted: f
 Judgement: g
 Phenomena: {Agreement}
 us2 ekii aawa
-us2 ek-ii aa-u-wa
-tall one-ANIM.FEM came-PST-IND
+us2 ek-ii e-u-wa
+tall one-ANIM.FEM come-PST-IND
 `The tall one came`
 
 ### Non-Verbal Predicates
@@ -1496,8 +1496,8 @@ Vetted: f
 Judgement: g
 Phenomena: {Pronouns, Tense Aspect Mood, Case, Clausal modifiers}
 oyaa pot2 bal2wain mam2 sudd2k2n2wa
-oyaa pot-2 bal2-wa-in ma-m2 sudd2k2-n2-wa
-2SG.NOM book-SG read-PST-INS 1SG-NOM clean-NPT-IND
+oyaa pot-2 bal2-u-wa-in ma-m2 sudd2k2-n2-wa
+2SG.NOM book-SG read-PST-IND-INS 1SG-NOM clean-NPT-IND
 `I clean because you read the book`
 
 # 9 Subordination without instrumental verb casing
@@ -1506,8 +1506,8 @@ Vetted: f
 Judgement: u
 Phenomena: {Clausal modifiers}
 oyaa pot2 bal2wa mam2 sudd2k2n2wa
-oyaa pot-2 bal2-wa ma-m2 sudd2k2-n2-wa
-2SG.NOM book-SG read-PST 1SG-NOM clean-NPT-IND
+oyaa pot-2 bal2-u-wa ma-m2 sudd2k2-n2-wa
+2SG.NOM book-SG read-PST-IND 1SG-NOM clean-NPT-IND
 `I clean because you read the book`
 
 # 10 Subordination via particle hinda
@@ -1520,7 +1520,17 @@ oyaa bat ka-n2 hinda ma-m2 sudd2k2-n2-wa
 2SG.NOM rice eat-NPT.ADJ since 1SG-NOM clean-NPT-IND
 `I clean because you eat rice`
 
-# 11 Subordination without particle hinda
+# 11 Subordination via particle hinda, PST
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Tense Aspect Mood, Pronouns, Case, Clausal modifiers}
+oyaa bat kaalaa hinda mam2 sudd2k2n2wa
+oyaa bat ka-laa hinda ma-m2 sudd2k2-n2-wa
+2SG.NOM rice eat-PST.ADJ since 1SG-NOM clean-NPT-IND
+`I clean because you ate rice`
+
+# 12 Subordination without particle hinda
 Source: author
 Vetted: f
 Judgement: u
@@ -1530,7 +1540,7 @@ oyaa bat ka-n2 ma-m2 sudd2k2-n2-wa
 2SG.NOM rice eat-NPT.ADJ 1SG-NOM clean-NPT-IND
 `I clean because you eat rice`
 
-# 12 Subordination via particle nissa
+# 13 Subordination via particle nissa
 Source: author
 Vetted: f
 Judgement: g
@@ -1540,7 +1550,17 @@ oyaa bat ka-n2 nissa ma-m2 sudd2k2-n2-wa
 2SG.NOM rice eat-NPT.ADJ since 1SG-NOM clean-NPT-IND
 `I clean because you ate rice`
 
-# 13 Subordination without particle nissa
+# 14 Subordination via particle nissa, PST
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Tense Aspect Mood, Pronouns, Case, Clausal modifiers}
+oyaa bat kaalaa nissa mam2 sudd2k2n2wa
+oyaa bat ka-laa nissa ma-m2 sudd2k2-n2-wa
+2SG.NOM rice eat-PST.ADJ since 1SG-NOM clean-NPT-IND
+`I clean because you ate rice`
+
+# 15 Subordination without particle nissa
 Source: author
 Vetted: f
 Judgement: u
@@ -1550,12 +1570,12 @@ oyaa bat ka-n2 ma-m2 sudd2k2-n2-wa
 2SG.NOM rice eat-NPT.ADJ 1SG-NOM clean-NPT-IND
 `I clean because you ate rice`
 
-# 14 Subordination via PP construction
+# 16 Subordination via PP construction
 Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Clausal modifiers}
-oyaa bat kalaa mam2 sudd2k2n2wa
-oyaa bat ka-laa ma-m2 sudd2k2-n2-wa
+oyaa bat kaala mam2 sudd2k2n2wa
+oyaa bat ka-la ma-m2 sudd2k2-n2-wa
 2SG.NOM rice eat-PP 1SG-NOM clean-NPT-IND
 `I clean because you have eaten rice`

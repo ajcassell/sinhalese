@@ -97,8 +97,6 @@ Argument Optionality
 Lexicon to add!!
 ----------------
 baw2
-kiiwa
-dan
 ki2la
 d2
 -ddi
@@ -111,8 +109,6 @@ nissa
 
 Adjectival form follows NPT and applies nothing?
 
-Looks like PP and PST can both have laa
-
 PAST
 gatta (stem is gan) - so gan-u-wa ?
 k55wa k55-wa (stem is ka) - so ka-u-wa ?
@@ -121,10 +117,10 @@ diwwa -> di-u-wa
 aawa aa-wa -> aa-u-wa
 5huwa -> 5h-u-wa
 bal2wa bal2-wa -> bal2-u-wa
+kiiwa -> ki-u-wa
 
 INVOL  - maybe INVOLs have no? IND, and then different PST rules
 5he-n2wa (hear)
-5huna -> stem 5he so 5he-un-a
 diun-a (run)
 n51un-a (dance)
 k5dun-a (break)
@@ -132,15 +128,17 @@ k5dun-a (break)
 
 PP
 gihilla (ya)
-ara4
 5hila (hear.INV.PP)
 
+ka-laa -> ka-la
+gihilla -> ya-la
+5hila -> 5he-la
 
 
+la = PP (involitive trans & vol both)
+laa = PAST (vol both for now)
 
 
-***** go back to PST tense in subordination examples (8, 9, 3)
-** add examples of PST for 10 and 12
 
 Write up notes:
 Adverbial Clausal Modifiers:

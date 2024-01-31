@@ -5,7 +5,7 @@ TO DO:
 - Emily says past participles are FINITE.. and they represent FORM (the one used to make past tenses)
 
 - FOCUS
-  - -nne for present, -e for past
+  - -e, updated to have a -nn NPT as well
   - When focus form is on verb, it means another constituent (not the verb) is focused
   - newei is a focus particle -> immediately follows the verb of a neutral sentence (meaning verb is not
   focus marked) or the focus of a focused sentence (tells what to negate or what to stress)
@@ -23,12 +23,12 @@ Morphology:
 - update laa to be suffix for PP and PST?
 
 - Something that says that adjectives can't modify pronouns, actually. I'm not sure we can do this via the customization system, but in tdl editing you can add a feature [ PRON bool ] (which you might get from the adnominal possessives library anyway) and have the adjectives require their MOD to be [ PRON - ] while the pronouns say that they are [ PRON + ].
-- Make the plural determiners only apply to plural nouns
+- Make the plural determiners only apply to plural nouns?
 
 - Adjective issue with ras2 vs rasa-i with nonverbal predicates
 
 Lexicon:
-- change sam2har2 and okkoma2 to be determiners instead of adjectives
+- change sam2har2 to be determiners instead of adjectives
 - Constraining sam2har2 to plural only -- that is certainly doable. If you keep sam2harak as an adjective, it can constrain its MOD to be [ NUM pl ]. If you make it a determiner, then it can constrain its SPEC to be [ NUM pl ].
 - Make different verb classes with different case frames (with case frames being sensitive to noun class)
 
@@ -133,3 +133,7 @@ What to write up (on top of everything that changes from above.. add here increm
 - changed asyndeton strategy to VPs and S
 - deleted plural-pc because we don't use it for pronouns anymore
 - added number-pc to put the plural endings, different per animacy
+- made i a word instead of clitic affix
+- added singular and plural rules
+- added focus feature and focus pc
+- made different verb classes with different case frames
