@@ -97,6 +97,73 @@ Also, conditional clauses (if), concession (although), purpose (to, infinitive),
 Argument Optionality
 --------------------
 
+a:14: (It) may rain by the evening
+a:15: (We) didn't buy the things since they were too expensive
+a:15 (Let's) talk about this when Ranjit comes
+Even if he comes, (we) cannot have the meeting OR having the meeting is impossible???
+
+a:17 Ellipsis - NPs including subject and object as well are often omitted from utterances
+First and second pronouns are the most freely deleted subjects
+
+gatta d2
+gan-u-wa d2
+buy-PST-IND Q
+`Did you buy it?`
+
+gatta
+gan-u-wa
+buy-PST-IND
+`I bought it`
+
+aawa, aawa
+e-u-wa, e-u-wa
+come-PST-IND, come-PST-IND
+`She is coming or they are coming`
+#`It came / The person (expected) came`
+
+Discourse-predictable constituents need not appear in surface structures for constructional purposes
+
+Sinhala allows deletion of non-nominative elements if they are easily recoverable from context
+The so called experiencer-subjects, appear in dative form and are better left unmentioned when They
+bear coreference with the speaker (usually sensation and perception)
+
+AM is assertion marker
+
+ba32ginii
+ba32gini-i
+hungry-AM
+`I'm hungry` # To me hungry
+
+siit2lai
+sitt2lai
+cold-AM
+`It's cold / I feel cold` # Cold
+
+wahin2wa
+wahi-n2-wa
+rain-NPT-IND
+`It's raining`
+
+Also verb dropping (mention - but not added)
+works with existential or possessive verbs inn2wa and tiyen2wa
+
+n55, taatta ged2r2 n55
+no, father home no
+`No, father isn't home`
+
+Source b:
+pro-drop (null anaphora)
+"super pro-drop language"
+Arguments may be freely omitted in all argument positions with the exception
+of complements of postpositionial phrases
+More prevalent in spoken Sinhala
+More often than not, they can be omitted
+(one example of 259 shows ambiguity, don't think it's simple enough to include)
+
+
+
+
+
 Lexicon to add!!
 ----------------
 baw2
@@ -109,6 +176,13 @@ ko12
 hinda
 nissa
 .ADJ?
+pit page -u
+aliya elephant masc
+hon32w5l-2 (inanim) trunk
+kalisa4 slacks
+andi = wear
+
+n5dd2 = no.Q ???
 
 Adjectival form follows NPT and applies nothing?
 
@@ -149,3 +223,27 @@ Adverbial Clausal Modifiers:
 
 TO FIX:
 - vase ending doesn't match any listed
+
+# 4 non-past tense (wrong tense, indicative present tense only)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Tense Aspect Mood}
+balla bat k55wa
+ball-a bat ka-u-wa
+dog.NOM-SG rice.NOM eat-PST-IND
+`The dog ate rice`
+
+Is it true that only NPT goes with IND?????? uh oh
+
+# 3 SV inanimate subject, non-nominative case
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Agreement}
+pot2 diuna
+pot-2 diun-a
+book.ACC-SG run.INVOL-PST
+`The book ran`
+
+got rid of this?? ^
