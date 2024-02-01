@@ -49,7 +49,12 @@ split-s-o-case-name=accusative
   case3_name=instrumental
   case4_name=dative
 
-section=adnom-poss
+  section=adnom-poss
+    poss-strat1_order=head-final
+    poss-strat1_mod-spec=spec
+    poss-strat1_mark-loc=possessor
+    poss-strat1_possessor-type=affix
+    poss-strat1_possessor-affix-agr=non-agree
 
 section=direct-inverse
 scale-equal=direct
@@ -110,6 +115,15 @@ section=coordination
   cs3_pat=a
 
 section=matrix-yes-no
+q-part=on
+q-part-order=after
+  q-particle1_orth=d2
+  q-particle1_main=on
+  q-particle1_embed=on
+  q-particle1_wh=oblig
+  q-particle2_orth=n5dd2
+  q-particle2_main=on
+  q-particle2_wh=oblig
 
 section=wh-q
 
@@ -127,6 +141,9 @@ obj-mark-drop=obj-mark-drop-not
 obj-mark-no-drop=obj-mark-no-drop-not
 
 section=nominalclause
+  ns1_name=verb-nom-strat
+  ns1_level=low
+  ns1_nmzRel=yes
 
 section=clausal-comp
   comps1_clause-pos-same=on
