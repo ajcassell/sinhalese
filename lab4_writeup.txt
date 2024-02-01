@@ -1,0 +1,205 @@
+Lab 4 Writeup
+LING 567
+Sinhala/Sinhalese Grammar
+February 2, 2024
+Melody Bechler, Alexandra Cassell
+
+Our language has several non-ASCII characters. We have assigned numbers to these characters as
+follows: ṭ = ʈ = 1, ə = 2, ɖ = 3, ŋ = 4 and æ = 5.
+
+Please note the source, vetted, and phenomena fields have been left out of the provided examples below
+for the sole purpose of space. They remain in the testsuite file. Also, the example numbers match those in
+the testsuite.
+
+1./2.
+
+We made a lot of changes to our grammar this week in areas that we didn't
+get to or were challenged with last week. Those that are more important
+will be discussed first, then followed by this week's new features, as
+these improvements were necessary to (try to) get the new features working.
+
+We totally revamped the morphology and lexicon once we learned how
+to analyze the morphology better. We created 5 verb types - vol-trans,
+vol-intrans, invol-trans, invol-intrans, and dec-clausal. The new feature
+below was defined called INVOL to be on the different verb classes and this
+was needed because our morphological rules apply different depending on
+volitivity.
+
+feature2_name=INVOL
+feature2_type=index
+feature2_cat=verb
+feature2_new=no
+feature2_existing=bool
+
+We updated our morphological rules to have 7 verb position classes.
+The first obligatory on a verb is the one applying case constraints
+to the subject and objects of verbs. We have vol-case-constraints-pc (#9),
+invol-case-constraints-pc (#7), invol-trans-case-constraints-pc, and
+invol-intrans-case-constraints-pc. The last two are separate because the
+subject behaves differently depending on transitivity whereas VOL verbs
+have the same allowed subject cases regardless of transitivity. INVOL
+object casing is handled in invol-case-constraints, which takes the other
+two more specific classes as its possible inputs - that way the trans pc
+only applies to trans verbs and the intrans pc only applies to
+intrans verbs but the invol-case-constraints applies to both.
+
+** DISCUSS CASE CONSTRAINTS **
+
+Next comes the obligatory tense-pc which contains lexical rules for
+npt (non-past - suffix n2), pp (past-participle - suffix la),
+pst-invol, and pst-vol which are two past tense rules that have different suffixes
+(a and u respectively). This takes the pc #7 and #9 as inputs.
+
+Then comes the while-modifier-pc which is used for one of our
+adverbial clausal modifier strategies that appends the suffix
+-ham2, updates the form to be WHILE and tense to be past as
+described below:
+
+verb-pc13_inputs=verb-pc12
+ verb-pc13_lrt1_name=while
+   verb-pc13_lrt1_feat1_name=form
+   verb-pc13_lrt1_feat1_value=while
+   verb-pc13_lrt1_feat1_head=verb
+   verb-pc13_lrt1_feat2_name=tense
+   verb-pc13_lrt1_feat2_value=past
+   verb-pc13_lrt1_feat2_head=verb
+   verb-pc13_lrt1_lri1_inflecting=yes
+   verb-pc13_lrt1_lri1_orth=ham2
+
+Our final pc is the mood-pc. This is not an obligatory
+class because some verbs are in adjectival form ADJ and do
+not take a mood. We have an IND rule and a FOC rule - FOC
+is technically not a mood but because these two have the same
+position and possible inputs, they were grouped together.
+
+verb-pc4_inputs=verb-pc13
+  verb-pc4_lrt1_name=ind
+    verb-pc4_lrt1_feat1_name=mood
+    verb-pc4_lrt1_feat1_value=indicative
+    verb-pc4_lrt1_feat1_head=verb
+    verb-pc4_lrt1_lri1_inflecting=yes
+    verb-pc4_lrt1_lri1_orth=wa
+  verb-pc4_lrt2_name=foc
+    verb-pc4_lrt2_feat1_name=information-structure meaning
+    verb-pc4_lrt2_feat1_value=focus
+    verb-pc4_lrt2_feat1_head=verb
+    verb-pc4_lrt2_lri1_inflecting=yes
+    verb-pc4_lrt2_lri1_orth=e
+
+FOCUS was added on the Information Structure page as a postverbal
+affix marker and this was defined as -e in the rule above.
+
+Our noun lexicon and morphology were also updated extensively as
+we settled on a standard segmentation of nouns depending on
+gender, animacy, and number. The following shows noun endings for
+these combinations:
+
+            Singular    Plural
+Masc        a/aa        o, u, laa
+Fem         2           o, u, laa
+Inanimate   2, ee       wal, n, 0
+
+Thus we inventoried our nouns and updated/segmented them so
+that each took the proper ending based on its noun class,
+and updated the testsuite with proper segmentation and glossing.
+
+For noun morphology, our source states that definiteness, if applicable,
+comes before case. It does not specify where the number position class
+should occur but we made the decision to make number the first, though
+there are almost no examples in the text that combines all three classes,
+since most examples are with DEF nouns which have no affix.
+
+The number-pc applies to all nouns and is obligatory.
+
+Our indefiniteness-pc takes number-pc as input and
+now has a zero-rule for DEF. When nominals appear unmarked, they
+assume definiteness:
+
+noun-pc1_lrt2_name=definite-rule
+  noun-pc1_lrt2_feat1_name=DEF
+  noun-pc1_lrt2_feat1_value=+
+  noun-pc1_lrt2_feat1_head=itself
+  noun-pc1_lrt2_lri1_inflecting=no
+
+Our case-pc rules remain the same, but now take indefiniteness-pc
+and mood-pc (used for clausal complements) as input in addition to all
+singular pronoun types. It is also obligatory so that if no other case, a noun
+is marked nominative.
+
+*** also number-pc???
+
+Now moving on to this week's features...
+
+Adverbial Clausal Modifiers:
+
+In Sinhala, subordination occurs through verbal endings, inflectional forms
+with subordination particles, and case markers (likely nominalization).
+
+The first that we implemented is the affix -ddi. It attaches directly to the verb
+root to indicate unspecified time i.e. the English "while".
+
+** ADD EXAMPLE ** / matrix
+
+Another verb ending is -ham2 which requires that the subordinate verb be PST tense.
+
+** ADD EXAMPLE ** / Matrix
+
+All examples show that the subordinate clause precedes the main clause.
+
+Clauses of cause and reason (because/since) are mainly formed with case markers
+or inflection plus a particle. Two examples of particles are hinda and nissa which behave
+identically. These particles occur with PST or NPT adjectival forms of the subordinate
+verb in cases of dynamic verbs, not stative verbs (i.e. not "is").
+
+** ADD EXAMPLE ** / matrix
+
+We did not get around to implementing the case markers. They seem characteristic
+of nominalization. The options are the dative -12 or the instrumental/ablative
+-in suffix which are affixed to the PST or NPT form of subordinate verb.
+Here are both examples in our testsuite. We have added nominalization in
+the customization system but it is not working yet...
+
+# 6 Subordination via dative verb casing + non-past subordinate verb
+Judgement: g
+oyaa bat kan2wa12 mam2 sudd2k2n2wa
+oyaa bat ka-n2-wa-12 ma-m2 sudd2k2-n2-wa
+2SG.NOM rice eat-NPT-IND-DAT 1SG-NOM clean-NPT-IND
+`I clean because you eat rice`
+
+# 8 Subordination with instrumental verb casing + past subordinate verb
+Judgement: g
+oyaa pot2 bal2wain mam2 sudd2k2n2wa
+oyaa pot-2 bal2-u-wa-in ma-m2 sudd2k2-n2-wa
+2SG.NOM book-SG read-PST-IND-INS 1SG-NOM clean-NPT-IND
+`I clean because you read the book`
+
+** explain in system **
+(example of nominalization in my notes - pay for cleaning)
+
+Finally, there is another strategy which is simply the past participle
+construction which shows sequential relation of cause and effect.
+This was not included as a strategy in the customization system though.
+
+
+
+
+
+
+
+
+
+
+
+5. There are a few areas where the customization is not
+fully equipped to work on Sinhala. Firstly, the language
+shows coordination on VPs and S which we called
+participle coordination above. The matrix cannot specify
+specific inflected forms of the verb constituents in the
+coordination, so we will need to manually add this into
+the TDL files somehow later. For now it is marked as
+asyndetonic. Second, we were unable to get the `saha` nominal coordination word
+to show up in the lexicon despite being included in the matrix. Instead
+it showed up as saha2.
+
+Extra Questions:
+1.

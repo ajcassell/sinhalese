@@ -18,8 +18,8 @@ Morphology:
 - update n2 to be suffix for NPT (and rules)
 - update wa to be suffix for IND mood (and rules)
 
-- update u to be suffix for PST
-- update laa to be suffix for PST and la for PP
+- update u and a to be suffix for PST
+- update la for PP
 
 - Something that says that adjectives can't modify pronouns, actually. I'm not sure we can do this via the customization system, but in tdl editing you can add a feature [ PRON bool ] (which you might get from the adnominal possessives library anyway) and have the adjectives require their MOD to be [ PRON - ] while the pronouns say that they are [ PRON + ].
 - Make the plural determiners only apply to plural nouns?
