@@ -1315,7 +1315,7 @@ Judgement: g
 Phenomena: {Case, Tense Aspect Mood, Embedded declaratives}
 balla bat kan2wa baw2 kiiwa
 ball-a bat ka-n2-wa baw2 kii-u-wa
-dog.NOM-SG rice eat-NPT-IND QM say-PAST-IND
+dog.NOM-SG rice eat-NPT-IND QM say-PST-IND
 `The dog said "I eat rice."'
 
 # 2 Embedded Declarative with baw2 QM, "says/knows", complement precedes main
@@ -1345,7 +1345,7 @@ Judgement: g
 Phenomena: {Case, Tense Aspect Mood, Embedded declaratives}
 balla bat kan2wa ki2la kiiwa
 ball-a bat ka-n2-wa ki2la ki-u-wa
-dog.NOM-SG rice eat-NPT-IND QM say-PAST-IND
+dog.NOM-SG rice eat-NPT-IND QM say-PST-IND
 `The dog said "I eat rice."'
 
 # 5 Embedded Interrogative, complement follows main clause
@@ -1365,7 +1365,7 @@ Judgement: u
 Phenomena: {Embedded declaratives}
 balla bat kan2wa kiiwa
 ball-a bat ka-n2-wa kii-u-wa
-dog.NOM-SG rice eat-NPT-IND say-PAST-IND
+dog.NOM-SG rice eat-NPT-IND say-PST-IND
 `The dog said "I eat rice."'
 
 # 7 Embedded Declarative, missing QM
@@ -1510,7 +1510,7 @@ oyaa pot-2 bal2-u-wa ma-m2 sudd2k2-n2-wa
 2SG.NOM book-SG read-PST-IND 1SG-NOM clean-NPT-IND
 `I clean because you read the book`
 
-# 10 Subordination via particle hinda
+# 10 Subordination via particle hinda, NPT
 Source: author
 Vetted: f
 Judgement: g
@@ -1548,7 +1548,7 @@ Phenomena: {Tense Aspect Mood, Pronouns, Case, Clausal modifiers}
 oyaa bat kan2 nissa mam2 sudd2k2n2wa
 oyaa bat ka-n2 nissa ma-m2 sudd2k2-n2-wa
 2SG.NOM rice eat-NPT.ADJ since 1SG-NOM clean-NPT-IND
-`I clean because you ate rice`
+`I clean because you eat rice`
 
 # 14 Subordination via particle nissa, PST
 Source: author
@@ -1568,7 +1568,7 @@ Phenomena: {Clausal modifiers}
 oyaa bat kan2 mam2 sudd2k2n2wa
 oyaa bat ka-n2 ma-m2 sudd2k2-n2-wa
 2SG.NOM rice eat-NPT.ADJ 1SG-NOM clean-NPT-IND
-`I clean because you ate rice`
+`I clean because you eat rice`
 
 # 16 Subordination via PP construction
 Source: author
