@@ -49,12 +49,12 @@ split-s-o-case-name=accusative
   case3_name=instrumental
   case4_name=dative
 
-  section=adnom-poss
-    poss-strat1_order=head-final
-    poss-strat1_mod-spec=spec
-    poss-strat1_mark-loc=possessor
-    poss-strat1_possessor-type=affix
-    poss-strat1_possessor-affix-agr=non-agree
+section=adnom-poss
+  poss-strat1_order=head-final
+  poss-strat1_mod-spec=spec
+  poss-strat1_mark-loc=possessor
+  poss-strat1_possessor-type=affix
+  poss-strat1_possessor-affix-agr=non-agree
 
 section=direct-inverse
 scale-equal=direct
@@ -85,7 +85,7 @@ form-fin-nf=on
   feature1_new=no
   feature1_existing=bool
   feature2_name=INVOL
-  feature2_type=index
+  feature2_type=head
   feature2_cat=verb
   feature2_new=no
   feature2_existing=bool

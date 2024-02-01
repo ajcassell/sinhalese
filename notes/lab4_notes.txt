@@ -176,11 +176,6 @@ ko12
 hinda
 nissa
 .ADJ?
-pit page -u
-aliya elephant masc
-hon32w5l-2 (inanim) trunk
-kalisa4 slacks
-andi = wear
 
 n5dd2 = no.Q ???
 
@@ -250,3 +245,5 @@ got rid of this?? ^
 
 cms1_subordinator=free
 ^ only thing we didn't have matching
+
+* go back to kalaa 2 examples I have

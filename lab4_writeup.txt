@@ -128,7 +128,66 @@ is marked nominative.
 
 *** also number-pc???
 
+
+Upon feedback, we also updated our coordination strategy that uses -i
+to be a separate clitic so our glosses were updated for this to be a separate
+whitespace separated morpheme.
+
+*** add example? *** if it works LOL
+
 Now moving on to this week's features...
+
+Embedded Complement Clauses - Declarative:
+
+Sinhala's strategy for embedded declaratives is solely to use obligatory
+"formal nouns" like witti2, wag2, and baw2. The complement object is
+embedded between the subject and the predicate of the main clause. If the subject
+is identical between the two clauses, then it can be deleted from ....
+
+Since there is free word order, the embedded clauses are also free to
+appear after or in the middle of the main clause. However, most often
+the pattern is that complement causes precede the main clause. The free word
+order remains for the embedded clause as well. There isn't specification
+that embedded clauses are necessarily nominalized. In fact, I think I only saw
+one example of this.
+
+**** has that been implemented? *****
+
+There is no special morphology on the verb.
+
+
+^^^^ whoops this is not my section....
+
+Embedded Complement Clauses - Interrogative:
+The same analysis for the embedded declarative clauses holds
+true with interrogatives. The only apparent difference is that to indicate
+the interrogative, Sinhala uses the Question (Q) and Quotative (QM)
+markers the same way they appear in questions. The sources
+only give one example and don't discuss embedded interrogatives
+further so the assumption is that this is as intricate as they get.
+For example:
+
+# 11 Embedded Interrogative, complement precedes main
+Judgement: g
+bat kan2wa d2 ki2la mam2 ballagen 5huwa
+bat ka-n2-wa d2 ki2la ma-m2 ball-a-gen 5h-u-wa
+rice eat-NPT-IND Q QM 1SG-NOM dog-SG-ABL ask-PST-IND
+`I asked the dog whether he eats rice`
+
+The ungrammatical examples have Q, QM, or both missing such as:
+
+# 9 Embedded Interrogative, missing QM
+Vetted: f
+Judgement: u
+mam2 ballagen 5huwa bat kan2wa d2
+ma-m2 ball-a-gen 5h-u-wa bat ka-n2-wa d2
+1SG-NOM dog-SG-ABL ask-PST-IND rice eat-NPT-IND Q
+`I asked the dog whether he eats rice`
+
+This was not an implementation requirement in the customization system this week
+so we have just included testsuite examples. It seems relatively trivial though
+since the pattern of embedded interrogatives seems the same as standalone
+interrogatives, but we didn't get to trying this in the grammar yet.
 
 Adverbial Clausal Modifiers:
 
@@ -146,12 +205,19 @@ Another verb ending is -ham2 which requires that the subordinate verb be PST ten
 
 All examples show that the subordinate clause precedes the main clause.
 
+These verb markers were implemented in the customization system as
+.......
+
 Clauses of cause and reason (because/since) are mainly formed with case markers
 or inflection plus a particle. Two examples of particles are hinda and nissa which behave
 identically. These particles occur with PST or NPT adjectival forms of the subordinate
 verb in cases of dynamic verbs, not stative verbs (i.e. not "is").
 
 ** ADD EXAMPLE ** / matrix
+
+These were implemented as free subordinator morphemes that appear after the S
+they attach to, as heads, and require a specific form on their verb complement.
+.....
 
 We did not get around to implementing the case markers. They seem characteristic
 of nominalization. The options are the dative -12 or the instrumental/ablative
@@ -180,6 +246,115 @@ Finally, there is another strategy which is simply the past participle
 construction which shows sequential relation of cause and effect.
 This was not included as a strategy in the customization system though.
 
+An example of this is (Do not parse):
+
+Ranjit kakul2 k2pila ispiritaale-12 ara4 giya
+Ranjit leg cut.INVL.PP hospital-DAT carry.PAST
+`Ranjit was taken to hospital because he had cut his leg/foot (involuntarily)`
+
+*** ^ maybe that should be.... (I mean it should parse as is, probably by asyndetonic coordination)
+
+There are other types of complemental clauses as well that are not included in our
+grammar that correspond to conditional (if), concession (although), purpose (to),
+and more.
+
+
+
+
+
+
+Argument Optionality:
+Sinhala is referred to as a "super pro-drop" language by two of our sources.
+However, neither goes into extensive detail and perhaps that is because the language
+is so free. The first source discusses it with regards to ellipsis where NPs including
+the subject and object are often omitted and the most freely deleted subjects are
+first and second pronouns, usually because they are contextual in a spoken/written conversation.
+
+These examples show no subject, no object, and both missing respectively.
+
+# 3 No subject
+Judgement: g
+bat gatta
+bat gan-u-wa
+rice buy-PST-IND
+`(I) bought rice`
+
+# 4 No object
+Judgement: g
+eyaa gatta
+eyaa gan-u-wa
+3SG.NOM buy-PST-IND
+`She bought (it)`
+
+# 2 No subject or object declarative
+Judgement: g
+gatta
+gan-u-wa
+buy-PST-IND
+`I bought it`
+
+This allows for a lot of ambiguity because when parsing, since it is possible
+to posit any pronoun as the subject given that Sinhala doesn't have
+any subject verb agreement. The subject of example #3 could be I, we, you, she,
+they... The second source refers to pro-drop as null
+anaphora and declares that arguments can be freely omitted in all argument
+positions except for complements of postpositional phrases. This exception
+has not been included in the grammar this week. This extensive pro-drop
+is more prevalent in spoken Sinhala and more often than not, allowed.
+
+Another scenario is where Sinhala allows the deletion of non-nominative elements
+if they are obvious in context. This is the case with "experiencer" subjects that
+are in the dative case. The following examples show how the Assertion Marker (AM)
+works with adjectives to form a sentence with no subject (as well as no verb).
+
+# 7 Assertion marker with non-assumed subject
+Judgement: g
+siit2lai
+sitt2la-i
+cold-AM
+`It's cold / I feel cold` # Cold
+
+Similarly, weather predicates do not require a subject.
+
+# 8 No Subject, intransitive verb
+Judgement: g
+wahin2wa
+wahi-n2-wa
+rain-NPT-IND
+`It's raining`
+
+Interestingly, Sinhala also allows verb dropping with the existential or
+possessive verbs inn2wa and tiyen2wa. This was not included in the grammar
+because it is not the same as argument optionality but it is included here
+just for curiosity.
+
+n55, taatta ged2r2 n55
+no, father home no
+`No, father isn't home`
+
+In the customization system, pro-drop was implemented for subjects and objects
+with any verb, and no subject markers permitted when dropped or not. There are
+no markers on the verbs in any pro-drop instances. The assertion marker
+does not represent any information for the missing argument. It is a separate
+feature. There was no evidence of contexts in which pro-drop was forbidden
+except for the complements of postpositions as mentioned above, but the sources
+did not provide any examples of this. We may be able to refine later if more
+information is found, but for now, the argument optionality is extremely free
+in our colloquial Sinhala grammar. Also for this reason, we did not need to
+include OPT or other ARG features in the lexicon and morphology as mentioned
+on the customization system.
+
+section=arg-opt
+subj-drop=subj-drop-all
+subj-mark-drop=subj-mark-drop-not
+subj-mark-no-drop=subj-mark-no-drop-not
+subj-con=subj-con-always
+obj-drop=obj-drop-all
+obj-mark-drop=obj-mark-drop-not
+obj-mark-no-drop=obj-mark-no-drop-not
+
+Because of this freedom in colloquial Sinhala, we were unable to think of
+any ungrammatical examples for the testsuite.
 
 
 
@@ -188,18 +363,26 @@ This was not included as a strategy in the customization system though.
 
 
 
-
+Things that we did not get around to:
+1. Incorporating agreement in case for coordinated NPs depending on
+INVOL of verbs to answer the question of what happens if you coordinate
+ANIM and INANIM subjects with a VOL intransitive verb, or if the case constraints
+would restrict this.
+2.
 
 5. There are a few areas where the customization is not
-fully equipped to work on Sinhala. Firstly, the language
-shows coordination on VPs and S which we called
-participle coordination above. The matrix cannot specify
+fully equipped to work on Sinhala. Firstly (and this is
+carry over from last week's lab but keeping here as a reminder),
+the language shows coordination on VPs and S which we called
+participle coordination. The matrix cannot specify
 specific inflected forms of the verb constituents in the
 coordination, so we will need to manually add this into
 the TDL files somehow later. For now it is marked as
-asyndetonic. Second, we were unable to get the `saha` nominal coordination word
-to show up in the lexicon despite being included in the matrix. Instead
-it showed up as saha2.
+asyndetonic. We also will need something that says that adjectives
+cannot modify pronouns which will need to be done in TDL editing with a
+[ PRON bool ] feature and have the adjectives require their MOD to be
+[ PRON - ] while the pronouns say that they are [ PRON + ].
+
 
 Extra Questions:
-1.
+1. What does "complements of postpositional phrases" mean?
