@@ -1,0 +1,129 @@
+Lab 4 Writeup
+LING 567
+Melody Bechler, Alexandra Cassell
+
+*make sure choices actually parse!!! double check these
+
+
+Possessives:
+In Sinhala, a possessive relationship among animate nouns is represented by the genitive marker
+-ge/-gee. If an inanimate noun takes the possessor role, then a locative suffix '-ee' is used.
+Possession is marked on the possessor with the suffix and the order is possessor-first. It appears
+the possessors are specifier-like because they take the place of the determiner. These phrases follow
+the canonical word order of SOV.
+
+# 1 Inanimate Locative Possession
+mam2 potee pitu bal2n2wa
+ma-m2 pot-ee pitu bal2-n2wap
+1SG-NOM book-LOC pages read-NPT
+`I read the pages of the book`
+
+#9 Pronominal Possession
+mage balla bat kan2wa
+ma-ge ball-a bat ka-n2-wa
+I.SG-GEN dog.NOM-SG rice eat-NPT-IND
+`My dog eats rice`
+
+# 7 Animate Genitive Possession   #note this sentence doesn't parse, example only
+eyaa lam2yage pot2 bal2n2wa
+eyaa lam2in-a-ge pot-2 bal2-n2-wa
+3SG.NOM child-SG-GEN book-SG.ACC read-NPT-IND
+`He read the child's book`
+
+In the adnominal possession section, we chose possessor-first for word order, given the information
+provided in our references. Possessors seem to take the place of the determiner. As previously mentioned,
+the possessor appears as an affix on the possessor, but we noted in the matrix that the affix does not
+agree in gender with the possessum. As shown in grammatical number #7 above, the possessum "pot" is
+inanimate gender while "lam2in" is animate gender, therefore these genders do not agree. In the morphology
+section, we added a possession position class that obligatorily occurs with three lexical rule types. We
+added animate possession to capture '-ge' and '-gee' possessive suffixes and inanimate possession to capture
+'-ee' suffixes. Lastly, we added a nonpossessive lexical rule for nouns in which possession does not apply.
+
+
+##### FIX SECTION
+Declarative Clausal Complements:
+Verbs of sign, knowledge, report, speech, discovery, or forensic acts take complement clauses with
+a subordinating conjunction. These subordinating conjunctions are added to the end of an embedded
+clause and include: 'baw2', 'wag2', and 'wittia'. When the verb denotes thinking, expecting, imagining,
+fearing, or any sense of uncertainty, the subordinating conjuction 'ki2la' is used. These are
+obligatory conjunctions. No special morphology is required on the verb. The embedded clause appears
+before the matrix verb and they are not nominalized. The word order between the matrix and embedded
+clauses is not different as free word order remains in embedded clauses.
+
+# 1 Declarative Clausal Complement, baw2 subordinating conjunction, complement precedes main
+balla bat kan2wa baw2 eyaa dann2wa
+ball-a bat ka-n2-n2 baw2 eyaa dan-n2-wa
+dog.NOM-SG rice eat-NPT-IND that.QM 3.SG know-NPT-IND                   # does not parse
+`She knows that the dog eats rice`
+
+# 4 Declarative Clausal Complement with ki2la formal noun               #does not parse
+balla bat k55wa ki2la eyaa hit2-n2wa
+ball-a bat ka-u-wa ki2la eyaa hit2-n2-wa
+dog.NOM-SG rice eat-PST-IND QM 3.SG think-NPT-IND
+`She thinks that the dog ate rice`
+
+
+Yes/No Questions:
+Yes/no questions are formed by using the 'd2' particle following the predicate. Questions in which
+any constituent other than the verb is chosen for questioning, the 'd2' particle follows questioning
+constituent and the verb is marked with a focus form. Multiple word orders are possible with this
+focus form. If the focus constituent is moved, the question particle 'd2' must move with the it. In
+declarative yes/no questions, the question particle appears between the sentence boundary and the final
+verb. Without the question particle, questions in declarative form would simply be declarative
+sentences. For negative yes/no questions, the question particle is added to the negative particle. In the
+case of "n55", "n55" and "d2" are combined to create the negative question particle "n5dd2". For the
+negative particle "newei", the question particle is simply added after the negative particle.
+
+# 1 Yes/no - neutral forms /SOV
+eyaa kalisa4 andin2wa d2
+eyaa kalisa4 andi-n2wa d2
+3.SG slacks wear-NPT Q
+`Does she wear slacks?`
+
+# 3 Yes/No - focus question / OVS
+kalisa4 andinne eyaa d2
+kalisa4 andi-nne eyaa d2
+slacks wear-NPT.FOC she Q
+`Is it she that wears slacks?`
+
+# 13 Negative Yes/No question, combined particle
+eyaa bat kannne n5dd2
+eyaa bat kan-nn-e n5dd2
+3.SG rice eat-NPT-FOC no.Q
+`Doesn't he eat rice?`
+
+In the matrix yes/no section, we stated that question particles occur clause finally. We added two particles:
+'d2' and 'n5dd2'. For 'd2', we stated the particle is obligatory and occurs in both main and embedded clauses.
+For 'n5dd2', we stated the particle is obligatory but only occurs in main clauses. Sinhala does not have
+subject-verb inversion nor does it have verbal inflection for these purposes, therefore these options were
+left unchecked.
+
+
+Customization Matrix Only:
+With nominalization, the highest argument of the verb must have genitive case once the verb is nominalized and the
+highest argument can never be the patient argument of a transitive verb. The highest argument cannot have nominative
+case when the verb is nominalized as nominalized verbs do not assign nominative case in Sinhala. Genitive marking on
+the object not acceptable. Nominalization applies to verbal predicates only. According to our sources, nominalization
+is restricted to verbs only and is a inflectional morphology process. This means the verb is suffixed with 'ek2' or
+'iim2' and the nominalized verb does not have a tense affix.
+
+Since this is matrix only, we only added to the nominalized clause section of the matrix. We added a Nominalization
+strategy where the nominalization of the clause occurs on the verb. We also stated that it should be reflected in the
+semantics because genitive case under nominalization is considered to have the highest semantic role.
+
+Note: this was matrix only this week. There are no examples in the testsuite.
+
+
+
+#4
+Overgeneralization: _____%
+Ambiguity: ______%
+Coverage: ______%
+
+
+
+# 7 Animate Genitive Possession   #note this sentence doesn't parse, example only
+eyaa lam2yage pot2 bal2n2wa
+eyaa lam2in-a-ge pot-2 bal2-n2-wa
+3SG.NOM child-SG-GEN book-SG.ACC read-NPT-IND
+`He read the child's book`
