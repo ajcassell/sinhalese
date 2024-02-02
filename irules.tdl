@@ -1,50 +1,126 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
-n1-bottom :=
-  %suffix (* i)
-  n1-bottom-coord-rule.
-
-n1-left :=
-  %suffix (* i)
-  n1-left-coord-rule.
-
 ;;; Inflecting Lexical Rule Instances
 
-indefinite-rule-suffix1 :=
-%suffix (* ak)
-indefinite-rule-lex-rule.
+indef-rule-suffix1 :=
+%suffix (* -ak)
+indef-rule-lex-rule.
 
-indefinite-rule-suffix2 :=
-%suffix (* ek)
-indefinite-rule-lex-rule.
+indef-rule-suffix2 :=
+%suffix (* -ek)
+indef-rule-lex-rule.
 
 dative-rule-suffix :=
-%suffix (* 12)
+%suffix (* -12)
 dative-rule-lex-rule.
 
 accusative-rule-suffix :=
-%suffix (* w2)
+%suffix (* -w2)
 accusative-rule-lex-rule.
 
 genitive-rule-suffix1 :=
-%suffix (* ee)
+%suffix (* -ee)
 genitive-rule-lex-rule.
 
 genitive-rule-suffix2 :=
-%suffix (* ge)
+%suffix (* -ge)
 genitive-rule-lex-rule.
 
-nominative-pronoun-rule-suffix :=
-%suffix (* m2)
-nominative-pronoun-rule-lex-rule.
+nominative-pronoun-suffix :=
+%suffix (* -m2)
+nominative-pronoun-lex-rule.
 
-pl-pronoun-suffix :=
-%suffix (* la)
-pl-pronoun-lex-rule.
+plural-anim-suffix1 :=
+%suffix (* -o)
+plural-anim-lex-rule.
 
-npt-ind-suffix :=
-%suffix (* n2wa)
-npt-ind-lex-rule.
+plural-anim-suffix2 :=
+%suffix (* -u)
+plural-anim-lex-rule.
 
-past-part-rule-suffix :=
-%suffix (* laa)
-past-part-rule-lex-rule.
+plural-anim-suffix3 :=
+%suffix (* -laa)
+plural-anim-lex-rule.
+
+plural-inanim-suffix1 :=
+%suffix (* -wal)
+plural-inanim-lex-rule.
+
+plural-inanim-suffix2 :=
+%suffix (* -n)
+plural-inanim-lex-rule.
+
+sg-inanim-suffix1 :=
+%suffix (* -2)
+sg-inanim-lex-rule.
+
+sg-inanim-suffix2 :=
+%suffix (* -ee)
+sg-inanim-lex-rule.
+
+sg-anim-fem-suffix :=
+%suffix (* -2)
+sg-anim-fem-lex-rule.
+
+sg-anim-masc-suffix1 :=
+%suffix (* -a)
+sg-anim-masc-lex-rule.
+
+sg-anim-masc-suffix2 :=
+%suffix (* -aa)
+sg-anim-masc-lex-rule.
+
+anim-poss-suffix1 :=
+%suffix (* -ge)
+anim-poss-lex-rule.
+
+anim-poss-suffix2 :=
+%suffix (* -gee)
+anim-poss-lex-rule.
+
+inanim-poss-suffix :=
+%suffix (* -ee)
+inanim-poss-lex-rule.
+
+ind-suffix :=
+%suffix (* -wa)
+ind-lex-rule.
+
+foc-suffix :=
+%suffix (* -e)
+foc-lex-rule.
+
+npt-suffix1 :=
+%suffix (* -n2)
+npt-lex-rule.
+
+npt-suffix2 :=
+%suffix (* -nn)
+npt-lex-rule.
+
+pp-suffix :=
+%suffix (* -la)
+pp-lex-rule.
+
+pst-invol-suffix :=
+%suffix (* -a)
+pst-invol-lex-rule.
+
+pst-vol-suffix :=
+%suffix (* -u)
+pst-vol-lex-rule.
+
+while_pst-suffix :=
+%suffix (* -ham2)
+while_pst-lex-rule.
+
+while_stem-suffix :=
+%suffix (* -ddi)
+while_stem-lex-rule.
+
+indef-suffix1 :=
+%suffix (* -ek)
+indef-lex-rule.
+
+indef-suffix2 :=
+%suffix (* -ak)
+indef-lex-rule.
