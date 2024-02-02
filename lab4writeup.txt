@@ -2,9 +2,6 @@ Lab 4 Writeup
 LING 567
 Melody Bechler, Alexandra Cassell
 
-*make sure choices actually parse!!! double check these
-
-
 Possessives:
 In Sinhala, a possessive relationship among animate nouns is represented by the genitive marker
 -ge/-gee. If an inanimate noun takes the possessor role, then a locative suffix '-ee' is used.
@@ -61,6 +58,11 @@ balla bat k55wa ki2la eyaa hit2-n2wa
 ball-a bat ka-u-wa ki2la eyaa hit2-n2-wa
 dog.NOM-SG rice eat-PST-IND QM 3.SG think-NPT-IND
 `She thinks that the dog ate rice`
+
+In the clausal complement section, we have one clausal complement type. We noted that object complement clauses
+are placed in the same positino as regular noun complements and our strategy is for embedding. We added two
+complementizer spellings, which include "baw2" and "ki2la". We also made sure the word order page listed subordinate
+clause order as the same as the matrix clause.
 
 
 Yes/No Questions:
@@ -119,11 +121,3 @@ Note: this was matrix only this week. There are no examples in the testsuite.
 Overgeneralization: _____%
 Ambiguity: ______%
 Coverage: ______%
-
-
-
-# 7 Animate Genitive Possession   #note this sentence doesn't parse, example only
-eyaa lam2yage pot2 bal2n2wa
-eyaa lam2in-a-ge pot-2 bal2-n2-wa
-3SG.NOM child-SG-GEN book-SG.ACC read-NPT-IND
-`He read the child's book`
