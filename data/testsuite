@@ -13,7 +13,7 @@ Source c: Jany, Carmen. (2005). THE RELATIONSHIP BETWEEN CASE MARKING AND S, A, 
 Source: author
 Vetted:
 Judgement: g
-Phenomena: {Word order, Tense Aspect Mood}
+Phenomena: {Word order, Tense Aspect Mood, Case}
 balla bat kan2wa
 ball-a bat ka-n2-wa
 dog.NOM-SG rice.NOM eat-NPT-IND
@@ -186,8 +186,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Pronouns, Tense Aspect Mood, Case}
-mam2 eluva pot2 gatta
-ma-m2 ma-aw2 pot-2 gan-u-wa
+mam2 maaw2 pot2 gatta
+ma-m2 ma-w2 pot-2 gan-u-wa
 1SG-NOM 1SG-ACC book.NOM-SG buy-PST-IND
 `I bought the book for me`
 
@@ -336,7 +336,7 @@ ball-a kohe-d2
 dog.NOM-SG where-Q
 `Where is the dog?`
 
-# 3 WH-question, focus shift
+# 4 WH-question, focus shift
 Source: a:12
 Vetted: s
 Judgement: g
@@ -346,7 +346,7 @@ ka3-ee-12 ya-nn-e kau-d2
 shop-SG-DAT go-NPT-FOC who-Q
 `Who goes to the shop?`
 
-# 4 WH-question, focus shift, wrong wh-word
+# 5 WH-question, focus shift, wrong wh-word
 Source: author
 Vetted: f
 Judgement: u
@@ -356,7 +356,7 @@ ka3-ee-12 ya-nn-e kohe-d2
 shop-SG-DAT go-NPT-FOC where-Q
 `Where goes to the shop?`
 
-# 5 WH-question, with focus shift
+# 6 WH-question, with focus shift
 Source: a:135
 Vetted: s
 Judgement: g
@@ -366,7 +366,7 @@ bat ka-nn-e kau-d2
 rice.NOM eat-NPT-FOC who-Q
 `Who eats rice?`
 
-# 6 WH-question, sentence-initial, with focus shift
+# 7 WH-question, sentence-initial, with focus shift
 Source: a:135
 Vetted: s
 Judgement: g
@@ -376,7 +376,7 @@ kau-d2 bat ka-nn-e
 who-Q rice.NOM eat-NPT-FOC
 `Who eats rice?`
 
-# 7 Response to WH-question
+# 8 Response to WH-question
 Source: author
 Vetted: f
 Judgement: g
@@ -385,6 +385,7 @@ mam2 ka3ee12 yan2wa
 ma-m2 ka3-ee-12 ya-n2-wa
 1SG-NOM shop-SG-DAT go-NPT-IND
 `I go to the shop`
+
 
 ### The Rest of the NP
 
@@ -459,16 +460,6 @@ balla bat kan2wa
 ball-a bat ka-n2-wa
 dog.NOM-SG rice.NOM eat-NPT-IND
 `The dog eats rice`
-
-# 4 non-past tense (wrong tense, indicative present tense only)
-Source: author
-Vetted: f
-Judgement: u
-Phenomena: {Tense Aspect Mood}
-balla bat k55wa
-ball-a bat ka-u-wa
-dog.NOM-SG rice.NOM eat-PST-IND
-`The dog ate rice`
 
 # 5 past tense
 Source: author
@@ -815,16 +806,6 @@ pot-2 diun-a
 book.NOM-SG run.INVOL-PST
 `The book ran`
 
-# 3 SV inanimate subject, non-nominative case
-Source: author
-Vetted: f
-Judgement: u
-Phenomena: {Agreement}
-pot2 diuna
-pot-2 diun-a
-book.ACC-SG run.INVOL-PST
-`The book ran`
-
 # 4 SV animate nominative subject, volitive verb
 Source: c:71
 Vetted: s
@@ -898,7 +879,6 @@ ka3-ee-12 ka-n2-wa
 shop-SG-DAT eat-NPT-IND
 `The shop eats`
 
-## ?
 # 12 AV inanimate nominative subject, involitive verb
 Source: author
 Vetted: f
@@ -1202,8 +1182,8 @@ Vetted: f
 Judgement: g
 Phenomena: {Non-Verbal Predicates}
 bat rasai
-bat.NOM rasa-i
-rice delicious-AM
+bat rasa-i
+rice.NOM delicious-AM
 `The rice is delicious`
 
 # 4 Adjectival Predicate, vowel-final adjective, missing assertion marker
@@ -1212,7 +1192,7 @@ Vetted: f
 Judgement: u
 Phenomena: {Non-Verbal Predicates}
 bat rasa
-bat.NOM rasa
+rice.NOM rasa
 rice delicious
 `The rice is delicious`
 
@@ -1272,8 +1252,8 @@ Vetted: f
 Judgement: g
 Phenomena: {Non-Verbal Predicates}
 bat mage
-bat.NOM ma-ge
-rice I-GEN
+bat ma-ge
+rice.NOM 1SG-GEN
 `The rice is mine`
 
 # 11 Non-Equational, incorrect - missing genitive marker
@@ -1282,51 +1262,11 @@ Vetted: f
 Judgement: u
 Phenomena: {Non-Verbal Predicates}
 bat ma
-bat.NOM ma
-rice I
+bat ma
+rice.NOM 1SG
 `The rice is I`
 
-### Embedded Complement Clauses
-
-# 1 Embedded Declarative with baw2 QM, "says/knows", object-position
-Source: author
-Vetted: f
-Judgement: g
-Phenomena: {Case, Tense Aspect Mood, Embedded declaratives}
-balla bat kan2wa baw2 kiiwa
-ball-a bat ka-n2-wa baw2 kii-u-wa
-dog.NOM-SG rice eat-NPT-IND QM say-PST-IND
-`The dog said "I eat rice."`
-
-# 2 Embedded Declarative with baw2 QM, "says/knows", complement precedes main
-Source: author
-Vetted: f
-Judgement: g
-Phenomena: {Case, Pronouns, Tense Aspect Mood, Embedded declaratives}
-balla bat kan2wa baw2 mam2 dann2wa
-ball-a bat ka-n2-wa baw2 ma-m2 dan-n2-wa
-dog.NOM-SG rice eat-NPT-IND QM 1SG-NOM know-NPT-IND
-`I know that the dog eats rice`
-
-# 3 Embedded Declarative with ki2la QM, "says/knows"
-Source: author
-Vetted: f
-Judgement: g
-Phenomena: {Case, Tense Aspect Mood, Embedded declaratives}
-balla bat kan2wa ki2la mam2 dann2wa
-ball-a bat ka-n2-wa ki2la ma-m2 dan-n2-wa
-dog.NOM-SG rice eat-NPT-IND QM 1SG-NOM know-NPT-IND
-`I know that the dog eats rice`
-
-# 4 Embedded Declarative with ki2la QM, "says/knows", object position
-Source: author
-Vetted: f
-Judgement: g
-Phenomena: {Case, Tense Aspect Mood, Embedded declaratives}
-balla bat kan2wa ki2la kiiwa
-ball-a bat ka-n2-wa ki2la ki-u-wa
-dog.NOM-SG rice eat-NPT-IND QM say-PST-IND
-`The dog said "I eat rice."`
+### Embedded Interrogative Complement Clauses
 
 # 5 Embedded Interrogative, complement follows main clause
 Source: author
@@ -1337,26 +1277,6 @@ mam2 ballagen 5huwa bat kan2wa d2 ki2la
 ma-m2 ball-a-gen 5h-u-wa bat ka-n2-wa d2 ki2la
 1SG-NOM dog-SG-ABL ask-PST-IND rice eat-NPT-IND Q QM
 `I asked the dog whether he eats rice`
-
-# 6 Embedded Declarative, missing QM
-Source: author
-Vetted: f
-Judgement: u
-Phenomena: {Embedded declaratives}
-balla bat kan2wa kiiwa
-ball-a bat ka-n2-wa kii-u-wa
-dog.NOM-SG rice eat-NPT-IND say-PST-IND
-`The dog said "I eat rice`
-
-# 7 Embedded Declarative, missing QM
-Source: author
-Vetted: f
-Judgement: u
-Phenomena: {Embedded questions}
-mam2 bat kan2wa balla dann2wa
-ma-m2 bat ka-n2-wa ball-a dan-n2-wa
-1SG-NOM rice eat-NPT-IND dog.NOM-SG know-NPT-IND
-`I know that the dog eats rice`
 
 # 8 Embedded Interrogative, missing Q
 Source: author
@@ -1554,7 +1474,7 @@ oyaa bat ka-n2 ma-m2 sudd2k2-n2-wa
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Clausal modifiers}
+Phenomena: {Clausal modifiers, Pronouns, Tense Aspect Mood, Case}
 oyaa bat kaala mam2 sudd2k2n2wa
 oyaa bat ka-la ma-m2 sudd2k2-n2-wa
 2SG.NOM rice eat-PP 1SG-NOM clean-NPT-IND
@@ -1563,13 +1483,13 @@ oyaa bat ka-la ma-m2 sudd2k2-n2-wa
 ### Possessives
 
 # 1 Inanimate Locative Possession
-Source: author #modified from a:118
+Source: author # modified from a:118
 Vetted: s
 Judgement: g
 Phenomena: {Possessives, Tense Aspect Mood}
 mam2 potee pitu bal2n2wa
-ma-m2 pot-ee pitu bal2-n2-wa
-1SG-NOM book-LOC pages read-NPT-IND
+ma-m2 pot-ee pit-u bal2-n2-wa
+1SG-NOM book-LOC page-PL read-NPT-IND
 `I read the pages of the book`
 
 # 2 Inanimate Locative Possession, missing locative marker (uses animate GEN instead)
@@ -1578,8 +1498,8 @@ Vetted: f
 Judgement: u
 Phenomena: {Possessives}
 mam2 potge pitu bal2n2wa
-ma-m2 pot-ge pitu bal2-n2-wa
-1SG-NOM book-GEN pages read-NPT-IND
+ma-m2 pot-ge pit-u bal2-n2-wa
+1SG-NOM book-GEN page-PL read-NPT-IND
 `I read the pages of the book`
 
 # 3 Inanimate Locative Possession, incorrect possessor/possessee order
@@ -1587,19 +1507,19 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Possessives}
-mam2  pitu potge bal2n2wa
-ma-m2 pitu pot-ge bal2-n2-wa
-1SG-NOM pages book-GEN read-NPT-IND
+mam2 pitu potge bal2n2wa
+ma-m2 pit-u pot-ge bal2-n2-wa
+1SG-NOM page-PL book-GEN read-NPT-IND
 `I read the pages of the book`
 
 # 4 Animate Genitive Possession
-Source: author #modified from a:118
+Source: author # modified from a:118
 Vetted: s
 Judgement: g
-Phenomena: {Possessives, Non-Verbal Predicates}
+Phenomena: {Possessives, Non-Verbal Predicates, Case}
 aliyage hon32w5l2 lokui
-aliya-ge hon32w5l2 loku-i
-elephant-GEN trunk big-AM
+aliy-a-ge hon32w5l-2 loku-i
+elephant-SG-GEN trunk.NOM-SG big-AM
 `The trunk of the elephant is big`
 
 # 5 Animate Genitive Possession, missing genitive marker (uses inanimate instead)
@@ -1608,8 +1528,8 @@ Vetted: f
 Judgement: u
 Phenomena: {Possessives}
 aliyage hon32w5l2 lokui
-aliya-ee hon32w5l2 loku-i
-elephant-LOC trunk big-AM
+aliy-a-ee hon32w5l-2 loku-i
+elephant-SG-LOC trunk.NOM-SG big-AM
 `The trunk of the elephant is big`
 
 # 6 Animate Genitive Possession, missing adjectival predicate marker
@@ -1618,8 +1538,8 @@ Vetted: f
 Judgement: u
 Phenomena: {Non-Verbal Predicates}
 aliyage hon32w5l2 loku
-aliya-ge hon32w5l2 loku
-elephant-GEN trunk big
+aliy-a-ge hon32w5l-2 loku
+elephant-SG-GEN trunk.NOM-SG big
 `The trunk of the elephant is big`
 
 # 7 Animate Genitive Possession
@@ -1629,7 +1549,7 @@ Judgement: g
 Phenomena: {Possessives, Tense Aspect Mood, Case}
 eyaa lam2yage pot2 bal2n2wa
 eyaa lam2in-a-ge pot-2 bal2-n2-wa
-3.SG child-SG-GEN book-SG.ACC read-NPT-IND
+3SG.NOM child-SG-GEN book-SG.ACC read-NPT-IND
 `He read the child's book`
 
 # 8 Animate Genitive Possession, incorrect use of locative marker
@@ -1646,7 +1566,7 @@ eyaa lam2in-a-ee pot-2 bal2-n2-wa
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Possessives, Tense Aspect Mood}
+Phenomena: {Possessives, Tense Aspect Mood, Case}
 mage balla bat kan2wa
 ma-ge ball-a bat ka-n2-wa
 I.SG-GEN dog.NOM-SG rice eat-NPT-IND
@@ -1657,44 +1577,54 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Possessives}
-mage balla bat kan2wa
+maee balla bat kan2wa
 ma-ee ball-a bat ka-n2-wa
 I.SG-LOC dog.NOM-SG rice eat-NPT-IND
 `My dog eats rice`
 
-## Declarative Clausal Complements
+## Embedded Declarative Clausal Complements
 
-# 1 Declarative Clausal Complement, baw2 subordinating conjunction
-Source: author #modified from a:193
+# 1 Declarative Clausal Complement, baw2 subordinating conjunction, complement precedes main
+Source: author # modified from a:193
 Vetted: s
 Judgement: g
 Phenomena: {Embedded declaratives, Tense Aspect Mood}
-balla chitr2 andin2 baw2 eyaa dann2wa
-ball-a chitr2 andi-n2 baw2 eyaa dan-n2-wa
-dog.NOM-SG pictures draw-NPT that 3.SG know-NPT-IND
-`She knows that the dog draws pictures`
+balla bat kan2wa baw2 eyaa dann2wa
+ball-a bat ka-n2-n2 baw2 eyaa dan-n2-wa
+dog.NOM-SG rice eat-NPT-IND that.QM 3.SG know-NPT-IND
+`She knows that the dog eats rice`
 
-# 2 Declarative Clausal Complement, missing formal noun associated with clausal complement
+# 2 Embedded Declarative with baw2 QM, "says/knows", object-position
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Case, Tense Aspect Mood, Embedded declaratives}
+balla bat kan2wa baw2 kiiwa
+ball-a bat ka-n2-wa baw2 kii-u-wa
+dog.NOM-SG rice eat-NPT-IND QM say-PST-IND
+`The dog said "I eat rice."`
+
+# 3 Declarative Clausal Complement, missing formal noun associated with clausal complement
 Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Embedded declaratives}
-balla chitr2 andin2 eyaa dann2wa
-ball-a chitr2 andi-n2 eyaa dan-n2-wa
-dog.NOM-SG pictures draw-NPT 3.SG know-NPT-IND
-`She knows the dog draws pictures`
+balla bat kan2wa eyaa dann2wa
+ball-a bat ka-n2-wa eyaa dan-n2-wa
+dog.NOM-SG rice eat-NPT-IND 3SG.NOM know-NPT-IND
+`She knows the dog eats rice`
 
-# 3 Declarative Clausal Complement
+# 4 Declarative Clausal Complement with ki2la formal noun
 Source: author
 Vetted: f
 Judgement: g
-Phenomena: {Embedded declaratives, Tense Aspect Mood}
-balla k55wa ki2la eyaa hit2-n2wa
-ball-a ka-u-wa ki2la eyaa hit2-n2-wa
-dog.NOM-SG eat-PST-IND QM 3.SG think-NPT-IND
-`She thinks that the dog ate`
+Phenomena: {Embedded declaratives, Tense Aspect Mood, Case}
+balla bat k55wa ki2la eyaa hit2-n2wa
+ball-a bat ka-u-wa ki2la eyaa hit2-n2-wa
+dog.NOM-SG rice eat-PST-IND QM 3.SG think-NPT-IND
+`She thinks that the dog ate rice`
 
-# 4 Declarative Clausal Complement, missing subordinating conjunction
+# 5 Declarative Clausal Complement, missing subordinating conjunction
 Source: author
 Vetted: f
 Judgement: u
@@ -1704,26 +1634,46 @@ ball-a ka-u-wa eyaa hit2-n2-wa
 dog.NOM-SG eat-PST-IND 3.SG think-NPT-IND
 `She thinks the dog ate`
 
-# 5 Declarative Clausal Complement
+# 6 Embedded Declarative with ki2la QM, "says/knows", object position
 Source: author
 Vetted: f
 Judgement: g
+Phenomena: {Case, Tense Aspect Mood, Embedded declaratives}
+balla bat kan2wa ki2la kiiwa
+ball-a bat ka-n2-wa ki2la ki-u-wa
+dog.NOM-SG rice eat-NPT-IND QM say-PST-IND
+`The dog said "I eat rice."`
+
+# 7 Declarative Clausal Complement
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Embedded declaratives, Tense Aspect Mood}
+balla bat k55wa ki2la eyaa hituwa
+ball-a bat ka-u-wa ki2la eyaa hit-u-wa
+dog.NOM-SG rice eat-PST-IND QM 3.SG think-PST-IND
+`She thought that the dog ate rice`
+
+# 8 Embedded Declarative, missing QM, object-position
+Source: author
+Vetted: f
+Judgement: u
 Phenomena: {Embedded declaratives}
-balla k55wa ki2la eyaa hituwa
-ball-a ka-u-wa ki2la eyaa hit-u-wa
-dog.NOM-SG eat-PST-IND QM 3.SG think-PST-IND
-`She thought that the dog ate`
+balla bat kan2wa kiiwa
+ball-a bat ka-n2-wa kii-u-wa
+dog.NOM-SG rice eat-NPT-IND say-PST-IND
+`The dog said "I eat rice."`
 
 ### Matrix Yes-No Questions
 
 # 1 Yes/no - neutral forms /SOV
-Source: author #modified from a:218
+Source: author # modified from a:218
 Vetted: s
 Judgement: g
-Phenomena: {Matrix yes-no questions, Word order, Tense Aspect Mood}
+Phenomena: {Matrix yes-no questions, Word order, Tense Aspect Mood, Case}
 eyaa kalisa4 andin2wa d2
-eyaa kalisa4 andi-n2wa d2
-3.SG slacks wear-NPT Q
+eyaa kalisa4 andi-n2-wa d2
+3SG.NOM slacks.PL wear-NPT-IND Q
 `Does she wear slacks?`
 
 # 2 Yes/no neutral form, q particle in wrong location for missing FOC marker
@@ -1733,7 +1683,7 @@ Judgement: u
 Phenomena: {Matrix yes-no questions}
 eyaa d2 kalisa4 andin2wa
 eyaa d2 kalisa4 andi-n2-wa
-3.SG Q slacks wear-NPT-IND
+3SG.NOM Q slacks.PL wear-NPT-IND
 `Does she wear slacks?`
 
 # 3 Yes/No - focus question / OVS
@@ -1743,7 +1693,7 @@ Judgement: g
 Phenomena: {Matrix yes-no questions, Word order, Tense Aspect Mood}
 kalisa4 andinne eyaa d2
 kalisa4 andi-nn-e eyaa d2
-slacks wear-NPT-FOC 3.SG Q
+slacks.PL wear-NPT-FOC 3SG.NOM Q
 `Is it she that wears slacks?`
 
 # 4 Yes/No - focus question / OVS, question particle in wrong location for focus constituent
@@ -1753,17 +1703,17 @@ Judgement: u
 Phenomena: {Matrix yes-no questions}
 kalisa4 d2 andinne eyaa
 kalisa4 d2 andi-nn-e eyaa
-slacks Q wear-NPT-FOC 3.SG
+slacks.PL Q wear-NPT-FOC 3SG.NOM
 `Is it she that wears slacks?
 
 # 5 Yes/No - focus question, #3 variable order/SOV
-Source: author #modified from a:219
+Source: author # modified from a:219
 Vetted: s
 Judgement: g
 Phenomena: {Matrix yes-no questions, Word order, Tense Aspect Mood}
 eyaa d2 kalisa4 andinne
 eyaa d2 kalisa4 andi-nn-e
-3.SG Q slacks wear-NPT-FOC
+3SG.NOM Q slacks.PL wear-NPT-FOC
 `Is it she that wears slacks?`
 
 # 6 Yes/No - focus question, #3 variable order/SOV, question particle marking incorrect focus constituent
@@ -1773,7 +1723,7 @@ Judgement: u
 Phenomena: {Matrix yes-no questions}
 eyaa kalisa4 d2 andinne
 eyaa kalisa4 d2 andi-nn-e
-3.SG slacks Q wear-NPT-FOC
+3SG.NOM slacks.PL Q wear-NPT-FOC
 `Is it she that wears slacks?`
 
 # 7 Yes/No - focus question SVO
@@ -1783,7 +1733,7 @@ Judgement: g
 Phenomena: {Matrix yes-no questions, Word order, Tense Aspect Mood}
 eyaa andinne kalisa4 d2
 eyaa andi-nn-e kalisa4 d2
-3.SG wear-NPT-FOC slacks Q
+3SG.NOM wear-NPT-FOC slacks.PL Q
 `Is it slacks that she wears?`
 
 # 8 Yes/No - focus question SVO, question particle marking incorrect focus constituent
@@ -1793,7 +1743,7 @@ Judgement: u
 Phenomena: {Matrix yes-no questions}
 eyaa d2 andinne kalisa4
 eyaa d2 andi-nn-e kalisa4
-3.SG Q wear-NPT-FOC slacks
+3SG.NOM Q wear-NPT-FOC slacks.PL
 `Is it slacks that she wears?`
 
 # 9 Yes/no - focus question, # 7 variable order/OSV
@@ -1803,7 +1753,7 @@ Judgement: g
 Phenomena: {Matrix yes-no questions, Word order, Tense Aspect Mood}
 kalisa4 d2 eyaa andinne
 kalisa4 d2 eyaa andi-nn-e
-slacks Q 3.SG wear-NPT-FOC
+slacks.PL Q 3SG.NOM wear-NPT-FOC
 `Is it slacks that she wears?`
 
 # 10 Yes/no - focus question, # 7 variable order/OSV, question particle marking incorrect focus constituent
@@ -1813,7 +1763,7 @@ Judgement: u
 Phenomena: {Matrix yes-no questions}
 kalisa4 eyaa d2 andinne
 kalisa4 eyaa d2 andi-nn-e
-slacks 3.SG Q wear-NPT-FOC
+slacks.PL 3SG.NOM Q wear-NPT-FOC
 `Is it slacks that she wears?`
 
 # 11 Yes/no declarative
@@ -1841,9 +1791,9 @@ Source: author #modified from a:135
 Vetted: s
 Judgement: g
 Phenomena: {Matrix yes-no questions, Tense Aspect Mood, Negation}
-eyaa bat kannne n5dd2
-eyaa bat kan-nn-e n5dd2
-3.SG rice eat-NPT-FOC no.Q
+eyaa bat kanne n5dd2
+eyaa bat ka-nn-e n5dd2
+3SG.NOM rice eat-NPT-FOC no.Q
 `Doesn't he eat rice?`
 
 # 14 Negative Yes/No question, combined particle - incorrect question particle combination
@@ -1851,9 +1801,9 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Matrix yes-no question}
-eyaa bat kannne d2 n55
-eyaa bat kan-nn-e d2 n55
-3.SG rice eat-NPT-FOC Q no
+eyaa bat kanne d2 n55
+eyaa bat ka-nn-e d2 n55
+3SG.NOM rice eat-NPT-FOC Q no
 `Doesn't he eat rice?`
 
 # 15 Negative Yes/no question, newei negator
@@ -1863,7 +1813,7 @@ Judgement: g
 Phenomena: {Matrix yes-no question, Non-Verbal Predicates, Negation, Tense Aspect Mood}
 eyaa guruw2r2ek newei d2
 eyaa guruw2r-2-ek newei d2
-3.SG teacher-SG-INDF no Q
+3SG.NOM teacher-SG-INDF no Q
 `Isn't he a teacher?`
 
 # 16 Negative Yes/no question, newei negator - question particle incorrectly placed
@@ -1873,7 +1823,7 @@ Judgement: u
 Phenomena: {Matrix yes-no question}
 eyaa guruw2r2ek d2 newei
 eyaa guruw2r-2-ek d2 newei
-3.SG teacher-SG-INDF Q no
+3SG.NOM teacher-SG-INDF Q no
 `Isn't he a teacher?`
 
 # 17 Negative Yes/no question - combined particle
@@ -1905,3 +1855,96 @@ mam2 ka3ee12 yan2wa
 ma-m2 ka3-ee-12 ya-n2-wa
 1SG-NOM shop-SG-DAT go-NPT-IND
 `I go to the shop?`
+
+### Argument Optionality
+
+# 1 Question with no subject or object
+Source: a:17
+Vetted: s
+Judgement: g
+Phenomena: {Argument Optionality, Tense Aspect Mood, Matrix wh questions}
+gatta d2
+gan-u-wa d2
+buy-PST-IND Q
+`Did you buy it?`
+
+# 2 No subject or object declarative
+Source: a:17
+Vetted: s
+Judgement: g
+Phenomena: {Argument Optionality, Tense Aspect Mood}
+gatta
+gan-u-wa
+buy-PST-IND
+`I bought it`
+
+# 3 No subject
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Argument Optionality, Tense Aspect Mood}
+bat gatta
+bat gan-u-wa
+rice buy-PST-IND
+`(I) bought rice`
+
+# 4 No object
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Argument Optionality, Tense Aspect Mood}
+eyaa gatta
+eyaa gan-u-wa
+3SG.NOM buy-PST-IND
+`She bought (it)`
+
+# 5 No subject with intransitive verb
+Source: a:17
+Vetted: s
+Judgement: g
+Phenomena: {Argument Optionality, Tense Aspect Mood}
+aawa, aawa
+e-u-wa, e-u-wa
+come-PST-IND, come-PST-IND
+`She is coming or they are coming`
+#`It came / The person (expected) came`
+
+# 6 Assertion marker with assumed subject
+Source: a:17
+Vetted: s
+Judgement: g
+Phenomena: {Argument Optionality}
+ba32ginii
+ba32gini-i
+hungry-AM
+`I'm hungry` # To me hungry
+
+# 7 Assertion marker with non-assumed subject
+Source: a:17
+Vetted: s
+Judgement: g
+Phenomena: {Argument Optionality}
+siit2lai
+sitt2la-i
+cold-AM
+`It's cold / I feel cold` # Cold
+
+# 8 No Subject, intransitive verb
+Source: a:17
+Vetted: s
+Judgement: g
+Phenomena: {Argument Optionality, Tense Aspect Mood}
+wahin2wa
+wahi-n2-wa
+rain-NPT-IND
+`It's raining`
+
+# 9 Missing subject
+Source: author # modified from a:15
+Vetted: s
+Judgement: g
+Phenomena: {Argument Optionality, Tense Aspect Mood, Negation}
+bat gatta n55
+bat gan-u-wa n55
+rice buy-PST-IND no
+`(We) didn't buy the rice`
