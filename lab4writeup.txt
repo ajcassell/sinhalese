@@ -73,7 +73,7 @@ dog.NOM-SG rice eat-NPT-IND that.QM 3.SG know-NPT-IND                   # NOTE: 
 `She knows that the dog eats rice`
 
 # 4 Declarative Clausal Complement with ki2la formal noun
-Judgement: g 
+Judgement: g
 balla bat k55wa ki2la eyaa hit2-n2wa                                    # NOTE: does not parse
 ball-a bat ka-u-wa ki2la eyaa hit2-n2-wa
 dog.NOM-SG rice eat-PST-IND QM 3.SG think-NPT-IND
@@ -85,7 +85,11 @@ complementizer spellings, which include "baw2" and "ki2la". We also made sure th
 clause order as the same as the matrix clause.
 
 Our ungrammatical variations of the above sentences parse. These variations do not have the subordinating conjunction,
-which is required for grammaticality. The ungrammatical ones that parse include:
+which is required for grammaticality. In #1 and #4 above, 'balla', 'kauwa', and 'hit2n2wa' do not even form stems when
+looking at the parse chart. In other sentences and the ungrammatical ones below, stems for these words are formed and 
+the affixes are properly added. This is peculiar, since it seems the subordinating conjunction is interfering with the
+lexicon and then the morphological rules here.
+The ungrammatical ones that parse include:
 
 # 3 Declarative Clausal Complement, missing formal noun associated with clausal complement
 Judgement: u
