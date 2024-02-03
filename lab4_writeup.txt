@@ -191,28 +191,124 @@ teacher-PL CONJ parent-PL CONJ child-PL CONJ road-SG watch-NPT-INID
 
 Now moving on to this week's features...
 
+Possessives:
+In Sinhala, a possessive relationship among animate nouns is represented by the genitive marker
+-ge/-gee. If an inanimate noun takes the possessor role, then a locative suffix '-ee' is used.
+Possession is marked on the possessor with the suffix and the order is possessor-first. It appears
+the possessors are specifier-like because they take the place of the determiner. These phrases follow
+the canonical word order of SOV.
+
+# NOTE: this is not parsing, example only - see note below
+# 1 Inanimate Locative Possession
+mam2 potee pitu bal2n2wa
+ma-m2 pot-ee pitu bal2-n2wap
+1SG-NOM book-LOC page.PL read-NPT
+`I read the pages of the book`
+
+#9 Pronominal Possession
+mage balla bat kan2wa
+ma-ge ball-a bat ka-n2-wa
+I.SG-GEN dog.NOM-SG rice eat-NPT-IND
+`My dog eats rice`
+
+# 7 Animate Genitive Possession
+eyaa lam2yage pot2 bal2n2wa
+eyaa lam2in-a-ge pot-2 bal2-n2-wa
+3SG.NOM child-SG-GEN book.ACC-SG read-NPT-IND
+`He read the child's book`
+
+In the adnominal possession section, we chose possessor-first for word order, given the information
+provided in our references. Possessors seem to take the place of the determiner. As previously mentioned,
+the possessor appears as an affix on the possessor, but we noted in the matrix that the affix does not
+agree in gender with the possessum. As shown in grammatical number #7 above, the possessum "pot" is
+inanimate gender while "lam2in" is animate gender, therefore these genders do not agree. In the morphology
+section, we added a possession position class that obligatorily occurs with three lexical rule types. We
+added animate possession to capture '-ge' and '-gee' possessive suffixes and inanimate possession to capture
+'-ee' suffixes. Lastly, we added a nonpossessive lexical rule for nouns in which possession does not apply.
+
+section=adnom-poss
+  poss-strat1_order=head-final
+  poss-strat1_mod-spec=spec
+  poss-strat1_mark-loc=possessor
+  poss-strat1_possessor-type=affix
+  poss-strat1_possessor-affix-agr=non-agree
+
+A note about #1 not parsing: In a previous version of our choices file, #1 parsed but now shows 'mam2', 'potee',
+and 'bal2n2wa' do not form nouns or verbs. We think this may have to do with the order of our rules, but are unsure.
+Additionally, both the locative and genitive suffixes are parsing for examples #7 and #9 above when they should not
+be. We believe this is due in part to the possessive position class holding genitive case while the case position
+class also has genitive case. Our ungrammatical examples, one is shown below, undergo the non-possessive lexical rule
+only to pick up their respective cases in the case position class, instead of going through the possessive animate or
+possessive inanimate rule. We also noticed that this occurs with our grammatical examples. We believe the solution to
+this issue requires us to remove the possessive position class and instead utilize the existing case position class.
+In the adnominal possession section of the matrix, we plan to create a new possessive strategy without the morpheme.
+Animate and Inanimate is crucial to possession, so these will have to be constraints on the lexical rule types.
+
+# NOTE: parses but is ungrammatical
+# 10 Pronominal Possession, incorrect case on possessor
+Judgement: u
+maee balla bat kan2wa
+ma-ee ball-a bat ka-n2-wa
+1SG-LOC dog.NOM-SG rice eat-NPT-IND
+`My dog eats rice`
+
 Embedded Complement Clauses - Declarative:
 
-Sinhala's strategy for embedded declaratives is solely to use obligatory
-"formal nouns" like witti2, wag2, and baw2. The complement object is
-embedded between the subject and the predicate of the main clause. If the subject
-is identical between the two clauses, then it can be deleted from ....
-
+Verbs of sign, knowledge, report, speech, discovery, or forensic acts take complement clauses with
+a subordinating conjunction. These subordinating conjunctions are added to the end of an embedded
+clause and include: 'baw2', 'wag2', and 'witti2'. When the verb denotes thinking, expecting, imagining,
+fearing, or any sense of uncertainty, the subordinating conjuction 'ki2la' is used. These are
+obligatory conjunctions known as "formal nouns". No special morphology is required on the verb.
+The embedded clause appears before the matrix verb. The word order between the matrix and embedded
+clauses is not different as free word order remains in embedded clauses.
 Since there is free word order, the embedded clauses are also free to
 appear after or in the middle of the main clause. However, most often
-the pattern is that complement causes precede the main clause. The free word
-order remains for the embedded clause as well. There isn't specification
+the pattern is that complement causes precede the main clause. There isn't specification
 that embedded clauses are necessarily nominalized. In fact, I think I only saw
-one example of this.
+one example of this. There is no special morphology on the verb.
 
-**** has that been implemented? *****
+# NOTE: does not parse
+# 1 Declarative Clausal Complement, baw2 subordinating conjunction, complement precedes main
+Judgement: g
+balla bat kan2wa baw2 eyaa dann2wa
+ball-a bat ka-n2-wa baw2 eyaa dan-n2-wa
+dog.NOM-SG rice eat-NPT-IND that.QM 3.SG know-NPT-IND
+`She knows that the dog eats rice`
 
-There is no special morphology on the verb.
+# NOTE: does not parse
+# 4 Declarative Clausal Complement with ki2la formal noun
+Judgement: g
+balla bat k55wa ki2la eyaa hit2-n2wa
+ball-a bat ka-u-wa ki2la eyaa hit2-n2-wa
+dog.NOM-SG rice eat-PST-IND QM 3.SG think-NPT-IND
+`She thinks that the dog ate rice`
 
+In the customization system, we have one clausal complement type. We noted that object complement clauses
+are placed in the same position as regular noun complements and our strategy is for embedding declaratives. We added two
+complementizer spellings, which include "baw2" and "ki2la". We also made sure the word order page listed subordinate
+clause order as the same as the matrix clause.
 
-^^^^ whoops this is not my section....
+#1 and #4 are able to unify "balla bat kan2wa baw2" to a CP but then the CP and the other S
+are not unified and we need to look into this further.
+Our ungrammatical variations (below) of the above sentences parse. These variations do not have the subordinating conjunction,
+which is required for grammaticality. The reason for this is likely asyndetonic coordination of VP/Ss which
+is described in a later section about parse coverage.
 
+# NOTE: parses but is ungrammatical
+# 3 Declarative Clausal Complement, missing formal noun associated with clausal complement
+Judgement: u
+balla bat kan2wa eyaa dann2wa
+ball-a bat ka-n2-wa eyaa dan-n2-wa
+dog.NOM-SG rice eat-NPT-IND 3SG.NOM know-NPT-IND
+`She knows the dog eats rice`
 
+# NOTE: parses but is ungrammatical
+# 5 Declarative Clausal Complement, missing subordinating conjunction
+Judgement: u
+balla k55wa eyaa hit2-n2wa
+ball-a ka-u-wa eyaa hit2-n2-wa
+dog.NOM-SG eat-PST-IND 3.SG think-NPT-IND
+`She thinks the dog ate`
 
 Embedded Complement Clauses - Interrogative:
 The same analysis for the embedded declarative clauses holds
@@ -221,6 +317,12 @@ the interrogative, Sinhala uses the Question (Q) and Quotative (QM)
 markers the same way they appear in questions. The sources
 only give one example and don't discuss embedded interrogatives
 further so the assumption is that this is as intricate as they get.
+
+This was not an implementation requirement in the customization system this week
+so we have just included testsuite examples. It seems relatively trivial though
+since the pattern of embedded interrogatives seems the same as standalone
+interrogatives, but we didn't get to trying this in the grammar yet.
+
 One thing to note is there is no indication for why the dog is in ablative case
 and if the dog is considered the object of ask-PST-IND, then this would not
 satisfy any of the case constraint position classes as ablative is not
@@ -244,10 +346,42 @@ ma-m2 ball-a-gen 5h-u-wa bat ka-n2-wa d2
 1SG-NOM dog-SG-ABL ask-PST-IND rice eat-NPT-IND Q
 `I asked the dog whether he eats rice`
 
-This was not an implementation requirement in the customization system this week
-so we have just included testsuite examples. It seems relatively trivial though
-since the pattern of embedded interrogatives seems the same as standalone
-interrogatives, but we didn't get to trying this in the grammar yet.
+Yes/No Questions:
+
+Yes/no questions are formed by using the 'd2' particle following the predicate. Questions in which
+any constituent other than the verb is chosen for questioning, the 'd2' particle follows questioning
+constituent and the verb is marked with a focus form. Multiple word orders are possible with this
+focus form. If the focus constituent is moved, the question particle 'd2' must move with the it. In
+declarative yes/no questions, the question particle appears between the sentence boundary and the final
+verb. Without the question particle, questions in declarative form would simply be declarative
+sentences. For negative yes/no questions, the question particle is added to the negative particle. In the
+case of "n55", "n55" and "d2" are combined to create the negative question particle "n5dd2". For the
+negative particle "newei", the question particle is simply added after the negative particle.
+
+# 1 Yes/no - neutral forms /SOV
+eyaa kalisa4 andin2wa d2
+eyaa kalisa4 andi-n2-wa d2
+3.SG slack.PL wear-NPT-IND Q
+`Does she wear slacks?`
+
+# 3 Yes/No - focus question / OVS
+kalisa4 andinne eyaa d2
+kalisa4 andi-nn-e eyaa d2
+slacks wear-NPT-FOC she Q
+`Is it she that wears slacks?`
+
+# 13 Negative Yes/No question, combined particle
+eyaa bat kannne n5dd2
+eyaa bat kan-nn-e n5dd2
+3.SG rice eat-NPT-FOC no.Q
+`Doesn't he eat rice?`
+
+In the matrix yes/no section, we stated that question particles occur clause-finally. We added two particles:
+'d2' and 'n5dd2'. For 'd2', we stated the particle is obligatory and occurs in both main and embedded clauses.
+For 'n5dd2', we stated the particle is obligatory but only occurs in main clauses. Sinhala does not have
+subject-verb inversion nor does it have verbal inflection for these purposes, therefore these options were
+left unchecked.
+
 
 Adverbial Clausal Modifiers:
 
@@ -256,7 +390,8 @@ with subordination particles, and case markers (likely nominalization).
 
 The first that we tried to implement is the affix -ddi. It attaches directly to the verb
 root to indicate unspecified time i.e. the English "while".
-** The following two do not parse. Hypothesis to follow.
+
+** The following TWO do not parse. Hypothesis to follow.
 
 Source: author
 Vetted: f
@@ -315,21 +450,25 @@ Based on the parse chart, the first step that is not able to unify
 is with the SUBJ-HEAD rule. kaddi cannot unify in this rule because it
 has the FLAG value for tense-pc as - when they need to be na-or-+.
 After determining that it seems we may need a zero-affix rule for
-when the tense is not specified on a verb. Is that a good idea?
-We did not have time to try this and were concerned a zero rule would
-add to even more crowded parse charts.
-#3 with -ham2 does not work starting with the fact that bal2uham2 is not
+when the tense is not specified on a verb. It was suggested that we update the pc
+for -ddi such that it attaches directly to the root instead of a non-affixing
+lexical tense rule, but we will need to include that next week.
+# 3 with -ham2 does not work starting with the fact that bal2uham2 is not
 morphologically created. I was able to interactively unify the stem bal2 with
 the appropriate position classes until attempting the while-pst rule that
-failed because of the forms not matching: while vs finite.
+failed because of the forms not matching: while vs finite. This is also an update
+we need to make for next week where we rework where [FORM fin] comes in, perhaps
+removing it from the past tense rule. I am confused as to how we customize the grammar
+so that the resulting S has FORM fin, not while.
 
 All examples show that the subordinate clause precedes the main clause.
 
 Clauses of cause and reason (because/since) are mainly formed with case markers
 or inflection plus a particle. Two examples of particles are hinda and nissa which behave
-identically. These particles both occur with PST or NPT adjectival forms of the subordinate
-verb in cases of dynamic verbs, not stative verbs (i.e. not "is"). There is also another
-particle ko12 which behaves the same as these but is used for time like the affixes above.
+identically. These particles both occur with PST or NPT adjectival
+(this is the terrm used in the source) forms of the subordinate
+verb in cases of dynamic verbs, not stative verbs (i.e. not forms of "be"). There is also another
+particle ko12 which behaves the same as these but is used for temporal clauses like the affixes above.
 We did not include it to keep our strategies smaller.
 
 In example #13, nissa follows the subordinate clause and precedes the main clause.
@@ -350,14 +489,17 @@ not verbs, they do not take a FORM feature. We instead are considering giving th
 Mood ADJ if we proceed with implementing that as a mood. When we attempted to do this,
 there was an error loading the grammar that said ADJECTIVAL-CLAUSE-FINAL-PREHEAD-NONPAST-SUBORD-LEX-ITEM
 has an invalid constraint, (which was the mood) with no further information.
+We have discussed adding adj to the mood-pc with no affix that attaches a new nonfinte
+FORM adj, update the other mood lexical rules to specify FORM finite, and
+have the subordinator morpheme requirer [TENSE non-past] and [FORM adj].
+Again, this is something we need to test out next week. We unfortunately ran out
+of time and wanted to get as much as we could of the other features working first.
 
 We did not get around to implementing the case markers, so the followiing
 examples will not parse. They seem characteristic
 of nominalization. The options are the dative -12 or the instrumental/ablative
 -in suffix which are affixed to the PST or NPT form of subordinate verb.
-Here are both examples in our testsuite. We have added nominalization in
-the customization system but it is not working yet. We also were only able
-to find a couple examples of explicit nominalization in our sources.
+Here are both examples in our testsuite.
 
 # 6 Subordination via dative verb casing + non-past subordinate verb
 Judgement: g
@@ -372,11 +514,6 @@ oyaa pot2 bal2wain mam2 sudd2k2n2wa
 oyaa pot-2 bal2-u-wa-in ma-m2 sudd2k2-n2-wa
 2SG.NOM book-SG read-PST-IND-INS 1SG-NOM clean-NPT-IND
 `I clean because you read the book`
-
-
-
-
-******(example of nominalization in my notes - pay for cleaning)
 
 Finally, there is another strategy which is simply the past participle
 construction which shows sequential relation of cause and effect.
@@ -396,7 +533,29 @@ There are other types of complemental clauses as well that are not included in o
 grammar that correspond to conditional (if), concession (although), purpose (to),
 and more.
 
+Customization Matrix Only:
+We have added nominalization in the customization system but have not tested it yet. We also were only able
+to find a couple examples of explicit nominalization in our sources.
+This was matrix only this week. There are no examples in the testsuite.
+With nominalization, the highest argument of the verb must have genitive case once the verb is nominalized and the
+highest argument can never be the patient argument of a transitive verb. The highest argument cannot have nominative
+case when the verb is nominalized as nominalized verbs do not assign nominative case in Sinhala. Genitive marking on
+the object is not acceptable. Nominalization applies to verbal predicates only. According to our sources, nominalization
+is restricted to verbs only and is a inflectional morphology process. This means the verb is suffixed with 'ek2' or
+'iim2' and the nominalized verb does not have a tense affix.
+
+Since this is matrix only, we only added to the nominalized clause section of the matrix. We added a Nominalization
+strategy where the nominalization of the clause occurs on the verb. We also stated that it should be reflected in the
+semantics because genitive case under nominalization is considered to have the highest semantic role.
+
+section=nominalclause
+  ns1_name=verb-nom-strat
+  ns1_level=low
+  ns1_nmzRel=yes
+
+
 Argument Optionality:
+
 Sinhala is referred to as a "super pro-drop" language by two of our sources.
 However, neither goes into extensive detail and perhaps that is because the language
 is so free (free word order, no verb subject/object agreement).
@@ -493,12 +652,33 @@ Because of this freedom in colloquial Sinhala, we were unable to think of
 any ungrammatical examples for this in the testsuite.
 
 
-3.
+3. There are a few areas where the customization is not
+fully equipped to work on Sinhala. Firstly (and this is
+carry over from last week's lab but keeping here as a reminder),
+the language shows coordination on VPs and S which we called
+participle coordination. The matrix cannot specify
+specific inflected forms of the verb constituents in the
+coordination, so we will need to manually add this into
+the TDL files somehow later. For now it is marked as
+asyndetonic. We also will need something that says that adjectives
+cannot modify pronouns which will need to be done in TDL editing with a
+[ PRON bool ] feature and have the adjectives require their MOD to be
+[ PRON - ] while the pronouns say that they are [ PRON + ].
+
+Things that we did not get around to that are in the testsuite
+(exception being #1 because we don't have evidence for it):
+1. Incorporating agreement in case for coordinated NPs depending on
+INVOL of verbs to answer the question of what happens if you coordinate
+ANIM and INANIM subjects with a VOL intransitive verb, or if the case constraints
+would restrict this.
+2. Adjectival form (mentioned)
+3. Need to fix the embedded clauses and adverbial modifiers
 
 4. Our metrics are as follows:
-Coverage:
-Overgeneration:
-?? :
+Coverage: 39.2 % (Sadly this was at 44.2, but I must have changed something last minute!)
+Overgeneration: 27.3 %
+Ambiguity: We were unable to find a numeric value for this anywhere.. but there
+was certainly a good amount of ambiguity in the scenarios where we got a lot of parses.
 
 We knowingly have a lot of sentences in the testsuite that are not expected
 to parse yet, due to not being expected in the starter grammar (nonverbal predicates,
@@ -538,10 +718,16 @@ dog.NOM-SG drink-NPT-FOC no
 Some of our sentences generate a lot of parses. It is not a surprise given for
 one the lack of subject/verb or verb/object agreement, as well as
 asyndetonic verb coordination. Also, because
-pro-drop is common, sentences like "bat gan-u-wa" (above) give 20 parses.
+pro-drop is common, sentences like "bat gan-u-wa" (above) give 20 parses
+so it's possible that the verb undergoes multiple paths of morphology
+for the different possible subject/object case constraints.
+It's important to note that in cases of many parses, it is not the case
+that each is a different parse structure which would indicate a lot of
+ambiguity, but rather different possible non-affixing lexical rules that
+produce the same surface structure.
 An area of concern in our parse results are the sentences of subordination
 that use free morphemes like "hinda" and "nissa" or use verb casing.
-Right now since these are not incorporated, the sentences like
+Right now since these are not incorporated, the sentences like:
 
 # 12 Subordination without particle hinda
 Judgement: u
@@ -552,30 +738,25 @@ oyaa bat ka-n2 ma-m2 sudd2k2-n2-wa
 
 are parsing (and with nearly 1000 parses) when they should not, or at least
 not in the way that they are, likely because of coordination rather than
-subordination of clauses.
+subordination of clauses. The parses show coordination of the phrases
+(but I did not look through all of them).
 
+It is clear we need to clean up some non affixing morphology rules.
 
-
-
-Things that we did not get around to:
-1. Incorporating agreement in case for coordinated NPs depending on
-INVOL of verbs to answer the question of what happens if you coordinate
-ANIM and INANIM subjects with a VOL intransitive verb, or if the case constraints
-would restrict this.
-2.
-
-5. There are a few areas where the customization is not
-fully equipped to work on Sinhala. Firstly (and this is
-carry over from last week's lab but keeping here as a reminder),
-the language shows coordination on VPs and S which we called
-participle coordination. The matrix cannot specify
-specific inflected forms of the verb constituents in the
-coordination, so we will need to manually add this into
-the TDL files somehow later. For now it is marked as
-asyndetonic. We also will need something that says that adjectives
-cannot modify pronouns which will need to be done in TDL editing with a
-[ PRON bool ] feature and have the adjectives require their MOD to be
-[ PRON - ] while the pronouns say that they are [ PRON + ].
+5. All of the changes that we made to our grammar from last week are mentioned
+in the first section with specific examples. In terms of what we real-time
+updated as we have been testing this week - The biggest fixes were with
+our case constraint position classes. A lot of our verbs were not unifying
+in the SUBJ-HEAD or COMPS-HEAD rules because their flags were - for
+case constraints pc. Thus they were not morphologically complete.
+This is because we had two pc classes for this that did not handle intransitive verbs.
+They were not handled because they were assume to not have objects. However,
+because the class was obligatory and the verb didn't meet meet the criteria of
+the specific rule types (i.e. didn't have an object), the class was not satisfied
+so we added two non-affixing rules (one for vol and one for invol verb pcs).
+This opened up a lot of sentences to parse better. We also greatly improved
+from last week by correctly implementing lexical rules for verbs we were
+deeming irregular that just needed to be analyzed the same as the rest. 
 
 
 Extra Questions:
