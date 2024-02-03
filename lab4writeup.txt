@@ -10,7 +10,7 @@ the possessors are specifier-like because they take the place of the determiner.
 the canonical word order of SOV.
 
 # 1 Inanimate Locative Possession
-mam2 potee pitu bal2n2wa
+mam2 potee pitu bal2n2wa                                 # NOTE: this is not parsing, example only
 ma-m2 pot-ee pitu bal2-n2wap
 1SG-NOM book-LOC pages read-NPT
 `I read the pages of the book`
@@ -21,7 +21,7 @@ ma-ge ball-a bat ka-n2-wa
 I.SG-GEN dog.NOM-SG rice eat-NPT-IND
 `My dog eats rice`
 
-# 7 Animate Genitive Possession   #note this sentence doesn't parse, example only
+# 7 Animate Genitive Possession
 eyaa lam2yage pot2 bal2n2wa
 eyaa lam2in-a-ge pot-2 bal2-n2-wa
 3SG.NOM child-SG-GEN book-SG.ACC read-NPT-IND
@@ -36,8 +36,26 @@ section, we added a possession position class that obligatorily occurs with thre
 added animate possession to capture '-ge' and '-gee' possessive suffixes and inanimate possession to capture
 '-ee' suffixes. Lastly, we added a nonpossessive lexical rule for nouns in which possession does not apply.
 
+A note about #1 not parsing: In a previous version of our choices file, #1 parsed but now shows 'mam2', 'potee',
+and 'bal2n2wa' do not form nouns or verbs. We think this may have to do with the order of our rules, but are unsure.
+Additionally, both the locative and genitive suffixes are parsing for examples #7 and #9 above when they should note
+be. We believe this is due in part to the possessive position class holding genitive case while the case position
+class also has genitive case. Our ungrammatical examples, one is shown below, undergo the non-possessive lexical rule
+only to pick up their respective cases in the case position class, instead of going through the possessive animate or
+possessive inanimate rule. We also noticed that this occurs with our grammatical examples. We believe the solution to
+this issue requires us to remove the possessive position class and instead utilize the existing case position class.
+In the adnomial possession section of the matrix, we plan to create a new possessive strategy without the morpheme.
+Animate and Inanimate is crucial to possession, so we are still figuring out how to incorporate animacy into our
+existing case position class for this purpose.
 
-##### FIX SECTION
+#10 Pronominal Possession, incorrect case on possessor
+Judgement: u
+maee balla bat kan2wa                                                   # NOTE: parses but is ungrammatical
+ma-ee ball-a bat ka-n2-wa
+I.SG-LOC dog.NOM-SG rice eat-NPT-IND
+`My dog eats rice`
+
+
 Declarative Clausal Complements:
 Verbs of sign, knowledge, report, speech, discovery, or forensic acts take complement clauses with
 a subordinating conjunction. These subordinating conjunctions are added to the end of an embedded
@@ -48,21 +66,40 @@ before the matrix verb and they are not nominalized. The word order between the 
 clauses is not different as free word order remains in embedded clauses.
 
 # 1 Declarative Clausal Complement, baw2 subordinating conjunction, complement precedes main
+Judgement: g
 balla bat kan2wa baw2 eyaa dann2wa
 ball-a bat ka-n2-n2 baw2 eyaa dan-n2-wa
-dog.NOM-SG rice eat-NPT-IND that.QM 3.SG know-NPT-IND                   # does not parse
+dog.NOM-SG rice eat-NPT-IND that.QM 3.SG know-NPT-IND                   # NOTE: does not parse
 `She knows that the dog eats rice`
 
-# 4 Declarative Clausal Complement with ki2la formal noun               #does not parse
-balla bat k55wa ki2la eyaa hit2-n2wa
+# 4 Declarative Clausal Complement with ki2la formal noun
+Judgement: g 
+balla bat k55wa ki2la eyaa hit2-n2wa                                    # NOTE: does not parse
 ball-a bat ka-u-wa ki2la eyaa hit2-n2-wa
 dog.NOM-SG rice eat-PST-IND QM 3.SG think-NPT-IND
 `She thinks that the dog ate rice`
 
 In the clausal complement section, we have one clausal complement type. We noted that object complement clauses
-are placed in the same positino as regular noun complements and our strategy is for embedding. We added two
+are placed in the same position as regular noun complements and our strategy is for embedding. We added two
 complementizer spellings, which include "baw2" and "ki2la". We also made sure the word order page listed subordinate
 clause order as the same as the matrix clause.
+
+Our ungrammatical variations of the above sentences parse. These variations do not have the subordinating conjunction,
+which is required for grammaticality. The ungrammatical ones that parse include:
+
+# 3 Declarative Clausal Complement, missing formal noun associated with clausal complement
+Judgement: u
+balla bat kan2wa eyaa dann2wa                                       # NOTE: parses but is ungrammatical
+ball-a bat ka-n2-wa eyaa dan-n2-wa
+dog.NOM-SG rice eat-NPT-IND 3SG.NOM know-NPT-IND
+`She knows the dog eats rice`
+
+# 5 Declarative Clausal Complement, missing subordinating conjunction
+Judgement: u
+balla k55wa eyaa hit2-n2wa                                         # NOTE: parses but is ungrammatical
+ball-a ka-u-wa eyaa hit2-n2-wa
+dog.NOM-SG eat-PST-IND 3.SG think-NPT-IND
+`She thinks the dog ate`
 
 
 Yes/No Questions:
