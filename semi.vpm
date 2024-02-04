@@ -58,6 +58,7 @@ PNG.GEND : PNG.GEND
 E.TENSE : E.TENSE
   nonpast <> nonpast
   past <> past
+  future <> future
   * <> *
 
 E.ASPECT : E.ASPECT
@@ -66,4 +67,5 @@ E.ASPECT : E.ASPECT
   * <> *
 
 E.MOOD : E.MOOD
+  indicative <> indicative
   * <> *

@@ -7,6 +7,9 @@ Complementizers - "formal nouns" like witti2, wag2 and baw2
 Object complement is embedded between subject and predicate of main clause
 Identical subject deleted, otherwise complement precedes main
 Embedded clauses can also appear after or in the middle of main clauses, usually for pragmatics
+- no special morphology on verb
+- word order same between matrix and embedded clauses
+- Are embedded clauses necessarily nominalized?? ----- my guess is no but idk what this means exactly
 
 balla bat ka-n2wa baw2 kiiwa
 dog.NOM rice eat-IND QM say.PAST
@@ -14,24 +17,26 @@ dog.NOM rice eat-IND QM say.PAST
 
 mam2 bat ka-n2wa baw2 balla dan-n2wa
 1SG.NOM rice eat-NPT.IND QM dog.NOM know-IND
-`I know that the dog draws pictures`
+`I know that the dog eats rice`
 
 QM = quotative marker - used to embed reported speech or thought into the main clause (Direct Speech)
 (but goes in the exact same place and nothing else changes? - maybe only QM can also do interrogative and imperatives)
 
 mam2 bat ka-n2wa ki2la balla dan-n2wa
 1SG.NOM rice eat-NPT.IND QM dog.NOM know-IND
-`I know that the dog draws pictures`
+`I know that the dog eats rice`
 
 balla bat ka-n2wa ki2la kiiwa
 dog.NOM rice eat-IND QM say.PAST
 `The dog said "I eat rice."'
 
-mam2 balla-en (??) 5huwa bat ka-n2wa d2 ki2la
-1SG.NOM dog-ABL (??) ask.PST rice eat-IND Q QM
+mam2 balla-gen 5huwa bat ka-n2wa d2 ki2la
+1SG.NOM dog-ABL ask.PST rice eat-IND Q QM
+`I asked the dog whether he eats rice`
 
 Other verbs QM works with are shouted, requested, was worried, muttered, promised, doubted, believed
 
+You will need to specify the position classes for the verbal morphology in the Morphology section. You will need to specify which verbs can take which type of complement in the Lexicon section.
 
 ---------------------------
 Adverbial Clausal Modifiers
@@ -45,7 +50,9 @@ balla uya-ddi mam2 patt2ree bal2-n2wa
 balla cook-while ma-m2 newspaper read-IND
 `While the dog is cooking, I read a newspaper`
 
-particle kot2 (while/when) for time as well
+particle ko12 (while/when) for time as well
+
+-ham2 verb ending + PST
 
 The tense of the unspecified temporal clauses in (78) is determined by the tense term
 of the main clause. (a:198 examples)
@@ -55,12 +62,13 @@ while - if subordinate clause is non-past tense
 as soon as - if subordinate clause is past tense
 (examples a:199)
 
-All examples are showing the subordinate clause precede the regular clause
+All examples are showing the subordinate clause PRECEDES the regular clause
 
 Clauses of cause and reason are mainly formed with case markers and inflection plus particles
 hinda or nisaa. The case forms include the dative -12
 and the instrumental/ablative -in which are suffixed to the past or non--past form of
-the subordinate verb. The particles occur with past or non-past adjectival forms of the verb.
+the subordinate verb. (both tenses for both suffixes)
+The particles occur with past or non-past adjectival forms of the verb.
 
 Case on the VERB
 
@@ -80,9 +88,162 @@ Ranjit asleep since we call.PT-Poc no
 
 Also the past participle construction to show sequential relation of cause and effect (200)
 
+Not going to bring up ki2la
+
 Also, conditional clauses (if), concession (although), purpose (to, infinitive), proportion, and manner
 
 
 --------------------
 Argument Optionality
 --------------------
+
+a:14: (It) may rain by the evening
+a:15: (We) didn't buy the things since they were too expensive
+a:15 (Let's) talk about this when Ranjit comes
+Even if he comes, (we) cannot have the meeting OR having the meeting is impossible???
+
+a:17 Ellipsis - NPs including subject and object as well are often omitted from utterances
+First and second pronouns are the most freely deleted subjects
+
+gatta d2
+gan-u-wa d2
+buy-PST-IND Q
+`Did you buy it?`
+
+gatta
+gan-u-wa
+buy-PST-IND
+`I bought it`
+
+aawa, aawa
+e-u-wa, e-u-wa
+come-PST-IND, come-PST-IND
+`She is coming or they are coming`
+#`It came / The person (expected) came`
+
+Discourse-predictable constituents need not appear in surface structures for constructional purposes
+
+Sinhala allows deletion of non-nominative elements if they are easily recoverable from context
+The so called experiencer-subjects, appear in dative form and are better left unmentioned when They
+bear coreference with the speaker (usually sensation and perception)
+
+AM is assertion marker
+
+ba32ginii
+ba32gini-i
+hungry-AM
+`I'm hungry` # To me hungry
+
+siit2lai
+sitt2lai
+cold-AM
+`It's cold / I feel cold` # Cold
+
+wahin2wa
+wahi-n2-wa
+rain-NPT-IND
+`It's raining`
+
+Also verb dropping (mention - but not added)
+works with existential or possessive verbs inn2wa and tiyen2wa
+
+n55, taatta ged2r2 n55
+no, father home no
+`No, father isn't home`
+
+Source b:
+pro-drop (null anaphora)
+"super pro-drop language"
+Arguments may be freely omitted in all argument positions with the exception
+of complements of postpositionial phrases
+More prevalent in spoken Sinhala
+More often than not, they can be omitted
+(one example of 259 shows ambiguity, don't think it's simple enough to include)
+
+
+
+
+
+Lexicon to add!!
+----------------
+baw2
+ki2la
+d2
+-ddi
+-ham2
+ko12
+-in
+hinda
+nissa
+.ADJ?
+
+n5dd2 = no.Q ???
+
+Adjectival form follows NPT and applies nothing?
+
+PAST
+gatta (stem is gan) - so gan-u-wa ?
+k55wa k55-wa (stem is ka) - so ka-u-wa ?
+dunna -> dun-u-wa ?
+diwwa -> di-u-wa
+aawa aa-wa -> aa-u-wa
+5huwa -> 5h-u-wa
+bal2wa bal2-wa -> bal2-u-wa
+kiiwa -> ki-u-wa
+
+INVOL  - maybe INVOLs have no? IND, and then different PST rules
+5he-n2wa (hear)
+diun-a (run)
+n51un-a (dance)
+k5dun-a (break)
+
+
+PP
+gihilla (ya)
+5hila (hear.INV.PP)
+
+ka-laa -> ka-la
+gihilla -> ya-la
+5hila -> 5he-la
+
+
+la = PP (involitive trans & vol both)
+laa = PAST (vol both for now)
+
+
+
+Write up notes:
+Adverbial Clausal Modifiers:
+- more examples of while/as soon as/before until etc - didn't include this because they're extra and not enough time
+
+TO FIX:
+- vase ending doesn't match any listed
+
+# 4 non-past tense (wrong tense, indicative present tense only)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Tense Aspect Mood}
+balla bat k55wa
+ball-a bat ka-u-wa
+dog.NOM-SG rice.NOM eat-PST-IND
+`The dog ate rice`
+
+Is it true that only NPT goes with IND?????? uh oh
+
+# 3 SV inanimate subject, non-nominative case
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Agreement}
+pot2 diuna
+pot-2 diun-a
+book.ACC-SG run.INVOL-PST
+`The book ran`
+
+got rid of this?? ^
+
+cms1_subordinator=free
+^ only thing we didn't have matching
+
+* go back to kalaa 2 examples I have

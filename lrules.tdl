@@ -1,2 +1,42 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
+def-sg-lex := def-sg-lex-rule.
+
+indef-pl-lex := indef-pl-lex-rule.
+
 nominative-rule-lex := nominative-rule-lex-rule.
+
+plural-inanim-nil-lex := plural-inanim-nil-lex-rule.
+
+non-poss-lex := non-poss-lex-rule.
+
+invol-anim-obj-1-lex := invol-anim-obj-1-lex-rule.
+
+invol-inanim-obj-lex := invol-inanim-obj-lex-rule.
+
+invol-anim-obj-2-lex := invol-anim-obj-2-lex-rule.
+
+invol-anim-obj-3-lex := invol-anim-obj-3-lex-rule.
+
+invol-intrans-lex := invol-intrans-lex-rule.
+
+vol-inanim-obj-lex := vol-inanim-obj-lex-rule.
+
+vol-anim-obj1-lex := vol-anim-obj1-lex-rule.
+
+vol-anim-obj2-lex := vol-anim-obj2-lex-rule.
+
+vol-intrans-lex := vol-intrans-lex-rule.
+
+invol-inanim-subj-lex := invol-inanim-subj-lex-rule.
+
+invol-anim-subj1-lex := invol-anim-subj1-lex-rule.
+
+invol-anim-subj2-lex := invol-anim-subj2-lex-rule.
+
+invol-inanim-agent-lex := invol-inanim-agent-lex-rule.
+
+invol-anim-agent-lex := invol-anim-agent-lex-rule.
+
+vol-subj-lex := vol-subj-lex-rule.
+
+def-lex := def-lex-rule.
