@@ -1,0 +1,32 @@
+-------------------------
+Lab 4 Updates to be made:
+-------------------------
+
+1. get clausal complements working
+2. get adverbial modifiers working
+3. get coordination working (MAYBE comment out VP asyndetonic for now..)
+4. If time, update case-constraints-pc to be one pc instead
+
+--------------------------
+TDL edits to be made:
+--------------------------
+
+1. Coordination on VPs and S which we called
+participle coordination. The matrix cannot specify
+specific inflected forms of the verb constituents in the
+coordination, so we will need to manually add this into
+the TDL files somehow later. For now it is marked as
+asyndetonic. (Check if that is also allowed.)
+2. We also will need something that says that adjectives
+cannot modify pronouns which will need to be done in TDL editing with a
+[ PRON bool ] feature and have the adjectives require their MOD to be
+[ PRON - ] while the pronouns say that they are [ PRON + ].
+
+----------------------------
+Translation Steps:
+----------------------------
+1. Find translations for allow of the words in eng.txt
+2. Translate first 3 sentences and put at end of testsuite
+3. Create sin.txt with the sentences
+4. Attempt translation - look at MRS
+5. Run test corpus and testsuite
