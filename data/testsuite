@@ -127,8 +127,8 @@ Vetted: f
 Judgement: g
 Phenomena: {Pronouns, Case, Tense Aspect Mood}
 eyaala bat kan2wa
-eyaa-la bat ka-n2-wa
-3.NOM-PL rice.NOM eat-NPT-IND
+eyaala bat ka-n2-wa
+3.NOM.PL rice.NOM eat-NPT-IND
 `They eat rice`
 
 # 5 2sg personal pronoun
@@ -147,8 +147,8 @@ Vetted: f
 Judgement: g
 Phenomena: {Pronouns, Case, Tense Aspect Mood}
 oyaala bat kan2wa
-oyaa-la bat ka-n2-wa
-2.NOM-PL rice.NOM eat-NPT-IND
+oyaala bat ka-n2-wa
+2.NOM.PL rice.NOM eat-NPT-IND
 `You (all) eat rice`
 
 # 7 Nominative case pronoun

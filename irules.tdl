@@ -18,12 +18,16 @@ accusative-rule-suffix :=
 accusative-rule-lex-rule.
 
 genitive-rule-suffix1 :=
-%suffix (* -ee)
+%suffix (* -gee)
 genitive-rule-lex-rule.
 
 genitive-rule-suffix2 :=
 %suffix (* -ge)
 genitive-rule-lex-rule.
+
+genitive-inanim-rule-suffix :=
+%suffix (* -ee)
+genitive-inanim-rule-lex-rule.
 
 nominative-pronoun-suffix :=
 %suffix (* -m2)
@@ -69,18 +73,6 @@ sg-anim-masc-suffix2 :=
 %suffix (* -aa)
 sg-anim-masc-lex-rule.
 
-anim-poss-suffix1 :=
-%suffix (* -ge)
-anim-poss-lex-rule.
-
-anim-poss-suffix2 :=
-%suffix (* -gee)
-anim-poss-lex-rule.
-
-inanim-poss-suffix :=
-%suffix (* -ee)
-inanim-poss-lex-rule.
-
 ind-suffix :=
 %suffix (* -wa)
 ind-lex-rule.
@@ -108,6 +100,14 @@ pst-invol-lex-rule.
 pst-vol-suffix :=
 %suffix (* -u)
 pst-vol-lex-rule.
+
+adjectival-npt-suffix :=
+%suffix (* -n2)
+adjectival-npt-lex-rule.
+
+adjectival-pst-suffix :=
+%suffix (* -2)
+adjectival-pst-lex-rule.
 
 while_pst-suffix :=
 %suffix (* -ham2)

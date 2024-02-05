@@ -30,3 +30,50 @@ Translation Steps:
 3. Create sin.txt with the sentences
 4. Attempt translation - look at MRS
 5. Run test corpus and testsuite
+
+
+
+
+----------------------
+Adverbial Complements
+----------------------
+* should get one working at a time!
+* requires rethinking where FORM comes into play
+EMB: "Then you need to rework where [ FORM fin ] comes in for the other forms (i.e. not have have the past tense rule itself put it there). As step one, I suggest taking [ FORM fin ] off the past tense rule. Then see if you can get the [ FORM while ] examples parsing. Then consider whether & how to put [ FORM fin ] back in."
+- took FORM fin off past-tense Rules
+- made tense-pc optional
+- PARSES but with coordination OR PP on balla kaddi mam2 when mam2 shouldn't be included.
+- Unification errored on S (balla kaddi) because of SYNSEM LOCAL CONT HCONS APPEND REST FIRST LAST END-LIST null vs cons .. after unifying S (basic-head-opt-comp-phrase) into while rule
+.. What does that mean?
+-ddi --> attaches directly to verb stem
+-ham2 --> PST
+nissa/hinda --> NPT or PST plus ADJ (adjectival mood)
+EMB:
+"1) Yes, add adj-verb to the mood-pc as a non-affixing verb. (Is it really "adjectival"? That seems odd. Maybe adjunct?)
+2) Create a value of FORM adj-form, subtype of infinitival.
+3) Make the actual mood affixes say [ FORM finite ] and the zero rule say [ FORM adj-form ].
+4) Have the subordinator morpheme require [ TENSE non-past ] and [ FROM adj-form ]."
+- ^ did all of those things
+- made mood class OBLIGATORY (nevermind no I didn't)
+- ^ because of this, thinking adjectival will apply to anything that doesn't have a suffix.... which might not be totally accurate
+**
+Adjectival form - verbs are inflected into non-finite forms through non-finite or connective suffixes
+which include the adjectival form, the focus form, conditional, concession, and temporal (ddi), etc etc etc
+-- just all examples of non-finite form endings.
+--- so rethinking adjectival should not be a mood, but rather another tense?.. whatever it is, it SHOULD be represented accurately by -n2 (and -2)
+^ I made adjectival-pst and adjectival-npt rules on tense
+
+** Concerning that asyndetonic coordination example showed while-rule even though -ham2 and -ddi were not present...
+- PP is above the coordinated S-T.... how does it get that?
+
+-- I removed asyndetonic VPs and S CMS3 (for now until TDL, still can't handle coord ex 1 -- was working when it was there, but not correctly ^)
+^ overgeneration cut in half though! and no longer examples with 1000s of parses
+
+----------------------
+Questions
+----------------------
+
+1.  I am wondering if there is an obvious way to see that the CMS is working
+in the parse chart. With the embedded complements, we see CP and Cs but with
+adverbial modifiers, do we just have to look at the rules applied or is there
+a specific rule we should be looking at?

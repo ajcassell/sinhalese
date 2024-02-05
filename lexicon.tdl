@@ -341,6 +341,14 @@ saha2 := conj-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
     CFORM "2" ].
 
+hinda := adjectival-clause-final-prehead-subord-lex-item &
+  [ STEM < "hinda" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_because_subord_rel" ].
+
+nissa := adjectival-clause-final-prehead-subord-lex-item &
+  [ STEM < "nissa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_because_subord_rel" ].
+
 ;;; Complementizers
 
 baw2 := comps1-complementizer-lex-item &

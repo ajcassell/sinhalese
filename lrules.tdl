@@ -7,8 +7,6 @@ nominative-rule-lex := nominative-rule-lex-rule.
 
 plural-inanim-nil-lex := plural-inanim-nil-lex-rule.
 
-non-poss-lex := non-poss-lex-rule.
-
 invol-anim-obj-1-lex := invol-anim-obj-1-lex-rule.
 
 invol-inanim-obj-lex := invol-inanim-obj-lex-rule.
