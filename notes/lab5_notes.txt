@@ -25,7 +25,7 @@ cannot modify pronouns which will need to be done in TDL editing with a
 ----------------------------
 Translation Steps:
 ----------------------------
-1. Find translations for allow of the words in eng.txt
+1. Find translations for all of the words in eng.txt
 2. Translate first 3 sentences and put at end of testsuite
 3. Create sin.txt with the sentences
 4. Attempt translation - look at MRS
@@ -81,6 +81,8 @@ Other changes made 2/5
 
 Features refined
 - added ko12 as adverbial modifier
+- added ek as masc and fem noun
+- took inanimate off of indef quantifier an added the number to def rules
 
 ----------------------
 Parses to work on:
@@ -91,7 +93,6 @@ Parses to work on:
 - 61, 62, 63 - parsing but SHOULDN'T - oddly POSS is showing up?
 - 79, 81, 83, 84, 86, 87 should not do COMP-HEAD when invol verb...
 - 104 (adjectives cannot modify pronouns - TDL edit)
-- Go back to "The tall one came"
 - 138, 139 - participle subordination
 - 150, 151, 153, 155, 156
 - 162, 166 (yes/no question)
