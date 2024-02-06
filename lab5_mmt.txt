@@ -1,0 +1,84 @@
+Lab 5 Vocabulary
+February 9, 2023
+Melody Bechler, Alexandra Cassell
+
+Vocab substitution:
+park -> yard
+chase -> watch
+
+New Vocabulary:
+dog(s): balla                        # a:155 notes balla as dogs
+sleep: nida (stem)
+       nid2n2wa                      # a:139
+       nid2nne                       #focus shift
+watch: bal2n2wa (NPT)                #present in current vocab
+       b5luwa (PST)                  #a:67
+       bal2nne
+
+car(s): kaarek (sg, no stem)         #a:186
+        kaarek-ak (car-INDF)         #a:197
+        kaar (pl)                    #a:60
+I: ma-m2                                  #present in current vocab
+you: oyaa                            #present in current vocab
+eat: ka-n2-wa
+don't: n55 (no)                      #present in current vocab
+       n5ti (no.ADJ)
+think: hit2-n2-wa                    #present in current vocab
+       hit2nne                        #focus
+that: witti2                         #a:192
+      wag2                           #a:192
+      baw2                           #a:192, precedes "know" construction
+know: da-n2-wa                       #present in current vocab
+ask: aha-n2-wa (NPT)                 #present BUT check for NPT
+     5huwa     (PST)                 #a:194
+     5huwe (PST.FOC)                 #a:221
+whether: ki2la                       #present in current vocab
+cat(s): puusa  (sg)                  #a:111, pl not indicated
+and: -i clitic                       #present in current vocab
+      saha                           #present in current vocab
+do: k2r2-n2-wa                       #not needed for "what do the dogs chase". likely not for "do dogs chase cats"
+                                     #likely not needed for "do cats chase dogs"
+hungry: ba32gini                     #already in testsuite
+who: kaud2                           #a:135, already in testsuite
+what: mon2wa-d2                      #a:135
+
+yard: midul                          #a:115 "The dogs are in the yard", "Dogs in the yard eat", "Dogs eat in the yard"
+                                     # Locative --e marks the location of an activity; in addition to the loca-tion of states given earlier.
+                                     #^"dogs eat in the yard" "the dogs are in the yard" = midul=e
+                                     #^since location, all should likely be marked with Locative
+
+because: hinda                       #present in current vocab
+         nissa                       #present in current vocab
+after: passe                         #a:197
+                                     #a:199, the particle passe 'after' can only join a past tense verb marked in the dative
+                                     #a:217, verb not pst marked with dative, noun marked with dative instead..
+be: in-n2-wa (NPT-IND)               #a:207
+
+
+Eng.txt Sentences:
+Dogs sleep
+Dogs chase cars -> Dogs watch cars
+I chase you   -> I watch you
+Dogs eat
+The dogs dont chase cars -> The dogs dont watch cars
+I think that you know that dogs chase cars -> I think that you know that dogs watch cars
+I ask whether you know that dogs chase cars -> I ask whether you know that dogs watch cars
+Cats and dogs chase cars -> Cats and dogs watch cars
+Dogs chase cars and cats chase dogs -> Dogs watch cars and cats watch dogs
+Cats chase dogs and sleep -> Cats watch dogs and sleep
+Do cats chase dogs        -> Do cats watch dogs
+Hungry dogs eat
+Dogs in the park eat        #ee?
+Dogs eat in the park
+The dogs are hungry         #non-verbal predicate
+The dogs are in the park
+The dogs are the cats
+The dog s car sleeps
+My dogs sleep
+Who sleeps
+What do the dogs chase  -> What do the dogs watch
+What do you think the dogs chase -> What do you think the dogs watch
+Who asked what the dogs chase  -> Who asked what the dogs watch
+I asked what the dogs chased   -> I asked what the dogs watched
+The dog sleeps because the cat sleeps
+The dog sleeps after the cat sleeps
