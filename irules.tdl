@@ -57,12 +57,8 @@ plural-inanim-suffix2 :=
 %suffix (* -n)
 plural-inanim-lex-rule.
 
-sg-inanim-suffix1 :=
+sg-inanim-suffix :=
 %suffix (* -2)
-sg-inanim-lex-rule.
-
-sg-inanim-suffix2 :=
-%suffix (* -ee)
 sg-inanim-lex-rule.
 
 sg-anim-fem-suffix :=

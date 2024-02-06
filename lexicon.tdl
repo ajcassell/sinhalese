@@ -5,7 +5,7 @@ bat := inanimate-noun-lex &
   [ STEM < "bat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_rice_n_rel" ].
 
-pot_1 := inanimate-noun-lex &
+pot := inanimate-noun-lex &
   [ STEM < "pot" >,
     SYNSEM.LKEYS.KEYREL.PRED "_book_n_rel" ].
 
@@ -85,33 +85,9 @@ eyaa := 3sg-pronoun-noun-lex &
   [ STEM < "eyaa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_it_n_rel" ].
 
-guruw2ru := irreg-plural-noun-lex &
-  [ STEM < "guruw2ru" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_teacher_n_rel" ].
-
-demaupiyo := irreg-plural-noun-lex &
-  [ STEM < "demaupiyo" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_parent_n_1_rel" ].
-
-lam2inu := irreg-plural-noun-lex &
-  [ STEM < "lam2inu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
-
-pot_2 := irreg-plural-noun-lex &
-  [ STEM < "pot" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_book_n_rel" ].
-
 gas := irreg-plural-noun-lex &
   [ STEM < "gas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tree_n_rel" ].
-
-kamiseku := irreg-indef-noun-lex &
-  [ STEM < "kamiseku" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_shirt_n_rel" ].
-
-gaum2ku := irreg-indef-noun-lex &
-  [ STEM < "gaum2ku" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_gown_n_rel" ].
 
 oyaala := 2pl-pronoun-noun-lex &
   [ STEM < "oyaala" >,
@@ -128,6 +104,10 @@ guruw2r := fem-noun-lex &
 demaupiy := fem-noun-lex &
   [ STEM < "demaupiy" >,
     SYNSEM.LKEYS.KEYREL.PRED "_parent_n_rel" ].
+
+ek_1 := fem-noun-lex &
+  [ STEM < "ek" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
 
 gon := masc-noun-lex &
   [ STEM < "gon" >,
@@ -152,6 +132,10 @@ lam2in := masc-noun-lex &
 aliy := masc-noun-lex &
   [ STEM < "aliy" >,
     SYNSEM.LKEYS.KEYREL.PRED "_elephant_n_rel" ].
+
+ek_2 := masc-noun-lex &
+  [ STEM < "ek" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
 
 ;;; Adjectives
 
@@ -352,6 +336,10 @@ hinda := adjectival-clause-final-prehead-subord-lex-item &
 nissa := adjectival-clause-final-prehead-subord-lex-item &
   [ STEM < "nissa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_because_subord_rel" ].
+
+ko12 := adjectival-clause-final-prehead-subord-lex-item &
+  [ STEM < "ko12" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_while_subord_rel" ].
 
 ;;; Complementizers
 

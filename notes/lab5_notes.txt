@@ -5,7 +5,7 @@ Lab 4 Updates to be made:
 1. get clausal complements working
 2. get adverbial modifiers working
 3. get coordination working (MAYBE comment out VP asyndetonic for now..)
-4. If time, update case-constraints-pc to be one pc instead
+4. If time, update case-constraints-pc to be one pc instead - NAH
 
 --------------------------
 TDL edits to be made:
@@ -79,6 +79,9 @@ Other changes made 2/5
 - added NOM as allowed on invol-anim-agent case ^ only for when ACC not marked, but..
 - added 5he in intransitive as well (was working before, but because it was going thru pro-drop)
 
+Features refined
+- added ko12 as adverbial modifier
+
 ----------------------
 Parses to work on:
 - aux 7,8
@@ -89,7 +92,6 @@ Parses to work on:
 - 79, 81, 83, 84, 86, 87 should not do COMP-HEAD when invol verb...
 - 104 (adjectives cannot modify pronouns - TDL edit)
 - Go back to "The tall one came"
-- 126 (add "ko12" modifier)
 - 138, 139 - participle subordination
 - 150, 151, 153, 155, 156
 - 162, 166 (yes/no question)
