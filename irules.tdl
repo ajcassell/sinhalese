@@ -29,8 +29,12 @@ genitive-inanim-rule-suffix :=
 %suffix (* -ee)
 genitive-inanim-rule-lex-rule.
 
-nominative-pronoun-suffix :=
+nominative-pronoun-suffix1 :=
 %suffix (* -m2)
+nominative-pronoun-lex-rule.
+
+nominative-pronoun-suffix2 :=
+%suffix (* -4)
 nominative-pronoun-lex-rule.
 
 plural-anim-suffix1 :=

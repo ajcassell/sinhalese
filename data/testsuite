@@ -679,26 +679,6 @@ guruw2r-u i demaupiy-o i lam2in-u paar-2 sudd2k2-u-wa
 teacher-PL CONJ parent-PL CONJ child-PL road-SG clean-PST-IND
 `The teachers, parents and children cleaned the road`
 
-# 6 Conjunctive coordination - clitic i between units of coordination
-Source: author # modified from a:183
-Vetted: s
-Judgement: g
-Phenomena: {Case, Coordination, Tense Aspect Mood}
-eyaa balla12 potak balla12 potak gatta dunna
-eyaa ball-a-12 pot-2-ak i ball-a-12 pot-2-ak i gan-la dun-u-wa
-3SG.NOM dog-SG-DAT shirt-SG-INDF CONJ dog-SG-DAT book-SG-INDF CONJ buy-PP give-PST-IND
-`He bought a book for the dog and a book for the dog`
-
-# 7 Conjunctive coordination - missing clitic
-Source: author # modified from a:183
-Vetted: f
-Judgement: u
-Phenomena: {Coordination}
-eyaa balla12 potak balla12 potak gatta dunna
-eyaa ball-a-12 pot-2-ak i ball-a-12 pot-2-ak gan-la dun-u-wa
-3SG.NOM dog-SG-DAT shirt-SG-INDF CONJ dog-SG-DAT shirt-SG-INDF buy-PP give-PST-IND
-`He bought a book for the dog and a book for the dog`
-
 # 8 Conjunctive coordination - saha noun-coordinator
 Source: author # based on a:182
 Vetted: f
@@ -811,8 +791,8 @@ Vetted: s
 Judgement: g
 Phenomena: {Agreement, Pronouns, Case, Tense Aspect Mood}
 ma4 diwwa
-ma4 di-u-wa
-1SG.NOM run-PST-IND
+ma-4 di-u-wa
+1SG-NOM run-PST-IND
 `I ran`
 
 # 5 SV animate non-nominative subject, volitive verb
@@ -1344,9 +1324,9 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Tense Aspect Mood, Case, Clausal modifiers}
-mam2 bat bal2uham2, mam2 pot2 ka2n2wa
-ma-m2 pot-2 bal2-u-ham2, ma-m2 bat ka-n2-wa
-1SG-NOM book-SG read-PST-while, 1SG-NOM rice eat-NPT-IND
+mam2 bat bal2uham2 mam2 pot2 ka2n2wa
+ma-m2 pot-2 bal2-u-ham2 ma-m2 bat ka-n2-wa
+1SG-NOM book-SG read-PST-while 1SG-NOM rice eat-NPT-IND
 `When I read the book, I eat rice`
 
 # 4 Subordination via ko12 particle + Adjectival form
@@ -1354,9 +1334,9 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Pronouns, Tense Aspect Mood, Case, Clausal modifiers}
-mam2 bal2n2 ko12, mam2 bat k55wa
-ma-m2 bal2-n2 ko12, ma-m2 bat ka-u-wa
-1SG-NOM read-NPT.ADJ when, 1SG-NOM rice eat-PST-IND
+mam2 bal2n2 ko12 mam2 bat k55wa
+ma-m2 bal2-n2 ko12 ma-m2 bat ka-u-wa
+1SG-NOM read-NPT.ADJ when 1SG-NOM rice eat-PST-IND
 `While I was reading, I ate rice`
 
 # 5 Subordination missing ko12 particle
@@ -1364,9 +1344,9 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Clausal modifiers}
-mam2 bal2n2, mam2 bat k55wa
-ma-m2 bal2-n2, ma-m2 bat ka-u-wa
-1SG-NOM read-NPT.ADJ, 1SG-NOM rice eat-PST-IND
+mam2 bal2n2 mam2 bat k55wa
+ma-m2 bal2-n2 ma-m2 bat ka-u-wa
+1SG-NOM read-NPT.ADJ 1SG-NOM rice eat-PST-IND
 `While I was reading, I ate rice`
 
 # 6 Subordination via dative verb casing + non-past subordinate verb
@@ -1497,8 +1477,8 @@ Vetted: s
 Judgement: g
 Phenomena: {Possessives, Tense Aspect Mood}
 mam2 potee pitu bal2n2wa
-ma-m2 pot-ee pit-u bal2-n2-wa
-1SG-NOM book-LOC page-PL read-NPT-IND
+ma-m2 pot-ee pitu bal2-n2-wa
+1SG-NOM book-LOC page.PL read-NPT-IND
 `I read the pages of the book`
 
 # 2 Inanimate Locative Possession, missing locative marker (uses animate GEN instead)
@@ -1507,8 +1487,8 @@ Vetted: f
 Judgement: u
 Phenomena: {Possessives}
 mam2 potge pitu bal2n2wa
-ma-m2 pot-ge pit-u bal2-n2-wa
-1SG-NOM book-GEN page-PL read-NPT-IND
+ma-m2 pot-ge pitu bal2-n2-wa
+1SG-NOM book-GEN page.PL read-NPT-IND
 `I read the pages of the book`
 
 # 3 Inanimate Locative Possession, incorrect possessor/possessee order
@@ -1517,8 +1497,8 @@ Vetted: f
 Judgement: u
 Phenomena: {Possessives}
 mam2 pitu potge bal2n2wa
-ma-m2 pit-u pot-ge bal2-n2-wa
-1SG-NOM page-PL book-GEN read-NPT-IND
+ma-m2 pitu pot-ge bal2-n2-wa
+1SG-NOM page.PL book-GEN read-NPT-IND
 `I read the pages of the book`
 
 # 4 Animate Genitive Possession
@@ -1781,8 +1761,8 @@ Vetted: f
 Judgement: g
 Phenomena: {Matrix yes-no questions, Tense Aspect Mood}
 eyaala k55wa d2
-eyaa-la ka-u-wa d2
-3.NOM-PL eat-PST-IND Q
+eyaala ka-u-wa d2
+3.NOM.PL eat-PST-IND Q
 `They ate?`
 
 # 12 Yes/no declarative, question particle in wrong location
@@ -1791,8 +1771,8 @@ Vetted: f
 Judgement: u
 Phenomena: {Matrix yes-no questions}
 eyaala d2 k55wa
-eyaa-la d2 ka-u-wa
-3.NOM-PL Q eat-PST-IND
+eyaala d2 ka-u-wa
+3.NOM.PL Q eat-PST-IND
 `They ate?`
 
 # 13 Negative Yes/No question, combined particle
@@ -1912,9 +1892,9 @@ Source: a:17
 Vetted: s
 Judgement: g
 Phenomena: {Argument Optionality, Tense Aspect Mood}
-aawa, aawa
-e-u-wa, e-u-wa
-come-PST-IND, come-PST-IND
+aawa aawa
+e-u-wa e-u-wa
+come-PST-IND come-PST-IND
 `She is coming or they are coming`
 #`It came / The person (expected) came`
 

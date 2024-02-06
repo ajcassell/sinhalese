@@ -149,8 +149,8 @@ lam2in := masc-noun-lex &
   [ STEM < "lam2in" >,
     SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
 
-aliya := masc-noun-lex &
-  [ STEM < "aliya" >,
+aliy := masc-noun-lex &
+  [ STEM < "aliy" >,
     SYNSEM.LKEYS.KEYREL.PRED "_elephant_n_rel" ].
 
 ;;; Adjectives
@@ -189,11 +189,11 @@ dek2 := cardinal-except-attr-adj-lex &
 
 ;;; Verbs
 
-5kdun := invol-trans-verb-lex &
-  [ STEM < "5kdun" >,
+k5dun := invol-trans-verb-lex &
+  [ STEM < "k5dun" >,
     SYNSEM.LKEYS.KEYREL.PRED "_break_v_rel" ].
 
-5he := invol-trans-verb-lex &
+5he_1 := invol-trans-verb-lex &
   [ STEM < "5he" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hear_v_rel" ].
 
@@ -204,6 +204,10 @@ diun := invol-intrans-verb-lex &
 n51un := invol-intrans-verb-lex &
   [ STEM < "n51un" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dance_v_rel" ].
+
+5he_2 := invol-intrans-verb-lex &
+  [ STEM < "5he" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hear_v_rel" ].
 
 gan := vol-trans-verb-lex &
   [ STEM < "gan" >,
@@ -307,8 +311,8 @@ daa := future-aux-aux-lex &
 
 ;;; Determiners
 
-keep2yak := quantifier-determiner-lex &
-  [ STEM < "keep2yak" >,
+keep2 := quantifier-determiner-lex &
+  [ STEM < "keep2" >,
     SYNSEM.LKEYS.KEYREL.PRED "_several_q_rel" ].
 
 sam2har := quantifier-determiner-lex &

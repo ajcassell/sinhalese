@@ -54,7 +54,7 @@ a:  inam -> NOM
 
 involitive verbs:
 s:  inam -> NOM
-    anim -> ACC or DAT (choosing to not put NOM* here)
+    anim -> ACC or DAT (choosing to not put NOM* here) -- JK updated
 o:  inam -> NOM
     anim -> NOM INDEF or ACC INDEF or ACC DEF
 a:  inam -> NOM

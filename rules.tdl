@@ -56,4 +56,4 @@ np2-top-coord := np2-top-coord-rule.
 
 np2-bottom-coord := np2-bottom-coord-rule.
 
-while-prehead-vp-attach-modifying-clause-phrase := while-prehead-vp-attach-modifying-clause-phrase.
+while-prehead-s-attach-modifying-clause-phrase := while-prehead-s-attach-modifying-clause-phrase.
