@@ -213,7 +213,6 @@ ball-a bat ka-n2-wa
 dog.NOM-SG rice.NOM eat-NPT-IND
 `The dog eats rice`
 
-### ?
 # 3 Dative case subject, involitive verb
 Source: c:73
 Vetted: s
@@ -395,8 +394,8 @@ Vetted: f
 Judgement: g
 Phenomena: {Case, Determiners, Tense Aspect Mood}
 mam2 pot keep2yak gatta
-ma-m2 pot keep2yak gan-u-wa
-1SG-NOM book.PL several.PL buy-PST-IND
+ma-m2 pot keep2-ak gan-u-wa
+1SG-NOM book.PL several.PL-INDF buy-PST-IND
 `I bought several books`
 
 # 2 Quantifier "some" follows plural noun
@@ -640,65 +639,65 @@ ball-a ged2r-2 e-n2-wa bat ka-n2-wa 1iiw-ee bal2-n2-wa
 dog.NOM-SG home-SG come-NPT-IND rice eat-NPT-IND TV-SG watch-NPT-IND
 `The dog comes home, has a meal and watches TV`
 
-# 2 Conjunctive coordination - clitic -i affixed to units of coordination
-Source: a:183
+# 2 Conjunctive coordination - clitic i between units of coordination
+Source: # modified from a:183
 Vetted: s
 Judgement: g
 Phenomena: {Coordination, Tense Aspect Mood}
-guruw2rui demaupiyoi lam2inui paar2 sudd2k2laa
-guruw2r-u i demaupiy-o i lam2in-u i paar-2 sudd2k2-laa
-teacher-PL CONJ parent-PL CONJ child-PL CONJ road-SG clean-PST
-`The teachers, parents and children cleaned the road`
+guruw2rui demaupiyoi lam2inui paar2 bal2n2wa
+guruw2r-u i demaupiy-o i lam2in-u i paar-2 bal2-n2-wa
+teacher-PL CONJ parent-PL CONJ child-PL CONJ road-SG watch-NPT-IND
+`The teachers, parents and children watch the road`
 
-# 3 Conjunctive coordination - clitic -i affixed to units of coordination
+# 3 Conjunctive coordination - clitic i between units of coordination
 Source: author, missing clitic on first argument
 Vetted: f
 Judgement: u
 Phenomena: {Coordination}
 guruw2ru demaupiyoi lam2inui paar2 sudd2k2laa
-guruw2r-u demaupiy-o i lam2in-u i paar-2 sudd2k2-laa
-teacher-PL parent-PL CONJ child-PL CONJ road-SG clean-PST
+guruw2r-u demaupiy-o i lam2in-u i paar-2 sudd2k2-u-wa
+teacher-PL parent-PL CONJ child-PL CONJ road-SG clean-PST-IND
 `The teachers, parents and children cleaned the road`
 
-# 4 Conjunctive coordination - clitic -i affixed to units of coordination
+# 4 Conjunctive coordination - clitic i between units of coordination
 Source: author, missing clitic on second argument
 Vetted: f
 Judgement: u
 Phenomena: {Coordination}
 guruw2rui demaupiyo lam2inui paar2 sudd2k2laa
-guruw2r-u i demaupiy-o lam2in-u i paar-2 sudd2k2-laa
-teacher-PL CONJ parent-PL child-PL CONJ road-SG clean-PST
+guruw2r-u i demaupiy-o lam2in-u i paar-2 sudd2k2-u-wa
+teacher-PL CONJ parent-PL child-PL CONJ road-SG clean-PST-IND
 `The teachers, parents and children cleaned the road`
 
-# 5 Conjunctive coordination - clitic -i affixed to units of coordination
+# 5 Conjunctive coordination - clitic i between units of coordination
 Source: author, missing clitic on third argument
 Vetted: f
 Judgement: u
 Phenomena: {Coordination}
 guruw2rui demaupiyoi lam2inu paar2 sudd2k2laa
-guruw2r-u i demaupiy-o i lam2in-u paar-2 sudd2k2-laa
-teacher-PL CONJ parent-PL CONJ child-PL road-SG clean-PST
+guruw2r-u i demaupiy-o i lam2in-u paar-2 sudd2k2-u-wa
+teacher-PL CONJ parent-PL CONJ child-PL road-SG clean-PST-IND
 `The teachers, parents and children cleaned the road`
 
-# 6 Conjunctive coordination - clitic -i affixed to units of coordination
+# 6 Conjunctive coordination - clitic i between units of coordination
 Source: author # modified from a:183
 Vetted: s
 Judgement: g
 Phenomena: {Case, Coordination, Tense Aspect Mood}
-eyaa balla12 kamisekui balla12 gaum2kui gatta dunna
-eyaa ball-a-12 kamiseku i ball-a-12 gaum2ku i gan-la dun-u-wa
-3SG.NOM dog-SG-DAT shirt.INDF CONJ dog-SG-DAT gown.INDF CONJ buy-PP give-PST-IND
-`He bought a shirt for the dog and a gown for the dog`
+eyaa balla12 potak balla12 potak gatta dunna
+eyaa ball-a-12 pot-2-ak i ball-a-12 pot-2-ak i gan-la dun-u-wa
+3SG.NOM dog-SG-DAT shirt-SG-INDF CONJ dog-SG-DAT book-SG-INDF CONJ buy-PP give-PST-IND
+`He bought a book for the dog and a book for the dog`
 
 # 7 Conjunctive coordination - missing clitic
 Source: author # modified from a:183
 Vetted: f
 Judgement: u
 Phenomena: {Coordination}
-eyaa balla12 kamisekui balla12 gaum2ku gatta dunna
-eyaa ball-a-12 kamiseku i ball-a-12 gaum2ku gan-la dun-u-wa
-3SG.NOM dog-SG-DAT shirt.INDF CONJ dog-SG-DAT gown.INDF buy-PP give-PST-IND
-`He bought a shirt for the dog and a gown for the dog`
+eyaa balla12 potak balla12 potak gatta dunna
+eyaa ball-a-12 pot-2-ak i ball-a-12 pot-2-ak gan-la dun-u-wa
+3SG.NOM dog-SG-DAT shirt-SG-INDF CONJ dog-SG-DAT shirt-SG-INDF buy-PP give-PST-IND
+`He bought a book for the dog and a book for the dog`
 
 # 8 Conjunctive coordination - saha noun-coordinator
 Source: author # based on a:182
@@ -770,7 +769,7 @@ Judgement: u
 Phenomena: {Coordination}
 mam2 balla ged2r2 gihilla k55m2 k55wa
 ma-m2 ball-a ged2r-2 ya-la k55m-2 ka-u-wa
-1SG-NOM dog.NOM-SG house.ACC-SG go-PP food-ACC eat-PST-IND
+1SG-NOM dog.NOM-SG house.ACC-SG go-PP food.ACC-SG eat-PST-IND
 `The dog went home and I ate`
 
 # 14 Participle coordination - final event is PST, preceding
@@ -780,8 +779,8 @@ Vetted: s
 Judgement: u
 Phenomena: {Coordination}
 mam2 ma12 sadd2yak 5hila diwwa
-ma-m2 ma-12 sadd2yak 5he-la di-u-wa
-1SG-NOM 1SG-DAT noise.INDF.ACC hear.INV-PP run-PST-IND
+ma-m2 ma-12 sadd-2-ak 5he-la di-u-wa
+1SG-NOM 1SG-DAT noise.ACC-SG-INDF hear.INV-PP run-PST-IND
 `I heard a sound and ran`
 
 ### Case Constraints between SOV/AV
@@ -987,7 +986,7 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Agreement}
-balla eluvek kan2wa
+balla eluvaek kan2wa
 ball-a eluv-a-ek ka-n2-wa
 dog.NOM-SG goat.NOM-SG-INDF eat-NPT-IND
 `The dog eats a goat`
@@ -1426,7 +1425,7 @@ Vetted: f
 Judgement: g
 Phenomena: {Tense Aspect Mood, Pronouns, Case, Clausal modifiers}
 oyaa bat kaalaa hinda mam2 sudd2k2n2wa
-oyaa bat ka-laa hinda ma-m2 sudd2k2-n2-wa
+oyaa bat ka-u hinda ma-m2 sudd2k2-n2-wa
 2SG.NOM rice eat-PST.ADJ since 1SG-NOM clean-NPT-IND
 `I clean because you ate rice`
 
@@ -1456,7 +1455,7 @@ Vetted: f
 Judgement: g
 Phenomena: {Tense Aspect Mood, Pronouns, Case, Clausal modifiers}
 oyaa bat kaalaa nissa mam2 sudd2k2n2wa
-oyaa bat ka-laa nissa ma-m2 sudd2k2-n2-wa
+oyaa bat ka-u nissa ma-m2 sudd2k2-n2-wa
 2SG.NOM rice eat-PST.ADJ since 1SG-NOM clean-NPT-IND
 `I clean because you ate rice`
 
@@ -1479,6 +1478,16 @@ oyaa bat kaala mam2 sudd2k2n2wa
 oyaa bat ka-la ma-m2 sudd2k2-n2-wa
 2SG.NOM rice eat-PP 1SG-NOM clean-NPT-IND
 `I clean because you have eaten rice`
+
+# 17 Subordination via PP construction
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Clausal modifiers, Pronouns, Tense Aspect Mood, Case}
+balla pot2 bal2la ged2r2 yauwa
+ball-a pot-2 bal2-la ged2r-2 ya-u-wa
+dog.NOM-SG book.NOM-SG read-PP house.NOM-SG go-PST-IND
+`The dog went home because he had read a book`
 
 ### Possessives
 
@@ -1590,7 +1599,7 @@ Vetted: s
 Judgement: g
 Phenomena: {Embedded declaratives, Tense Aspect Mood}
 balla bat kan2wa baw2 eyaa dann2wa
-ball-a bat ka-n2-n2 baw2 eyaa dan-n2-wa
+ball-a bat ka-n2-wa baw2 eyaa dan-n2-wa
 dog.NOM-SG rice eat-NPT-IND that.QM 3.SG know-NPT-IND
 `She knows that the dog eats rice`
 
@@ -1619,8 +1628,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Embedded declaratives, Tense Aspect Mood, Case}
-balla bat k55wa ki2la eyaa hit2-n2wa
-ball-a bat ka-u-wa ki2la eyaa hit2-n2-wa
+balla bat k55wa ki2la eyaa hitn2wa
+ball-a bat ka-u-wa ki2la eyaa hit-n2-wa
 dog.NOM-SG rice eat-PST-IND QM 3.SG think-NPT-IND
 `She thinks that the dog ate rice`
 
@@ -1629,8 +1638,8 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Embedded declaratives}
-balla k55wa eyaa hit2-n2wa
-ball-a ka-u-wa eyaa hit2-n2-wa
+balla k55wa eyaa hitn2wa
+ball-a ka-u-wa eyaa hit-n2-wa
 dog.NOM-SG eat-PST-IND 3.SG think-NPT-IND
 `She thinks the dog ate`
 
@@ -1948,3 +1957,34 @@ bat gatta n55
 bat gan-u-wa n55
 rice buy-PST-IND no
 `(We) didn't buy the rice`
+
+# MMT Sentences
+# 1
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Tense Aspect Mood}
+balla nid2n2wa
+ball-a nid2-n2-wa
+ball-NOM.SG sleep-NPT-IND
+`Dogs sleep`
+
+# 2
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Tense Aspect Mood}
+balla kaar bal2n2wa
+ball-a kaar bal2-n2-wa
+ball-NOM.SG car watch-NPT-IND
+`Dogs watch cars`
+
+# 3
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Tense Aspect Mood}
+mam2 oyaa bal2n2wa
+ma-m2 oyaa bal2-n2-wa
+1SG-NOM you watch-NPT-IND
+`I watch you`
