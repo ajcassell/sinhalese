@@ -1,0 +1,33 @@
+balla nid2n2wa -> Dogs sleep
+balla kaar bal2n2wa -> Dogs watch cars
+mam2 oyaa bal2n2wa -> I watch you
+balla kan2wa -> Dogs eat
+balla kaar bal2n2wa n55 -> The dogs dont watch cars
+balla kaar bal2n2wa ki2la oyaa dan2wa ki2la mam2 hit2n2wa -> I think that you know that dogs watch cars
+balla kaar bal2n2wa d2 ki2la oyaa dan2wa ki2la mam2 ahan2wa -> I ask whether you know that dogs watch cars
+puusai ballai kaar bal2n2wa - > Cats and dogs watch cars
+balla kaar bal2n2wa puusa balla bal2n2wa -> Dogs watch cars and cats watch dogs
+puusa balla bal2n2wa nid2n2wa -> Cats watch dogs and sleep
+puusa balla bal2n2wa d2 -> Do cats watch dogs
+ba32gini balla kan2wa -> Hungry dogs eat
+SKIPPED
+balla midule kan2wa -> Dogs eat in the park
+balla ba32ginii -> The dogs are hungry    #non verbal
+balla midule inn2wa -> The dogs are in the park
+balla puusa inn2wa -> The dogs are the cats
+ball-ge kaarek nid2n2wa -> The dog s car sleeps
+mage balla nid2n2wa -> My dogs sleep
+nid2nne kaud2 - > Who sleeps
+balla bal2nne mon2wad2 -> What do the dogs watch
+balla bal2n2wa oyaa hi2nne mon2wad2 -> What do you think the dogs watch
+balla mon2wad2 bal2nne 5huwe kaud2 -> Who asked what the dogs watch
+mam2 5huwa balla bal2n2wa d2 ki2la -> I asked what the dogs watched
+puusa nid2n2wa nissa balla nid2n2wa -> The dog sleeps because the cat sleeps
+SKIPPED -> The dog sleeps after the cat sleeps
+
+Notes on skipped:
+Dogs in the park eat ->  -honestly not sure if we can even do this one in Sinhala due to where the PP is
+                                  -a:352 -- the paddy in te paddy field began.....
+The dog sleeps after the cat sleeps
+->sleep requires past tense form plus dative for "the cat sleeps" because of "passe" (after).
+Our sources do not have sleep-PST and any instances of PST associated with sleep are reflexive.
