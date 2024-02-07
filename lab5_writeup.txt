@@ -26,6 +26,7 @@ Other sentences that may not be possible to model due to phenomena include the f
 2. balla midule inn2wa -> The dogs are in the park
 3. balla puusa inn2wa -> The dogs are the cats
 
+
 The first sentence is a non-verbal predicate, a phenomena we have no yet covered. We do not expect to
 model this sentence. The second and third sentences are also considered non-verbal, but both contain a
 verb that, once added to the choices file, could be modelled.
@@ -36,6 +37,18 @@ verb that, once added to the choices file, could be modelled.
 #can we accurately model these two coordination constructions???? -- i think the translations are close
 balla kaar bal2n2wa puusa balla bal2n2wa -> Dogs watch cars and cats watch dogs
 puusa balla bal2n2wa nid2n2wa -> Cats watch dogs and sleep
+
+
+To do:
+#need to add vocab to choices file ----- repalcements
+
+
+
+
+
+
+
+
 
 
 Choices file improvements for 3 Phenomena:
