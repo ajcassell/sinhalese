@@ -1,0 +1,47 @@
+Lab 5 Writeup
+LING 567
+February 9, 2023
+Melody Bechler, Alexandra Cassell
+
+
+MMT section:
+
+To collect MMT sentences, we first found translations for all of the vocabulary in the eng.txt
+file. Two of the words in the vocabulary were not in our resources. The words "park" and "chase"
+we replaced with "yard" and "watch", respectively. In creating the vocabulary, we attempted to
+include all possible verb tense and mood variations for all verbs, including past, nonpast, and
+focus structure. We then created sentences based on the vocabulary and phenomena already present
+in our testsuite/choices file.
+
+We skipped two sentences in the eng.txt: "Dogs in the park eat "and "The dog sleeps after the cat
+sleeps". The construction of the first sentence is not one we found in our resources. The second
+sentence involves phenomena we do not expect to get to. "passe", meaning "after", is more complicated
+to model. It requires a past tense verb form with dative case. Our resources do not show this verb in
+past tense alone, which of course we could attempt to model given other past tense examples. Past tense
+is commonly associated with reflexives, which we are not modeling, and therefore think modeling the
+final sentence of eng.txt will not be possible.
+
+Other sentences that may not be possible to model due to phenomena include the following:
+1. balla ba32ginii -> The dogs are hungry
+2. balla midule inn2wa -> The dogs are in the park
+3. balla puusa inn2wa -> The dogs are the cats
+
+The first sentence is a non-verbal predicate, a phenomena we have no yet covered. We do not expect to
+model this sentence. The second and third sentences are also considered non-verbal, but both contain a
+verb that, once added to the choices file, could be modelled.
+
+
+#should we skip the others in sin.txt or...?
+
+#can we accurately model these two coordination constructions???? -- i think the translations are close
+balla kaar bal2n2wa puusa balla bal2n2wa -> Dogs watch cars and cats watch dogs
+puusa balla bal2n2wa nid2n2wa -> Cats watch dogs and sleep
+
+
+Choices file improvements for 3 Phenomena:
+
+Tdl Edits:
+
+First Translation:
+
+Testsuite:
