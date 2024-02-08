@@ -63,7 +63,69 @@ used.
 
 Choices file improvements for 3 Phenomena:
 
--Possessives
+Possessives:
+For possessives in the adnomial possession section, we previously stated morphemes appear on the
+possessor as an affix. This meant we had to define a possessive noun position class in the morphology
+section. This method did not capture all our possessives and many of the ungrammatical examples parsed.
+Thus, we removed that possessive strategy in the adnomial possession section and replaced it with a
+strategy that states no possessive morphemes appear, but that there are constraints on the features of
+the possessor. This constraint is genitive case. Since we already had a case position class in morphology,
+we utilized this pre-existing position class and removed the possessive position class we had created for
+Lab 4. Genitive was already present in the case position class, so we simply added one additional affix
+'-gee' that we did not have prior and removed the '-ee' that corresponds to inanimates. We then created a
+genitive-inanim-rule so inanimates would only take the inanimate affixes, rather than incorrectly taking
+both animate and inanimate suffixes as they were in Lab 4.
+
+Choices File Snippets:
+section=adnom-poss
+  poss-strat2_order=head-final
+  poss-strat2_mod-spec=spec
+  poss-strat2_mark-loc=neither
+  poss-strat2_pronoun-allow=yes
+    poss-strat2_feat1_name=case
+    poss-strat2_feat1_value=genitive
+
+section=morphology
+ noun-pc3_name=case-p
+    noun-pc3_lrt3_name=genitive-rule
+      noun-pc3_lrt3_feat1_name=case
+      noun-pc3_lrt3_feat1_value=genitive
+      noun-pc3_lrt3_feat1_head=itself
+      noun-pc3_lrt3_forbid1_others=noun1
+      noun-pc3_lrt3_lri1_inflecting=yes
+      noun-pc3_lrt3_lri1_orth=-gee
+      noun-pc3_lrt3_lri2_inflecting=yes
+      noun-pc3_lrt3_lri2_orth=-ge
+    noun-pc3_lrt5_name=genitive-inanim-rule
+      noun-pc3_lrt5_feat2_name=case
+      noun-pc3_lrt5_feat2_value=genitive
+      noun-pc3_lrt5_feat2_head=itself
+      noun-pc3_lrt5_require1_others=noun1
+      noun-pc3_lrt5_lri1_inflecting=yes
+      noun-pc3_lrt5_lri1_orth=-ee
+
+
+Possessive IGT Snippets:
+# 1 Inanimate Locative Possession                              #parses
+mam2 potee pitu bal2n2wa
+ma-m2 pot-ee pitu bal2-n2-wa
+1SG-NOM book-LOC page.PL read-NPT-IND
+`I read the pages of the book`
+
+#9 Pronominal Possession                                       #parses
+mage balla bat kan2wa
+ma-ge ball-a bat ka-n2-wa
+I.SG-GEN dog.NOM-SG rice eat-NPT-IND
+`My dog eats rice`
+
+#10 Pronominal Possession, incorrect case on possessor          #CORRECTLY does NOT parse
+maee balla bat kan2wa
+ma-ee ball-a bat ka-n2-wa
+I.SG-LOC dog.NOM-SG rice eat-NPT-IND
+`My dog eats rice`
+
+
+
 
 Tdl Edits:
 
