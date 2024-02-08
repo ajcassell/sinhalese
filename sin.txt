@@ -1,26 +1,26 @@
-ball-a nid2-n2-wa
-ball-a kaar bal2-n2-wa
+ball-o nid2-n2-wa
+ball-o kaar bal2-n2-wa
 ma-m2 oyaa bal2-n2-wa
-ball-a ka-n2-wa
-ball-a kaar bal2-n2-wa n55
-ball-a kaar bal2-n2-wa ki2la oyaa dan-n2-wa ki2la ma-m2 hit2-n2-wa
-ball-a kaar bal2-n2-wa d2 ki2la oyaa dan-n2-wa ki2la ma-m2 5h-n2-wa
-puusa-i ball-a-i kaar bal2-n2-wa
-ball-a kaar bal2-n2-wa puusa ball-a bal2-n2-wa
-puusa ball-a bal2-n2-wa nid2-n2-wa
-puusa ball-a bal2-n2-wa d2
-ba32gini ball-a ka-n2-wa
+ball-o ka-n2-wa
+ball-o kaar bal2-n2-wa n55
+ball-o kaar bal2-n2-wa ki2la oyaa dan-n2-wa ki2la ma-m2 hit2-n2-wa
+ball-o kaar bal2-n2-wa d2 ki2la oyaa dan-n2-wa ki2la ma-m2 5h-n2-wa
+puusa-i ball-o-i kaar bal2-n2-wa
+ball-o kaar bal2-n2-wa puusa ball-o bal2-n2-wa
+puusa ball-o bal2-n2-wa nid2-n2-wa
+puusa ball-o bal2-n2-wa d2
+ba32gini ball-o ka-n2-wa
 SKIPPED
-ball-a midul-e ka-n2-wa
-ball-a ba32gini-i
-ball-a midul-e in-n2-wa
-ball-a puusa in-n2-wa
+ball-o midul-e ka-n2-wa
+ball-o ba32gini-i
+ball-o midul-e in-n2-wa
+ball-o puusa in-n2-wa
 ball-ge kaar-ek nid2-n2-wa
-ma-ge ball-a nid2-n2-wa
+ma-ge ball-o nid2-n2-wa
 nid2-nne kau-d2
-ball-a bal2-nne mon2wa-d2
-ball-a bal2-n2-wa oyaa hi2-nne mon2wa-d2
-ball-a mon2wa-d2 bal2-nne 5h-uw-e kau-d2
-ma-m2 5h-uw-a ball-a bal2-n2-wa d2 ki2la
+ball-o bal2-nne mon2wa-d2
+ball-o bal2-n2-wa oyaa hi2-nne mon2wa-d2
+ball-o mon2wa-d2 bal2-nne 5h-uw-e kau-d2
+ma-m2 5h-uw-a ball-o bal2-n2-wa d2 ki2la
 puusa nid2-n2-wa nissa ball-a nid2-n2-wa
 SKIPPED
