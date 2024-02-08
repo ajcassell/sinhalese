@@ -1497,8 +1497,8 @@ Vetted: s
 Judgement: g
 Phenomena: {Possessives, Tense Aspect Mood}
 mam2 potee pitu bal2n2wa
-ma-m2 pot-ee pit-u bal2-n2-wa
-1SG-NOM book-LOC page-PL read-NPT-IND
+ma-m2 pot-ee pitu bal2-n2-wa
+1SG-NOM book-LOC page.PL read-NPT-IND
 `I read the pages of the book`
 
 # 2 Inanimate Locative Possession, missing locative marker (uses animate GEN instead)
@@ -1507,8 +1507,8 @@ Vetted: f
 Judgement: u
 Phenomena: {Possessives}
 mam2 potge pitu bal2n2wa
-ma-m2 pot-ge pit-u bal2-n2-wa
-1SG-NOM book-GEN page-PL read-NPT-IND
+ma-m2 pot-ge pitu bal2-n2-wa
+1SG-NOM book-GEN page.PL read-NPT-IND
 `I read the pages of the book`
 
 # 3 Inanimate Locative Possession, incorrect possessor/possessee order
@@ -1517,8 +1517,8 @@ Vetted: f
 Judgement: u
 Phenomena: {Possessives}
 mam2 pitu potge bal2n2wa
-ma-m2 pit-u pot-ge bal2-n2-wa
-1SG-NOM page-PL book-GEN read-NPT-IND
+ma-m2 pitu pot-ge bal2-n2-wa
+1SG-NOM page.PL book-GEN read-NPT-IND
 `I read the pages of the book`
 
 # 4 Animate Genitive Possession
