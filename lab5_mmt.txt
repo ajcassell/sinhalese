@@ -28,8 +28,8 @@ think: hit2-n2-wa                    #present in current vocab
 that: witti2                         #a:192
       wag2                           #a:192
       baw2                           #a:192, precedes "know" construction
-know: da-n2-wa                       #present in current vocab
-ask: aha-n2-wa (NPT)                 #present BUT check for NPT
+know: dan-n2-wa                       #present in current vocab
+ask: aha-n2-wa (NPT) ->5hn2wa        #present BUT check for NPT; adjusted for morphophono issue
      5huwa     (PST)                 #a:194
      5huwe (PST.FOC)                 #a:221
 whether: ki2la                       #present in current vocab
