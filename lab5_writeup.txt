@@ -40,8 +40,18 @@ puusa balla bal2n2wa nid2n2wa -> Cats watch dogs and sleep
 
 
 To do:
-#need to add vocab to choices file ----- repalcements
+# need to add vocab to choices file ----- repalcements
+# update testsuite skeleton to reflect new testsuite.txt
 
+First Translation:
+We worked on the VM for the translations. We first tested translate-line.sh without changing the
+commented out sections and our results mimicked those from lecture on 2/6. We then chose the full
+pipeline, which resulted in two translated sentences in the terminal without additional notes. The
+second option was "full pipeline; errors from last step" which resulted the two translations in
+addition to notes about the passives built and the sentence transfer. We also chose to look at the
+transfer output. This resulted in a MRS only. Lastly, we chose the parser output, which resulted in
+a longer MRS (at least compared to the transfer output) and the terminal stated the test sentence
+used.
 
 
 
@@ -53,8 +63,10 @@ To do:
 
 Choices file improvements for 3 Phenomena:
 
+-Possessives
+
 Tdl Edits:
 
-First Translation:
+
 
 Testsuite:
