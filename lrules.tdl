@@ -7,23 +7,11 @@ nominative-rule-lex := nominative-rule-lex-rule.
 
 plural-inanim-nil-lex := plural-inanim-nil-lex-rule.
 
-invol-anim-obj-1-lex := invol-anim-obj-1-lex-rule.
-
-invol-inanim-obj-lex := invol-inanim-obj-lex-rule.
-
-invol-anim-obj-2-lex := invol-anim-obj-2-lex-rule.
-
-invol-anim-obj-3-lex := invol-anim-obj-3-lex-rule.
-
-invol-intrans-lex := invol-intrans-lex-rule.
-
 vol-inanim-obj-lex := vol-inanim-obj-lex-rule.
 
 vol-anim-obj1-lex := vol-anim-obj1-lex-rule.
 
 vol-anim-obj2-lex := vol-anim-obj2-lex-rule.
-
-vol-intrans-lex := vol-intrans-lex-rule.
 
 invol-inanim-subj-lex := invol-inanim-subj-lex-rule.
 
@@ -35,6 +23,16 @@ invol-inanim-agent-lex := invol-inanim-agent-lex-rule.
 
 invol-anim-agent-lex := invol-anim-agent-lex-rule.
 
-vol-subj-lex := vol-subj-lex-rule.
+vol-trans-subj-lex := vol-trans-subj-lex-rule.
+
+invol-anim-obj-1-lex := invol-anim-obj-1-lex-rule.
+
+invol-anim-obj-2-lex := invol-anim-obj-2-lex-rule.
+
+invol-anim-obj-3-lex := invol-anim-obj-3-lex-rule.
+
+invol-inanim-obj-lex := invol-inanim-obj-lex-rule.
+
+vol-intrans-agent-lex := vol-intrans-agent-lex-rule.
 
 def-lex := def-lex-rule.

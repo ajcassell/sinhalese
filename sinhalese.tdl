@@ -2,11 +2,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Sinhalese
 ;;; created at:
-;;;     Tue Feb 06 02:27:02 UTC 2024
+;;;     Wed Feb 07 23:25:33 UTC 2024
 ;;; based on Matrix customization system version of:
 ;;;     Fri 27 Oct 2023 04:16:13 PM UTC
 ;;;
-;;; 
+;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Type assigning empty mod list. Added to basic types for nouns, verbs and determiners.
@@ -25,7 +25,6 @@ png :+ [ DEF bool,
 
 head :+ [ INVOL bool,
     PRON bool,
-    NMZ bool,
     POSSESSOR poss,
     FORM form,
     AUX bool,
@@ -56,36 +55,31 @@ basic-head-spec-phrase :+ [ SYNSEM.INFOSTR-FLAG - ].
 
 basic-bare-np-phrase :+ [ SYNSEM.INFOSTR-FLAG -, HEAD-DTR.SYNSEM.INFOSTR-FLAG - ].
 
-coord-phrase :+ [ SYNSEM.LOCAL.CAT.HEAD.NMZ #nmz,
-    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.NMZ #nmz,
-    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.NMZ #nmz ].
-
-unary-bottom-coord-rule :+ [ SYNSEM.LOCAL.CAT.HEAD.NMZ #nmz,
-    ARGS < [ SYNSEM.LOCAL.CAT.HEAD.NMZ #nmz ] > ].
-
-inflected :+ [ VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG luk,
-    INDEFINITENESS-PC-FLAG luk,
-    INVOL-CASE-CONSTRAINTS-PC-FLAG luk,
-    INVOL-INTRANS-CASE-CONSTRAINTS-PC-FLAG luk,
-    FEM-NOUN-FLAG luk,
-    INANIMATE-NOUN-FLAG luk,
-    CASE-PC-FLAG luk,
-    INVOL-TRANS-CASE-CONSTRAINTS-PC-FLAG luk,
-    VOL-CASE-CONSTRAINTS-PC-FLAG luk,
+inflected :+ [ CASE-PC-OR-PRONOUN-CASE-PC-FLAG luk,
+    INVOL-TRANS-SUBJ-CC-PC-FLAG luk,
+    INVOL-INTRANS-AGENT-CC-PC-FLAG luk,
     NUMBER-PC-FLAG luk,
-    CASE-PC-OR-PRONOUN-CASE-PC-FLAG luk ].
+    INDEFINITENESS-PC-FLAG luk,
+    FEM-NOUN-FLAG luk,
+    INVOL-TRANS-OBJ-CC-PC-FLAG luk,
+    VOL-INTRANS-AGENT-CC-PC-FLAG luk,
+    VOL-TRANS-SUBJ-CC-PC-FLAG luk,
+    VOL-TRANS-OBJ-CC-PC-FLAG luk,
+    INANIMATE-NOUN-FLAG luk,
+    CASE-PC-FLAG luk ].
 
-infl-satisfied :+ [ VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG na-or-+,
-    INDEFINITENESS-PC-FLAG na-or-+,
-    INVOL-CASE-CONSTRAINTS-PC-FLAG na-or-+,
-    INVOL-INTRANS-CASE-CONSTRAINTS-PC-FLAG na-or-+,
-    FEM-NOUN-FLAG na-or-+,
-    INANIMATE-NOUN-FLAG na-or-+,
-    CASE-PC-FLAG na-or-+,
-    INVOL-TRANS-CASE-CONSTRAINTS-PC-FLAG na-or-+,
-    VOL-CASE-CONSTRAINTS-PC-FLAG na-or-+,
+infl-satisfied :+ [ CASE-PC-OR-PRONOUN-CASE-PC-FLAG na-or-+,
+    INVOL-TRANS-SUBJ-CC-PC-FLAG na-or-+,
+    INVOL-INTRANS-AGENT-CC-PC-FLAG na-or-+,
     NUMBER-PC-FLAG na-or-+,
-    CASE-PC-OR-PRONOUN-CASE-PC-FLAG na-or-+ ].
+    INDEFINITENESS-PC-FLAG na-or-+,
+    FEM-NOUN-FLAG na-or-+,
+    INVOL-TRANS-OBJ-CC-PC-FLAG na-or-+,
+    VOL-INTRANS-AGENT-CC-PC-FLAG na-or-+,
+    VOL-TRANS-SUBJ-CC-PC-FLAG na-or-+,
+    VOL-TRANS-OBJ-CC-PC-FLAG na-or-+,
+    INANIMATE-NOUN-FLAG na-or-+,
+    CASE-PC-FLAG na-or-+ ].
 
 cat :+ [ POSSESSUM poss ].
 
@@ -240,8 +234,7 @@ noun-lex := basic-noun-lex & basic-non-wh-word-lex & non-local-none-lex-item & n
                              COMPS < >,
                              SUBJ < >,
                              SPEC < > ],
-                       HEAD [ NMZ -,
-                              POSSESSOR nonpossessive ],
+                       HEAD.POSSESSOR nonpossessive,
                        POSSESSUM nonpossessive ] ].
 
 no-spr-noun-lex := noun-lex &
@@ -250,7 +243,7 @@ no-spr-noun-lex := noun-lex &
 ; Nouns which cannot take specifiers mark their SPR requirement
 ; as OPT +.  Making the non-head daughter OPT - in this rule
 ; keeps such nouns out.
-; 
+;
 ; Rules for building NPs.  Note that the Matrix uses SPR for
 ; the specifier of nouns and SUBJ for the subject (specifier) of verbs.
 
@@ -339,16 +332,15 @@ masc-noun-lex := noun-lex & case-pc-rule-dtr & indefiniteness-pc-rule-dtr & numb
 ;;; Verbs
 
 ; verb-lex is HC-LIGHT - to allow us to pick out
-; 
+;
 ;   lexical Vs for V-level attachment of negative adverbs.
 
 verb-lex := non-mod-lex-item &
   [ SYNSEM [ L-QUE -,
-             LOCAL.CAT [ HEAD verb &
-                              [ NMZ - ],
+             LOCAL.CAT [ HEAD verb,
                          HC-LIGHT - ] ] ].
 
-main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex &
+main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & mood-pc-rule-dtr & tense-pc-rule-dtr & while-modifier-pc-rule-dtr &
   [ SYNSEM [ L-QUE -,
              LOCAL [ CAT [ HEAD.AUX -,
                            VAL [ SPEC < >,
@@ -360,18 +352,16 @@ main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex &
                                        COMPS < > ] ],
                            CONT.HOOK.INDEX #xarg ] ] ].
 
-aux-lex := verb-lex & basic-icons-lex-item & mood-pc-rule-dtr & tense-pc-rule-dtr & vol-case-constraints-pc-rule-dtr & vol-case-constraints-subj-pc-rule-dtr & while-modifier-pc-rule-dtr &
+aux-lex := verb-lex & basic-icons-lex-item & mood-pc-rule-dtr & tense-pc-rule-dtr & while-modifier-pc-rule-dtr &
   [ SYNSEM [ LOCAL.CAT.HEAD.AUX +,
-             L-QUE - ],
-    INFLECTED [ VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG -,
-                VOL-CASE-CONSTRAINTS-PC-FLAG - ] ].
+             L-QUE - ] ].
 
 intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
     ARG-ST < [ LOCAL.CAT.HEAD noun &
                               [ CASE real-case ] ] > ].
 
-transitive-verb-lex := main-verb-lex & transitive-lex-item & mood-pc-rule-dtr & tense-pc-rule-dtr & while-modifier-pc-rule-dtr &
+transitive-verb-lex := main-verb-lex & transitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
     ARG-ST < [ LOCAL.CAT.HEAD noun &
                               [ CASE real-case ] ],
@@ -409,28 +399,27 @@ clausal-nom-verb-lex := clausal-verb-lex &
   [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
                                 [ CASE nom ] ].
 
-invol-trans-verb-lex := transitive-verb-lex & invol-case-constraints-pc-rule-dtr &
+invol-trans-verb-lex := transitive-verb-lex & invol-trans-obj-cc-pc-rule-dtr &
   [ SYNSEM.LOCAL.CAT.HEAD.INVOL +,
-    INFLECTED [ INVOL-TRANS-CASE-CONSTRAINTS-PC-FLAG -,
-                INVOL-CASE-CONSTRAINTS-PC-FLAG - ] ].
+    INFLECTED [ INVOL-TRANS-SUBJ-CC-PC-FLAG -,
+                INVOL-TRANS-OBJ-CC-PC-FLAG - ] ].
 
-invol-intrans-verb-lex := intransitive-verb-lex & invol-case-constraints-pc-rule-dtr & mood-pc-rule-dtr & tense-pc-rule-dtr & while-modifier-pc-rule-dtr &
+invol-intrans-verb-lex := intransitive-verb-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.INVOL +,
-    INFLECTED [ INVOL-INTRANS-CASE-CONSTRAINTS-PC-FLAG -,
-                INVOL-CASE-CONSTRAINTS-PC-FLAG - ] ].
+    INFLECTED.INVOL-INTRANS-AGENT-CC-PC-FLAG - ].
 
-vol-trans-verb-lex := transitive-verb-lex & vol-case-constraints-pc-rule-dtr & vol-case-constraints-subj-pc-rule-dtr &
+vol-trans-verb-lex := transitive-verb-lex & vol-trans-obj-cc-pc-rule-dtr &
   [ SYNSEM.LOCAL.CAT.HEAD.INVOL -,
-    INFLECTED [ VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG -,
-                VOL-CASE-CONSTRAINTS-PC-FLAG - ] ].
+    INFLECTED [ VOL-TRANS-SUBJ-CC-PC-FLAG -,
+                VOL-TRANS-OBJ-CC-PC-FLAG - ] ].
 
-vol-intrans-verb-lex := intransitive-verb-lex & mood-pc-rule-dtr & tense-pc-rule-dtr & vol-case-constraints-pc-rule-dtr & vol-case-constraints-subj-pc-rule-dtr & while-modifier-pc-rule-dtr &
+vol-intrans-verb-lex := intransitive-verb-lex & vol-intrans-agent-cc-pc-rule-dtr &
   [ SYNSEM.LOCAL.CAT.HEAD.INVOL -,
-    INFLECTED [ VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG -,
-                VOL-CASE-CONSTRAINTS-PC-FLAG - ] ].
+    INFLECTED.VOL-INTRANS-AGENT-CC-PC-FLAG - ].
 
-dec-clausal-verb-lex := clausal-verb-lex & clausal-second-arg-trans-lex-item &
-  [ SYNSEM [ LOCAL.CAT [ HEAD.INVOL -,
+dec-clausal-verb-lex := clausal-verb-lex & vol-intrans-agent-cc-pc-rule-dtr & clausal-second-arg-trans-lex-item &
+  [ INFLECTED.VOL-INTRANS-AGENT-CC-PC-FLAG -,
+    SYNSEM [ LOCAL.CAT [ HEAD.INVOL -,
                          VAL.COMPS < [ LOCAL [ CAT [ HEAD comp,
                                                      WH.BOOL - ],
                                                CONT.HOOK.INDEX.SF prop ] ] > ],
@@ -504,8 +493,9 @@ cardinal-except-attr-adj-lex := attr-only-adj-lex &
 ; Basic attributive adjective definition
 
 attr-adj-lex := adj-lex & intersective-mod-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
-                                              VAL.SPR cons ] ] > ].
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun &
+                                                                                                         [ PRON - ],
+                                                                                              VAL.SPR cons ] ] > ].
 
 attr-only-adj-lex := attr-adj-lex &
   [ SYNSEM.LOCAL.CAT [ HEAD.PRD -,
@@ -604,7 +594,7 @@ quantifier-determiner-lex := determiner-lex & no-icons-lex-item &
 ;;; Adverbs
 
 ; Type for negative adverbs.
-; 
+;
 ; This adverb should go through a specialized phrase structure rule
 ;                           included with this grammar.
 
@@ -622,81 +612,45 @@ neg-adv-lex := basic-scopal-adverb-lex &
 ;;; Lexical Rules
 ;;;;;;;;;;;;;;;;;;;
 
-low-nominalization-lex-rule := cat-change-with-ccont-lex-rule &
-  [ SYNSEM.LOCAL.CAT [ HEAD noun &
-                            [ NMZ +,
-                              MOD #mod ],
-                       VAL [ SUBJ < [ LOCAL [ CAT.VAL.SPR < >,
-                                              CONT.HOOK.INDEX #subj ] ] >,
-                             SPEC #spec,
-                             SPR < [ OPT + ] > ],
-                       MC #mc,
-                       MKG #mkg,
-                       HC-LIGHT #hc-light,
-                       POSTHEAD #posthead ],
-    C-CONT [ RELS.LIST < [ PRED "nominalized_rel",
-                           LBL #ltop,
-                           ARG0 ref-ind & #arg0,
-                           ARG1 #arg1 ] >,
-             HCONS.LIST < qeq &
-                          [ HARG #arg1,
-                            LARG #larg ] >,
-             HOOK [ XARG #xarg,
-                    INDEX #arg0,
-                    LTOP #ltop ] ],
-    DTR.SYNSEM.LOCAL [ CAT [ HEAD.MOD #mod,
-                             VAL [ SUBJ < [ LOCAL.CONT.HOOK.INDEX #subj ] >,
-                                   SPEC #spec ],
-                             MC #mc,
-                             MKG #mkg,
-                             HC-LIGHT #hc-light,
-                             POSTHEAD #posthead ],
-                       CONT.HOOK [ XARG #xarg,
-                                   LTOP #larg ] ] ].
-
-low-nmz-subjid-compsid-lex-rule := low-nominalization-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL [ COMPS #comps,
-                           SUBJ #subj ],
-    DTR.SYNSEM.LOCAL.CAT.VAL [ COMPS #comps,
-                               SUBJ #subj ] ].
-
 ;;; Intermediate rule types
 
-vol-case-constraints-pc-rule-dtr := word-or-lexrule.
-case-pc-rule-dtr := word-or-lexrule.
+vol-intrans-agent-cc-pc-rule-dtr := word-or-lexrule.
 mood-pc-rule-dtr := word-or-lexrule.
+vol-trans-obj-cc-pc-rule-dtr := word-or-lexrule.
 tense-pc-rule-dtr := word-or-lexrule.
-invol-case-constraints-pc-rule-dtr := word-or-lexrule.
-number-pc-rule-dtr := word-or-lexrule.
-vol-case-constraints-subj-pc-rule-dtr := word-or-lexrule.
 indefiniteness-pc-rule-dtr := word-or-lexrule.
 while-modifier-pc-rule-dtr := word-or-lexrule.
+number-pc-rule-dtr := word-or-lexrule.
+case-pc-rule-dtr := word-or-lexrule.
+invol-trans-obj-cc-pc-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
 indefiniteness-pc-lex-rule-super := add-only-no-ccont-rule & case-pc-rule-dtr &
   [ INFLECTED [ INDEFINITENESS-PC-FLAG +,
-                VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG #vol-case-constraints-subj-pc,
-                INVOL-CASE-CONSTRAINTS-PC-FLAG #invol-case-constraints-pc,
-                INVOL-INTRANS-CASE-CONSTRAINTS-PC-FLAG #invol-intrans-case-constraints-pc,
-                FEM-NOUN-FLAG #fem-noun,
-                INANIMATE-NOUN-FLAG #inanimate-noun,
-                CASE-PC-FLAG #case-pc,
-                INVOL-TRANS-CASE-CONSTRAINTS-PC-FLAG #invol-trans-case-constraints-pc,
-                VOL-CASE-CONSTRAINTS-PC-FLAG #vol-case-constraints-pc,
+                CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc,
+                INVOL-TRANS-SUBJ-CC-PC-FLAG #invol-trans-subj-cc-pc,
+                INVOL-INTRANS-AGENT-CC-PC-FLAG #invol-intrans-agent-cc-pc,
                 NUMBER-PC-FLAG #number-pc,
-                CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc ],
+                FEM-NOUN-FLAG #fem-noun,
+                INVOL-TRANS-OBJ-CC-PC-FLAG #invol-trans-obj-cc-pc,
+                VOL-INTRANS-AGENT-CC-PC-FLAG #vol-intrans-agent-cc-pc,
+                VOL-TRANS-SUBJ-CC-PC-FLAG #vol-trans-subj-cc-pc,
+                VOL-TRANS-OBJ-CC-PC-FLAG #vol-trans-obj-cc-pc,
+                INANIMATE-NOUN-FLAG #inanimate-noun,
+                CASE-PC-FLAG #case-pc ],
     DTR indefiniteness-pc-rule-dtr &
-        [ INFLECTED [ VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG #vol-case-constraints-subj-pc,
-                      INVOL-CASE-CONSTRAINTS-PC-FLAG #invol-case-constraints-pc,
-                      INVOL-INTRANS-CASE-CONSTRAINTS-PC-FLAG #invol-intrans-case-constraints-pc,
-                      FEM-NOUN-FLAG #fem-noun,
-                      INANIMATE-NOUN-FLAG #inanimate-noun,
-                      CASE-PC-FLAG #case-pc,
-                      INVOL-TRANS-CASE-CONSTRAINTS-PC-FLAG #invol-trans-case-constraints-pc,
-                      VOL-CASE-CONSTRAINTS-PC-FLAG #vol-case-constraints-pc,
+        [ INFLECTED [ CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc,
+                      INVOL-TRANS-SUBJ-CC-PC-FLAG #invol-trans-subj-cc-pc,
+                      INVOL-INTRANS-AGENT-CC-PC-FLAG #invol-intrans-agent-cc-pc,
                       NUMBER-PC-FLAG #number-pc,
-                      CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc ] ] ].
+                      FEM-NOUN-FLAG #fem-noun,
+                      INVOL-TRANS-OBJ-CC-PC-FLAG #invol-trans-obj-cc-pc,
+                      VOL-INTRANS-AGENT-CC-PC-FLAG #vol-intrans-agent-cc-pc,
+                      VOL-TRANS-SUBJ-CC-PC-FLAG #vol-trans-subj-cc-pc,
+                      VOL-TRANS-OBJ-CC-PC-FLAG #vol-trans-obj-cc-pc,
+                      INANIMATE-NOUN-FLAG #inanimate-noun,
+                      CASE-PC-FLAG #case-pc ] ] ].
 
 indef-rule-lex-rule := indefiniteness-pc-lex-rule-super & infl-lex-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.DEF - ].
@@ -712,25 +666,27 @@ indef-pl-lex-rule := const-lex-rule & indefiniteness-pc-lex-rule-super &
 case-pc-lex-rule-super := add-only-no-ccont-rule &
   [ INFLECTED [ CASE-PC-FLAG +,
                 CASE-PC-OR-PRONOUN-CASE-PC-FLAG +,
-                VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG #vol-case-constraints-subj-pc,
-                INDEFINITENESS-PC-FLAG #indefiniteness-pc,
-                INVOL-CASE-CONSTRAINTS-PC-FLAG #invol-case-constraints-pc,
-                INVOL-INTRANS-CASE-CONSTRAINTS-PC-FLAG #invol-intrans-case-constraints-pc,
-                FEM-NOUN-FLAG #fem-noun,
-                INANIMATE-NOUN-FLAG #inanimate-noun,
-                VOL-CASE-CONSTRAINTS-PC-FLAG #vol-case-constraints-pc,
+                INVOL-TRANS-SUBJ-CC-PC-FLAG #invol-trans-subj-cc-pc,
+                INVOL-INTRANS-AGENT-CC-PC-FLAG #invol-intrans-agent-cc-pc,
                 NUMBER-PC-FLAG #number-pc,
-                INVOL-TRANS-CASE-CONSTRAINTS-PC-FLAG #invol-trans-case-constraints-pc ],
+                INDEFINITENESS-PC-FLAG #indefiniteness-pc,
+                FEM-NOUN-FLAG #fem-noun,
+                INVOL-TRANS-OBJ-CC-PC-FLAG #invol-trans-obj-cc-pc,
+                VOL-INTRANS-AGENT-CC-PC-FLAG #vol-intrans-agent-cc-pc,
+                VOL-TRANS-SUBJ-CC-PC-FLAG #vol-trans-subj-cc-pc,
+                VOL-TRANS-OBJ-CC-PC-FLAG #vol-trans-obj-cc-pc,
+                INANIMATE-NOUN-FLAG #inanimate-noun ],
     DTR case-pc-rule-dtr &
-        [ INFLECTED [ VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG #vol-case-constraints-subj-pc,
-                      INDEFINITENESS-PC-FLAG #indefiniteness-pc,
-                      INVOL-CASE-CONSTRAINTS-PC-FLAG #invol-case-constraints-pc,
-                      INVOL-INTRANS-CASE-CONSTRAINTS-PC-FLAG #invol-intrans-case-constraints-pc,
-                      FEM-NOUN-FLAG #fem-noun,
-                      INANIMATE-NOUN-FLAG #inanimate-noun,
-                      VOL-CASE-CONSTRAINTS-PC-FLAG #vol-case-constraints-pc,
+        [ INFLECTED [ INVOL-TRANS-SUBJ-CC-PC-FLAG #invol-trans-subj-cc-pc,
+                      INVOL-INTRANS-AGENT-CC-PC-FLAG #invol-intrans-agent-cc-pc,
                       NUMBER-PC-FLAG #number-pc,
-                      INVOL-TRANS-CASE-CONSTRAINTS-PC-FLAG #invol-trans-case-constraints-pc ] ] ].
+                      INDEFINITENESS-PC-FLAG #indefiniteness-pc,
+                      FEM-NOUN-FLAG #fem-noun,
+                      INVOL-TRANS-OBJ-CC-PC-FLAG #invol-trans-obj-cc-pc,
+                      VOL-INTRANS-AGENT-CC-PC-FLAG #vol-intrans-agent-cc-pc,
+                      VOL-TRANS-SUBJ-CC-PC-FLAG #vol-trans-subj-cc-pc,
+                      VOL-TRANS-OBJ-CC-PC-FLAG #vol-trans-obj-cc-pc,
+                      INANIMATE-NOUN-FLAG #inanimate-noun ] ] ].
 
 genitive-rule-lex-rule := case-pc-lex-rule-super & infl-lex-rule &
   [ DTR.INFLECTED.INANIMATE-NOUN-FLAG na,
@@ -751,54 +707,58 @@ nominative-rule-lex-rule := case-pc-lex-rule-super & const-lex-rule &
 
 pronoun-case-pc-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED [ CASE-PC-OR-PRONOUN-CASE-PC-FLAG +,
-                VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG #vol-case-constraints-subj-pc,
+                INVOL-TRANS-SUBJ-CC-PC-FLAG #invol-trans-subj-cc-pc,
+                INVOL-INTRANS-AGENT-CC-PC-FLAG #invol-intrans-agent-cc-pc,
+                NUMBER-PC-FLAG #number-pc,
                 INDEFINITENESS-PC-FLAG #indefiniteness-pc,
-                INVOL-CASE-CONSTRAINTS-PC-FLAG #invol-case-constraints-pc,
-                INVOL-INTRANS-CASE-CONSTRAINTS-PC-FLAG #invol-intrans-case-constraints-pc,
                 FEM-NOUN-FLAG #fem-noun,
+                INVOL-TRANS-OBJ-CC-PC-FLAG #invol-trans-obj-cc-pc,
+                VOL-INTRANS-AGENT-CC-PC-FLAG #vol-intrans-agent-cc-pc,
+                VOL-TRANS-SUBJ-CC-PC-FLAG #vol-trans-subj-cc-pc,
+                VOL-TRANS-OBJ-CC-PC-FLAG #vol-trans-obj-cc-pc,
                 INANIMATE-NOUN-FLAG #inanimate-noun,
-                CASE-PC-FLAG #case-pc,
-                INVOL-TRANS-CASE-CONSTRAINTS-PC-FLAG #invol-trans-case-constraints-pc,
-                VOL-CASE-CONSTRAINTS-PC-FLAG #vol-case-constraints-pc,
-                NUMBER-PC-FLAG #number-pc ],
+                CASE-PC-FLAG #case-pc ],
     DTR 1sg-pronoun-noun-lex &
-        [ INFLECTED [ VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG #vol-case-constraints-subj-pc,
+        [ INFLECTED [ INVOL-TRANS-SUBJ-CC-PC-FLAG #invol-trans-subj-cc-pc,
+                      INVOL-INTRANS-AGENT-CC-PC-FLAG #invol-intrans-agent-cc-pc,
+                      NUMBER-PC-FLAG #number-pc,
                       INDEFINITENESS-PC-FLAG #indefiniteness-pc,
-                      INVOL-CASE-CONSTRAINTS-PC-FLAG #invol-case-constraints-pc,
-                      INVOL-INTRANS-CASE-CONSTRAINTS-PC-FLAG #invol-intrans-case-constraints-pc,
                       FEM-NOUN-FLAG #fem-noun,
+                      INVOL-TRANS-OBJ-CC-PC-FLAG #invol-trans-obj-cc-pc,
+                      VOL-INTRANS-AGENT-CC-PC-FLAG #vol-intrans-agent-cc-pc,
+                      VOL-TRANS-SUBJ-CC-PC-FLAG #vol-trans-subj-cc-pc,
+                      VOL-TRANS-OBJ-CC-PC-FLAG #vol-trans-obj-cc-pc,
                       INANIMATE-NOUN-FLAG #inanimate-noun,
-                      CASE-PC-FLAG #case-pc,
-                      INVOL-TRANS-CASE-CONSTRAINTS-PC-FLAG #invol-trans-case-constraints-pc,
-                      VOL-CASE-CONSTRAINTS-PC-FLAG #vol-case-constraints-pc,
-                      NUMBER-PC-FLAG #number-pc ] ] ].
+                      CASE-PC-FLAG #case-pc ] ] ].
 
 nominative-pronoun-lex-rule := pronoun-case-pc-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE nom ].
 
 number-pc-lex-rule-super := add-only-no-ccont-rule & case-pc-rule-dtr & indefiniteness-pc-rule-dtr &
   [ INFLECTED [ NUMBER-PC-FLAG +,
-                VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG #vol-case-constraints-subj-pc,
+                CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc,
+                INVOL-TRANS-SUBJ-CC-PC-FLAG #invol-trans-subj-cc-pc,
+                INVOL-INTRANS-AGENT-CC-PC-FLAG #invol-intrans-agent-cc-pc,
                 INDEFINITENESS-PC-FLAG #indefiniteness-pc,
-                INVOL-CASE-CONSTRAINTS-PC-FLAG #invol-case-constraints-pc,
-                INVOL-INTRANS-CASE-CONSTRAINTS-PC-FLAG #invol-intrans-case-constraints-pc,
                 FEM-NOUN-FLAG #fem-noun,
+                INVOL-TRANS-OBJ-CC-PC-FLAG #invol-trans-obj-cc-pc,
+                VOL-INTRANS-AGENT-CC-PC-FLAG #vol-intrans-agent-cc-pc,
+                VOL-TRANS-SUBJ-CC-PC-FLAG #vol-trans-subj-cc-pc,
+                VOL-TRANS-OBJ-CC-PC-FLAG #vol-trans-obj-cc-pc,
                 INANIMATE-NOUN-FLAG #inanimate-noun,
-                CASE-PC-FLAG #case-pc,
-                INVOL-TRANS-CASE-CONSTRAINTS-PC-FLAG #invol-trans-case-constraints-pc,
-                VOL-CASE-CONSTRAINTS-PC-FLAG #vol-case-constraints-pc,
-                CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc ],
+                CASE-PC-FLAG #case-pc ],
     DTR number-pc-rule-dtr &
-        [ INFLECTED [ VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG #vol-case-constraints-subj-pc,
+        [ INFLECTED [ CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc,
+                      INVOL-TRANS-SUBJ-CC-PC-FLAG #invol-trans-subj-cc-pc,
+                      INVOL-INTRANS-AGENT-CC-PC-FLAG #invol-intrans-agent-cc-pc,
                       INDEFINITENESS-PC-FLAG #indefiniteness-pc,
-                      INVOL-CASE-CONSTRAINTS-PC-FLAG #invol-case-constraints-pc,
-                      INVOL-INTRANS-CASE-CONSTRAINTS-PC-FLAG #invol-intrans-case-constraints-pc,
                       FEM-NOUN-FLAG #fem-noun,
+                      INVOL-TRANS-OBJ-CC-PC-FLAG #invol-trans-obj-cc-pc,
+                      VOL-INTRANS-AGENT-CC-PC-FLAG #vol-intrans-agent-cc-pc,
+                      VOL-TRANS-SUBJ-CC-PC-FLAG #vol-trans-subj-cc-pc,
+                      VOL-TRANS-OBJ-CC-PC-FLAG #vol-trans-obj-cc-pc,
                       INANIMATE-NOUN-FLAG #inanimate-noun,
-                      CASE-PC-FLAG #case-pc,
-                      INVOL-TRANS-CASE-CONSTRAINTS-PC-FLAG #invol-trans-case-constraints-pc,
-                      VOL-CASE-CONSTRAINTS-PC-FLAG #vol-case-constraints-pc,
-                      CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc ] ] ].
+                      CASE-PC-FLAG #case-pc ] ] ].
 
 sg-anim-fem-lex-rule := infl-lex-rule & number-pc-lex-rule-super &
   [ DTR.INFLECTED.FEM-NOUN-FLAG +,
@@ -838,155 +798,114 @@ foc-lex-rule := mood-pc-lex-rule-super &
   [ SYNSEM.LOCAL [ CONT.HOOK.ICONS-KEY focus,
                    CAT.HEAD.FORM finite ] ].
 
-invol-case-constraints-pc-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & mood-pc-rule-dtr & tense-pc-rule-dtr & while-modifier-pc-rule-dtr &
-  [ INFLECTED [ INVOL-CASE-CONSTRAINTS-PC-FLAG +,
-                VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG #vol-case-constraints-subj-pc,
-                INDEFINITENESS-PC-FLAG #indefiniteness-pc,
-                INVOL-INTRANS-CASE-CONSTRAINTS-PC-FLAG #invol-intrans-case-constraints-pc,
-                FEM-NOUN-FLAG #fem-noun,
-                INANIMATE-NOUN-FLAG #inanimate-noun,
-                CASE-PC-FLAG #case-pc,
-                INVOL-TRANS-CASE-CONSTRAINTS-PC-FLAG #invol-trans-case-constraints-pc,
-                VOL-CASE-CONSTRAINTS-PC-FLAG #vol-case-constraints-pc,
+vol-trans-obj-cc-pc-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & mood-pc-rule-dtr & tense-pc-rule-dtr & while-modifier-pc-rule-dtr &
+  [ INFLECTED [ VOL-TRANS-OBJ-CC-PC-FLAG +,
+                CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc,
+                INVOL-TRANS-SUBJ-CC-PC-FLAG #invol-trans-subj-cc-pc,
+                INVOL-INTRANS-AGENT-CC-PC-FLAG #invol-intrans-agent-cc-pc,
                 NUMBER-PC-FLAG #number-pc,
-                CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc ],
-    DTR invol-case-constraints-pc-rule-dtr &
-        [ INFLECTED [ VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG #vol-case-constraints-subj-pc,
-                      INDEFINITENESS-PC-FLAG #indefiniteness-pc,
-                      INVOL-INTRANS-CASE-CONSTRAINTS-PC-FLAG #invol-intrans-case-constraints-pc,
-                      FEM-NOUN-FLAG #fem-noun,
-                      INANIMATE-NOUN-FLAG #inanimate-noun,
-                      CASE-PC-FLAG #case-pc,
-                      INVOL-TRANS-CASE-CONSTRAINTS-PC-FLAG #invol-trans-case-constraints-pc,
-                      VOL-CASE-CONSTRAINTS-PC-FLAG #vol-case-constraints-pc,
+                INDEFINITENESS-PC-FLAG #indefiniteness-pc,
+                FEM-NOUN-FLAG #fem-noun,
+                INVOL-TRANS-OBJ-CC-PC-FLAG #invol-trans-obj-cc-pc,
+                VOL-INTRANS-AGENT-CC-PC-FLAG #vol-intrans-agent-cc-pc,
+                VOL-TRANS-SUBJ-CC-PC-FLAG #vol-trans-subj-cc-pc,
+                INANIMATE-NOUN-FLAG #inanimate-noun,
+                CASE-PC-FLAG #case-pc ],
+    DTR vol-trans-obj-cc-pc-rule-dtr &
+        [ INFLECTED [ CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc,
+                      INVOL-TRANS-SUBJ-CC-PC-FLAG #invol-trans-subj-cc-pc,
+                      INVOL-INTRANS-AGENT-CC-PC-FLAG #invol-intrans-agent-cc-pc,
                       NUMBER-PC-FLAG #number-pc,
-                      CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc ] ] ].
+                      INDEFINITENESS-PC-FLAG #indefiniteness-pc,
+                      FEM-NOUN-FLAG #fem-noun,
+                      INVOL-TRANS-OBJ-CC-PC-FLAG #invol-trans-obj-cc-pc,
+                      VOL-INTRANS-AGENT-CC-PC-FLAG #vol-intrans-agent-cc-pc,
+                      VOL-TRANS-SUBJ-CC-PC-FLAG #vol-trans-subj-cc-pc,
+                      INANIMATE-NOUN-FLAG #inanimate-noun,
+                      CASE-PC-FLAG #case-pc ] ] ].
 
-invol-anim-obj-1-lex-rule := invol-case-constraints-pc-lex-rule-super &
+vol-inanim-obj-lex-rule := vol-trans-obj-cc-pc-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.PNG.GEND inanimate,
+                                             CAT.HEAD.CASE nom ] ].
+
+vol-anim-obj1-lex-rule := vol-trans-obj-cc-pc-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.CASE nom,
                                              CONT.HOOK.INDEX.PNG [ GEND animate,
                                                                    DEF - ] ] ].
 
-invol-inanim-obj-lex-rule := invol-case-constraints-pc-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.PNG.GEND inanimate,
-                                             CAT.HEAD.CASE nom ] ].
-
-invol-anim-obj-2-lex-rule := invol-case-constraints-pc-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.CASE acc,
-                                             CONT.HOOK.INDEX.PNG [ GEND animate,
-                                                                   DEF + ] ] ].
-
-invol-anim-obj-3-lex-rule := invol-case-constraints-pc-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.CASE acc,
-                                             CONT.HOOK.INDEX.PNG [ GEND animate,
-                                                                   DEF - ] ] ].
-
-invol-intrans-lex-rule := invol-case-constraints-pc-lex-rule-super.
-
-vol-case-constraints-pc-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & mood-pc-rule-dtr & tense-pc-rule-dtr & while-modifier-pc-rule-dtr &
-  [ INFLECTED [ VOL-CASE-CONSTRAINTS-PC-FLAG +,
-                VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG #vol-case-constraints-subj-pc,
-                INDEFINITENESS-PC-FLAG #indefiniteness-pc,
-                INVOL-CASE-CONSTRAINTS-PC-FLAG #invol-case-constraints-pc,
-                INVOL-INTRANS-CASE-CONSTRAINTS-PC-FLAG #invol-intrans-case-constraints-pc,
-                FEM-NOUN-FLAG #fem-noun,
-                INANIMATE-NOUN-FLAG #inanimate-noun,
-                CASE-PC-FLAG #case-pc,
-                INVOL-TRANS-CASE-CONSTRAINTS-PC-FLAG #invol-trans-case-constraints-pc,
-                NUMBER-PC-FLAG #number-pc,
-                CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc ],
-    DTR vol-case-constraints-pc-rule-dtr &
-        [ INFLECTED [ VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG #vol-case-constraints-subj-pc,
-                      INDEFINITENESS-PC-FLAG #indefiniteness-pc,
-                      INVOL-CASE-CONSTRAINTS-PC-FLAG #invol-case-constraints-pc,
-                      INVOL-INTRANS-CASE-CONSTRAINTS-PC-FLAG #invol-intrans-case-constraints-pc,
-                      FEM-NOUN-FLAG #fem-noun,
-                      INANIMATE-NOUN-FLAG #inanimate-noun,
-                      CASE-PC-FLAG #case-pc,
-                      INVOL-TRANS-CASE-CONSTRAINTS-PC-FLAG #invol-trans-case-constraints-pc,
-                      NUMBER-PC-FLAG #number-pc,
-                      CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc ] ] ].
-
-vol-inanim-obj-lex-rule := vol-case-constraints-pc-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.PNG.GEND inanimate,
-                                             CAT.HEAD.CASE nom ] ].
-
-vol-anim-obj1-lex-rule := vol-case-constraints-pc-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.CASE nom,
-                                             CONT.HOOK.INDEX.PNG [ GEND animate,
-                                                                   DEF - ] ] ].
-
-vol-anim-obj2-lex-rule := vol-case-constraints-pc-lex-rule-super &
+vol-anim-obj2-lex-rule := vol-trans-obj-cc-pc-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.PNG.GEND animate,
                                              CAT.HEAD.CASE acc ] ].
 
-vol-intrans-lex-rule := vol-case-constraints-pc-lex-rule-super.
-
-invol-trans-case-constraints-pc-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & invol-case-constraints-pc-rule-dtr & mood-pc-rule-dtr & tense-pc-rule-dtr & while-modifier-pc-rule-dtr &
-  [ INFLECTED [ INVOL-TRANS-CASE-CONSTRAINTS-PC-FLAG +,
-                VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG #vol-case-constraints-subj-pc,
-                INDEFINITENESS-PC-FLAG #indefiniteness-pc,
-                INVOL-CASE-CONSTRAINTS-PC-FLAG #invol-case-constraints-pc,
-                INVOL-INTRANS-CASE-CONSTRAINTS-PC-FLAG #invol-intrans-case-constraints-pc,
-                FEM-NOUN-FLAG #fem-noun,
-                INANIMATE-NOUN-FLAG #inanimate-noun,
-                CASE-PC-FLAG #case-pc,
-                VOL-CASE-CONSTRAINTS-PC-FLAG #vol-case-constraints-pc,
+invol-trans-subj-cc-pc-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & invol-trans-obj-cc-pc-rule-dtr & mood-pc-rule-dtr & tense-pc-rule-dtr & while-modifier-pc-rule-dtr &
+  [ INFLECTED [ INVOL-TRANS-SUBJ-CC-PC-FLAG +,
+                CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc,
+                INVOL-INTRANS-AGENT-CC-PC-FLAG #invol-intrans-agent-cc-pc,
                 NUMBER-PC-FLAG #number-pc,
-                CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc ],
+                INDEFINITENESS-PC-FLAG #indefiniteness-pc,
+                FEM-NOUN-FLAG #fem-noun,
+                INVOL-TRANS-OBJ-CC-PC-FLAG #invol-trans-obj-cc-pc,
+                VOL-INTRANS-AGENT-CC-PC-FLAG #vol-intrans-agent-cc-pc,
+                VOL-TRANS-SUBJ-CC-PC-FLAG #vol-trans-subj-cc-pc,
+                VOL-TRANS-OBJ-CC-PC-FLAG #vol-trans-obj-cc-pc,
+                INANIMATE-NOUN-FLAG #inanimate-noun,
+                CASE-PC-FLAG #case-pc ],
     DTR invol-trans-verb-lex &
-        [ INFLECTED [ VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG #vol-case-constraints-subj-pc,
-                      INDEFINITENESS-PC-FLAG #indefiniteness-pc,
-                      INVOL-CASE-CONSTRAINTS-PC-FLAG #invol-case-constraints-pc,
-                      INVOL-INTRANS-CASE-CONSTRAINTS-PC-FLAG #invol-intrans-case-constraints-pc,
-                      FEM-NOUN-FLAG #fem-noun,
-                      INANIMATE-NOUN-FLAG #inanimate-noun,
-                      CASE-PC-FLAG #case-pc,
-                      VOL-CASE-CONSTRAINTS-PC-FLAG #vol-case-constraints-pc,
+        [ INFLECTED [ CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc,
+                      INVOL-INTRANS-AGENT-CC-PC-FLAG #invol-intrans-agent-cc-pc,
                       NUMBER-PC-FLAG #number-pc,
-                      CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc ] ] ].
+                      INDEFINITENESS-PC-FLAG #indefiniteness-pc,
+                      FEM-NOUN-FLAG #fem-noun,
+                      INVOL-TRANS-OBJ-CC-PC-FLAG #invol-trans-obj-cc-pc,
+                      VOL-INTRANS-AGENT-CC-PC-FLAG #vol-intrans-agent-cc-pc,
+                      VOL-TRANS-SUBJ-CC-PC-FLAG #vol-trans-subj-cc-pc,
+                      VOL-TRANS-OBJ-CC-PC-FLAG #vol-trans-obj-cc-pc,
+                      INANIMATE-NOUN-FLAG #inanimate-noun,
+                      CASE-PC-FLAG #case-pc ] ] ].
 
-invol-inanim-subj-lex-rule := invol-trans-case-constraints-pc-lex-rule-super &
+invol-inanim-subj-lex-rule := invol-trans-subj-cc-pc-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL [ CONT.HOOK.INDEX.PNG.GEND inanimate,
                                             CAT.HEAD.CASE nom ] ].
 
-invol-anim-subj1-lex-rule := invol-trans-case-constraints-pc-lex-rule-super &
+invol-anim-subj1-lex-rule := invol-trans-subj-cc-pc-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL [ CONT.HOOK.INDEX.PNG.GEND animate,
                                             CAT.HEAD.CASE acc ] ].
 
-invol-anim-subj2-lex-rule := invol-trans-case-constraints-pc-lex-rule-super &
+invol-anim-subj2-lex-rule := invol-trans-subj-cc-pc-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL [ CONT.HOOK.INDEX.PNG.GEND animate,
                                             CAT.HEAD.CASE nom+dat ] ].
 
-invol-intrans-case-constraints-pc-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & invol-case-constraints-pc-rule-dtr & mood-pc-rule-dtr & tense-pc-rule-dtr & while-modifier-pc-rule-dtr &
-  [ INFLECTED [ INVOL-INTRANS-CASE-CONSTRAINTS-PC-FLAG +,
-                VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG #vol-case-constraints-subj-pc,
-                INDEFINITENESS-PC-FLAG #indefiniteness-pc,
-                INVOL-CASE-CONSTRAINTS-PC-FLAG #invol-case-constraints-pc,
-                FEM-NOUN-FLAG #fem-noun,
-                INANIMATE-NOUN-FLAG #inanimate-noun,
-                CASE-PC-FLAG #case-pc,
-                INVOL-TRANS-CASE-CONSTRAINTS-PC-FLAG #invol-trans-case-constraints-pc,
-                VOL-CASE-CONSTRAINTS-PC-FLAG #vol-case-constraints-pc,
+invol-intrans-agent-cc-pc-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & mood-pc-rule-dtr & tense-pc-rule-dtr & while-modifier-pc-rule-dtr &
+  [ INFLECTED [ INVOL-INTRANS-AGENT-CC-PC-FLAG +,
+                CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc,
+                INVOL-TRANS-SUBJ-CC-PC-FLAG #invol-trans-subj-cc-pc,
                 NUMBER-PC-FLAG #number-pc,
-                CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc ],
+                INDEFINITENESS-PC-FLAG #indefiniteness-pc,
+                FEM-NOUN-FLAG #fem-noun,
+                INVOL-TRANS-OBJ-CC-PC-FLAG #invol-trans-obj-cc-pc,
+                VOL-INTRANS-AGENT-CC-PC-FLAG #vol-intrans-agent-cc-pc,
+                VOL-TRANS-SUBJ-CC-PC-FLAG #vol-trans-subj-cc-pc,
+                VOL-TRANS-OBJ-CC-PC-FLAG #vol-trans-obj-cc-pc,
+                INANIMATE-NOUN-FLAG #inanimate-noun,
+                CASE-PC-FLAG #case-pc ],
     DTR invol-intrans-verb-lex &
-        [ INFLECTED [ VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG #vol-case-constraints-subj-pc,
-                      INDEFINITENESS-PC-FLAG #indefiniteness-pc,
-                      INVOL-CASE-CONSTRAINTS-PC-FLAG #invol-case-constraints-pc,
-                      FEM-NOUN-FLAG #fem-noun,
-                      INANIMATE-NOUN-FLAG #inanimate-noun,
-                      CASE-PC-FLAG #case-pc,
-                      INVOL-TRANS-CASE-CONSTRAINTS-PC-FLAG #invol-trans-case-constraints-pc,
-                      VOL-CASE-CONSTRAINTS-PC-FLAG #vol-case-constraints-pc,
+        [ INFLECTED [ CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc,
+                      INVOL-TRANS-SUBJ-CC-PC-FLAG #invol-trans-subj-cc-pc,
                       NUMBER-PC-FLAG #number-pc,
-                      CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc ] ] ].
+                      INDEFINITENESS-PC-FLAG #indefiniteness-pc,
+                      FEM-NOUN-FLAG #fem-noun,
+                      INVOL-TRANS-OBJ-CC-PC-FLAG #invol-trans-obj-cc-pc,
+                      VOL-INTRANS-AGENT-CC-PC-FLAG #vol-intrans-agent-cc-pc,
+                      VOL-TRANS-SUBJ-CC-PC-FLAG #vol-trans-subj-cc-pc,
+                      VOL-TRANS-OBJ-CC-PC-FLAG #vol-trans-obj-cc-pc,
+                      INANIMATE-NOUN-FLAG #inanimate-noun,
+                      CASE-PC-FLAG #case-pc ] ] ].
 
-invol-inanim-agent-lex-rule := invol-intrans-case-constraints-pc-lex-rule-super &
+invol-inanim-agent-lex-rule := invol-intrans-agent-cc-pc-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL [ CONT.HOOK.INDEX.PNG.GEND inanimate,
                                             CAT.HEAD.CASE nom ] ].
 
-invol-anim-agent-lex-rule := invol-intrans-case-constraints-pc-lex-rule-super &
+invol-anim-agent-lex-rule := invol-intrans-agent-cc-pc-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL [ CONT.HOOK.INDEX.PNG.GEND animate,
                                             CAT.HEAD.CASE acc+dat ] ].
 
@@ -1032,33 +951,110 @@ while_stem-lex-rule := while-modifier-pc-lex-rule-super &
   [ SYNSEM.LOCAL [ CAT.HEAD.FORM while,
                    CONT.HOOK.INDEX.E.TENSE nonpast ] ].
 
-vol-case-constraints-subj-pc-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & mood-pc-rule-dtr & tense-pc-rule-dtr & vol-case-constraints-pc-rule-dtr & while-modifier-pc-rule-dtr &
-  [ INFLECTED [ VOL-CASE-CONSTRAINTS-SUBJ-PC-FLAG +,
-                INDEFINITENESS-PC-FLAG #indefiniteness-pc,
-                INVOL-CASE-CONSTRAINTS-PC-FLAG #invol-case-constraints-pc,
-                INVOL-INTRANS-CASE-CONSTRAINTS-PC-FLAG #invol-intrans-case-constraints-pc,
-                FEM-NOUN-FLAG #fem-noun,
-                INANIMATE-NOUN-FLAG #inanimate-noun,
-                CASE-PC-FLAG #case-pc,
-                INVOL-TRANS-CASE-CONSTRAINTS-PC-FLAG #invol-trans-case-constraints-pc,
-                VOL-CASE-CONSTRAINTS-PC-FLAG #vol-case-constraints-pc,
+vol-trans-subj-cc-pc-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & mood-pc-rule-dtr & tense-pc-rule-dtr & vol-trans-obj-cc-pc-rule-dtr & while-modifier-pc-rule-dtr &
+  [ INFLECTED [ VOL-TRANS-SUBJ-CC-PC-FLAG +,
+                CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc,
+                INVOL-TRANS-SUBJ-CC-PC-FLAG #invol-trans-subj-cc-pc,
+                INVOL-INTRANS-AGENT-CC-PC-FLAG #invol-intrans-agent-cc-pc,
                 NUMBER-PC-FLAG #number-pc,
-                CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc ],
-    DTR vol-case-constraints-subj-pc-rule-dtr &
-        [ INFLECTED [ INDEFINITENESS-PC-FLAG #indefiniteness-pc,
-                      INVOL-CASE-CONSTRAINTS-PC-FLAG #invol-case-constraints-pc,
-                      INVOL-INTRANS-CASE-CONSTRAINTS-PC-FLAG #invol-intrans-case-constraints-pc,
-                      FEM-NOUN-FLAG #fem-noun,
-                      INANIMATE-NOUN-FLAG #inanimate-noun,
-                      CASE-PC-FLAG #case-pc,
-                      INVOL-TRANS-CASE-CONSTRAINTS-PC-FLAG #invol-trans-case-constraints-pc,
-                      VOL-CASE-CONSTRAINTS-PC-FLAG #vol-case-constraints-pc,
+                INDEFINITENESS-PC-FLAG #indefiniteness-pc,
+                FEM-NOUN-FLAG #fem-noun,
+                INVOL-TRANS-OBJ-CC-PC-FLAG #invol-trans-obj-cc-pc,
+                VOL-INTRANS-AGENT-CC-PC-FLAG #vol-intrans-agent-cc-pc,
+                VOL-TRANS-OBJ-CC-PC-FLAG #vol-trans-obj-cc-pc,
+                INANIMATE-NOUN-FLAG #inanimate-noun,
+                CASE-PC-FLAG #case-pc ],
+    DTR vol-trans-verb-lex &
+        [ INFLECTED [ CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc,
+                      INVOL-TRANS-SUBJ-CC-PC-FLAG #invol-trans-subj-cc-pc,
+                      INVOL-INTRANS-AGENT-CC-PC-FLAG #invol-intrans-agent-cc-pc,
                       NUMBER-PC-FLAG #number-pc,
-                      CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc ] ] ].
+                      INDEFINITENESS-PC-FLAG #indefiniteness-pc,
+                      FEM-NOUN-FLAG #fem-noun,
+                      INVOL-TRANS-OBJ-CC-PC-FLAG #invol-trans-obj-cc-pc,
+                      VOL-INTRANS-AGENT-CC-PC-FLAG #vol-intrans-agent-cc-pc,
+                      VOL-TRANS-OBJ-CC-PC-FLAG #vol-trans-obj-cc-pc,
+                      INANIMATE-NOUN-FLAG #inanimate-noun,
+                      CASE-PC-FLAG #case-pc ] ] ].
 
-vol-subj-lex-rule := vol-case-constraints-subj-pc-lex-rule-super &
+vol-trans-subj-lex-rule := vol-trans-subj-cc-pc-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL [ CONT.HOOK.INDEX.PNG.GEND gender,
                                             CAT.HEAD.CASE nom ] ].
+
+invol-trans-obj-cc-pc-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & mood-pc-rule-dtr & tense-pc-rule-dtr & while-modifier-pc-rule-dtr &
+  [ INFLECTED [ INVOL-TRANS-OBJ-CC-PC-FLAG +,
+                CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc,
+                INVOL-TRANS-SUBJ-CC-PC-FLAG #invol-trans-subj-cc-pc,
+                INVOL-INTRANS-AGENT-CC-PC-FLAG #invol-intrans-agent-cc-pc,
+                NUMBER-PC-FLAG #number-pc,
+                INDEFINITENESS-PC-FLAG #indefiniteness-pc,
+                FEM-NOUN-FLAG #fem-noun,
+                VOL-INTRANS-AGENT-CC-PC-FLAG #vol-intrans-agent-cc-pc,
+                VOL-TRANS-SUBJ-CC-PC-FLAG #vol-trans-subj-cc-pc,
+                VOL-TRANS-OBJ-CC-PC-FLAG #vol-trans-obj-cc-pc,
+                INANIMATE-NOUN-FLAG #inanimate-noun,
+                CASE-PC-FLAG #case-pc ],
+    DTR invol-trans-obj-cc-pc-rule-dtr &
+        [ INFLECTED [ CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc,
+                      INVOL-TRANS-SUBJ-CC-PC-FLAG #invol-trans-subj-cc-pc,
+                      INVOL-INTRANS-AGENT-CC-PC-FLAG #invol-intrans-agent-cc-pc,
+                      NUMBER-PC-FLAG #number-pc,
+                      INDEFINITENESS-PC-FLAG #indefiniteness-pc,
+                      FEM-NOUN-FLAG #fem-noun,
+                      VOL-INTRANS-AGENT-CC-PC-FLAG #vol-intrans-agent-cc-pc,
+                      VOL-TRANS-SUBJ-CC-PC-FLAG #vol-trans-subj-cc-pc,
+                      VOL-TRANS-OBJ-CC-PC-FLAG #vol-trans-obj-cc-pc,
+                      INANIMATE-NOUN-FLAG #inanimate-noun,
+                      CASE-PC-FLAG #case-pc ] ] ].
+
+invol-anim-obj-1-lex-rule := invol-trans-obj-cc-pc-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.CASE nom,
+                                             CONT.HOOK.INDEX.PNG [ GEND animate,
+                                                                   DEF - ] ] ].
+
+invol-anim-obj-2-lex-rule := invol-trans-obj-cc-pc-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.CASE acc,
+                                             CONT.HOOK.INDEX.PNG [ GEND animate,
+                                                                   DEF + ] ] ].
+
+invol-anim-obj-3-lex-rule := invol-trans-obj-cc-pc-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.CASE acc,
+                                             CONT.HOOK.INDEX.PNG [ GEND animate,
+                                                                   DEF - ] ] ].
+
+invol-inanim-obj-lex-rule := invol-trans-obj-cc-pc-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.PNG.GEND inanimate,
+                                             CAT.HEAD.CASE nom ] ].
+
+vol-intrans-agent-cc-pc-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & mood-pc-rule-dtr & tense-pc-rule-dtr & while-modifier-pc-rule-dtr &
+  [ INFLECTED [ VOL-INTRANS-AGENT-CC-PC-FLAG +,
+                CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc,
+                INVOL-TRANS-SUBJ-CC-PC-FLAG #invol-trans-subj-cc-pc,
+                INVOL-INTRANS-AGENT-CC-PC-FLAG #invol-intrans-agent-cc-pc,
+                NUMBER-PC-FLAG #number-pc,
+                INDEFINITENESS-PC-FLAG #indefiniteness-pc,
+                FEM-NOUN-FLAG #fem-noun,
+                INVOL-TRANS-OBJ-CC-PC-FLAG #invol-trans-obj-cc-pc,
+                VOL-TRANS-SUBJ-CC-PC-FLAG #vol-trans-subj-cc-pc,
+                VOL-TRANS-OBJ-CC-PC-FLAG #vol-trans-obj-cc-pc,
+                INANIMATE-NOUN-FLAG #inanimate-noun,
+                CASE-PC-FLAG #case-pc ],
+    DTR vol-intrans-agent-cc-pc-rule-dtr &
+        [ INFLECTED [ CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc,
+                      INVOL-TRANS-SUBJ-CC-PC-FLAG #invol-trans-subj-cc-pc,
+                      INVOL-INTRANS-AGENT-CC-PC-FLAG #invol-intrans-agent-cc-pc,
+                      NUMBER-PC-FLAG #number-pc,
+                      INDEFINITENESS-PC-FLAG #indefiniteness-pc,
+                      FEM-NOUN-FLAG #fem-noun,
+                      INVOL-TRANS-OBJ-CC-PC-FLAG #invol-trans-obj-cc-pc,
+                      VOL-TRANS-SUBJ-CC-PC-FLAG #vol-trans-subj-cc-pc,
+                      VOL-TRANS-OBJ-CC-PC-FLAG #vol-trans-obj-cc-pc,
+                      INANIMATE-NOUN-FLAG #inanimate-noun,
+                      CASE-PC-FLAG #case-pc ] ] ].
+
+vol-intrans-agent-lex-rule := vol-intrans-agent-cc-pc-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL [ CAT.HEAD.CASE nom,
+                                            CONT.HOOK.INDEX.PNG.GEND gender ] ].
 
 indefiniteness-lex-rule-super := add-only-no-ccont-rule &
   [ INFLECTED #infl,
@@ -1103,18 +1099,6 @@ narrow-focused-phrase := head-only & unary-nonloc-phrase &
                       LOCAL [ CAT.HEAD noun,
                               CONT [ HOOK #hook,
                                      ICONS.LIST < > ] ] ] ].
-
-non-event-subj-head-phrase := head-final-head-nexus & basic-head-subj-phrase &
-  [ HEAD-DTR.SYNSEM [ LOCAL.CONT.HOOK.INDEX ref-ind,
-                      NON-LOCAL [ QUE.LIST < >,
-                                  REL.LIST < > ] ],
-    NON-HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SPR < > ].
-
-non-event-head-subj-phrase := head-initial-head-nexus & basic-head-subj-phrase &
-  [ HEAD-DTR.SYNSEM [ LOCAL.CONT.HOOK.INDEX ref-ind,
-                      NON-LOCAL [ QUE.LIST < >,
-                                  REL.LIST < > ] ],
-    NON-HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SPR < > ].
 
 poss-phrase-2 := head-final &
   [ SYNSEM.LOCAL.CAT [ HEAD #head,

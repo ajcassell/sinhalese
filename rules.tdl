@@ -9,10 +9,6 @@ decl-head-opt-subj := decl-head-opt-subj-phrase.
 
 basic-head-opt-comp := basic-head-opt-comp-phrase.
 
-non-event-subj-head := non-event-subj-head-phrase.
-
-non-event-head-subj := non-event-head-subj-phrase.
-
 adj-head-scop := adj-head-scop-phrase.
 
 ; Rule instances for head-modifier structures. Corresponding types

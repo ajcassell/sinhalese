@@ -16,7 +16,7 @@ participle coordination. The matrix cannot specify
 specific inflected forms of the verb constituents in the
 coordination, so we will need to manually add this into
 the TDL files somehow later. For now it is marked as
-asyndetonic. (Check if that is also allowed.)
+asyndetonic. (Check if that is also allowed.) --> not even sure we need this
 2. We also will need something that says that adjectives
 cannot modify pronouns which will need to be done in TDL editing with a
 [ PRON bool ] feature and have the adjectives require their MOD to be
@@ -83,6 +83,14 @@ Features refined
 - added ko12 as adverbial modifier
 - added ek as masc and fem noun
 - took inanimate off of indef quantifier an added the number to def rules
+- got complements working by making it follow intrans morph rules instead of trans
+- revamped cc pcs to be easier to read.
+
+---------------------
+Notes:
+
+- There aren't actually that many word order ambiguities as we thought because the case constraints reject some of the orders - for example balla bat kan2wa
+
 
 ----------------------
 Parses to work on:
@@ -94,14 +102,14 @@ Parses to work on:
 - 79, 81, 83, 84, 86, 87 should not do COMP-HEAD when invol verb...
 - 104 (adjectives cannot modify pronouns - TDL edit)
 - 138, 139 - participle subordination
-- 150, 151, 153, 155, 156
+- 153, 155, 156
 - 162, 166 (yes/no question)
 
 Parses that we expect to not work yet:
 - non-verbal predicate 25, 49, 55, 56, 107, 109, 111, 112, 114, 116, 143, 172, 174, 182, 183
 - 28 ("mee" demonstrative)
 - wh-questions 31, 32, 33, 35, 36
-- "for me" dative 17,18
+- "for me" dative 17, 18
 - "to the shop" dative 37, 46, 51, 175, 176
 - 52, 59, 181 (took out asyndetonic S/VP coordination)
 - 66, 67 (participle coordination)
@@ -109,6 +117,7 @@ Parses that we expect to not work yet:
 - 118, 122 (interrogative clauses)
 
 Parses that are ungrammatical and are thus skipped:
+- 22, 24
 - 26, 27
 - 29, 30
 - 34

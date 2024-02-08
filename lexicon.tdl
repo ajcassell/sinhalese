@@ -197,7 +197,7 @@ gan := vol-trans-verb-lex &
   [ STEM < "gan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_buy_v_rel" ].
 
-ka_1 := vol-trans-verb-lex &
+ka := vol-trans-verb-lex &
   [ STEM < "ka" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
@@ -213,17 +213,13 @@ bal2 := vol-trans-verb-lex &
   [ STEM < "bal2" >,
     SYNSEM.LKEYS.KEYREL.PRED "_readwatch_v_rel" ].
 
-gili_1 := vol-trans-verb-lex &
+gili := vol-trans-verb-lex &
   [ STEM < "gili" >,
     SYNSEM.LKEYS.KEYREL.PRED "_devour_v_rel" ].
 
-sudd2k2_1 := vol-trans-verb-lex &
+sudd2k2 := vol-trans-verb-lex &
   [ STEM < "sudd2k2" >,
     SYNSEM.LKEYS.KEYREL.PRED "_clean_v_rel" ].
-
-dan_1 := vol-trans-verb-lex &
-  [ STEM < "dan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
 
 kii_1 := vol-trans-verb-lex &
   [ STEM < "kii" >,
@@ -233,17 +229,9 @@ andi := vol-trans-verb-lex &
   [ STEM < "andi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_wear_v_rel" ].
 
-hit := vol-trans-verb-lex &
-  [ STEM < "hit" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
-
 bo := vol-trans-verb-lex &
   [ STEM < "bo" >,
     SYNSEM.LKEYS.KEYREL.PRED "_drink_v_rel" ].
-
-ka_2 := vol-intrans-verb-lex &
-  [ STEM < "ka" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
 di := vol-intrans-verb-lex &
   [ STEM < "di" >,
@@ -257,18 +245,6 @@ ya := vol-intrans-verb-lex &
   [ STEM < "ya" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
 
-gili_2 := vol-intrans-verb-lex &
-  [ STEM < "gili" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_devour_v_rel" ].
-
-sudd2k2_2 := vol-intrans-verb-lex &
-  [ STEM < "sudd2k2" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_clean_v_rel" ].
-
-hit2 := vol-intrans-verb-lex &
-  [ STEM < "hit2" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
-
 wahi := vol-intrans-verb-lex &
   [ STEM < "wahi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_rain_v_rel" ].
@@ -277,9 +253,13 @@ kii_2 := dec-clausal-verb-lex &
   [ STEM < "kii" >,
     SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
 
-dan_2 := dec-clausal-verb-lex &
+dan := dec-clausal-verb-lex &
   [ STEM < "dan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+
+hit2 := dec-clausal-verb-lex &
+  [ STEM < "hit2" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
 
 ;;; Auxiliaries
 

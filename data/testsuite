@@ -193,15 +193,15 @@ ma-m2 ma-w2 pot-2 gan-u-wa
 
 ### Case
 
-# 1 Accusative case common noun
+# 1 Accusative case common noun (only when object is animate)
 Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Case, Tense Aspect Mood}
-balla batw2 kan2wa
-ball-a bat-w2 ka-n2-wa
-dog.NOM-SG rice-ACC eat-NPT-IND
-`The dog eats rice`
+balla eluvaw2 kan2wa
+ball-a eluv-a-w2 ka-n2-wa
+dog.NOM-SG goat-SG-ACC eat-NPT-IND
+`The dog eats the goat`
 
 # 2 Optional accusative case common noun
 Source: author
@@ -1608,8 +1608,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Embedded declaratives, Tense Aspect Mood, Case}
-balla bat k55wa ki2la eyaa hitn2wa
-ball-a bat ka-u-wa ki2la eyaa hit-n2-wa
+balla bat k55wa ki2la eyaa hit2n2wa
+ball-a bat ka-u-wa ki2la eyaa hit2-n2-wa
 dog.NOM-SG rice eat-PST-IND QM 3.SG think-NPT-IND
 `She thinks that the dog ate rice`
 
@@ -1618,8 +1618,8 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {Embedded declaratives}
-balla k55wa eyaa hitn2wa
-ball-a ka-u-wa eyaa hit-n2-wa
+balla k55wa eyaa hit2n2wa
+ball-a ka-u-wa eyaa hit2-n2-wa
 dog.NOM-SG eat-PST-IND 3.SG think-NPT-IND
 `She thinks the dog ate`
 
@@ -1638,8 +1638,8 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {Embedded declaratives, Tense Aspect Mood}
-balla bat k55wa ki2la eyaa hituwa
-ball-a bat ka-u-wa ki2la eyaa hit-u-wa
+balla bat k55wa ki2la eyaa hit2uwa
+ball-a bat ka-u-wa ki2la eyaa hit2-u-wa
 dog.NOM-SG rice eat-PST-IND QM 3.SG think-PST-IND
 `She thought that the dog ate rice`
 
