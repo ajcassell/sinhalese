@@ -6,7 +6,7 @@
 ;;; based on Matrix customization system version of:
 ;;;     Fri 27 Oct 2023 04:16:13 PM UTC
 ;;;
-;;; 
+;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Type assigning empty mod list. Added to basic types for nouns, verbs and determiners.
@@ -243,7 +243,7 @@ no-spr-noun-lex := noun-lex &
 ; Nouns which cannot take specifiers mark their SPR requirement
 ; as OPT +.  Making the non-head daughter OPT - in this rule
 ; keeps such nouns out.
-; 
+;
 ; Rules for building NPs.  Note that the Matrix uses SPR for
 ; the specifier of nouns and SUBJ for the subject (specifier) of verbs.
 
@@ -332,7 +332,7 @@ masc-noun-lex := noun-lex & case-pc-rule-dtr & indefiniteness-pc-rule-dtr & numb
 ;;; Verbs
 
 ; verb-lex is HC-LIGHT - to allow us to pick out
-; 
+;
 ;   lexical Vs for V-level attachment of negative adverbs.
 
 verb-lex := non-mod-lex-item &
@@ -493,8 +493,9 @@ cardinal-except-attr-adj-lex := attr-only-adj-lex &
 ; Basic attributive adjective definition
 
 attr-adj-lex := adj-lex & intersective-mod-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
-                                              VAL.SPR cons ] ] > ].
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun &
+                                                                                                         [ PRON - ],
+                                                                                              VAL.SPR cons ] ] > ].
 
 attr-only-adj-lex := attr-adj-lex &
   [ SYNSEM.LOCAL.CAT [ HEAD.PRD -,
@@ -593,7 +594,7 @@ quantifier-determiner-lex := determiner-lex & no-icons-lex-item &
 ;;; Adverbs
 
 ; Type for negative adverbs.
-; 
+;
 ; This adverb should go through a specialized phrase structure rule
 ;                           included with this grammar.
 
