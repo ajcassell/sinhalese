@@ -69,6 +69,14 @@ hon32w5l := inanimate-noun-lex &
   [ STEM < "hon32w5l" >,
     SYNSEM.LKEYS.KEYREL.PRED "_trunk_n_rel" ].
 
+kaar := inanimate-noun-lex &
+  [ STEM < "kaar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_car_n_rel" ].
+
+midul := inanimate-noun-lex &
+  [ STEM < "midul" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_park_n_rel" ].
+
 ma := 1sg-pronoun-noun-lex &
   [ STEM < "ma" >,
     SYNSEM.LKEYS.KEYREL.PRED "_I_n_rel" ].
@@ -136,6 +144,10 @@ aliy := masc-noun-lex &
 ek_2 := masc-noun-lex &
   [ STEM < "ek" >,
     SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
+
+puusa := masc-noun-lex &
+  [ STEM < "puusa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
 
 ;;; Adjectives
 
@@ -233,6 +245,10 @@ bo := vol-trans-verb-lex &
   [ STEM < "bo" >,
     SYNSEM.LKEYS.KEYREL.PRED "_drink_v_rel" ].
 
+in := vol-trans-verb-lex &
+  [ STEM < "in" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_is_v_rel" ].
+
 di := vol-intrans-verb-lex &
   [ STEM < "di" >,
     SYNSEM.LKEYS.KEYREL.PRED "_run_v_rel" ].
@@ -248,6 +264,10 @@ ya := vol-intrans-verb-lex &
 wahi := vol-intrans-verb-lex &
   [ STEM < "wahi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_rain_v_rel" ].
+
+nid2 := vol-intrans-verb-lex &
+  [ STEM < "nid2" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
 
 kii_2 := dec-clausal-verb-lex &
   [ STEM < "kii" >,
