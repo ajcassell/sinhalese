@@ -86,6 +86,11 @@ Features refined
 - got complements working by making it follow intrans morph rules instead of trans
 - revamped cc pcs to be easier to read.
 
+attr-adj-lex := adj-lex & intersective-mod-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun &
+                                                                                                         [ PRON - ],
+                                                                                              VAL.SPR cons ] ] > ].
+
 ---------------------
 Notes:
 
