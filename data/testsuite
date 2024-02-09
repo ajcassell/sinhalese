@@ -1937,3 +1937,34 @@ bat gatta n55
 bat gan-u-wa n55
 rice buy-PST-IND no
 `(We) didn't buy the rice`
+
+# MMT Sentences
+# 1
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Tense Aspect Mood}
+ballo nid2n2wa
+ball-o nid2-n2-wa
+dog-NOM.PL sleep-NPT-IND
+`Dogs sleep`
+
+# 2
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Tense Aspect Mood}
+ballo kaar bal2n2wa
+ball-o kaar bal2-n2-wa
+dog-NOM.PL car watch-NPT-IND
+`Dogs watch cars`
+
+# 3
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Tense Aspect Mood}
+mam2 oyaa bal2n2wa
+ma-m2 oyaa bal2-n2-wa
+1SG-NOM you watch-NPT-IND
+`I watch you`
