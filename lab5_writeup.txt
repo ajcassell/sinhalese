@@ -4,8 +4,7 @@ February 9, 2023
 Melody Bechler, Alexandra Cassell
 
 
-MMT section:
-
+MMT:
 To collect MMT sentences, we first found translations for all of the vocabulary in the eng.txt
 file. Two of the words in the vocabulary were not in our resources. The words "park" and "chase"
 we replaced with "yard" and "watch", respectively. In creating the vocabulary, we attempted to
@@ -18,30 +17,24 @@ sleeps". The construction of the first sentence is not one we found in our resou
 sentence involves phenomena we do not expect to get to. "passe", meaning "after", is more complicated
 to model. It requires a past tense verb form with dative case. Our resources do not show this verb in
 past tense alone, which of course we could attempt to model given other past tense examples. Past tense
-is commonly associated with reflexives, which we are not modeling, and therefore think modeling the
-final sentence of eng.txt will not be possible.
+for this verb is commonly associated with reflexives, which we are not modeling, and therefore think
+modeling the final sentence of eng.txt will not be possible.
 
 Other sentences that may not be possible to model due to phenomena include the following:
 1. balla ba32ginii -> The dogs are hungry
 2. balla midule inn2wa -> The dogs are in the park
 3. balla puusa inn2wa -> The dogs are the cats
-
+4. nid2nne kaud2 - > Who sleeps
+5. balla bal2nne mon2wad2 -> What do the dogs watch
+6. balla bal2n2wa oyaa hi2nne mon2wad2 -> What do you think the dogs watch
+7. balla mon2wad2 bal2nne 5huwe kaud2 -> Who asked what the dogs watch
+8. mam2 5huwa balla bal2n2wa d2 ki2la -> I asked what the dogs watched
 
 The first sentence is a non-verbal predicate, a phenomena we have no yet covered. We do not expect to
 model this sentence. The second and third sentences are also considered non-verbal, but both contain a
-verb that, once added to the choices file, could be modelled.
+verb that, once added to the choices file, could be modelled. Sentences 4-8 will be impossible to
+translate because they involve wh words, a phenomena we did not address in our grammar.
 
-
-#should we skip the others in sin.txt or...?
-
-#can we accurately model these two coordination constructions???? -- i think the translations are close
-balla kaar bal2n2wa puusa balla bal2n2wa -> Dogs watch cars and cats watch dogs
-puusa balla bal2n2wa nid2n2wa -> Cats watch dogs and sleep
-
-
-To do:
-# need to add vocab to choices file ----- repalcements
-# update testsuite skeleton to reflect new testsuite.txt
 
 First Translation:
 We worked on the VM for the translations. We first tested translate-line.sh without changing the
@@ -53,12 +46,19 @@ transfer output. This resulted in a MRS only. Lastly, we chose the parser output
 a longer MRS (at least compared to the transfer output) and the terminal stated the test sentence
 used.
 
+Steps 4-7 presented issues for both of us. We received messages two messages: "ln: failed to create
+symbolic link" and "ace/config.td: no such file or directory". We debugged this by using the absolute
+source path in the ln command. This solved both error messages and we were easily able to translate
+the first sentence from English into Sinhala! Our output was extensive, with 450 translations, but the
+output included the correct translation. Clearly, most of these translations are not accurate. It appears
+it applied every rule with every affix. The first translation is "ball-aa-ek nid2-wa". This translation
+incorrectly applied our sg-anim-masc rule adding the -aa to "ball", followed by the indef-rule which added
+ -ek. For "nid2-wa", it incorrectly skipped our npt tense rule that would have added "-n2" as the first affix
+on the verb. Instead, only the ind mood rule was applied.
 
-
-
-
-
-
+We think the excessive number of translations is due to our morphological rules and the number of affixing
+and non-affixing rules we have. We attempted to reduce the number of rules in our grammar while retaining
+accuracy but this broke our grammar. We hope to better resolve this issue in the next lab.
 
 
 Choices file improvements for 3 Phenomena:
@@ -125,10 +125,71 @@ I.SG-LOC dog.NOM-SG rice eat-NPT-IND
 `My dog eats rice`
 
 
+Testsuite Results:
+After all the changes to the starter grammar this week, 123 of the 188 of the items
+parsed. We now have 63.4% coverage compared to Lab 4's 39.2%!
+
+Overgeneration was 27.3 % in Lab 4 and is now 12.3% for Lab 5!
+
+The average number of parses per parsed item in Lab 5 is 10.44, taken from the distinct
+analyses listed under coverage.
+
+Lab 5 ambiguity is now 10.25! This is a huge change from Lab 4, where ambiguity was
+46.87. The most ambiguous item in Lab 5 had 232 parses, shown below.
+
+# 2 Conjunctive coordination - clitic i between units of coordination
+guruw2rui demaupiyoi lam2inui paar2 bal2n2wa
+guruw2r-u i demaupiy-o i lam2in-u i paar-2 bal2-n2-wa
+teacher-PL CONJ parent-PL CONJ child-PL CONJ road-SG watch-NPT-IND
+`The teachers, parents and children watch the road`
+
+Last week, this example parsed with 760 parses. We were able to greatly reduce total
+ambiguity, but the parse count is still very high. We noticed these issues stem from
+various rules being applied, especially with coordination rules. For example, one tree
+shows the VP formed by the Complement Head Rule whereas another tree shows a V instead
+formed by the Subject Head Rule. In terms of coordination rules, we noticed left coord,
+top coord, mid coord, and bottom coord continue to be key differences among the trees.
+Lastly, we noted the ungrammatical versions of this sentence parse with significantly
+lower parse counts than the grammatical example.
+
+For ambiguity, we think some of our case constraint and non-affixing rules might be
+causing some continued ambiguity. The high volume of trees is likely due in part to the
+multiple morphological rules that we might be able to clean up better. We think this is
+definitely part of our coordination issues. Even the saha noun coordinator has 97 parses:
+
+# 8 Conjunctive coordination - saha noun-coordinator
+mam2 saha eyaa bat kan2wa
+ma-m2 saha eyaa bat ka-n2-wa
+1SG-NOM and 3SG.NOM rice.NOM eat-NPT-IND
+`He and I eat rice`
+
+These sentences also parse, but with higher parse totals compared to the rest of the
+testsuite with 44 parses each. All these sentences are grammatical, but have the same
+aforementioned ambiguity issues:
+
+# 10 Subordination via particle hinda, NPT
+oyaa bat kan2 hinda mam2 sudd2k2n2wa
+oyaa bat ka-n2 hinda ma-m2 sudd2k2-n2-wa
+2SG.NOM rice eat-NPT.ADJ since 1SG-NOM clean-NPT-IND
+`I clean because you eat rice`
+
+# 13 Subordination via particle nissa
+oyaa bat kan2 nissa mam2 sudd2k2n2wa
+oyaa bat ka-n2 nissa ma-m2 sudd2k2-n2-wa
+2SG.NOM rice eat-NPT.ADJ since 1SG-NOM clean-NPT-IND
+`I clean because you eat rice`
 
 
-Tdl Edits:
+We thought free word order would result in multiple parses and more
+ambiguity. We realized this is not always true because of the case constraints on the
+subject and objects corresponding to specific verb types. For example, if an involitive
+verb has an animate subject that is case DAT and has an animate object that is case NOM,
+free word order does not apply. That is, the case constraints do not allow the subject
+and object to be switched.
 
-
-
-Testsuite:
+Referring back to MMT, our first test sentence "ball-o nid2-n2-wa" had 186 translations.
+As previously mentioned, the majority of these translations were the product of applying
+ALL our morphological rules, even when they should not have applied. This leads us to
+think we should attempt to resolve more of our ambiguity to potentially mitigate the
+excessive number of translations. This is just a theory we have but it might not be
+accurate.
