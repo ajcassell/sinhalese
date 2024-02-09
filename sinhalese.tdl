@@ -494,8 +494,8 @@ cardinal-except-attr-adj-lex := attr-only-adj-lex &
 
 attr-adj-lex := adj-lex & intersective-mod-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun &
-                                                                                                         [ PRON - ],
-                                                                                              VAL.SPR cons ] ] > ].
+                                                [ PRON - ],
+                                                VAL.SPR cons ] ] > ].
 
 attr-only-adj-lex := attr-adj-lex &
   [ SYNSEM.LOCAL.CAT [ HEAD.PRD -,
