@@ -1,0 +1,81 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+; A basic VPM for Matrix grammars.
+event          <> e
+ref-ind        <> x
+individual     <> i
+handle         <> h
+non_event      <> p
+*              >> u
+semarg         << u
+
+SPECI : SPECI
+  * <> *
+
+SF : SF
+  prop <> prop
+  ques <> ques
+  prop-or-ques >> prop-or-ques
+  prop << prop-or-ques
+  comm <> comm
+  * <> *
+
+COG-ST : COG-ST
+  type-id <> type-id
+  uniq-id <> uniq-id
+  familiar <> familiar
+  activated <> activated
+  in-foc <> in-foc
+  activ+fam <> activ+fam
+  uniq+fam <> uniq+fam
+  activ-or-more <> activ-or-more
+  uniq-or-less <> uniq-or-less
+  uniq+fam+act <> uniq+fam+act
+  fam-or-more <> fam-or-more
+  fam-or-less <> fam-or-less
+  uniq-or-more <> uniq-or-more
+  activ-or-less <> activ-or-less
+  * <> *
+
+
+PNG.PN : PERS NUM
+  3rd <> 3rd
+  3plural <> 3 plural
+  3singular <> 3 singular
+  3per <> 3 !
+  3per << 3 *
+  2nd <> 2nd
+  2plural <> 2 plural
+  2singular <> 2 singular
+  2per <> 2 !
+  2per << 2 *
+  1st <> 1st
+  1plural <> 1 plural
+  1singular <> 1 singular
+  1per <> 1 !
+  1per << 1 *
+  * <> *
+
+PNG.NUM : NUM
+  plural <> plural
+  singular <> singular
+  * <> *
+
+PNG.GEND : GEND
+  masculine <> masculine
+  feminine <> feminine
+  inanimate <> inanimate
+  animate <> animate
+  * <> *
+
+E.TENSE : TENSE
+  nonpast <> nonpast
+  past <> past
+  future <> future
+  * <> *
+
+E.ASPECT : ASPECT
+  * >> no-aspect
+  no-aspect << [e]
+
+E.MOOD : MOOD
+  indicative << [e]
