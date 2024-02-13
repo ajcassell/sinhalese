@@ -1,11 +1,7 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Inflecting Lexical Rule Instances
 
-indef-rule-suffix1 :=
-%suffix (* -ak)
-indef-rule-lex-rule.
-
-indef-rule-suffix2 :=
+indef-rule-suffix :=
 %suffix (* -ek)
 indef-rule-lex-rule.
 
@@ -17,11 +13,7 @@ accusative-rule-suffix :=
 %suffix (* -w2)
 accusative-rule-lex-rule.
 
-genitive-rule-suffix1 :=
-%suffix (* -gee)
-genitive-rule-lex-rule.
-
-genitive-rule-suffix2 :=
+genitive-rule-suffix :=
 %suffix (* -ge)
 genitive-rule-lex-rule.
 
@@ -29,31 +21,15 @@ genitive-inanim-rule-suffix :=
 %suffix (* -ee)
 genitive-inanim-rule-lex-rule.
 
-nominative-pronoun-suffix1 :=
+nominative-pronoun-suffix :=
 %suffix (* -m2)
 nominative-pronoun-lex-rule.
 
-nominative-pronoun-suffix2 :=
-%suffix (* -4)
-nominative-pronoun-lex-rule.
-
-plural-anim-suffix1 :=
+plural-anim-suffix :=
 %suffix (* -o)
 plural-anim-lex-rule.
 
-plural-anim-suffix2 :=
-%suffix (* -u)
-plural-anim-lex-rule.
-
-plural-anim-suffix3 :=
-%suffix (* -laa)
-plural-anim-lex-rule.
-
-plural-inanim-suffix1 :=
-%suffix (* -wal)
-plural-inanim-lex-rule.
-
-plural-inanim-suffix2 :=
+plural-inanim-suffix :=
 %suffix (* -n)
 plural-inanim-lex-rule.
 
@@ -65,12 +41,8 @@ sg-anim-fem-suffix :=
 %suffix (* -2)
 sg-anim-fem-lex-rule.
 
-sg-anim-masc-suffix1 :=
+sg-anim-masc-suffix :=
 %suffix (* -a)
-sg-anim-masc-lex-rule.
-
-sg-anim-masc-suffix2 :=
-%suffix (* -aa)
 sg-anim-masc-lex-rule.
 
 ind-suffix :=
@@ -81,12 +53,8 @@ foc-suffix :=
 %suffix (* -e)
 foc-lex-rule.
 
-npt-suffix1 :=
+npt-suffix :=
 %suffix (* -n2)
-npt-lex-rule.
-
-npt-suffix2 :=
-%suffix (* -nn)
 npt-lex-rule.
 
 pp-suffix :=
@@ -117,10 +85,6 @@ while_stem-suffix :=
 %suffix (* -ddi)
 while_stem-lex-rule.
 
-indef-suffix1 :=
+indef-suffix :=
 %suffix (* -ek)
-indef-lex-rule.
-
-indef-suffix2 :=
-%suffix (* -ak)
 indef-lex-rule.

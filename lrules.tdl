@@ -5,13 +5,13 @@ indef-pl-lex := indef-pl-lex-rule.
 
 nominative-rule-lex := nominative-rule-lex-rule.
 
-plural-inanim-nil-lex := plural-inanim-nil-lex-rule.
-
 vol-inanim-obj-lex := vol-inanim-obj-lex-rule.
 
 vol-anim-obj1-lex := vol-anim-obj1-lex-rule.
 
 vol-anim-obj2-lex := vol-anim-obj2-lex-rule.
+
+vol-obj-opt-lex := vol-obj-opt-lex-rule.
 
 invol-inanim-subj-lex := invol-inanim-subj-lex-rule.
 

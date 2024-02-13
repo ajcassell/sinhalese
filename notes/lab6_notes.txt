@@ -1,0 +1,72 @@
+2/12 Initial #s
+Coverage: 63.4%
+Overgeneration: 12.3%
+Average distinct analyses: 10.25%
+
+Morph rules removed:
+-aa sing anim masc
+-wal pl inanim
+-ak indef for nouns and determiners
+-gee genitive case
+-u and -laa plural anim
+-additional -nn NPT
+-irreg-pl noun type
+
+- changed to pron_rel
+
+* YAY back to 63.4% coverage, 10.8% overgeneration and 11.43 distinct analyses
+
+come back to ABL
+
+-------------------------------------------------------
+
+
+attr-adj-lex := adj-lex & intersective-mod-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun &
+                                                                                                         [ PRON - ],
+                                                                                              VAL.SPR cons ] ] > ].
+----------------------
+Parses to work on:
+- aux 7,8
+- plural quantifiers 38, 39, 41, 101, 102 (check on order we specify..) (also 102 is doing head-spec backwards...)
+- aux 42, 43
+- coordination with clitic -i 60 - not working because too big.. 2000 edge limit
+- 61, 62, 63 - parsing but SHOULDN'T - oddly POSS is showing up?
+- 79, 81, 83, 84, 86, 87 should not do COMP-HEAD when invol verb...
+- 138, 139 - participle subordination
+- 155
+- 162, 166 (yes/no question)
+
+Parses that we expect to not work yet:
+- non-verbal predicate 25, 49, 55, 56, 107, 109, 111, 112, 114, 116, 143, 172, 174, 182, 183
+- 28 ("mee" demonstrative)
+- wh-questions 31, 32, 33, 35, 36
+- "for me" dative 17, 18
+- "to the shop" dative 37, 46, 51, 175, 176
+- 52, 59, 181 (took out asyndetonic S/VP coordination)
+- 66, 67 (participle coordination)
+- 128, 130 (nominalized modifiers)
+- 118, 122 (interrogative clauses)
+
+Parses that are ungrammatical and are thus skipped:
+- 22, 24
+- 26, 27
+- 29, 30
+- 34
+- 47, 48
+- 50
+- 58
+- 65
+- 68, 69, 70
+- 74, 75
+- 100
+- 104
+- 108, 110, 113, 115, 117
+- 119, 120, 121
+- 124
+- 127
+- 129, 131
+- 134, 137
+- 141, 142, 144, 145, 147, 149
+- 152, 154, 157
+- 159, 161, 163, 165, 167, 169, 171, 173
