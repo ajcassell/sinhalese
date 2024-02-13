@@ -1,0 +1,153 @@
+-------------------------
+Lab 4 Updates to be made:
+-------------------------
+
+1. get clausal complements working
+2. get adverbial modifiers working
+3. get coordination working (MAYBE comment out VP asyndetonic for now..)
+4. If time, update case-constraints-pc to be one pc instead - NAH
+
+--------------------------
+TDL edits to be made:
+--------------------------
+
+1. Coordination on VPs and S which we called
+participle coordination. The matrix cannot specify
+specific inflected forms of the verb constituents in the
+coordination, so we will need to manually add this into
+the TDL files somehow later. For now it is marked as
+asyndetonic. (Check if that is also allowed.) --> not even sure we need this
+2. We also will need something that says that adjectives
+cannot modify pronouns which will need to be done in TDL editing with a
+[ PRON bool ] feature and have the adjectives require their MOD to be
+[ PRON - ] while the pronouns say that they are [ PRON + ].
+
+----------------------------
+Translation Steps:
+----------------------------
+1. Find translations for all of the words in eng.txt
+2. Translate first 3 sentences and put at end of testsuite
+3. Create sin.txt with the sentences
+4. Attempt translation - look at MRS
+5. Run test corpus and testsuite
+
+
+
+
+----------------------
+Adverbial Complements
+----------------------
+* should get one working at a time!
+* requires rethinking where FORM comes into play
+EMB: "Then you need to rework where [ FORM fin ] comes in for the other forms (i.e. not have have the past tense rule itself put it there). As step one, I suggest taking [ FORM fin ] off the past tense rule. Then see if you can get the [ FORM while ] examples parsing. Then consider whether & how to put [ FORM fin ] back in."
+- took FORM fin off past-tense Rules
+- made tense-pc optional
+- PARSES but with coordination OR PP on balla kaddi mam2 when mam2 shouldn't be included.
+- Unification errored on S (balla kaddi) because of SYNSEM LOCAL CONT HCONS APPEND REST FIRST LAST END-LIST null vs cons .. after unifying S (basic-head-opt-comp-phrase) into while rule
+.. What does that mean?
+-ddi --> attaches directly to verb stem
+-- got this one working
+- changed the modifier to attach to S only, not VP only.
+- discuss the ambiguity (since objects can be nominative, there are equal numbers of parses as subject or object)
+-ham2 --> PST (works from taking off FORM finite from past-tense rule)
+nissa/hinda --> NPT or PST plus ADJ (adjectival mood)
+EMB:
+"1) Yes, add adj-verb to the mood-pc as a non-affixing verb. (Is it really "adjectival"? That seems odd. Maybe adjunct?)
+2) Create a value of FORM adj-form, subtype of infinitival.
+3) Make the actual mood affixes say [ FORM finite ] and the zero rule say [ FORM adj-form ].
+4) Have the subordinator morpheme require [ TENSE non-past ] and [ FROM adj-form ]."
+- ^ did all of those things
+- made mood class OBLIGATORY (nevermind no I didn't)
+- ^ because of this, thinking adjectival will apply to anything that doesn't have a suffix.... which might not be totally accurate
+**
+Adjectival form - verbs are inflected into non-finite forms through non-finite or connective suffixes
+which include the adjectival form, the focus form, conditional, concession, and temporal (ddi), etc etc etc
+-- just all examples of non-finite form endings.
+--- so rethinking adjectival should not be a mood, but rather another tense?.. whatever it is, it SHOULD be represented accurately by -n2 (and -2)
+^ I made adjectival-pst and adjectival-npt rules on tense
+
+** Concerning that asyndetonic coordination example showed while-rule even though -ham2 and -ddi were not present...
+- PP is above the coordinated S-T.... how does it get that?
+
+-- I removed asyndetonic VPs and S CMS3 (for now until TDL, still can't handle coord ex 1 -- was working when it was there, but not correctly ^)
+^ overgeneration cut in half though! and no longer examples with 1000s of parses
+
+Other changes made 2/5
+- took off non-past requirement on n55 aux because PST is valid too (question about if n55 V should negate the S, or just VP...?)
+- added -4 as another nom-pronoun affix
+- added DAT as allowed on invol-anim-agent case constraint for one of our examples, even though it is supposed to be lexically marked on the verb
+- added NOM as allowed on invol-anim-agent case ^ only for when ACC not marked, but..
+- added 5he in intransitive as well (was working before, but because it was going thru pro-drop)
+
+Features refined
+- added ko12 as adverbial modifier
+- added ek as masc and fem noun
+- took inanimate off of indef quantifier an added the number to def rules
+- got complements working by making it follow intrans morph rules instead of trans
+- revamped cc pcs to be easier to read.
+
+attr-adj-lex := adj-lex & intersective-mod-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun &
+                                                                                                         [ PRON - ],
+                                                                                              VAL.SPR cons ] ] > ].
+
+---------------------
+Notes:
+
+- There aren't actually that many word order ambiguities as we thought because the case constraints reject some of the orders - for example balla bat kan2wa
+
+
+----------------------
+Parses to work on:
+- aux 7,8
+- plural quantifiers 38, 39, 41, 101, 102 (check on order we specify..) (also 102 is doing head-spec backwards...)
+- aux 42, 43
+- coordination with clitic -i 60 - not working because too big.. 2000 edge limit
+- 61, 62, 63 - parsing but SHOULDN'T - oddly POSS is showing up?
+- 79, 81, 83, 84, 86, 87 should not do COMP-HEAD when invol verb...
+- 104 (adjectives cannot modify pronouns - TDL edit)
+- 138, 139 - participle subordination
+- 153, 155, 156
+- 162, 166 (yes/no question)
+
+Parses that we expect to not work yet:
+- non-verbal predicate 25, 49, 55, 56, 107, 109, 111, 112, 114, 116, 143, 172, 174, 182, 183
+- 28 ("mee" demonstrative)
+- wh-questions 31, 32, 33, 35, 36
+- "for me" dative 17, 18
+- "to the shop" dative 37, 46, 51, 175, 176
+- 52, 59, 181 (took out asyndetonic S/VP coordination)
+- 66, 67 (participle coordination)
+- 128, 130 (nominalized modifiers)
+- 118, 122 (interrogative clauses)
+
+Parses that are ungrammatical and are thus skipped:
+- 22, 24
+- 26, 27
+- 29, 30
+- 34
+- 47, 48
+- 50
+- 58
+- 65
+- 68, 69, 70
+- 74, 75
+- 100
+- 108, 110, 113, 115, 117
+- 119, 120, 121
+- 124
+- 127
+- 129, 131
+- 134, 137
+- 141, 142, 144, 145, 147, 149
+- 152, 154, 157
+- 159, 161, 163, 165, 167, 169, 171, 173
+
+----------------------
+Questions
+----------------------
+
+1.  I am wondering if there is an obvious way to see that the CMS is working
+in the parse chart. With the embedded complements, we see CP and Cs but with
+adverbial modifiers, do we just have to look at the rules applied or is there
+a specific rule we should be looking at?

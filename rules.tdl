@@ -9,10 +9,6 @@ decl-head-opt-subj := decl-head-opt-subj-phrase.
 
 basic-head-opt-comp := basic-head-opt-comp-phrase.
 
-non-event-subj-head := non-event-subj-head-phrase.
-
-non-event-head-subj := non-event-head-subj-phrase.
-
 adj-head-scop := adj-head-scop-phrase.
 
 ; Rule instances for head-modifier structures. Corresponding types
@@ -21,6 +17,8 @@ adj-head-scop := adj-head-scop-phrase.
 ; appear in sinhalese.tdl
 
 head-adj-scop := head-adj-scop-phrase.
+
+poss-2 := poss-phrase-2.
 
 head-comp := head-comp-phrase.
 
@@ -33,8 +31,6 @@ subj-head := subj-head-phrase.
 head-comp-2 := head-comp-phrase-2.
 
 comp-head-2 := comp-head-phrase-2.
-
-poss-unary-1 := poss-unary-phrase-1.
 
 head-spec := head-spec-phrase.
 
@@ -56,12 +52,4 @@ np2-top-coord := np2-top-coord-rule.
 
 np2-bottom-coord := np2-bottom-coord-rule.
 
-vp3-top-coord := vp3-top-coord-rule.
-
-vp3-bottom-coord := vp3-bottom-coord-rule.
-
-s3-top-coord := s3-top-coord-rule.
-
-s3-bottom-coord := s3-bottom-coord-rule.
-
-while-prehead-vp-attach-modifying-clause-phrase := while-prehead-vp-attach-modifying-clause-phrase.
+while-prehead-s-attach-modifying-clause-phrase := while-prehead-s-attach-modifying-clause-phrase.

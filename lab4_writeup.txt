@@ -756,7 +756,7 @@ the specific rule types (i.e. didn't have an object), the class was not satisfie
 so we added two non-affixing rules (one for vol and one for invol verb pcs).
 This opened up a lot of sentences to parse better. We also greatly improved
 from last week by correctly implementing lexical rules for verbs we were
-deeming irregular that just needed to be analyzed the same as the rest. 
+deeming irregular that just needed to be analyzed the same as the rest.
 
 
 Extra Questions:
