@@ -149,6 +149,18 @@ puusa := masc-noun-lex &
   [ STEM < "puusa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
 
+kaud2 := wh-pronoun-noun-lex &
+  [ STEM < "kaud2" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
+
+mon2wad2 := wh-pronoun-noun-lex &
+  [ STEM < "mon2wad2" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel" ].
+
+kohed2 := wh-pronoun-noun-lex &
+  [ STEM < "kohed2" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_place_n_rel" ].
+
 ;;; Adjectives
 
 loku := regular-attr-adj-lex &
@@ -223,7 +235,7 @@ dun := vol-trans-verb-lex &
 
 bal2 := vol-trans-verb-lex &
   [ STEM < "bal2" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_readwatch_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
 
 gili := vol-trans-verb-lex &
   [ STEM < "gili" >,

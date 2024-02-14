@@ -1,8 +1,6 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 def-sg-lex := def-sg-lex-rule.
 
-indef-pl-lex := indef-pl-lex-rule.
-
 nominative-rule-lex := nominative-rule-lex-rule.
 
 vol-inanim-obj-lex := vol-inanim-obj-lex-rule.

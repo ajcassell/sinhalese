@@ -3,8 +3,6 @@ head-adj := head-adj-int-phrase.
 
 adj-head := adj-head-int-phrase.
 
-narrow-focused-phrase := narrow-focused-phrase.
-
 decl-head-opt-subj := decl-head-opt-subj-phrase.
 
 basic-head-opt-comp := basic-head-opt-comp-phrase.
@@ -53,3 +51,13 @@ np2-top-coord := np2-top-coord-rule.
 np2-bottom-coord := np2-bottom-coord-rule.
 
 while-prehead-s-attach-modifying-clause-phrase := while-prehead-s-attach-modifying-clause-phrase.
+
+;ex-comp := extracted-comp-phrase.
+
+;ex-adj := basic-extracted-adj-phrase.
+
+;ex-subj := extracted-subj-phrase.
+
+wh-ques := wh-ques-phrase.
+
+in-situ-ques := insitu-int-cl.
