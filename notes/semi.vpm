@@ -52,6 +52,7 @@ E.TENSE : TENSE
   nonpast <> non-past
   past <> past
   future <> future
+  nonpast << present
   * <> *
 
 E.ASPECT : ASPECT
