@@ -37,38 +37,19 @@ COG-ST : COG-ST
   * <> *
 
 
-PNG.PN : PERS NUM
-  3rd <> 3rd
-  3plural <> 3 plural
-  3singular <> 3 singular
-  3per <> 3 !
-  3per << 3 *
-  2nd <> 2nd
-  2plural <> 2 plural
-  2singular <> 2 singular
-  2per <> 2 !
-  2per << 2 *
-  1st <> 1st
-  1plural <> 1 plural
-  1singular <> 1 singular
-  1per <> 1 !
-  1per << 1 *
+PNG.PER : PER
+  3rd <> third
+  2nd <> second
+  1st <> first
   * <> *
 
 PNG.NUM : NUM
-  plural <> plural
-  singular <> singular
-  * <> *
-
-PNG.GEND : GEND
-  masculine <> masculine
-  feminine <> feminine
-  inanimate <> inanimate
-  animate <> animate
+  plural <> pl
+  singular <> sg
   * <> *
 
 E.TENSE : TENSE
-  nonpast <> nonpast
+  nonpast <> non-past
   past <> past
   future <> future
   * <> *
