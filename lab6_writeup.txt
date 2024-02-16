@@ -1,0 +1,89 @@
+Lab 6 Writeup
+LING 567
+February 16, 2024
+Melody Bechler, Alexandra Cassell
+
+
+1. In the semi.vpm file, we removed the PNG and E that preceded the header text on
+the external side (i.e. : E.TENSE => Tense). We removed gender completely from the file
+and changed the default mood to indicative. Indicative is regularly used with our verbs
+and therefore we thought it was best as the default. Since only two of our testsuite
+examples have aspect, we changed our aspect to no aspect. Under tense, we added a hyphen
+on the external side for non-past, as discussed in lecture. We also added an additional
+property to map present tense, which is not a tense in Sinhala, to nonpast tense in Sinhala.
+Under PER and NUM, we simply changed the external side. For example, 3rd <> 3rd became
+3rd <> third and plural <> plural became plural <> pl. Sinhala does not have a combined
+PERNUM feature. The only other semantic feature we have is a DEF feature, but we did not add
+it as discussed on Canvas.
+
+In order to remove errors in translating, we commented out items in the lexicon and in sinhalese.tdl.
+In sinhalese.tdl, we commented out both completive and perfective aspects and the future-aux-aux-lex
+rule. Since we changed the aspect in semi.vpm to no aspect, the existence of future-aux-aux-lex caused
+issues with translation, and we thought it best to commment it out. As a result, in the lexicon, we
+commented out the auxiliary "daa", since removing the future-aux-aux-lex rule created another error.
+"Daa" is not used in our sin.txt file and it is only used for a single testsuite sentence.
+
+For sin sin translations, as well as sje sin and eng sin, we started with 450 translations
+for sentence 1 with the Lab 5 grammar. After editing the semi.vpm file, this brought the
+number of translations down to 162, a significant difference from the lab prior!
+
+
+
+Wh Questions:
+
+In Sinhala,  Wh questions are always accompanied by 'd2', a question marker. Wh words, such as ‘Kohe-d2’ (where),
+‘kau-d2’ (who), and 'mon2wa-d2' must have the question marker attached for a sentence to be grammatical. Interrogative
+words also require the verb be in focus form, which means the focus marker ‘-e’ is added to the verbal predicate to
+reflect a focused sentence pattern. Sinhala uses focus to signal the addressee to focus attention on the referent.
+Interrogative words are considered an inherently focused constituent, therefore Sinhala uses focus markers on the
+verbal predicate in wh questions. Focus form also appears in other contexts such as yes/no questions, negation, aspect,
+clauses, and more. Interrogative words are generally sentence-initial, but Sinhala’s free word order allows for optional
+movement.
+
+INSERT IGT/testable sentences
+
+
+
+In the customizaton system, we edited the constituent (wh-) questions section. We stated that all questions phrases can
+be fronted and that fronting is also optional. We left pied piping empty, as we do not have any evidence this occurs. We
+also did not check any of the options under "other choices". We added wh words as a noun type called wh-pronouns and
+combined the wh word and the question marker as mentioned on canvas. "kau-d2" is now reflected as "kaud2". We also changed
+the predicates to reflect "_person_n_rel", "_thing_n_rel", and  "_place_n_rel". For the focus form of the verbal predicate,
+
+^add focus info
+
+Here are snippets from our choices file:
+section=wh-q
+front-matrix=multi
+matrix-front-opt=none-oblig
+
+noun24_name=wh-pronoun
+  noun24_inter=on
+  noun24_det=imp
+    noun24_stem1_orth=kaud2
+    noun24_stem1_pred=_person_n_rel
+    noun24_stem2_orth=mon2wad2
+    noun24_stem2_pred=_thing_n_rel
+    noun24_stem3_orth=kohed2
+    noun24_stem3_pred=_place_n_rel
+
+
+MMT Issues:
+
+Coordination:
+
+We are still having issues with coordination following Thursday's debugging. We have been testing with
+sentence 8, shown below. Sin to sin translation still results in 0 translated sentences as it still
+terminates the search due to too much RAM. The  output states 3779 passive, 17472 edges with 0/2
+sentences generated. In the lkb, the sentence parses, but there are 0 realizations when we attempt
+generation.
+
+Sentence 8: puusa-o i ball-o i kaar-n bal2-n2-wa
+
+Of Note, sentences 9 and 10 will not parse or translate because of how our grammar is set up. We previously
+had a coordination strategy targeting regualar VP coordination, but it caused so many additional parses
+for other sentences that we decided to remove it. We are willing to add it back if there is a way to
+restrict all other VPs from incorrectly attempting coordination.
+
+Other MMT Notes:
+Sentence 7, 22, 23, 24 - We have not implemented interrogative complements.
