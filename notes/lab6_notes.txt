@@ -19,7 +19,7 @@ Morph rules removed:
 
 * YAY back to 63.4% coverage, 10.8% overgeneration and 11.43 distinct analyses
 
-come back to ABL
+-----------come back to ABL
 
 ----
 Lecture Notes:
@@ -38,6 +38,76 @@ Lecture Notes:
 - nom should be default case
 - default to definite
 - trigger rules for the three sem empty morphemes
+
+
+What we did in TDL:
+
+wh-questions - added focusform!:
+wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final & 1st-head-filler-phrase &
+  [ SYNSEM [ LOCAL.CAT [ WH.BOOL +,
+                         MC bool,
+                         VAL #val,
+                         HEAD verb ],
+             NON-LOCAL.QUE.LIST < > ],
+    NON-HEAD-DTR.SYNSEM [ NON-LOCAL [ QUE.LIST < ref-ind >,
+                                      SLASH.LIST < >,
+                                      REL.LIST < > ],
+                          LOCAL.CONT.HOOK.ICONS-KEY focus ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT [ HEAD.FORM focusform, VAL #val &
+                                      [ SUBJ < >,
+                                        COMPS < > ],
+                                  MC na-or-+ ],
+                      NON-LOCAL.SLASH.LIST.FIRST [ ] ] ].
+
+;;; Aspect
+
+;Perfective := aspect.
+;Completive := aspect.
+no-aspect := aspect.
+
+;future-aux-aux-lex := subj-raise-aux-no-pred &
+;  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM past-part,
+;                                             CONT.HOOK.INDEX.E [ TENSE past,
+;                                                                 ASPECT Completive ] ] ].
+
+Hmm -- I thought that comp-head would require [ OPT -- ] on the complement, but it seems that it doesn't. We can add that constraint though. In sinhalese.tdl, preferably near the definition of head-comp-phrase, add this:
+
+basic-head-1st-comp-phrase :+
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < [ OPT - ] > ].
+
+commented out wh-pronoun-noun-lex inside itself because recursion
+
+attr-adj-lex := adj-lex & intersective-mod-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun &
+                                                                                                         [ PRON - ],
+                                                                                              VAL.SPR cons ] ] > ].
+
+commented out coordination strategy 2 for Ns, so now only NPs and didn't change coverage PHEW
+as well as
+;n2-top-coord := n2-top-coord-rule.
+;n2-bottom-coord := n2-bottom-coord-rule.
+in rules.TDL
+
+Added
+vp3-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "3",
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.FORM past-part ].
+
+vp3-bottom-coord-rule := unary-bottom-coord-rule & vp-bottom-coord-phrase &
+  [ SYNSEM.LOCAL [ COORD-STRAT "3",
+                   COORD-REL.PRED "_and_coord_rel" ],
+    NONCONJ-DTR.SYNSEM.LOCAL.CAT.HEAD.FORM finite ].
+in sinhalese.tdl
+
+vp3-top-coord := vp3-top-coord-rule.
+vp3-bottom-coord := vp3-bottom-coord-rule.
+in rules.TDL
+
+and got this working: ma-m2 ged2r-2 ka-la k55m-2 ka-u-wa (which is ya-la in testsuite but that's an intrans verb)
+
+
+
+
 
 -------------------------------------------------------
 - might need to add OPT + rule on invol-trans also (but might not have any scenarios of this..)
@@ -63,7 +133,7 @@ Parses to work on:
 Parses that we expect to not work yet:
 - non-verbal predicate 25, 49, 55, 56, 107, 109, 111, 112, 114, 116, 143, 172, 174, 182, 183
 - 28 ("mee" demonstrative)
-- wh-questions 31, 32, 33, 35, 36
+- wh-questions 31, 32, 33
 - "for me" dative 17, 18
 - "to the shop" dative 37, 46, 51, 175, 176
 - 52, 59, 181 (took out asyndetonic S/VP coordination)
@@ -75,7 +145,7 @@ Parses that are ungrammatical and are thus skipped:
 - 22, 24
 - 26, 27
 - 29, 30
-- 34
+- 34, 35, 36
 - 47, 48
 - 50
 - 58

@@ -37,35 +37,27 @@ COG-ST : COG-ST
   * <> *
 
 
-PNG.PER : PNG.PER
-  3rd <> 3rd
-  2nd <> 2nd
-  1st <> 1st
+PNG.PER : PER
+  3rd <> third
+  2nd <> second
+  1st <> first
   * <> *
 
-PNG.NUM : PNG.NUM
-  plural <> plural
-  singular <> singular
+PNG.NUM : NUM
+  plural <> pl
+  singular <> sg
   * <> *
 
-PNG.GEND : PNG.GEND
-  masculine <> masculine
-  feminine <> feminine
-  inanimate <> inanimate
-  animate <> animate
-  * <> *
-
-E.TENSE : E.TENSE
-  nonpast <> nonpast
+E.TENSE : TENSE
+  nonpast <> non-past
   past <> past
   future <> future
+  nonpast << present
   * <> *
 
-E.ASPECT : E.ASPECT
-  Perfective <> Perfective
-  Completive <> Completive
-  * <> *
+E.ASPECT : ASPECT
+  * >> no-aspect
+  no-aspect << [e]
 
-E.MOOD : E.MOOD
-  indicative <> indicative
-  * <> *
+E.MOOD : MOOD
+  indicative << [e]

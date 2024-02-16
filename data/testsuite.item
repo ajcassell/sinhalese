@@ -28,12 +28,12 @@
 28@a:115@@@1@c,tam@api mee ka3-en ba3u-n gan-n2-wa@@@@1@5@3PL.NOM this shop-ABL commodity-PL buy-NPT-IND'We buy things from this shop'@alexandra cassell, melody bechler@january 15, 2024
 29@author@@@1@c@api mee ka3-ee-12 ba3u gan-n2-wa@@@@0@5@3PL.NOM this shop-SG-DAT commodities buy-NPT-IND'We buy things from this shop'@alexandra cassell, melody bechler@january 15, 2024
 30@author@@@1@c@api mee ka3-ee ba3u-n gan-n2-wa@@@@0@5@3PL.NOM this shop-GEN commodity-PL buy-NPT-IND'We buy things from this shop'@alexandra cassell, melody bechler@january 15, 2024
-31@author@@@1@c,matrixwhquestions,tam@ma-m2 ya-n2-e kohe-d2@@@@1@3@1SG-NOM go-NPT-FOC where-Q`Where do I go?`@alexandra cassell, melody bechler@january 15, 2024
-32@author@@@1@c,matrixwhquestions,tam@ball-a kohe-d2@@@@1@2@dog.NOM-SG where-Q`Where is the dog?`@alexandra cassell, melody bechler@january 15, 2024
-33@autthor # modified from a:12@@@1@matrixwhquestions,tam,c@ka3-ee-12 ya-n2-e kau-d2@@@@1@3@shop-SG-DAT go-NPT-FOC who-Q`Who goes to the shop?`@alexandra cassell, melody bechler@january 15, 2024
-34@author@@@1@matrixwhquestions@ka3-ee-12 ya-n2-e kohe-d2@@@@0@3@shop-SG-DAT go-NPT-FOC where-Q`Where goes to the shop?`@alexandra cassell, melody bechler@january 15, 2024
-35@author # modified from a:135@@@1@c,matrixwhquestions,tam@bat-2 ka-n2-e kau-d2@@@@1@3@rice.NOM-SG eat-NPT-FOC who-Q`Who eats rice?`@alexandra cassell, melody bechler@january 15, 2024
-36@author # modified from a:135@@@1@c,matrixwhquestions,tam@kau-d2 bat-2 ka-n2-e@@@@1@3@who-Q rice.NOM-SG eat-NPT-FOC`Who eats rice?`@alexandra cassell, melody bechler@january 15, 2024
+31@author@@@1@c,matrixwhquestions,tam@ma-m2 ya-n2-e kohed2@@@@1@3@1SG-NOM go-NPT-FOC where.Q`Where do I go?`@alexandra cassell, melody bechler@january 15, 2024
+32@author@@@1@c,matrixwhquestions,tam@ball-a kohed2@@@@1@2@dog.NOM-SG where.Q`Where is the dog?`@alexandra cassell, melody bechler@january 15, 2024
+33@author # modified from a:12@@@1@matrixwhquestions,tam,c@ka3-ee-12 ya-n2-e kaud2@@@@1@3@shop-SG-DAT go-NPT-FOC who.Q`Who goes to the shop?`@alexandra cassell, melody bechler@january 15, 2024
+34@author@@@1@matrixwhquestions@ka3-ee-12 ya-n2-e kohed2@@@@0@3@shop-SG-DAT go-NPT-FOC where.Q`Where goes to the shop?`@alexandra cassell, melody bechler@january 15, 2024
+35@author # modified from a:135@@@1@c,matrixwhquestions,tam@bat-2 ka-n2-e kaud2@@@@1@3@rice.NOM-SG eat-NPT-FOC who.Q`Who eats rice?`@alexandra cassell, melody bechler@january 15, 2024
+36@author # modified from a:135@@@1@c,matrixwhquestions,tam@kaud2 bat-2 ka-n2-e@@@@1@3@who.Q rice.NOM-SG eat-NPT-FOC`Who eats rice?`@alexandra cassell, melody bechler@january 15, 2024
 37@author@@@1@c,tam@ma-m2 ka3-ee-12 ya-n2-wa@@@@1@3@1SG-NOM shop-SG-DAT go-NPT-IND`I go to the shop`@alexandra cassell, melody bechler@january 15, 2024
 38@author@@@1@c,det,tam@ma-m2 pot-n keep2-ek gan-u-wa@@@@1@4@1SG-NOM book-PL several.PL-INDF buy-PST-IND`I bought several books`@alexandra cassell, melody bechler@january 15, 2024
 39@author@@@1@c,det,tam@ma-m2 pot-n sam2har-ek gan-u-wa@@@@1@4@1SG-NOM book-PL some.PL-INDF buy-PST-IND`I bought some books`@alexandra cassell, melody bechler@january 15, 2024

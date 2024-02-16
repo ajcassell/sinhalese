@@ -1,0 +1,457 @@
+Lab 6 Writeup
+LING 567
+February 16, 2023
+Melody Bechler, Alexandra Cassell
+
+1. In the semi.vpm file, we removed the PNG and E that preceded the header text on
+the external side (i.e. : E.TENSE => Tense). We removed gender completely from the file
+and changed the default mood to indicative. Indicative is regularly used with our verbs
+and therefore we thought it was best as the default. Since only two of our testsuite
+examples have aspect, we changed our aspect to no aspect. Under tense, we added a hyphen
+on the external side for non-past, as discussed in lecture. We also added an additional
+property to map present tense, which is not a tense in Sinhala, to nonpast tense in Sinhala.
+Under PER and NUM, we simply changed the external side. For example, 3rd <> 3rd became
+3rd <> third and plural <> plural became plural <> pl. Sinhala does not have a combined
+PERNUM feature. The only other semantic feature we have is a DEF feature, but we did not add
+it as discussed on Canvas. Defaults for CASE have not been implemented yet, as requested.
+
+In order to remove errors in translating, we commented out items in the lexicon and in sinhalese.tdl.
+In sinhalese.tdl, we commented out both completive and perfective aspects and the future-aux-aux-lex
+rule. Since we changed the aspect in semi.vpm to no aspect, the existence of future-aux-aux-lex caused
+issues with translation, and we thought it best to comment it out. As a result, in the lexicon, we
+commented out the auxiliary "daa", since removing the future-aux-aux-lex rule created another error.
+"Daa" is not used in our sin.txt file and it is only used for a single testsuite sentence.
+
+;;; Aspect
+
+;Perfective := aspect.
+;Completive := aspect.
+no-aspect := aspect.
+
+;future-aux-aux-lex := subj-raise-aux-no-pred &
+;  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM past-part,
+;                                             CONT.HOOK.INDEX.E [ TENSE past,
+;
+
+For sin sin translations, as well as sje sin and eng sin, we started with 450 translations
+for sentence 1 with the Lab 5 grammar. After editing the semi.vpm file, this brought the
+number of translations down to 162, a significant difference from the lab prior (stay tuned
+for more refinement)!
+
+In addition to the semi.vpm file, we also included these three trigger rules
+for our 2 complementizers and our clitic that were giving warnings when
+loading the grammar:
+
+i1_nosem_gr := generator_rule &
+  [ CONTEXT.RELS.LIST < [ PRED "_and_coord_rel" ] >,
+    FLAGS.TRIGGER "i1_nosem" ].
+
+comp_gtr := generator_rule &
+[ CONTEXT [ RELS <! [ ARG0 #e & [ SF prop ]] !> ],
+  FLAGS [ EQUAL < #e >,
+          TRIGGER "baw2" ]].
+
+comp2_gtr := generator_rule &
+[ CONTEXT [ RELS <! [ ARG0 #e & [ SF prop ]] !> ],
+  FLAGS [ EQUAL < #e >,
+          TRIGGER "ki2la" ]].
+
+2. We started with a lot of morphology cleanup, most of which included
+removing unnecessary extra affixing lexical rules. These were present
+in two instances. There were multiple possible affixes (according
+to our sources) for the same lexical rule (i.e. -a or -aa for masc.sg nouns)
+and in some cases we were not using one so it could be removed and in other
+cases we had instances of both but switched over to one option only.
+
+The rules with affixes that we removed are:
+- anim masc sg -aa
+- anim pl -u and -laa
+- inanim pl -wal
+- genitive -generate
+- NPT tense -nn
+- INDEF -ak for nouns and determiners
+
+There were also two types we removed:
+- irreg-plural nouns
+- indef-plural nouns
+These were leftover from week 1 when we weren't sure how to do morphology
+correctly for this course and had groupings of "irregular" words that behaved
+differently. Now we moved those nouns into the correct noun classes.
+
+Essentially we had way too many morphological options that caused a LOT
+of generations and clouded our results.
+
+A lot of parses were showing issues with NARROWED-FOCUS constituents appearing
+in places that they shouldn't. We think that we were not using the choices
+in the customization system correctly. So we cleared that from the grammar
+and just maintained the FOCUS lexical rule in the mood-pc and this ties in with
+the [ FORM focusform ] mentioned later with respect to wh-questions.
+
+We also updated all of our pronouns to have the correct PRED, as requested,
+for example:
+ma := 1sg-pronoun-noun-lex &
+  [ STEM < "ma" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+These changes brought our metrics to:
+Coverage: 63.4%
+Overgeneration: 10.8%
+Average distinct analyses: 11.43%
+which are not far from the original results, BUT the number of parses
+for some of our sentence such as conjunctive coordination dropped
+significantly from 232 to 82.
+
+# 2 Conjunctive coordination - clitic i between units of coordination
+Judgement: g
+guruw2rui demaupiyoi lam2inui paar2 bal2n2wa
+guruw2r-u i demaupiy-o i lam2in-u i paar-2 bal2-n2-wa
+teacher-PL CONJ parent-PL CONJ child-PL CONJ road-SG watch-NPT-IND
+`The teachers, parents and children watch the road`
+
+We made significant other changes in TDL as well.
+First,
+
+Wh Questions:
+
+In Sinhala,  Wh questions are always accompanied by 'd2', a question marker. Wh words, such as ‘kohe-d2’ (where),
+‘kau-d2’ (who), and 'mon2wa-d2' must have the question marker attached for a sentence to be grammatical. Interrogative
+words also require the verb be in focus form, which means the focus marker ‘-e’ is added to the verbal predicate to
+reflect a focused sentence pattern. Sinhala uses focus to signal the addressee to focus attention on the referent.
+Interrogative words are considered an inherently focused constituent, therefore Sinhala uses focus markers on the
+verbal predicate in wh questions. Focus form also appears in other contexts such as yes/no questions, negation, aspect,
+clauses, and more. Interrogative words are generally sentence-initial, but Sinhala’s free word order allows for optional
+movement.
+
+In the customizaton system, we edited the constituent (wh-) questions section. We stated that all questions phrases can
+be fronted and that fronting is also optional. We left pied piping empty, as we do not have any evidence this occurs. We
+also did not check any of the options under "other choices". We added wh words as a noun type called wh-pronouns and
+combined the wh word and the question marker as mentioned on canvas. "kau-d2" is now reflected as "kaud2". We also changed
+the predicates to reflect "_person_n_rel", "_thing_n_rel", and  "_place_n_rel". For the focus form of the verbal predicate,
+
+We noticed that the choices we made with respect to focus in the customization
+system during a previous lab was interfering with our results - parses
+were happening with NARROWED-FOCUS in places they shouldn't have and we came to
+the assumption (via feedback) that perhaps we were using the focus information
+structure page to do something more than what we were aiming to model
+from our sources. To combat these extra parses, we got rid of the focus choices in
+the information structure page. The use of focus for our testsuite and the
+translation sentences is only in wh-questions and negation, so we just maintained
+our lexical rule for focus in the mood-pc and in the TDL, we added a FORM type,
+subtype of finite, such that the head-daughter of the
+wh-ques rule requires [ FORM focusform ]. Our focus test sentences continue
+to parse correctly.
+
+Here are snippets from our choices file:
+section=wh-q
+front-matrix=multi
+matrix-front-opt=none-oblig
+
+noun24_name=wh-pronoun
+  noun24_inter=on
+  noun24_det=imp
+    noun24_stem1_orth=kaud2
+    noun24_stem1_pred=_person_n_rel
+    noun24_stem2_orth=mon2wad2
+    noun24_stem2_pred=_thing_n_rel
+    noun24_stem3_orth=kohed2
+    noun24_stem3_pred=_place_n_rel
+
+verb-pc4_lrt2_name=foc
+  verb-pc4_lrt2_feat1_name=information-structure meaning
+  verb-pc4_lrt2_feat1_value=focus
+  verb-pc4_lrt2_feat1_head=verb
+  verb-pc4_lrt2_feat2_name=form
+  verb-pc4_lrt2_feat2_value=focusform
+  verb-pc4_lrt2_feat2_head=verb
+  verb-pc4_lrt2_lri1_inflecting=yes
+  verb-pc4_lrt2_lri1_orth=-e
+
+wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final & 1st-head-filler-phrase &
+  [ SYNSEM [ LOCAL.CAT [ WH.BOOL +,
+                         MC bool,
+                         VAL #val,
+                         HEAD verb ],
+             NON-LOCAL.QUE.LIST < > ],
+    NON-HEAD-DTR.SYNSEM [ NON-LOCAL [ QUE.LIST < ref-ind >,
+                                      SLASH.LIST < >,
+                                      REL.LIST < > ],
+                          LOCAL.CONT.HOOK.ICONS-KEY focus ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT [ HEAD.FORM focusform, VAL #val &
+                                      [ SUBJ < >,
+                                        COMPS < > ],
+                                  MC na-or-+ ],
+                      NON-LOCAL.SLASH.LIST.FIRST [ ] ] ].
+
+Examples of WH-question with focus:
+
+# 6 WH-question, with focus shift
+Judgement: g
+bat kanne kaud2
+bat-2 ka-n2-e kaud2
+rice.NOM-SG eat-NPT-FOC who.Q
+`Who eats rice?`
+
+# 7 WH-question, sentence-initial, with focus shift
+Judgement: g
+kaud2 bat kanne
+kaud2 bat-2 ka-n2-e
+who.Q rice.NOM-SG eat-NPT-FOC
+`Who eats rice?`
+
+An example that is not yet working is:
+# 1 WH-question sentence-final, with focus shift
+Judgement: g
+mam2 yanne kohed2
+ma-m2 ya-n2-e kohed2
+1SG-NOM go-NPT-FOC where.Q
+`Where do I go?`
+
+It is only in the case of our WHERE.Q word and my assumption
+is that this is due to WHERE semantics being related to the
+either non-verbal predicates or dative clauses such as
+"where is the dog"/"the dog is here" and
+"where do I go?"/"I go TO the store". Do we need to
+wait for those two things to be implemented for this to work?
+
+The next thing we fixed in the TDL was to include the OPT variable in
+our transitive verb lexical rules for case constraint because our
+vol/invol obj1/obj2 rules were allowing all combinations, generating too
+many parses. We added another rule in the obj-pc with [ OPT + ] on the object
+and [ OPT - ] on all the other rules. When this didn't solve the problem,
+we updated the TDL such that the comp-head rule requires [ OPT - ] on the
+complement.
+
+verb-pc9_lrt4_name=vol-obj-opt
+  verb-pc9_lrt4_feat1_name=OPT
+  verb-pc9_lrt4_feat1_value=plus
+  verb-pc9_lrt4_feat1_head=obj
+  verb-pc9_lrt4_lri1_inflecting=no
+
+(the rest of those three pc rules have OPT minus)
+
+We put the following in sinhalese.tdl near the definition of head-comp phrase.
+
+basic-head-1st-comp-phrase :+
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < [ OPT - ] > ].
+
+Now this parses with less ambiguity:
+
+kaddi bal2n2wa
+ka-ddi bal2-n2-wa
+eat-while read-NPT-IND
+`While someone is eating, someone reads'
+
+A lot of ambiguity remains here but we think it is do to word order and argument
+optionality because the pronoun "ma-m2" can apply to either clause as the object
+or subject.
+
+# 1 Subordination via verb ending -ddi
+Judgement: g
+balla kaddi mam2 pot2 bal2n2wa
+ball-a ka-ddi ma-m2 pot-2 bal2-n2-wa
+dog.NOM-SG eat-while 1SG-NOM book-SG read-NPT-IND
+`While the dog is eating, I read the book`
+
+However, I'm a little confused by the PP consituent that is created for ka-ddi.
+
+The last updates we worked on were improving coordination.
+First we commented out coordination strategy #2 that was just for Ns, not NPs and
+this did not affect our results.
+
+Next, we wanted to incorporate our final coordination strategy which is
+asyndetonic coordination of VPs in what our sources called "participle coordination".
+This strategy is used to demonstrate a temporal relation of events.
+We did this through TDL instead of the customization system, so we added:
+
+vp3-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "3",
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.FORM past-part ].
+
+vp3-bottom-coord-rule := unary-bottom-coord-rule & vp-bottom-coord-phrase &
+  [ SYNSEM.LOCAL [ COORD-STRAT "3",
+                   COORD-REL.PRED "_and_coord_rel" ],
+    NONCONJ-DTR.SYNSEM.LOCAL.CAT.HEAD.FORM finite ].
+to sinhalese.tdl and:
+
+vp3-top-coord := vp3-top-coord-rule.
+vp3-bottom-coord := vp3-bottom-coord-rule.
+
+to rules.TDL. The non-final conjunct daughter (first) id FORM past-part and the
+rest are FORM finite.
+
+In the following example, the "going home" occurs and then the "eating food". Because
+go is intransitive and the clause "go home" is more like a dative clause,
+for syntactic testing purposes we replaced "ya-la" with "ka-la".
+
+# Does not parse
+Judgement: g
+mam2 ged2r2 gihilla k55m2 k55wa
+ma-m2 ged2r-2 ya-la k55m-2 ka-u-wa
+1SG-NOM house.ACC-SG go-PP food.ACC-SG eat-PST-IND
+`I went home and ate`
+
+# Parses!
+Judgement: g
+mam2 ged2r2 gihilla k55m2 k55wa
+ma-m2 ged2r-2 ka-la k55m-2 ka-u-wa
+1SG-NOM house.ACC-SG eat-PP food.ACC-SG eat-PST-IND
+`I ate home and ate`
+
+Lastly, as a result of testing translations/generations, we found that our
+coordination sentences struggled with memory. The cause of this was because
+Sinhalese has multiple cases and genders, none of which were requirements in
+NP agreement between coordinands, and so the tops of coordination rules
+were left unspecified in case and gender and could thus combine with any and
+all verb case constraints. We didn't see evidence of coordinand agreement in our sources
+but to clean up this translation step, we made two changes:
+a) the case is passed up from the non-conj daughter to the head.
+b) "default" to animate GENDER for the
+purposes of these test sentences being "dogs" and "cats".
+The goal of these changes was to not leave these things unspecified at the top of the NP.
+
+omni-coord-phrase :+
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE #case,
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case,
+    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
+
+n1-top-coord-rule := basic-n-top-coord-rule & omni-top-coord-rule &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.GEND animate,
+		   COORD-STRAT "1" ]].
+
+n1-bottom-coord-rule := omni-conj-last-bottom-coord-rule & n-bottom-coord-phrase &
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+       COORD-STRAT "1" ],
+    NONCONJ-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
+
+n1-left-coord-rule := omni-conj-last-left-coord-rule & n-bottom-coord-phrase &
+   [ SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+  	   COORD-STRAT "1" ],
+     NONCONJ-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
+
+^ the following was then repeated for strategy # 2:
+;;; Coordination Strategy 2
+
+np2-top-coord-rule := basic-np-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+		   CONT.HOOK.INDEX.PNG.GEND animate,
+		   COORD-STRAT "2" ],
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case,
+    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
+
+np2-bottom-coord-rule := conj-first-bottom-coord-rule & np-bottom-coord-phrase &
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+		   COORD-STRAT "2" ],
+    NONCONJ-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
+
+These updates brought the number of parses for the following
+from 82 to 2! (already included as an example above)
+
+# 2 Conjunctive coordination - clitic i between units of coordination
+Judgement: g
+guruw2rui demaupiyoi lam2inui paar2 bal2n2wa
+guruw2r-u i demaupiy-o i lam2in-u i paar-2 bal2-n2-wa
+teacher-PL CONJ parent-PL CONJ child-PL CONJ road-SG watch-NPT-IND
+`The teachers, parents and children watch the road`
+
+MMT: We greatly improved the translations from last week. Sentence #1 started with 450
+translations and is now down to 24. However, sentences 2 and 3 are at 144 and 600+ translations.
+There still seems to be a lot of extra generations due to affixes that are NOT optional
+being excluded in generations. For example, with sentence 3, we see two examples of this.
+
+ma-m2 oyaa bal2-n2-wa
+1sg-NOM 3SG watch-NPT-IND
+"I watch you"
+
+First, oyaala is present when it should be the singular oyaa and second,
+there are many instances of the verb stem "bal2" alone when our grammar
+requires the tense-pc to be indicated as an affix. So we need to do
+more investigating into these issues.
+
+On the other hand, sentence 20 is now at 18 translations eng->sin and sin->sin when it
+was at 0 before all of our edits.
+
+Coordination:
+
+We are still having issues with coordination following Thursday's debugging (when we added
+the coordinand agreement constraints to strategies 1 and 2). We have been testing with
+sentence 8, shown below. Sin to sin translation still results in 0 translated sentences as it still
+terminates the search due to too much RAM. The output states 3779 passive, 17472 edges with 0/2
+sentences generated. In the lkb, the sentence parses, but there are 0 realizations when we attempt
+generation. Sin->eng works but not sin->sin or eng->sin.
+
+Sentence 8:
+puusa-o i ball-o i kaar-n bal2-n2-wa
+cat.NOM-PL and dog.NOM-PL and car.NOM-PL watch-NPT-IND
+"The cats and dogs watch the car"
+
+Of note, sentences 9 and 10 will not parse or translate because of how our grammar is set up. We previously
+had a coordination strategy targeting asyndetonic VP coordination, but it caused so many additional parses
+for other sentences that we decided to remove it. We are willing to add it back if there is a way to
+restrict all other VPs from incorrectly attempting coordination (this is mentioned more below in #3).
+
+Other MMT Notes:
+Sentence 7, 22, 23, 24 - We have not yet implemented interrogative complements.
+
+3. The initial metrics from our testsuite (from end of Lab 5) were:
+Coverage: 63.4%
+Overgeneration: 12.3%
+Average Distinct Analyses: 10.25
+
+Attempts to generate via mmt --> ran out of memory for most sentences
+
+Final metrics from our testsuite as of today:
+Coverage: 65.9% (81 results from 188)
+Overgeneration: 16.9%
+Average Distinct Analyses: 4.45
+
+MMT -> some have improved and one still has memory issues (as discussed above)
+
+Coverage increased as we are now able to parse our 2 wh-questions
+and our participle conjuction example as well. In terms of
+overgeneration, we introduced a few new ungrammatical parses such as:
+
+# 9 Subordination without instrumental verb casing
+Judgement: u
+oyaa pot2 bal2wa mam2 sudd2k2n2wa
+oyaa pot-2 bal2-u-wa ma-m2 sudd2k2-n2-wa
+2SG.NOM book-SG read-PST-IND 1SG-NOM clean-NPT-IND
+`I clean because you read the book`
+
+This is technically syntactically grammatical because
+it parses due to VP coordination (from our new
+strategy 3) of "read book" and "clean I.NOM/'me'"
+when semantically they are supposed to be related
+via the adverbial modification of "because" which can
+be the free morpheme hinda/nissa or nominalized casing
+(which we chose to not focus on implementing).
+The VP coordination does not show the cause and effect
+of these two VPs. We had made the FORM requirements be
+finite and past-part but neither of these verbs are
+past-part. Sinhalese does in fact allow for VP coordination
+that is asyndetonic but we have not implemented this because
+it caused majorly excessive parses in all of our sentences
+that contained more than one verb. We would like to find a way
+to clean that up because it will also be needed in the translation
+sentences.
+
+At this point we have all of our major phenomena working
+except for interrogative complement clauses. Our
+remaining issues still have to do with too much ambiguity. For example,
+our sentences that use free morpheme adverbial modifiers "hinda" and "nissa"
+are creating 48 parses. This is our largest remaining ambiguity.
+
+# 10 Subordination via particle hinda, NPT
+Judgement: g
+oyaa bat kan2 hinda mam2 sudd2k2n2wa
+oyaa bat-2 ka-n2 hinda ma-m2 sudd2k2-n2-wa
+2SG.NOM rice-SG eat-NPT.ADJ since 1SG-NOM clean-NPT-IND
+`I clean because you eat rice`
+
+Another note regarding ambiguity: we have commented out the
+ex-adj, ex-subj, ex-comps rules that come from the wh-questions
+implementation because they were causing many excess generations
+which was confusing to us.
+
+The sentences that are not parsing yet are still in high part due to
+non-verbal predicates, dative "for/to NP", interrogative complement
+clauses, and asyndetonic VP coordination.

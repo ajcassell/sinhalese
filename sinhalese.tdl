@@ -197,8 +197,9 @@ past := tense.
 
 ;;; Aspect
 
-Perfective := aspect.
-Completive := aspect.
+;Perfective := aspect.
+;Completive := aspect.
+no-aspect := aspect.
 
 ;;; Mood
 
@@ -471,10 +472,10 @@ past-part-aux-aux-lex := subj-raise-aux-no-pred &
 ; but I don't want to rely on this.  Then again, [ AUX - ]
 ; might not be true.
 
-future-aux-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM past-part,
-                                             CONT.HOOK.INDEX.E [ TENSE past,
-                                                                 ASPECT Completive ] ] ].
+;future-aux-aux-lex := subj-raise-aux-no-pred &
+;  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM past-part,
+;                                             CONT.HOOK.INDEX.E [ TENSE past,
+;                                                                 ASPECT Completive ] ] ].
 
 ;;; Adjectives
 
@@ -1163,6 +1164,9 @@ subj-head-phrase := decl-head-subj-phrase & head-final-head-nexus.
 
 ; The head of head-comp-phrase can't be: ['comp']
 
+basic-head-1st-comp-phrase :+
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < [ OPT - ] > ].
+
 head-comp-phrase := basic-head-1st-comp-phrase & head-initial-head-nexus &
   [ SYNSEM.LOCAL.CAT.HEAD +nvjrpdmo &
                           [ AUX - ],
@@ -1253,30 +1257,57 @@ wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final &
 
 ;;; Coordination Strategy 1
 
+omni-coord-phrase :+
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE #case,
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case,
+    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
+
 n1-top-coord-rule := basic-n-top-coord-rule & omni-top-coord-rule &
-  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.GEND animate,
+		   COORD-STRAT "1" ]].
 
 n1-mid-coord-rule := basic-n-mid-coord-rule & omni-mid-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
 n1-bottom-coord-rule := omni-conj-last-bottom-coord-rule & n-bottom-coord-phrase &
-  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+		   COORD-STRAT "1" ],
+    NONCONJ-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
 
 n1-left-coord-rule := omni-conj-last-left-coord-rule & n-bottom-coord-phrase &
-  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+		   COORD-STRAT "1" ],
+    NONCONJ-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
 
 ;;; Coordination Strategy 2
 
-n2-top-coord-rule := basic-n-top-coord-rule & apoly-top-coord-rule &
-  [ SYNSEM.LOCAL.COORD-STRAT "2" ].
+;n2-top-coord-rule := basic-n-top-coord-rule & apoly-top-coord-rule &
+;  [ SYNSEM.LOCAL.COORD-STRAT "2" ].
 
-n2-bottom-coord-rule := conj-first-bottom-coord-rule & n-bottom-coord-phrase &
-  [ SYNSEM.LOCAL.COORD-STRAT "2" ].
+;n2-bottom-coord-rule := conj-first-bottom-coord-rule & n-bottom-coord-phrase &
+;  [ SYNSEM.LOCAL.COORD-STRAT "2" ].
 
 ;;; Coordination Strategy 2
 
 np2-top-coord-rule := basic-np-top-coord-rule & apoly-top-coord-rule &
-  [ SYNSEM.LOCAL.COORD-STRAT "2" ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+		   CONT.HOOK.INDEX.PNG.GEND animate,
+		   COORD-STRAT "2" ],  
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case,
+    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
 
 np2-bottom-coord-rule := conj-first-bottom-coord-rule & np-bottom-coord-phrase &
-  [ SYNSEM.LOCAL.COORD-STRAT "2" ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+		   COORD-STRAT "2" ],
+    NONCONJ-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
+
+;;; Coordination Strategy 3
+
+vp3-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "3",
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.FORM past-part ].
+
+vp3-bottom-coord-rule := unary-bottom-coord-rule & vp-bottom-coord-phrase &
+  [ SYNSEM.LOCAL [ COORD-STRAT "3",
+                   COORD-REL.PRED "_and_coord_rel" ],
+    NONCONJ-DTR.SYNSEM.LOCAL.CAT.HEAD.FORM finite ].

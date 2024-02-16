@@ -302,8 +302,8 @@ n55 := neg-aux-lex &
 tie := past-part-aux-aux-lex &
   [ STEM < "tie" > ].
 
-daa := future-aux-aux-lex &
-  [ STEM < "daa" > ].
+;daa := future-aux-aux-lex &
+;  [ STEM < "daa" > ].
 
 ;;; Determiners
 
