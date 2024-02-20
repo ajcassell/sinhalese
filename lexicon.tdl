@@ -77,33 +77,33 @@ midul := inanimate-noun-lex &
   [ STEM < "midul" >,
     SYNSEM.LKEYS.KEYREL.PRED "_park_n_rel" ].
 
-ma := 1sg-pronoun-noun-lex &
-  [ STEM < "ma" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_I_n_rel" ].
-
-api := 1pl-pronoun-noun-lex &
-  [ STEM < "api" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_we_n_rel" ].
-
-oyaa := 2sg-pronoun-noun-lex &
-  [ STEM < "oyaa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_you_n_rel" ].
-
-eyaa := 3sg-pronoun-noun-lex &
-  [ STEM < "eyaa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_it_n_rel" ].
-
-gas := irreg-plural-noun-lex &
+gas := inanimate-noun-lex &
   [ STEM < "gas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tree_n_rel" ].
 
+ma := 1sg-pronoun-noun-lex &
+  [ STEM < "ma" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+api := 1pl-pronoun-noun-lex &
+  [ STEM < "api" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+oyaa := 2sg-pronoun-noun-lex &
+  [ STEM < "oyaa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+eyaa := 3sg-pronoun-noun-lex &
+  [ STEM < "eyaa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
 oyaala := 2pl-pronoun-noun-lex &
   [ STEM < "oyaala" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_youall_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 eyaala := 3pl-pronoun-noun-lex &
   [ STEM < "eyaala" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_they_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 guruw2r := fem-noun-lex &
   [ STEM < "guruw2r" >,
@@ -148,6 +148,18 @@ ek_2 := masc-noun-lex &
 puusa := masc-noun-lex &
   [ STEM < "puusa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
+
+kaud2 := wh-pronoun-noun-lex &
+  [ STEM < "kaud2" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
+
+mon2wad2 := wh-pronoun-noun-lex &
+  [ STEM < "mon2wad2" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel" ].
+
+kohed2 := wh-pronoun-noun-lex &
+  [ STEM < "kohed2" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_place_n_rel" ].
 
 ;;; Adjectives
 
@@ -223,7 +235,7 @@ dun := vol-trans-verb-lex &
 
 bal2 := vol-trans-verb-lex &
   [ STEM < "bal2" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_readwatch_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
 
 gili := vol-trans-verb-lex &
   [ STEM < "gili" >,
@@ -290,8 +302,8 @@ n55 := neg-aux-lex &
 tie := past-part-aux-aux-lex &
   [ STEM < "tie" > ].
 
-daa := future-aux-aux-lex &
-  [ STEM < "daa" > ].
+;daa := future-aux-aux-lex &
+;  [ STEM < "daa" > ].
 
 ;;; Determiners
 

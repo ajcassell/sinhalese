@@ -1,0 +1,201 @@
+2/12 Initial #s
+Coverage: 63.4%
+Overgeneration: 12.3%
+Average distinct analyses: 10.25%
+
+Morph rules removed:
+-aa sing anim masc
+-wal pl inanim
+-ak indef for nouns and determiners
+-gee genitive case
+-u and -laa plural anim
+-additional -nn NPT
+-irreg-pl noun type
+-indef-pl
+
+- changed to pron_rel
+- took out focus page, but left mood in
+- commented out ex-*** rules which brought conjuctive coordination from 208 to 133 trees
+
+* YAY back to 63.4% coverage, 10.8% overgeneration and 11.43 distinct analyses
+
+-----------come back to ABL
+
+----
+Lecture Notes:
+- gender isn't included in semi.vpm - take it out
+- need to map to defaults
+- spell non-past
+- rules are order sensitive so more specific at top
+
+- update spellings in vpm PNG.PER : PER
+- tense <> * if no tense
+- pred non_existing rel or warnings about no sem means need trigger Rules
+
+============
+***TO DO:***
+============
+- nom should be default case
+- default to definite
+- trigger rules for the three sem empty morphemes
+
+
+What we did in TDL:
+
+wh-questions - added focusform!:
+wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final & 1st-head-filler-phrase &
+  [ SYNSEM [ LOCAL.CAT [ WH.BOOL +,
+                         MC bool,
+                         VAL #val,
+                         HEAD verb ],
+             NON-LOCAL.QUE.LIST < > ],
+    NON-HEAD-DTR.SYNSEM [ NON-LOCAL [ QUE.LIST < ref-ind >,
+                                      SLASH.LIST < >,
+                                      REL.LIST < > ],
+                          LOCAL.CONT.HOOK.ICONS-KEY focus ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT [ HEAD.FORM focusform, VAL #val &
+                                      [ SUBJ < >,
+                                        COMPS < > ],
+                                  MC na-or-+ ],
+                      NON-LOCAL.SLASH.LIST.FIRST [ ] ] ].
+
+;;; Aspect
+
+;Perfective := aspect.
+;Completive := aspect.
+no-aspect := aspect.
+
+;future-aux-aux-lex := subj-raise-aux-no-pred &
+;  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM past-part,
+;                                             CONT.HOOK.INDEX.E [ TENSE past,
+;                                                                 ASPECT Completive ] ] ].
+
+Hmm -- I thought that comp-head would require [ OPT -- ] on the complement, but it seems that it doesn't. We can add that constraint though. In sinhalese.tdl, preferably near the definition of head-comp-phrase, add this:
+
+basic-head-1st-comp-phrase :+
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < [ OPT - ] > ].
+
+commented out wh-pronoun-noun-lex inside itself because recursion
+
+attr-adj-lex := adj-lex & intersective-mod-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun &
+                                                                                                         [ PRON - ],
+                                                                                              VAL.SPR cons ] ] > ].
+
+commented out coordination strategy 2 for Ns, so now only NPs and didn't change coverage PHEW
+as well as
+;n2-top-coord := n2-top-coord-rule.
+;n2-bottom-coord := n2-bottom-coord-rule.
+in rules.TDL
+
+Added
+vp3-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "3",
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.FORM past-part ].
+
+vp3-bottom-coord-rule := unary-bottom-coord-rule & vp-bottom-coord-phrase &
+  [ SYNSEM.LOCAL [ COORD-STRAT "3",
+                   COORD-REL.PRED "_and_coord_rel" ],
+    NONCONJ-DTR.SYNSEM.LOCAL.CAT.HEAD.FORM finite ].
+in sinhalese.tdl
+
+vp3-top-coord := vp3-top-coord-rule.
+vp3-bottom-coord := vp3-bottom-coord-rule.
+in rules.TDL
+
+and got this working: ma-m2 ged2r-2 ka-la k55m-2 ka-u-wa (which is ya-la in testsuite but that's an intrans verb)
+
+
+
+
+
+-------------------------------------------------------
+- might need to add OPT + rule on invol-trans also (but might not have any scenarios of this..)
+------------
+
+
+attr-adj-lex := adj-lex & intersective-mod-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun &
+                                                                                                         [ PRON - ],
+                                                                                              VAL.SPR cons ] ] > ].
+----------------------
+Parses to work on:
+- aux 7,8
+- plural quantifiers 38, 39, 41, 101, 102 (check on order we specify..) (also 102 is doing head-spec backwards...)
+- aux 42, 43
+- coordination with clitic -i 60 - not working because too big.. 2000 edge limit
+- 61, 62, 63 - parsing but SHOULDN'T - oddly POSS is showing up?
+- 79, 81, 83, 84, 86, 87 should not do COMP-HEAD when invol verb...
+- 138, 139 - participle subordination
+- 155
+- 162, 166 (yes/no question)
+
+Parses that we expect to not work yet:
+- non-verbal predicate 25, 49, 55, 56, 107, 109, 111, 112, 114, 116, 143, 172, 174, 182, 183
+- 28 ("mee" demonstrative)
+- wh-questions 31, 32, 33
+- "for me" dative 17, 18
+- "to the shop" dative 37, 46, 51, 175, 176
+- 52, 59, 181 (took out asyndetonic S/VP coordination)
+- 66, 67 (participle coordination)
+- 128, 130 (nominalized modifiers)
+- 118, 122 (interrogative clauses)
+
+Parses that are ungrammatical and are thus skipped:
+- 22, 24
+- 26, 27
+- 29, 30
+- 34, 35, 36
+- 47, 48
+- 50
+- 58
+- 65
+- 68, 69, 70
+- 74, 75
+- 100
+- 104
+- 108, 110, 113, 115, 117
+- 119, 120, 121
+- 124
+- 127
+- 129, 131
+- 134, 137
+- 141, 142, 144, 145, 147, 149
+- 152, 154, 157
+- 159, 161, 163, 165, 167, 169, 171, 173
+
+
+EXPECTING:
+1-6
+9-16
+19-21
+23
+45-45
+53-54
+57
+60-64
+71-73
+76-78
+80
+82-99
+101
+103
+105-106
+123
+125-126
+132-133
+135-136
+140
+146
+47148150-151
+153
+156
+158
+160
+164
+168
+170
+177
+178-179
+180
+184-188

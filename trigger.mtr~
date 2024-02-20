@@ -1,0 +1,22 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Semantically Empty Lexical Entries
+
+tie_gr := arg0e_gtr &
+  [ CONTEXT.RELS.LIST < [ PRED "non_existing_rel" ] >,
+    FLAGS.TRIGGER "tie" ].
+
+daa_gr := arg0e_gtr &
+  [ CONTEXT.RELS.LIST < [ PRED "non_existing_rel" ] >,
+    FLAGS.TRIGGER "daa" ].
+
+d2_gr := generator_rule &
+  [ CONTEXT.RELS.LIST < [ ARG0.SF ques ] >,
+    FLAGS.TRIGGER "d2" ].
+
+n5dd2_gr := generator_rule &
+  [ CONTEXT.RELS.LIST < [ ARG0.SF ques ] >,
+    FLAGS.TRIGGER "n5dd2" ].
+
+i1_nosem_gr := generator_rule &
+  [ CONTEXT.RELS.LIST < [ PRED "N-1_and_coord_rel" ] >,
+    FLAGS.TRIGGER "i1_nosem" ].
