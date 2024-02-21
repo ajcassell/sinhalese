@@ -257,7 +257,7 @@ bo := vol-trans-verb-lex &
   [ STEM < "bo" >,
     SYNSEM.LKEYS.KEYREL.PRED "_drink_v_rel" ].
 
-in := vol-trans-verb-lex &
+in := copula-verb-lex &
   [ STEM < "in" >,
     SYNSEM.LKEYS.KEYREL.PRED "_is_v_rel" ].
 

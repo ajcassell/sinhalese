@@ -1,0 +1,337 @@
+Non-verbal predicates
+
+1. Copula with PP / locative NP (NO adpositions = "in" (preposition))
+2. AP and no copula
+3. NP and no copula
+
+QUESTIONS:
+1. +jp is for adj AND adp.. is there something for just adp??
+
+--------------------------
+1. Copula with PP/NP locative
+--------------------------
+
+ex. The dogs are in the park (no explicit adposition items so locative-pp-phrase + copula headed by adp)
+MRS looks good!
+
+locative-pp := locative-pp-phrase. --> added to rules.tdl
+below everything added to sinhalese.tdl
+
+copula-verb-lex := verb-lex-supertype & trans-first-arg-raising-lex-item-2 &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
+                             COMPS < #comps >,
+                             SPR < >,
+                             SPEC < > ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CONT.HOOK.INDEX #xarg,
+                       CAT [ VAL [ SPR < >,
+                                   COMPS < > ],
+                             HEAD noun ] ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ COMPS < > ],
+                           HEAD +jp ] ] > ].
+
+verb-lex-supertype := verb-lex & mood-pc-rule-dtr & tense-pc-rule-dtr &
+     [ SYNSEM.LOCAL.CAT.HEAD verb ].
+
+locative-pp-phrase := unary-phrase &
+               [ SYNSEM [ NON-LOCAL #nl,
+                                      LOCAL.CAT [ HEAD adp & [ MOD < [ LOCAL intersective-mod &
+                                                                                   [ CAT.HEAD verb,
+                                                                                     CONT.HOOK.INDEX #xarg ] ] > ],
+                               		          VAL [ COMPS < >,
+                               			        SUBJ < >,
+                               			        SPR < > ]]],
+                                   C-CONT [ HOOK [ LTOP #ltop,
+                               		    INDEX #index,
+                               		    XARG #xarg ],
+                               	  RELS.LIST < arg12-ev-relation &
+                               		   [ PRED "_loc_p_rel",
+                               		     LBL #ltop,
+                               		     ARG0 #index,
+                               		     ARG1 #xarg,
+                               		     ARG2 #dtr ] >,
+                               	     HCONS.LIST < >  ],
+                               	  ARGS < [ SYNSEM [ NON-LOCAL #nl,
+                               		            LOCAL [ CAT [ HEAD noun & [CASE loc],
+                               		                          VAL.SPR < > ],
+                               			            CONT.HOOK [ INDEX #dtr ] ] ] ] > ].
+
+
+---------------------------
+3. Equational NP, no copula
+---------------------------
+
+Once we added
+n-bar-predicate := n-bar-predicate-rule.
+and
+n-bar-predicate-rule := unary-phrase & nocoord &
+  [ SYNSEM [ LOCAL.CAT [ HEAD verb & [ FORM finite, MOD < > ]
+                          MOD < >,
+	  	         VAL [ COMPS < >,
+                     SPEC < >,
+			       SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg1,
+					         CAT [ HEAD noun,
+				      VAL.SPR < > ] ] ] > ] ],
+             NON-LOCAL #nl ],
+    C-CONT [ HOOK [ LTOP #ltop,
+		    INDEX #index,
+		    XARG #arg1 ],
+	     RELS.LIST < arg12-ev-relation &
+		   [ PRED "_be_v_id_rel",
+		     LBL #ltop,
+		     ARG0 #index,
+		     ARG1 #arg1,
+		     ARG2 #arg2 ],
+		   quant-relation &
+		   [ PRED "exist_q_rel",
+		     ARG0 #arg2,
+		     RSTR #harg ] >,
+	     HCONS.LIST < qeq & [ HARG #harg, LARG #larg ] > ],
+    ARGS < [ SYNSEM [ LOCAL [ CAT [ HEAD noun,
+		 		    VAL.SPR cons ],
+			      CONT.HOOK [ INDEX #arg2,
+	                                  LTOP #larg ]],
+	              NON-LOCAL #nl ]] > ].
+
+;;; Verbs
+
+; verb-lex is HC-LIGHT - to allow us to pick out
+;
+;   lexical Vs for V-level attachment of negative adverbs.
+
+copula-verb-lex := verb-lex-supertype & trans-first-arg-raising-lex-item-2 &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
+                             COMPS < #comps >,
+                             SPR < >,
+                             SPEC < > ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CONT.HOOK.INDEX #xarg,
+                       CAT [ VAL [ SPR < >,
+                                   COMPS < > ],
+                             HEAD noun ] ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ COMPS < > ],
+                           HEAD +jp ] ] > ].
+
+then the singular parse for ball-o midul-2-ee in-n2-wa turned into 40 trees
+made FORM finite in n-bar mother to eliminate some.. down to 11
+DECL-HEAD-OPT-SUBJ applying to the otherwise correct parse and then ADJ-HEAD instead of SUBJ-HEAD
+This is because the n-bar predicate is getting applied to ball-o but we don't want that??
+
+BASED on the MRS example in lab, seems like the _be_v_id_rel should only show up once
+so does that mean that only one of the NPs should become a VP in ball-o puusa-o???
+
+
+
+Got 40% overgen yikes - ball-a bat-2 ka-n2-wa got 5 or 6 parses instead of 1
+made past-part := form
+
+updated
+1pl-pronoun-noun-lex := pl-pronoun-noun-lex & case-pc-rule-dtr &
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG.PER 1st ],
+    INFLECTED [ CASE-PC-FLAG -,
+                INANIMATE-NOUN-FLAG na-or--,
+                FEM-NOUN-FLAG na-or-- ] ].
+
+and added case-pc-rule-dtr on there to make api become NOM (brought api bat kan2wa from 22-3 trees)
+realized this was the same for all pronouns AND also that
+an extra parse was happening for inanimate object so updated
+no-spr-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL [ CAT.VAL.SPR < [ OPT + ] >,
+                  CONT.HOOK.INDEX.PNG.GEND animate ] ].
+which the pronouns inherit from because nothing was restricting pronoun gender
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------come back to ABL
+
+----
+Lecture Notes:
+- gender isn't included in semi.vpm - take it out
+- need to map to defaults
+- spell non-past
+- rules are order sensitive so more specific at top
+
+- update spellings in vpm PNG.PER : PER
+- tense <> * if no tense
+- pred non_existing rel or warnings about no sem means need trigger Rules
+
+============
+***TO DO:***
+============
+- nom should be default case
+- default to definite
+- trigger rules for the three sem empty morphemes
+
+
+What we did in TDL:
+
+wh-questions - added focusform!:
+wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final & 1st-head-filler-phrase &
+  [ SYNSEM [ LOCAL.CAT [ WH.BOOL +,
+                         MC bool,
+                         VAL #val,
+                         HEAD verb ],
+             NON-LOCAL.QUE.LIST < > ],
+    NON-HEAD-DTR.SYNSEM [ NON-LOCAL [ QUE.LIST < ref-ind >,
+                                      SLASH.LIST < >,
+                                      REL.LIST < > ],
+                          LOCAL.CONT.HOOK.ICONS-KEY focus ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT [ HEAD.FORM focusform, VAL #val &
+                                      [ SUBJ < >,
+                                        COMPS < > ],
+                                  MC na-or-+ ],
+                      NON-LOCAL.SLASH.LIST.FIRST [ ] ] ].
+
+;;; Aspect
+
+;Perfective := aspect.
+;Completive := aspect.
+no-aspect := aspect.
+
+;future-aux-aux-lex := subj-raise-aux-no-pred &
+;  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM past-part,
+;                                             CONT.HOOK.INDEX.E [ TENSE past,
+;                                                                 ASPECT Completive ] ] ].
+
+Hmm -- I thought that comp-head would require [ OPT -- ] on the complement, but it seems that it doesn't. We can add that constraint though. In sinhalese.tdl, preferably near the definition of head-comp-phrase, add this:
+
+basic-head-1st-comp-phrase :+
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < [ OPT - ] > ].
+
+commented out wh-pronoun-noun-lex inside itself because recursion
+
+attr-adj-lex := adj-lex & intersective-mod-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun &
+                                                                                                         [ PRON - ],
+                                                                                              VAL.SPR cons ] ] > ].
+
+commented out coordination strategy 2 for Ns, so now only NPs and didn't change coverage PHEW
+as well as
+;n2-top-coord := n2-top-coord-rule.
+;n2-bottom-coord := n2-bottom-coord-rule.
+in rules.TDL
+
+Added
+vp3-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "3",
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.FORM past-part ].
+
+vp3-bottom-coord-rule := unary-bottom-coord-rule & vp-bottom-coord-phrase &
+  [ SYNSEM.LOCAL [ COORD-STRAT "3",
+                   COORD-REL.PRED "_and_coord_rel" ],
+    NONCONJ-DTR.SYNSEM.LOCAL.CAT.HEAD.FORM finite ].
+in sinhalese.tdl
+
+vp3-top-coord := vp3-top-coord-rule.
+vp3-bottom-coord := vp3-bottom-coord-rule.
+in rules.TDL
+
+and got this working: ma-m2 ged2r-2 ka-la k55m-2 ka-u-wa (which is ya-la in testsuite but that's an intrans verb)
+
+
+
+
+
+-------------------------------------------------------
+- might need to add OPT + rule on invol-trans also (but might not have any scenarios of this..)
+------------
+
+
+attr-adj-lex := adj-lex & intersective-mod-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun &
+                                                                                                         [ PRON - ],
+                                                                                              VAL.SPR cons ] ] > ].
+----------------------
+Parses to work on:
+- aux 7,8
+- plural quantifiers 38, 39, 41, 101, 102 (check on order we specify..) (also 102 is doing head-spec backwards...)
+- aux 42, 43
+- 79, 81, 83, 84, 86, 87 should not do COMP-HEAD when invol verb...
+- 162, 166 (yes/no question)
+
+Parses that we expect to not work yet:
+- non-verbal predicate 25, 49, 55, 56, 107, 109, 111, 112, 114, 116, 143, 172, 174, 182, 183
+- 28 ("mee" demonstrative)
+- wh-questions 31, 32, 33
+- "for me" dative 17, 18
+- "to the shop" dative 37, 46, 51, 175, 176
+- 52, 59, 181 (took out asyndetonic S/VP coordination)
+- 66, 67 (participle coordination)
+- 128, 130 (nominalized modifiers)
+- 118, 122 (interrogative clauses)
+
+Parses that are ungrammatical and are thus skipped:
+- 22, 24
+- 26, 27
+- 29, 30
+- 34, 35, 36
+- 47, 48
+- 50
+- 58
+- 61, 62, 63
+- 65
+- 68, 69, 70
+- 74, 75
+- 100
+- 104
+- 108, 110, 113, 115, 117
+- 119, 120, 121
+- 124
+- 127
+- 129, 131
+- 134, 137
+- 141, 142, 144, 145, 147, 149
+- 152, 154, 157
+- 159, 161, 163, 165, 167, 169, 171, 173
+
+
+EXPECTING:
+1-6
+9-16
+19-21
+23
+45-45
+53-54
+57
+60-64
+71-73
+76-78
+80
+82-99
+101
+103
+105-106
+123
+125-126
+132-133
+135-136
+138-139
+140
+146
+47148150-151
+153
+155-156
+158
+160
+164
+168
+170
+177
+178-179
+180
+184-188
