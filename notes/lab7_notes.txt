@@ -146,7 +146,54 @@ no-spr-noun-lex := noun-lex &
 which the pronouns inherit from because nothing was restricting pronoun gender
 
 
+nom_acc := real-case.
+nom :+ nom_acc.
+acc :+ nom_acc.
 
+made n-bar args[0] have nom_acc case - took ballo midul2ee inn2wa from 8 to 3 parses
+
+
+------------------
+Definiteness
+------------------
+
+no-spr-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL [ CAT.VAL.SPR < [ OPT + ] >,
+                  CONT.HOOK.INDEX [ PNG.GEND animate,
+                                    COG-ST activ-or-more,
+                                    SPECI + ] ] ].
+
+^ inherited by pronouns
+
+indef-rule-lex-rule := indefiniteness-pc-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ COG-ST type-id ] ].
+
+def-sg-lex-rule := const-lex-rule & indefiniteness-pc-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ COG-ST uniq+fam+act ] ].
+
+indef-lex-rule := indefiniteness-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.COG-ST type-id ].
+
+def-lex-rule := const-lex-rule & indefiniteness-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.COG-ST uniq+fam+act ].
+
+  invol-anim-obj-1-lex-rule := invol-trans-obj-cc-pc-lex-rule-super &
+    [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.CASE nom,
+                                               CONT.HOOK.INDEX [ PNG [ GEND animate ],
+                                                                 COG-ST type-id ] ] ].
+
+
+  invol-anim-obj-2-lex-rule := invol-trans-obj-cc-pc-lex-rule-super &
+    [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.CASE acc,
+                                               CONT.HOOK.INDEX [ PNG [ GEND animate ],
+                                                                 COG-ST uniq+fam+act ] ] ].
+
+
+  invol-anim-obj-3-lex-rule := invol-trans-obj-cc-pc-lex-rule-super &
+    [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.CASE acc,
+                                               CONT.HOOK.INDEX [ PNG [ GEND animate ],
+                                                                 COG-ST type-id ] ] ].
+kl
 
 
 
@@ -305,6 +352,8 @@ EXPECTING:
 9-16
 19-21
 23
+31-32
+35-36
 45-45
 53-54
 57
@@ -323,7 +372,8 @@ EXPECTING:
 138-139
 140
 146
-47148150-151
+147-148
+150-151
 153
 155-156
 158
