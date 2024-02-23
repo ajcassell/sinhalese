@@ -259,7 +259,7 @@ bo := vol-trans-verb-lex &
 
 in := copula-verb-lex &
   [ STEM < "in" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_is_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
 
 di := vol-intrans-verb-lex &
   [ STEM < "di" >,

@@ -31,6 +31,6 @@ comp2_gtr := generator_rule &
   FLAGS [ EQUAL < #e >,
           TRIGGER "ki2la" ]].
 
-;in_gr := arg0e_gtr &
-;  [ CONTEXT.RELS.LIST < [ PRED "_be_v_rel" ] >,
-;    FLAGS.TRIGGER "in" ].
+in_gr := arg0e_gtr &
+  [ CONTEXT.RELS.LIST < [ PRED "~._p_" ] >,
+    FLAGS.TRIGGER "in" ].

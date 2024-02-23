@@ -68,7 +68,6 @@ n-bar-predicate := n-bar-predicate-rule.
 and
 n-bar-predicate-rule := unary-phrase & nocoord &
   [ SYNSEM [ LOCAL.CAT [ HEAD verb & [ FORM finite, MOD < > ]
-                          MOD < >,
 	  	         VAL [ COMPS < >,
                      SPEC < >,
 			       SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg1,
@@ -94,12 +93,6 @@ n-bar-predicate-rule := unary-phrase & nocoord &
 			      CONT.HOOK [ INDEX #arg2,
 	                                  LTOP #larg ]],
 	              NON-LOCAL #nl ]] > ].
-
-;;; Verbs
-
-; verb-lex is HC-LIGHT - to allow us to pick out
-;
-;   lexical Vs for V-level attachment of negative adverbs.
 
 copula-verb-lex := verb-lex-supertype & trans-first-arg-raising-lex-item-2 &
   [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,

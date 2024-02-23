@@ -48,7 +48,8 @@ inflected :+ [ CASE-PC-OR-PRONOUN-CASE-PC-FLAG luk,
     VOL-INTRANS-AGENT-CC-PC-FLAG luk,
     VOL-TRANS-SUBJ-CC-PC-FLAG luk,
     INDEFINITENESS-PC-FLAG luk,
-    CASE-PC-FLAG luk ].
+    CASE-PC-FLAG luk,
+    PRD-ADJ-FLAG luk ].
 
 infl-satisfied :+ [ CASE-PC-OR-PRONOUN-CASE-PC-FLAG na-or-+,
     NUMBER-PC-FLAG na-or-+,
@@ -61,7 +62,8 @@ infl-satisfied :+ [ CASE-PC-OR-PRONOUN-CASE-PC-FLAG na-or-+,
     VOL-INTRANS-AGENT-CC-PC-FLAG na-or-+,
     VOL-TRANS-SUBJ-CC-PC-FLAG na-or-+,
     INDEFINITENESS-PC-FLAG na-or-+,
-    CASE-PC-FLAG na-or-+ ].
+    CASE-PC-FLAG na-or-+,
+    PRD-ADJ-FLAG na-or-+ ].
 
 cat :+ [ POSSESSUM poss ].
 
@@ -78,6 +80,8 @@ basic-head-1st-comp-phrase :+ [ SYNSEM.LOCAL.CAT.POSSESSUM #poss,
     HEAD-DTR.SYNSEM.LOCAL.CAT.POSSESSUM #poss ].
 
 basic-head-opt-subj-phrase :+ [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
+
+basic-head-opt-comp-phrase :+ [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ cons ].
 
 ; We can't just use the V-final and V-initial word
 ; order modules together to get a good free word order
@@ -383,7 +387,7 @@ copula-verb-lex := verb-lex-supertype & trans-first-arg-raising-lex-item-2 &
                              HEAD noun ] ] ],
              #comps &
              [ LOCAL.CAT [ VAL [ COMPS < > ],
-                           HEAD +vp ] ] > ].
+                           HEAD adp ] ] > ].
 
 verb-lex := non-mod-lex-item &
   [ SYNSEM [ L-QUE -,
@@ -535,9 +539,10 @@ past-part-aux-aux-lex := subj-raise-aux-no-pred &
 
 ;;; Adjectives
 
-adj-lex := basic-intersective-adjective-lex.
+adj-lex := basic-intersective-adjective-lex & non-local-none-lex-item.
 
-regular-attr-adj-lex := adj-lex.
+regular-attr-adj-lex := adj-lex &
+  [ INFLECTED.PRD-ADJ-FLAG - ].
 
 cardinal-except-attr-adj-lex := attr-only-adj-lex &
   [ SYNSEM.LOCAL.CAT.POSTHEAD + ].
@@ -778,10 +783,10 @@ indefiniteness-pc-lex-rule-super := add-only-no-ccont-rule & case-pc-rule-dtr &
                       CASE-PC-FLAG #case-pc ] ] ].
 
 indef-rule-lex-rule := indefiniteness-pc-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ COG-ST type-id ] ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST type-id ].
 
 def-sg-lex-rule := const-lex-rule & indefiniteness-pc-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ COG-ST uniq+fam+act ] ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST uniq+fam+act ].
 
 case-pc-lex-rule-super := add-only-no-ccont-rule &
   [ INFLECTED [ CASE-PC-FLAG +,
@@ -1200,9 +1205,8 @@ def-lex-rule := const-lex-rule & indefiniteness-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.COG-ST uniq+fam+act ].
 
 pred-pc-lex-rule-super := add-only-no-ccont-rule &
-  [ INFLECTED #infl,
-    DTR regular-attr-adj-lex &
-        [ INFLECTED #infl ] ].
+  [ INFLECTED.PRD-ADJ-FLAG +,
+    DTR regular-attr-adj-lex ].
 
 pred-lex-rule := infl-lex-rule & pred-pc-lex-rule-super & stative-pred-lex-rule &
   [ SYNSEM.LOCAL.CAT [ HEAD [ MOD < >,
@@ -1266,7 +1270,8 @@ head-initial-head-nexus := head-initial &
 head-final-head-nexus := head-final &
   [ SYNSEM.ATTACH rmod ].
 
-head-subj-phrase := decl-head-subj-phrase & head-initial-head-nexus.
+head-subj-phrase := decl-head-subj-phrase & head-initial-head-nexus &
+  [ SYNSEM.LOCAL.CAT.HEAD +nv ].
 
 subj-head-phrase := decl-head-subj-phrase & head-final-head-nexus.
 

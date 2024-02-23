@@ -178,13 +178,16 @@ nom := nom+dat.
 dat := nom+dat & acc+dat.
 acc+dat := real-case.
 acc := acc+dat.
+nom_acc := real-case.
+nom :+ nom_acc.
+acc :+ nom_acc.
 
 ;;; Form
 
 form := *top*.
 nonfinite := form.
 finite := form.
-past-part := finite.
+past-part := form.
 while := nonfinite.
 adjectival := nonfinite.
 focusform := finite.
@@ -197,8 +200,6 @@ past := tense.
 
 ;;; Aspect
 
-;Perfective := aspect.
-;Completive := aspect.
 no-aspect := aspect.
 
 ;;; Mood
@@ -240,7 +241,10 @@ noun-lex := basic-noun-lex & basic-non-wh-word-lex & non-local-none-lex-item & n
                        POSSESSUM nonpossessive ] ].
 
 no-spr-noun-lex := noun-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT + ] > ].
+  [ SYNSEM.LOCAL [ CAT.VAL.SPR < [ OPT + ] >,
+                  CONT.HOOK.INDEX [ PNG.GEND animate,
+                                    COG-ST activ-or-more,
+                                    SPECI + ] ] ].
 
 ; Nouns which cannot take specifiers mark their SPR requirement
 ; as OPT +.  Making the non-head daughter OPT - in this rule
@@ -279,10 +283,11 @@ pl-pronoun-noun-lex := no-spr-noun-lex &
                 INANIMATE-NOUN-FLAG na-or--,
                 FEM-NOUN-FLAG na-or-- ] ].
 
-1pl-pronoun-noun-lex := pl-pronoun-noun-lex &
+1pl-pronoun-noun-lex := pl-pronoun-noun-lex & case-pc-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                    CONT.HOOK.INDEX.PNG.PER 1st ],
-    INFLECTED [ INANIMATE-NOUN-FLAG na-or--,
+    INFLECTED [ CASE-PC-FLAG -,
+                INANIMATE-NOUN-FLAG na-or--,
                 FEM-NOUN-FLAG na-or-- ] ].
 
 2sg-pronoun-noun-lex := sg-pronoun-noun-lex & case-pc-rule-dtr &
@@ -299,15 +304,17 @@ pl-pronoun-noun-lex := no-spr-noun-lex &
                 INANIMATE-NOUN-FLAG na-or--,
                 FEM-NOUN-FLAG na-or-- ] ].
 
-2pl-pronoun-noun-lex := pl-pronoun-noun-lex &
+2pl-pronoun-noun-lex := pl-pronoun-noun-lex & case-pc-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                    CONT.HOOK.INDEX.PNG.PER 2nd ],
-    INFLECTED [ INANIMATE-NOUN-FLAG na-or--,
+    INFLECTED [ CASE-PC-FLAG -,
+                INANIMATE-NOUN-FLAG na-or--,
                 FEM-NOUN-FLAG na-or-- ] ].
 
-3pl-pronoun-noun-lex := pl-pronoun-noun-lex &
+3pl-pronoun-noun-lex := pl-pronoun-noun-lex & case-pc-rule-dtr &
   [ SYNSEM.LOCAL.CAT.HEAD.PRON +,
-    INFLECTED [ INANIMATE-NOUN-FLAG na-or--,
+    INFLECTED [ CASE-PC-FLAG -,
+                INANIMATE-NOUN-FLAG na-or--,
                 FEM-NOUN-FLAG na-or-- ] ].
 
 fem-noun-lex := noun-lex & case-pc-rule-dtr & indefiniteness-pc-rule-dtr & number-pc-rule-dtr &
@@ -326,16 +333,65 @@ masc-noun-lex := noun-lex & case-pc-rule-dtr & indefiniteness-pc-rule-dtr & numb
                 INANIMATE-NOUN-FLAG na-or--,
                 FEM-NOUN-FLAG na-or-- ] ].
 
+
+;  [ SYNSEM [ LOCAL.CAT [ HEAD verb, HEAD.FORM finite,
+
+n-bar-predicate-rule := unary-phrase & nocoord &
+  [ SYNSEM [ LOCAL.CAT [ HEAD verb & [ FORM finite, MOD < > ],
+	  	         VAL [ COMPS < >,
+               SPEC < >,
+			       SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg1,
+					         CAT [ HEAD noun,
+				      VAL.SPR < > ] ] ] > ] ],
+             NON-LOCAL #nl ],
+    C-CONT [ HOOK [ LTOP #ltop,
+		    INDEX #index,
+		    XARG #arg1 ],
+	     RELS.LIST < arg12-ev-relation &
+		   [ PRED "_be_v_id_rel",
+		     LBL #ltop,
+		     ARG0 #index,
+		     ARG1 #arg1,
+		     ARG2 #arg2 ],
+		   quant-relation &
+		   [ PRED "exist_q_rel",
+		     ARG0 #arg2,
+		     RSTR #harg ] >,
+	     HCONS.LIST < qeq & [ HARG #harg, LARG #larg ] > ],
+    ARGS < [ SYNSEM [ LOCAL [ CAT [ HEAD noun & [ CASE nom_acc ],
+		 		    VAL.SPR cons ],
+			      CONT.HOOK [ INDEX #arg2,
+	                                  LTOP #larg ]],
+	              NON-LOCAL #nl ]] > ].
+
 ;;; Verbs
 
 ; verb-lex is HC-LIGHT - to allow us to pick out
 ;
 ;   lexical Vs for V-level attachment of negative adverbs.
 
+copula-verb-lex := verb-lex-supertype & trans-first-arg-raising-lex-item-2 &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
+                             COMPS < #comps >,
+                             SPR < >,
+                             SPEC < > ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CONT.HOOK.INDEX #xarg,
+                       CAT [ VAL [ SPR < >,
+                                   COMPS < > ],
+                             HEAD noun ] ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ COMPS < > ],
+                           HEAD +vp ] ] > ].
+
 verb-lex := non-mod-lex-item &
   [ SYNSEM [ L-QUE -,
              LOCAL.CAT [ HEAD verb,
                          HC-LIGHT - ] ] ].
+
+verb-lex-supertype := verb-lex & mood-pc-rule-dtr & tense-pc-rule-dtr &
+  [ SYNSEM.LOCAL.CAT.HEAD verb ].
 
 main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & mood-pc-rule-dtr & tense-pc-rule-dtr & while-modifier-pc-rule-dtr &
   [ SYNSEM [ L-QUE -,
@@ -481,8 +537,7 @@ past-part-aux-aux-lex := subj-raise-aux-no-pred &
 
 adj-lex := basic-intersective-adjective-lex.
 
-regular-attr-adj-lex := attr-only-adj-lex &
-  [ SYNSEM.LOCAL.CAT.POSTHEAD - ].
+regular-attr-adj-lex := adj-lex.
 
 cardinal-except-attr-adj-lex := attr-only-adj-lex &
   [ SYNSEM.LOCAL.CAT.POSTHEAD + ].
@@ -490,13 +545,40 @@ cardinal-except-attr-adj-lex := attr-only-adj-lex &
 ; Basic attributive adjective definition
 
 attr-adj-lex := adj-lex & intersective-mod-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun &
-                                                                                                         [ PRON - ],
-                                                                                              VAL.SPR cons ] ] > ].
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun & [ PRON - ],
+                                              VAL.SPR cons ] ] > ].
 
 attr-only-adj-lex := attr-adj-lex &
   [ SYNSEM.LOCAL.CAT [ HEAD.PRD -,
                        VAL.SUBJ < > ] ].
+
+;;;;;;;;;;;;;;;;;;;
+;;; Lexical Rules
+;;;;;;;;;;;;;;;;;;;
+
+; Basic attributive adjective lexical rule definition
+
+attr-adj-lex-rule := add-only-no-ccont-rule &
+  [ SYNSEM.LOCAL [ CAT.HEAD.MOD < [ LOCAL intersective-mod &
+                                          [ CONT.HOOK.INDEX #xarg,
+                                            CAT [ HEAD noun,
+                                                  VAL.SPR cons ] ] ] >,
+                   CONT.HOOK.XARG #xarg ] ].
+
+attr-only-adj-lex-rule := attr-adj-lex-rule &
+  [ SYNSEM.LOCAL.CAT [ HEAD.PRD -,
+                       VAL.SUBJ < > ] ].
+
+
+; Stative predicate adjective lexical rule definition
+
+stative-pred-lex-rule := add-only-no-ccont-rule &
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ < [ LOCAL [ CAT.HEAD.CASE real-case,
+                                            CONT.HOOK.INDEX #xarg,
+                                            CAT [ VAL [ SPR < >,
+                                                        COMPS < > ],
+                                                  HEAD noun ] ] ] >,
+                   CONT.HOOK.XARG #xarg ] ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Subordinators
@@ -696,10 +778,10 @@ indefiniteness-pc-lex-rule-super := add-only-no-ccont-rule & case-pc-rule-dtr &
                       CASE-PC-FLAG #case-pc ] ] ].
 
 indef-rule-lex-rule := indefiniteness-pc-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.DEF - ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ COG-ST type-id ] ].
 
 def-sg-lex-rule := const-lex-rule & indefiniteness-pc-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.DEF + ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ COG-ST uniq+fam+act ] ].
 
 case-pc-lex-rule-super := add-only-no-ccont-rule &
   [ INFLECTED [ CASE-PC-FLAG +,
@@ -863,10 +945,17 @@ vol-inanim-obj-lex-rule := vol-trans-obj-cc-pc-lex-rule-super &
                                                CAT.HEAD.CASE nom ],
                                        OPT - ] ].
 
+;;;; PROBLEM CHILD - DEF + all good, when I do DEF -.. this is the last piece and coverage goes down to 76.4
+;vol-anim-obj1-lex-rule := vol-trans-obj-cc-pc-lex-rule-super &
+;  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST [ LOCAL [ CAT.HEAD.CASE nom,
+;                                               CONT.HOOK.INDEX.PNG [ GEND animate,
+;                                                                     DEF - ] ],
+;                                       OPT - ] ].
+
 vol-anim-obj1-lex-rule := vol-trans-obj-cc-pc-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST [ LOCAL [ CAT.HEAD.CASE nom,
-                                               CONT.HOOK.INDEX.PNG [ GEND animate,
-                                                                     DEF - ] ],
+                                               CONT.HOOK.INDEX [ PNG [ GEND animate ],
+                                                                 COG-ST type-id ] ],
                                        OPT - ] ].
 
 vol-anim-obj2-lex-rule := vol-trans-obj-cc-pc-lex-rule-super &
@@ -1047,20 +1136,23 @@ invol-trans-obj-cc-pc-lex-rule-super := add-only-no-ccont-rule & const-lex-rule 
                       INDEFINITENESS-PC-FLAG #indefiniteness-pc,
                       CASE-PC-FLAG #case-pc ] ] ].
 
+
 invol-anim-obj-1-lex-rule := invol-trans-obj-cc-pc-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.CASE nom,
-                                             CONT.HOOK.INDEX.PNG [ GEND animate,
-                                                                   DEF - ] ] ].
+                                             CONT.HOOK.INDEX [ PNG [ GEND animate ],
+                                                               COG-ST type-id ] ] ].
+
 
 invol-anim-obj-2-lex-rule := invol-trans-obj-cc-pc-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.CASE acc,
-                                             CONT.HOOK.INDEX.PNG [ GEND animate,
-                                                                   DEF + ] ] ].
+                                             CONT.HOOK.INDEX [ PNG [ GEND animate ],
+                                                               COG-ST uniq+fam+act ] ] ].
+
 
 invol-anim-obj-3-lex-rule := invol-trans-obj-cc-pc-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.CASE acc,
-                                             CONT.HOOK.INDEX.PNG [ GEND animate,
-                                                                   DEF - ] ] ].
+                                             CONT.HOOK.INDEX [ PNG [ GEND animate ],
+                                                               COG-ST type-id ] ] ].
 
 invol-inanim-obj-lex-rule := invol-trans-obj-cc-pc-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.PNG.GEND inanimate,
@@ -1102,10 +1194,26 @@ indefiniteness-lex-rule-super := add-only-no-ccont-rule &
         [ INFLECTED #infl ] ].
 
 indef-lex-rule := indefiniteness-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.DEF - ].
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.COG-ST type-id ].
 
 def-lex-rule := const-lex-rule & indefiniteness-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.DEF + ].
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.COG-ST uniq+fam+act ].
+
+pred-pc-lex-rule-super := add-only-no-ccont-rule &
+  [ INFLECTED #infl,
+    DTR regular-attr-adj-lex &
+        [ INFLECTED #infl ] ].
+
+pred-lex-rule := infl-lex-rule & pred-pc-lex-rule-super & stative-pred-lex-rule &
+  [ SYNSEM.LOCAL.CAT [ HEAD [ MOD < >,
+                              PRD - ],
+		       VAL [ SUBJ < [ LOCAL.CAT [ HEAD noun ] ] > ] ] ].
+
+attrib-lex-rule := attr-adj-lex-rule & const-lex-rule & pred-pc-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT [ VAL.SUBJ < >,
+                       HEAD.PRD -,
+		       HEAD.MOD < [ LOCAL.CAT [ HEAD noun ] ] >,
+                       POSTHEAD - ] ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
@@ -1225,6 +1333,29 @@ while-prehead-s-attach-modifying-clause-phrase := morphological-subord-clause-ph
                        POSTHEAD - ],
     C-CONT.RELS.LIST < [ PRED "_while_subord_rel" ] > ].
 
+locative-pp-phrase := unary-phrase &
+    [ SYNSEM [ NON-LOCAL #nl,
+               LOCAL.CAT [ HEAD adp & [ MOD < [ LOCAL intersective-mod &
+                                                        [ CAT.HEAD verb,
+                                                          CONT.HOOK.INDEX #xarg ] ] > ],
+    		          VAL [ COMPS < >,
+    			        SUBJ < >,
+    			        SPR < > ]]],
+        C-CONT [ HOOK [ LTOP #ltop,
+    		    INDEX #index,
+    		    XARG #xarg ],
+    	  RELS.LIST < arg12-ev-relation &
+    		   [ PRED "_loc_p_rel",
+    		     LBL #ltop,
+    		     ARG0 #index,
+    		     ARG1 #xarg,
+    		     ARG2 #dtr ] >,
+    	     HCONS.LIST < >  ],
+    	  ARGS < [ SYNSEM [ NON-LOCAL #nl,
+    		            LOCAL [ CAT [ HEAD noun & [CASE gen],
+    		                          VAL.SPR < > ],
+    			            CONT.HOOK [ INDEX #dtr ] ] ] ] > ].
+
 ;;; Wh-question-related phrasal types
 
 wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final & 1st-head-filler-phrase &
@@ -1257,17 +1388,27 @@ wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final &
 
 ;;; Coordination Strategy 1
 
+omni-coord-phrase :+
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE #case,
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case,
+    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
+
 n1-top-coord-rule := basic-n-top-coord-rule & omni-top-coord-rule &
-  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.GEND animate,
+		   COORD-STRAT "1" ]].
 
 n1-mid-coord-rule := basic-n-mid-coord-rule & omni-mid-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
 n1-bottom-coord-rule := omni-conj-last-bottom-coord-rule & n-bottom-coord-phrase &
-  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+		   COORD-STRAT "1" ],
+    NONCONJ-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
 
 n1-left-coord-rule := omni-conj-last-left-coord-rule & n-bottom-coord-phrase &
-  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+		   COORD-STRAT "1" ],
+    NONCONJ-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
 
 ;;; Coordination Strategy 2
 
@@ -1280,10 +1421,16 @@ n1-left-coord-rule := omni-conj-last-left-coord-rule & n-bottom-coord-phrase &
 ;;; Coordination Strategy 2
 
 np2-top-coord-rule := basic-np-top-coord-rule & apoly-top-coord-rule &
-  [ SYNSEM.LOCAL.COORD-STRAT "2" ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+		   CONT.HOOK.INDEX.PNG.GEND animate,
+		   COORD-STRAT "2" ],
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case,
+    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
 
 np2-bottom-coord-rule := conj-first-bottom-coord-rule & np-bottom-coord-phrase &
-  [ SYNSEM.LOCAL.COORD-STRAT "2" ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+		   COORD-STRAT "2" ],
+    NONCONJ-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
 
 ;;; Coordination Strategy 3
 
