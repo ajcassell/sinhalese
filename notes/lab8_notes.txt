@@ -1,0 +1,30 @@
+eng-sin
+sje-sin
+
+Questions about the affixes on verbs in all combinations and not correct ones
+- tense is not obligatory
+
+oyaa has case acc case for one of them
+
+ma-m2 doesn't take nominative when it should
+ma by itself
+
+
+d2 and both negators - does that mean negation isn't adding the semantics properly
+
+
+how to look at MMT MRS??
+
+
+
+
+
+-----
+mood and tense pc are not obligatory so it's allowing
+
+subj-head-phrase :+ decl-head-subj-phrase & head-final-head-nexus &
+ [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD noun & [ CASE nom ] ].
+
+nominal predicates can be any case but realistically should be nominative
+which we already ruled out to be just nom_acc
+(head-subj for adjectives and the non-head in a non-verbal predicate pairing)

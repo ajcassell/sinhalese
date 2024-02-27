@@ -337,9 +337,6 @@ masc-noun-lex := noun-lex & case-pc-rule-dtr & indefiniteness-pc-rule-dtr & numb
                 INANIMATE-NOUN-FLAG na-or--,
                 FEM-NOUN-FLAG na-or-- ] ].
 
-
-;  [ SYNSEM [ LOCAL.CAT [ HEAD verb, HEAD.FORM finite,
-
 n-bar-predicate-rule := unary-phrase & nocoord &
   [ SYNSEM [ LOCAL.CAT [ HEAD verb & [ FORM finite, MOD < > ],
 	  	         VAL [ COMPS < >,
@@ -1210,7 +1207,7 @@ pred-pc-lex-rule-super := add-only-no-ccont-rule &
 
 pred-lex-rule := infl-lex-rule & pred-pc-lex-rule-super & stative-pred-lex-rule &
   [ SYNSEM.LOCAL.CAT [ HEAD [ MOD < >,
-                              PRD - ],
+                              PRD -],
 		       VAL [ SUBJ < [ LOCAL.CAT [ HEAD noun ] ] > ] ] ].
 
 attrib-lex-rule := attr-adj-lex-rule & const-lex-rule & pred-pc-lex-rule-super &
@@ -1274,6 +1271,9 @@ head-subj-phrase := decl-head-subj-phrase & head-initial-head-nexus &
   [ SYNSEM.LOCAL.CAT.HEAD +nv ].
 
 subj-head-phrase := decl-head-subj-phrase & head-final-head-nexus.
+
+;subj-head-phrase :+ decl-head-subj-phrase & head-final-head-nexus &
+; [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD noun & [ CASE nom ] ].
 
 ; The head of head-comp-phrase can't be: ['comp']
 

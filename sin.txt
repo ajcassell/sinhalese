@@ -1,17 +1,17 @@
-ball-o nid2-n2-wa
-ball-o kaar-n bal2-n2-wa
+ball-o-ek nid2-n2-wa
+ball-o-ek kaar-n bal2-n2-wa
 ma-m2 oyaa bal2-n2-wa
-ball-o ka-n2-wa
-ball-o kaar-n bal2-n2-wa n55
-ball-o kaar-n bal2-n2-wa ki2la oyaa dan-n2-wa ki2la ma-m2 hit2-n2-wa
-ball-o kaar-n bal2-n2-wa d2 ki2la oyaa dan-n2-wa ki2la ma-m2 5h-n2-wa
-puusa-o i ball-o i kaar-n bal2-n2-wa
-ball-o kaar-n bal2-n2-wa puusa-o ball-o bal2-n2-wa
-puusa-o ball-o bal2-n2-wa nid2-n2-wa
-puusa-o ball-o bal2-n2-wa d2
-ba32gini ball-o ka-n2-wa
+ball-o-ek ka-n2-wa
+ball-o kaar-n-ek bal2-n2-wa n55
+ball-o-ek kaar-n-ek bal2-n2-wa ki2la oyaa dan-n2-wa ki2la ma-m2 hit2-n2-wa
+ball-o-ek kaar-n-ek bal2-n2-wa d2 ki2la oyaa dan-n2-wa ki2la ma-m2 5h-n2-wa
+puusa-o-ek i ball-o-ek i kaar-n-ek bal2-n2-wa
+ball-o-ek kaar-n-ek bal2-n2-wa puusa-o-ek ball-o-ek bal2-n2-wa
+puusa-o-ek ball-o-ek bal2-n2-wa nid2-n2-wa
+puusa-o-ek ball-o-ek bal2-n2-wa d2
+ba32gini ball-o-ek ka-n2-wa
 SKIPPED
-ball-o midul-2-ee ka-n2-wa
+ball-o-ek midul-2-ee ka-n2-wa
 ball-o ba32gini-i
 ball-o midul-2-ee in-n2-wa
 ball-o puusa-o-w2
