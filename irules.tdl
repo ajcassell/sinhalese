@@ -88,3 +88,7 @@ while_stem-lex-rule.
 indef-suffix :=
 %suffix (* -ek)
 indef-lex-rule.
+
+pred-suffix :=
+%suffix (* -i)
+pred-lex-rule.

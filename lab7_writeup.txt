@@ -1,0 +1,482 @@
+Lab 7 Writeup
+LING 567
+February 23, 2024
+Melody Bechler, Alexandra Cassell
+
+
+1. Non-Verbal Predicates:
+In Sinhala, predicates are divided into two categories: verbal and non-verbal. In the non-verbal
+category, non-verbal clauses are subdivided into equational and non-equational sentences. Equational
+sentences include a topic (a nominal) and an adjectival or nominal predicate. The predicate describes
+the topic’s quality, category, or characteristics. Non-equational sentences consist of NPs marked with
+dative, genitive, ablative, or locative case as predicates. Non-verbal predicates do not have a copula
+to combine the subject and the predicate. In adjectival predicates, an assertion mark ‘i’ is required for
+adjectives when they appear as a predicate. This morpheme is not required when consonant-final
+adjectives are the predicate or with negative forms.
+
+For sentences like "ball-o midul-2-ee in-n2-wa" (the dogs are in the park), "in-n2-wa" functions like other
+transitive verbs with "n2-wa"(NPT-IND) attaching to the stem of the verb.
+
+Example IGT:
+
+Judgement: g
+bat-2 rasa-i                       #parses
+rice.NOM-SG delicious-AM
+`The rice is delicious`
+
+Judgement: g
+bat-2 ma-ge                       #parses
+rice.NOM-SG 1SG-GEN
+`The rice is mine`
+
+Judgement: g                      #parses
+eyaa guruw2r-2-ek
+3SG.NOM teacher-SG-INDF
+`She is a teacher
+
+Judgement g:                      #parses
+puusa-o midul-2-ee in-n2-wa
+cat-NOM.PL park-SG-GEN be-NPT-IND
+"The cats are in the park"
+
+
+2. For adjectival predicates, adjectives were already present in our lexicon, but marked as attributive only. In the
+customization system, we changed this to reflect that these adjectives are unspecified. We also added a new position class with
+two new lexical rules in morphology. In this new PC we stated that this PC constrains the syntactic behavior of its output because it allowed
+us to choose whether instances of each lexical rule type were predicative or attributive. One rule adds the "-i" affix for adjectives used
+predicatively and instances are likewise stated to be predicative. The second rule is stated to have attributive instances and no affix is
+added to the adjective. For predicative adjectives, we chose to apply the assertion marker "-i" to all adjectives behaving predicatively, even
+consonsant final adjectives.
+
+Choices snippets:
+adj1_name=regular-attr
+adj1_mod=none
+adj1_modpos=after
+
+adj-pc1_name=pred-pc
+adj-pc1_order=suffix
+adj-pc1_inputs=adj1
+adj-pc1_switching=on
+  adj-pc1_lrt1_name=pred
+  adj-pc1_lrt1_mod=pred
+  adj-pc1_lrt1_modpos=after
+    adj-pc1_lrt1_lri1_inflecting=yes
+    adj-pc1_lrt1_lri1_orth=-i
+  adj-pc1_lrt2_name=attrib
+  adj-pc1_lrt2_mod=attr
+  adj-pc1_lrt2_modpos=after
+    adj-pc1_lrt2_lri1_inflecting=no
+
+In TDL editing we had to alter this rules so that adjectives used predicatively have a non empty SUBJ list, but an empty MOD list. For
+attributive adjectives, they have an empty SUBJ list and a non-empty MOD list. If we did not make these changes, our grammar overgenerates
+so we receive incorrect parses including, "rasa-i bat-2" (pred adj occuring before the noun) and "bat-2 rasa" (attrib adj occuring after the
+noun as a predicate).
+
+ Here is the TDL we changed
+
+ INSERT TDL CHANGES --add the rules here we modified
+
+We changed these rules in sinhalese.tdl so pred-lex is MOD empty and SUBJ nonempty and attrib lex is SUBJ empty and MOD nonempty.
+
+ pred-lex-rule := infl-lex-rule & pred-pc-lex-rule-super & stative-pred-lex-rule &
+  [ SYNSEM.LOCAL.CAT [ HEAD [ MOD < >,
+                              PRD - ],
+		       VAL [ SUBJ < [ LOCAL.CAT [ HEAD noun ] ] > ] ] ].
+
+attrib-lex-rule := attr-adj-lex-rule & const-lex-rule & pred-pc-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT [ VAL.SUBJ < >,
+                       HEAD.PRD -,
+		       HEAD.MOD < [ LOCAL.CAT [ HEAD noun ] ] >,
+                       POSTHEAD - ] ].
+
+We were missing the instance of attrib-lex-rule in lrules.tdl, and this was added to the file.Our irules.tdl already had the rule from the
+customization system. A flag was added in infl-satisfied and also to regular-attr-adj-lex to ensure the adjective pc is obligatory.
+In pred-pc-lex-rule-super, inflected.prd-adj-flag was set to +, which ensures examples like "ball-o ba32gini" do not parse in the lkb.
+
+attrib-lex := attrib-lex-rule.
+
+pred-suffix :=
+%suffix (* -i)
+pred-lex-rule.
+
+PRD-ADJ-FLAG na-or-+
+
+regular-attr-adj-lex := adj-lex &
+  [ INFLECTED.PRD-ADJ-FLAG - ].
+
+pred-pc-lex-rule-super := add-only-no-ccont-rule &
+  [ INFLECTED.PRD-ADJ-FLAG +,
+    DTR regular-attr-adj-lex ].
+
+We also had to edit the head-subj rule, since "ba32gini-i ball-o" incorrectly continued to parse. The head value, when head is first, must be
+a noun or a verb. This prevents the previous example from parsing. Adj-lex was underspecified for non-local and the supertype non-local-none-lex-item
+was added to state the non-local value is none.
+
+head-subj-phrase := decl-head-subj-phrase & head-initial-head-nexus &
+  [ SYNSEM.LOCAL.CAT.HEAD +nv ].
+
+  adj-lex := basic-intersective-adjective-lex & non-local-none-lex-item.
+
+
+IGT to Test with:
+
+Judgement: u                            #should not parse; Predicative adj before noun
+rasa-i bat-2
+delicious-AM rice.NOM-SG
+`The rice is delicious`
+
+Judgement: u                            #should not parse; attrib adj after noun
+bat-2 rasa
+rice.NOM-SG delicious
+`The rice is delicious`
+
+Judgement: g                          #correctly parses
+ball-o ba32gini-i
+dog.NOM-PL hungry-AM
+`The dog is hungry`
+
+
+Copula with PP/NP locative:
+
+Sinhala uses a require copula with a locative NP to express location in a non-verbal predicate.
+To achieve this, there were multiple steps required. First, we added a copula-verb-lex
+which our lexicon instantiates with the entry "in".
+
+in := copula-verb-lex &
+  [ STEM < "in" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
+
+copula-verb-lex := verb-lex-supertype & trans-first-arg-raising-lex-item-2 &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
+                             COMPS < #comps >,
+                             SPR < >,
+                             SPEC < > ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CONT.HOOK.INDEX #xarg,
+                       CAT [ VAL [ SPR < >,
+                                   COMPS < > ],
+                             HEAD noun ] ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ COMPS < > ],
+                           HEAD adp ] ] > ].
+
+The HEAD of the second argument was made to be adp because otherwise we were
+allowing a verby complement to the copula which added additional incorrect
+parses, and because nouny complements are not possible either since
+we have the equational NP predicates below.
+
+Next, we created the verb-lex-supertype that is a daughter to the mood and tense
+position classes since "in-n2-wa" showed up in our source's examples for these
+scenarios, but as a copula the case constraint position classes were not relevant
+since the concept of an object is not relevant.
+
+verb-lex-supertype := verb-lex & mood-pc-rule-dtr & tense-pc-rule-dtr &
+     [ SYNSEM.LOCAL.CAT.HEAD verb ].
+
+Lastly, we created the locative-pp-phrase to build a PP mother out of an NP
+when that NP has genitive case (our sources used genitive and locative
+interchangeably).
+
+locative-pp := locative-pp-phrase.
+
+locative-pp-phrase := unary-phrase &
+    [ SYNSEM [ NON-LOCAL #nl,
+               LOCAL.CAT [ HEAD adp & [ MOD < [ LOCAL intersective-mod &
+                                                        [ CAT.HEAD verb,
+                                                          CONT.HOOK.INDEX #xarg ] ] > ],
+    		          VAL [ COMPS < >,
+    			        SUBJ < >,
+    			        SPR < > ]]],
+        C-CONT [ HOOK [ LTOP #ltop,
+    		    INDEX #index,
+    		    XARG #xarg ],
+    	  RELS.LIST < arg12-ev-relation &
+    		   [ PRED "_loc_p_rel",
+    		     LBL #ltop,
+    		     ARG0 #index,
+    		     ARG1 #xarg,
+    		     ARG2 #dtr ] >,
+    	     HCONS.LIST < >  ],
+    	  ARGS < [ SYNSEM [ NON-LOCAL #nl,
+    		            LOCAL [ CAT [ HEAD noun & [CASE gen],
+    		                          VAL.SPR < > ],
+    			            CONT.HOOK [ INDEX #dtr ] ] ] ] > ].
+
+
+Sentence 16 from sin.txt is an example of this:
+
+ball-o midul-2-ee in-n2-wa
+dog-PL park-SG-GEN in-NPT-IND
+The dogs are in the park
+
+It parses correctly, making a PP constituent from midul-2-ee and making that
+the COMPS of the copula.
+
+During translation, we were seeing no generations for this sentence and this
+was due to the PRED for our copula not being recognized by the English grammar
+so we updated our trigger rule to account for any PPs.
+
+in_gr := arg0e_gtr &
+  [ CONTEXT.RELS.LIST < [ PRED "~._p_" ] >,
+    FLAGS.TRIGGER "in" ].
+
+
+
+Non-locative NP non-verbal predicates:
+Sinhala also has equational NP predicates to express sentences like #17 in sin.txt:
+
+ball-o puusa-o-w2
+dog-PL cat-PL-ACC
+The dogs are the cats
+
+For these instances, no copula is used. Instead, we implemented the n-bar-predicate rule
+and constrained this in a few ways. First, the resulting VP has FORM finite because
+otherwise our VP coordination strategy 3 (participle coordination) was trying to
+coordinate the resulting VP. Our overgeneration metric increased from ~20% to ~40%
+because of this which indicated that VP coordination was occurring in sentences
+that it should not be. Since participle coordination requires
+[ FORM past-part ] and past-part was a subtype of finite and thus continued to
+unify, we had to separate these two FORMs from their subtype-supertype relationship.
+So now past-part := form. Secondly, the resulting VP has MOD < > to block
+ADJ-HEAD and HEAD-ADJ combinations and SPEC < > to block HEAD-SPEC combinations.
+Third, we constrained the case of the daughter in this rule to be nominative or
+accusative to prevent our locative/genitive NPs from becoming VPs when
+they should truly become PPs by the locative rule above. In order to
+account for both these cases, we had to make a new joint case:
+
+nom_acc := real-case.
+nom :+ nom_acc.
+acc :+ nom_acc.
+
+n-bar-predicate := n-bar-predicate-rule.
+
+n-bar-predicate-rule := unary-phrase & nocoord &
+  [ SYNSEM [ LOCAL.CAT [ HEAD verb & [ FORM finite, MOD < > ],
+	  	         VAL [ COMPS < >,
+               SPEC < >,
+			       SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg1,
+					         CAT [ HEAD noun,
+				      VAL.SPR < > ] ] ] > ] ],
+             NON-LOCAL #nl ],
+    C-CONT [ HOOK [ LTOP #ltop,
+		    INDEX #index,
+		    XARG #arg1 ],
+	     RELS.LIST < arg12-ev-relation &
+		   [ PRED "_be_v_id_rel",
+		     LBL #ltop,
+		     ARG0 #index,
+		     ARG1 #arg1,
+		     ARG2 #arg2 ],
+		   quant-relation &
+		   [ PRED "exist_q_rel",
+		     ARG0 #arg2,
+		     RSTR #harg ] >,
+	     HCONS.LIST < qeq & [ HARG #harg, LARG #larg ] > ],
+    ARGS < [ SYNSEM [ LOCAL [ CAT [ HEAD noun & [ CASE nom_acc ],
+		 		    VAL.SPR cons ],
+			      CONT.HOOK [ INDEX #arg2,
+	                                  LTOP #larg ]],
+	              NON-LOCAL #nl ]] > ].
+
+The example above produces two possible parses, one where ball-o becomes
+the SUBJ and one where puusa-o-w2 becomes the SUBJ.
+
+
+
+3.
+Sentence 15 does translate with 3 translations. "ball-o ba32gini-i", the correct translation, is present. The other translations
+include case marking on the noun, such as "ball-o-ge", "ball-o-w2", and "ball-o-12", which should not be present and are causing
+additional ambiguity here. The MRS of this sentence matches the MRS provided in the instructions.
+
+Sentence 16 does translate with 264 translations. The correct translation, "ball-o midul-2-ee in-n2-wa", is present. The additional
+translations are caused by the different case affixes incorrectly with "ball-o". The verb, "in-n2-wa", has two affixes which are
+replaced with other affixes in the output. For example, "-wa" is dropped leaving "in-n2" while others drop the middle affix. Most of
+the tense-pc affixes and all of the mood-pc affixes incorrectly appear in various constructions, i.e. "in-n2-e" (be-NPT-FOC), "in-a-wa"
+(be-PST.INVOL-IND). These are causing ambiguity and as a result, many additional translations. The MRS of this sentence matches the MRS
+provided in the instructions. Of note, this particular sentence does not translate sin2eng. We receive a message stating "WARNING: EP
+' "_loc_p_rel"' is not covered. We think this is an issue on the English side with the predicates not correctly matching in part due to
+the fact Sinhala does not have prepositions, while English does.
+
+Sentence 17 does translate with 32 translations. "ball-o puusa-o-w2", the correct translation, is present. All of these additional
+translations involve case as dative, genitive, and accusative are all affixed to both nouns, or not affixed at all when they should be.
+With Sinhala's free word order, we receive the additional 16 translations (present in the 32 count previously mentioned) for the reverse
+word order (i.e ball-o puusa-o-w2 --> puusa-o-w2 ball-o). The MRS of this sentence matches the MRS provided in the instructions.
+
+
+
+ 4. Definiteness is marked on nouns in Sinhala and appears as indefinite and definite. Our sources indicate '-ak" and '-ek are possible
+ suffixes, so we decided to proceed with only '-ek'. For indefinite nouns, the suffix "-ek" is used, while definite nouns do not have an
+ affix.
+
+
+ 5. Sinhala marks indefiniteness on nouns with a suffix. Our sources indicated -ak and -ek were possible suffixes and we chose to proceed with
+ just -ek. Nouns that are unmarked for indefiniteness are considered inherently definite. We had originally implemented this by creating a boolean
+ variable DEF on the PNG of a noun in an earlier lab. The DEF feature was utilized in lexical rules for nouns, quantifiers, as well as our case
+ constraint rules for volitive and involitive transitive and intransitive verb combinations. In this lab, we transitioned all of these instances of
+ DEF to use the appropriate COG-ST value.
+
+First, we updated the following to use COG-ST activ-or-more and SPECI + for pronouns. This type is the immediate supertype of all our personal
+pronouns and nothing else.
+
+no-spr-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL [ CAT.VAL.SPR < [ OPT + ] >,
+                  CONT.HOOK.INDEX [ PNG.GEND animate,
+                                    COG-ST activ-or-more,
+                                    SPECI + ] ] ].
+
+Next, we updated the indef and def lexical rule types to have the correct COG-ST values.
+
+indef-rule-lex-rule := indefiniteness-pc-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST type-id ].
+
+def-sg-lex-rule := const-lex-rule & indefiniteness-pc-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST uniq+fam+act ].
+
+indef-lex-rule := indefiniteness-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.COG-ST type-id ].
+
+def-lex-rule := const-lex-rule & indefiniteness-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.COG-ST uniq+fam+act ].
+
+Lastly, there were 3 non-affixing lexical rules on verbs that constrain the possible case/gender/definiteness of
+subjects and objects. The definiteness actually only is relevant for verbs with animate objects, as seen here:
+(These represent invol/anim/nom/indef, invol/anim/acc/def, invol/anim/acc/indef,and vol/anim/nom/indef combinations).
+
+invol-anim-obj-1-lex-rule := invol-trans-obj-cc-pc-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.CASE nom,
+                                             CONT.HOOK.INDEX [ PNG [ GEND animate ],
+                                                               COG-ST type-id ] ] ].
+
+
+invol-anim-obj-2-lex-rule := invol-trans-obj-cc-pc-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.CASE acc,
+                                             CONT.HOOK.INDEX [ PNG [ GEND animate ],
+                                                               COG-ST uniq+fam+act ] ] ].
+
+
+invol-anim-obj-3-lex-rule := invol-trans-obj-cc-pc-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.CASE acc,
+                                             CONT.HOOK.INDEX [ PNG [ GEND animate ],
+                                                               COG-ST type-id ] ] ].
+
+vol-anim-obj1-lex-rule := vol-trans-obj-cc-pc-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST [ LOCAL [ CAT.HEAD.CASE nom,
+                                               CONT.HOOK.INDEX [ PNG [ GEND animate ],
+                                                                 COG-ST type-id ] ],
+                                       OPT - ] ].
+
+We tested this against our testsuite and for the most part the results remained the same.
+It wasn't until the very last step when we updated vol-anim-obj1-lex-rule to use
+COG-ST that our coverage dropped, by less than 1%. I was unable to find which exact
+sentence was the issue. I found the first example below from our testsuite which uses
+a volitive verb and has an animate nominative indefinite object and it parses correctly still.
+The following two show that the case constraint + definiteness rules are still
+working correctly on the verbs.
+
+# 23 OV animate nominative indefinite object, volitive verb
+Judgement: g
+balla eluvaek kan2wa
+ball-a eluv-a-ek ka-n2-wa
+dog.NOM-SG goat.NOM-SG-INDF eat-NPT-IND
+`The dog eats a goat`
+
+# ungrammatical b/c anim/nom/def object is not allowed for volitive verb - does not parse
+balla eluva kan2wa
+ball-a eluv-a ka-n2-wa
+dog.NOM-SG goat.NOM-SG eat-NPT-IND
+`The dog eats the goat`
+
+# parses b/c anim/acc/def object IS allow for volitive verb
+balla eluvaw2 kan2wa
+ball-a eluv-a-w2 ka-n2-wa
+dog.NOM-SG goat-SG-ACC eat-NPT-IND
+`The dog eats a goat`
+
+For sentence #23 above, we checked the MRSs and they appear correct.
+There are two exist_q_rel, one per NP, and the one corresponding to
+the definite dog shows ARG0 having COG-ST uniq+fam+act and the one
+corresponding to the indefinite goats shows ARG0 having COG-ST type-id
+which aligns with the correct DEF +/- matching we used to have in the grammar
+and matches the example in the lab instructions.
+
+Unfortunately, we did not keep record of the translations before implementing
+definiteness in this way, but information about translations is below.
+IGT to test the analysis?
+
+
+
+Other TDL Changes:
+
+We added case-pc-rule-dtr as a supertype to all of our pronouns (1PL is
+just one example).
+
+1pl-pronoun-noun-lex := pl-pronoun-noun-lex & case-pc-rule-dtr &
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG.PER 1st ],
+    INFLECTED [ CASE-PC-FLAG -,
+                INANIMATE-NOUN-FLAG na-or--,
+                FEM-NOUN-FLAG na-or-- ] ].
+
+We realized that not all of our pronouns were set up to have case which was
+necessary for certain case constraint lexical rules that require some
+combination of gender, case, and definiteness. We first
+saw this with our 1PL pronoun "api" that was never inflecting properly
+and this brought the following sentence from 22 to 3 parses.
+
+api bat-n ka-n2-wa
+1PL.NOM rice.NOM-SG eat-NPT-IND
+We eat rice
+
+We then realized that an extra parse was happening and this was a result
+of underspecified gender on pronouns. There was nothing restricting
+pronoun gender and like mentioned previously, certain case constraint rules
+depend on the gender - animate or inanimate. So we updated this supertype of pronouns:
+
+no-spr-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL [ CAT.VAL.SPR < [ OPT + ] >,
+                  CONT.HOOK.INDEX.PNG.GEND animate ] ].
+
+Lastly, during our debugging session, we saw that we had additional parses due
+to ambiguity of when to apply the optional complement rule and when to apply
+the head subj rule. So we updated the head-opt-comp-phrase
+so that it can only apply when the head daughter is still looking for a subject.
+
+basic-head-opt-comp-phrase :+ [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ cons ].
+
+
+6. For sin.txt, we already had all the sentences translated. We only edited 14 and 16 to make sure we expressed number with -2-
+in midul-2-ee. We also removed the "in-n2-wa" from 17, because, based on our testsuite examples and our resources, we realized
+Sinhala does not use "in-n2-wa" for nominal predicates, which we had added accidentally.
+
+
+
+7.
+
+Last week:
+Coverage: 65.9% (81 out of 188)
+Overgeneration: 16.9%
+Average Distinct Analyses: 4.45
+
+This week:
+Coverage: 76.4 (127 out of 190)
+Overgeneration: 12.7%
+Average Distinct Analyses: 2.38
+
+Compared to last week, we have 46 more items parsing. Last week, we only had 81 parsing and this week it is 127.
+
+The most ambiguous parsing item is "pot-2 5he-n2-wa", which has 8 parses (it had 12 last week). Some parses are the result of decl-head-opt-subj
+rule creating S instead of the subj head rule. Other parses are due to the invol-anim-subj1-lex and invol-anim-subj2-lex applying,
+even though the subject is inanimate.
+
+pot-2 5he-n2-wa
+book.NOM-SG hear.INVOL-NPT-IND
+`The book hears`
+
+We still have quite a bit of ambiguity with our invol-anim and invol-inanim rules. This sentence is another example of ambiguity with invol rules.
+It has 7 parses, compared to 11 last week. With this sentence, only inanimate subject and object rules should be applying, not animate.
+With the example below, there isn't an object, so all our object rules are being applied, creating the higher parse count.
+
+malbanduna-2 k5dun-a
+vase.DEF.NOM-SG break.INVOL-PST
+`The vase broke`

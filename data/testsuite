@@ -240,7 +240,7 @@ Judgement: g
 Phenomena: {Case, Tense Aspect Mood}
 malbanduna k5duna
 malbanduna-2 k5dun-a
-vase.DEF.NOMp-SG break.INVOL-PST
+vase.DEF.NOM-SG break.INVOL-PST
 `The vase broke`
 
 # 6 Accusative subject, involitive verb (inanimates can only be marked with nominative case)
@@ -1134,7 +1134,7 @@ tall one-ANIM.FEM come-PST-IND
 
 ### Non-Verbal Predicates
 
-# 1 Dative nominal predicate
+# 1 Dative nominal predicate, indicating dedication
 Source: author
 Vetted: f
 Judgement: g
@@ -1144,10 +1144,10 @@ ball-a oyaa-12
 dog.NOM-SG you-DAT
 `The dog is for you`
 
-# 2 Dative nominal predicate, missing dative marker
+# 2 Dative nominal predicate
 Source: author
 Vetted: f
-Judgement: u
+Judgement: g
 Phenomena: {Non-Verbal Predicates}
 balla oyaa
 ball-a oyaa
@@ -1214,15 +1214,15 @@ eyaa guruw2r-2-ek
 3SG.NOM teacher-SG-INDF
 `She is a teacher`
 
-# 9 Nominal Predicate, missing indefinite marker on noun
+# 9 Nominal Predicate
 Source: author
 Vetted: f
-Judgement: u
+Judgement: g
 Phenomena: {Non-Verbal Predicates}
 eyaa guruw2r2
 eyaa guruw2r-2
 3SG.NOM teacher-SG
-`She is teacher`
+`She is the teacher`
 
 # 10 Non-Equational
 Source: author
@@ -1234,10 +1234,10 @@ bat-2 ma-ge
 rice.NOM-SG 1SG-GEN
 `The rice is mine`
 
-# 11 Non-Equational, incorrect - missing genitive marker
+# 11 Non-Equational
 Source: author
 Vetted: f
-Judgement: u
+Judgement: g
 Phenomena: {Non-Verbal Predicates}
 bat ma
 bat-2 ma
@@ -1628,7 +1628,7 @@ Vetted: f
 Judgement: g
 Phenomena: {Case, Tense Aspect Mood, Embedded declaratives}
 balla bat kan2wa ki2la kiiwa
-ball-a bat-2 ka-n2-wa ki2la ki-u-wa
+ball-a bat-2 ka-n2-wa ki2la kii-u-wa
 dog.NOM-SG rice-SG eat-NPT-IND QM say-PST-IND
 `The dog said "I eat rice."`
 
@@ -1967,3 +1967,25 @@ mam2 oyaa bal2n2wa
 ma-m2 oyaa bal2-n2-wa
 1SG-NOM you watch-NPT-IND
 `I watch you`
+
+### More Non-verbal predicates
+# 1 PP locative predicate
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {Non-Verbal Predicates, Tense Aspect Mood}
+puusao midul2ee inn2wa
+puusa-o midul-2-ee in-n2-wa
+cat-NOM.PL park-SG-GEN be-NPT-IND
+"The cats are in the park"
+
+
+# 2 PP locative predicate - missing mandatory be verb
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {Non-Verbal Predicates}
+puusao midul2ee
+puusa-o midul-2-ee
+cat-NOM.PL park-SG-GEN
+"The cats are in the park"

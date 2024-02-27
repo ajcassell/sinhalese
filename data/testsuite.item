@@ -105,16 +105,16 @@
 105@author # modified from a:62@@@1@agr@us2 ek-a e-u-wa@@@@1@3@tall one.ANIM.MASC-SG come-PST-IND`The tall one came`@alexandra cassell, melody bechler@january 15, 2024
 106@author # modified from a:62@@@1@agr@us2 ek-2 e-u-wa@@@@1@3@tall one-ANIM.FEM come-PST-IND`The tall one came`@alexandra cassell, melody bechler@january 15, 2024
 107@author@@@1@non-verbalpredicates@ball-a oyaa-12@@@@1@2@dog.NOM-SG you-DAT`The dog is for you`@alexandra cassell, melody bechler@january 15, 2024
-108@author@@@1@non-verbalpredicates@ball-a oyaa@@@@0@2@dog.NOM-SG you`The dog is you`@alexandra cassell, melody bechler@january 15, 2024
+108@author@@@1@non-verbalpredicates@ball-a oyaa@@@@1@2@dog.NOM-SG you`The dog is you`@alexandra cassell, melody bechler@january 15, 2024
 109@author@@@1@non-verbalpredicates@bat-2 rasa-i@@@@1@2@rice.NOM-SG delicious-AM`The rice is delicious`@alexandra cassell, melody bechler@january 15, 2024
 110@author@@@1@non-verbalpredicates@bat-2 rasa@@@@0@2@rice.NOM-SG delicious`The rice is delicious`@alexandra cassell, melody bechler@january 15, 2024
 111@author@@@1@non-verbalpredicates@pot-2 alut@@@@1@2@book.NOM-SG new`The book is new`@alexandra cassell, melody bechler@january 15, 2024
 112@author@@@1@non-verbalpredicates@pot-2 loku-i@@@@1@2@book.NOM-SG big-AM`The book is big`@alexandra cassell, melody bechler@january 15, 2024
 113@author@@@1@non-verbalpredicates@pot-2 loku@@@@0@2@book.NOM-SG big`The book is big`@alexandra cassell, melody bechler@january 15, 2024
 114@author@@@1@non-verbalpredicates@eyaa guruw2r-2-ek@@@@1@2@3SG.NOM teacher-SG-INDF`She is a teacher`@alexandra cassell, melody bechler@january 15, 2024
-115@author@@@1@non-verbalpredicates@eyaa guruw2r-2@@@@0@2@3SG.NOM teacher-SG`She is teacher`@alexandra cassell, melody bechler@january 15, 2024
+115@author@@@1@non-verbalpredicates@eyaa guruw2r-2@@@@1@2@3SG.NOM teacher-SG`She is the teacher`@alexandra cassell, melody bechler@january 15, 2024
 116@author@@@1@non-verbalpredicates@bat-2 ma-ge@@@@1@2@rice.NOM-SG 1SG-GEN`The rice is mine`@alexandra cassell, melody bechler@january 15, 2024
-117@author@@@1@non-verbalpredicates@bat-2 ma@@@@0@2@rice.NOM-SG 1SG`The rice is I`@alexandra cassell, melody bechler@january 15, 2024
+117@author@@@1@non-verbalpredicates@bat-2 ma@@@@1@2@rice.NOM-SG 1SG`The rice is I`@alexandra cassell, melody bechler@january 15, 2024
 118@author@@@1@c,tam,emb-q@ma-m2 ball-a-gen 5h-u-wa bat-2 ka-n2-wa d2 ki2la@@@@1@7@1SG-NOM dog-SG-ABL ask-PST-IND rice-SG eat-NPT-IND Q QM`I asked the dog whether he eats rice`@alexandra cassell, melody bechler@january 15, 2024
 119@author@@@1@emb-q@ma-m2 ball-a-gen 5h-u-wa bat-2 ka-n2-wa ki2la@@@@0@6@1SG-NOM dog-SG-ABL ask-PST-IND rice-SG eat-NPT-IND QM`I asked the dog whether he eats rice`@alexandra cassell, melody bechler@january 15, 2024
 120@author@@@1@emb-q@ma-m2 ball-a-gen 5h-u-wa bat-2 ka-n2-wa d2@@@@0@6@1SG-NOM dog-SG-ABL ask-PST-IND rice-SG eat-NPT-IND Q`I asked the dog whether he eats rice`@alexandra cassell, melody bechler@january 15, 2024
@@ -152,7 +152,7 @@
 152@author@@@1@emb-d@ball-a bat-2 ka-n2-wa eyaa dan-n2-wa@@@@0@5@dog.NOM-SG rice-SG eat-NPT-IND 3SG.NOM know-NPT-IND`She knows the dog eats rice`@alexandra cassell, melody bechler@january 15, 2024
 153@author@@@1@emb-d,tam,c@ball-a bat-2 ka-u-wa ki2la eyaa hit2-n2-wa@@@@1@6@dog.NOM-SG rice-SG eat-PST-IND QM 3.SG think-NPT-IND`She thinks that the dog ate rice`@alexandra cassell, melody bechler@january 15, 2024
 154@author@@@1@emb-d@ball-a ka-u-wa eyaa hit2-n2-wa@@@@0@4@dog.NOM-SG eat-PST-IND 3.SG think-NPT-IND`She thinks the dog ate`@alexandra cassell, melody bechler@january 15, 2024
-155@author@@@1@c,tam,emb-d@ball-a bat-2 ka-n2-wa ki2la ki-u-wa@@@@1@5@dog.NOM-SG rice-SG eat-NPT-IND QM say-PST-IND`The dog said "I eat rice."`@alexandra cassell, melody bechler@january 15, 2024
+155@author@@@1@c,tam,emb-d@ball-a bat-2 ka-n2-wa ki2la kii-u-wa@@@@1@5@dog.NOM-SG rice-SG eat-NPT-IND QM say-PST-IND`The dog said "I eat rice."`@alexandra cassell, melody bechler@january 15, 2024
 156@author@@@1@emb-d,tam@ball-a bat-2 ka-u-wa ki2la eyaa hit2-u-wa@@@@1@6@dog.NOM-SG rice-SG eat-PST-IND QM 3.SG think-PST-IND`She thought that the dog ate rice`@alexandra cassell, melody bechler@january 15, 2024
 157@author@@@1@emb-d@ball-a bat-2 ka-n2-wa kii-u-wa@@@@0@4@dog.NOM-SG rice-SG eat-NPT-IND say-PST-IND`The dog said "I eat rice."`@alexandra cassell, melody bechler@january 15, 2024
 158@author # modified from a:218@@@1@q,wo,tam,c@eyaa kalisa4-n andi-n2-wa d2@@@@1@4@3SG.NOM slack-PL wear-NPT-IND Q`Does she wear slacks?`@alexandra cassell, melody bechler@january 15, 2024
@@ -186,3 +186,5 @@
 186@author@@@1@tam@ball-o nid2-n2-wa@@@@1@2@dog.NOM-PL sleep-NPT-IND`Dogs sleep`@alexandra cassell, melody bechler@january 15, 2024
 187@author@@@1@tam@ball-o kaar-n bal2-n2-wa@@@@1@3@dog.NOM-PL car-PL watch-NPT-IND`Dogs watch cars`@alexandra cassell, melody bechler@january 15, 2024
 188@author@@@1@tam@ma-m2 oyaa bal2-n2-wa@@@@1@3@1SG-NOM you watch-NPT-IND`I watch you`@alexandra cassell, melody bechler@january 15, 2024
+189@author@@@1@non-verbalpredicates,tam@puusa-o midul-2-ee in-n2-wa@@@@1@3@cat-NOM.PL park-SG-GEN be-NPT-IND"The cats are in the park"@alexandra cassell, melody bechler@january 15, 2024
+190@author@@@1@non-verbalpredicates@puusa-o midul-2-ee@@@@0@2@cat-NOM.PL park-SG-GEN"The cats are in the park"@alexandra cassell, melody bechler@january 15, 2024

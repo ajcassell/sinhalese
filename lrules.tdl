@@ -34,3 +34,5 @@ invol-inanim-obj-lex := invol-inanim-obj-lex-rule.
 vol-intrans-agent-lex := vol-intrans-agent-lex-rule.
 
 def-lex := def-lex-rule.
+
+attrib-lex := attrib-lex-rule.

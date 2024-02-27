@@ -18,5 +18,19 @@ n5dd2_gr := generator_rule &
     FLAGS.TRIGGER "n5dd2" ].
 
 i1_nosem_gr := generator_rule &
-  [ CONTEXT.RELS.LIST < [ PRED "N-1_and_coord_rel" ] >,
+  [ CONTEXT.RELS.LIST < [ PRED "_and_coord_rel" ] >,
     FLAGS.TRIGGER "i1_nosem" ].
+
+comp_gtr := generator_rule &
+[ CONTEXT [ RELS <! [ ARG0 #e & [ SF prop ]] !> ],
+  FLAGS [ EQUAL < #e >,
+          TRIGGER "baw2" ]].
+
+comp2_gtr := generator_rule &
+[ CONTEXT [ RELS <! [ ARG0 #e & [ SF prop ]] !> ],
+  FLAGS [ EQUAL < #e >,
+          TRIGGER "ki2la" ]].
+
+in_gr := arg0e_gtr &
+  [ CONTEXT.RELS.LIST < [ PRED "_be_v_rel" ] >,
+    FLAGS.TRIGGER "in" ].

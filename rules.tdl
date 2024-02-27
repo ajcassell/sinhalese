@@ -30,6 +30,10 @@ head-comp-2 := head-comp-phrase-2.
 
 comp-head-2 := comp-head-phrase-2.
 
+locative-pp := locative-pp-phrase.
+
+n-bar-predicate := n-bar-predicate-rule.
+
 head-spec := head-spec-phrase.
 
 bare-np := bare-np-phrase.
