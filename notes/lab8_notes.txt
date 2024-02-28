@@ -16,6 +16,14 @@ d2 and both negators - does that mean negation isn't adding the semantics proper
 how to look at MMT MRS??
 
 
+QUESTIONS:
+
+1. sentence #3 oyaa (2sg) is becoming oyaala (makes sense) and eyaala (does not make sense). Is this like
+how Spanish has 3pl "you all"?
+
+
+
+
 
 
 
@@ -28,3 +36,33 @@ subj-head-phrase :+ decl-head-subj-phrase & head-final-head-nexus &
 nominal predicates can be any case but realistically should be nominative
 which we already ruled out to be just nom_acc
 (head-subj for adjectives and the non-head in a non-verbal predicate pairing)
+
+-- DID ---
+
+added tense and mood flags and copied up the inflections everywhere except for while-modifier
+and then neg-aux-lex := subj-raise-aux-with-pred &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CONT.HOOK.ICONS-KEY focus,
+                                             CAT.HEAD.FORM finite ],
+    INFLECTED [ TENSE-PC-FLAG +,
+                MOOD-PC-FLAG + ] ].
+
+ko12
+
+pred-lex-rule := infl-lex-rule & pred-pc-lex-rule-super & stative-pred-lex-rule &
+  [ SYNSEM.LOCAL.CAT [ HEAD [ MOD < >,
+                              PRD -],
+		       VAL [ SUBJ < [ LOCAL.CAT [ HEAD noun & [ CASE nom ]] ] > ] ] ].
+
+           added CASE nom
+
+-e focus doesn't change the semantics.. it's just another mood with no restrictions on being affixed
+
+commented out 1sg-pronoun nominative rule
+;nominative-pronoun-suffix :=
+;%suffix (* -m2)
+;nominative-pronoun-lex-rule.
+got rid of -m2 for 1sg pronoun so that it behaved like all other pronouns and nouns, not an exception
+
+took off mood-pc-dtr and tense-pc-dtr from aux-lex and put it directly onto the past-part-aux
+since that's the only one using it and that way neg-aux isn't ALLOWED to have mood and tense
+because it was adding them anyway optionally.
