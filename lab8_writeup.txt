@@ -1,0 +1,418 @@
+Lab 8 Writeup
+March 1, 2024
+Alexandra Cassell, Melody Bechler
+
+
+
+1. We made one change for MRS refinement. This was instantiating the transfer rule
+loc-mtr := in-loc-mtr.
+in our sin/acm.mtr. This is used for our example sentences that use the copula
+which is necessary for prepositional predicates like #16:
+
+# parses
+ball-o midul-2-ee in-n2-wa
+dog-PL park-SG-GEN in-NPT-IND
+The dogs are in the park
+
+We also removed the predicate for our copula, since it is a semantically empty verb.
+We removed the predicate from lexicon.tdl and changed the pred value in the choices
+file.
+
+in := copula-verb-lex &
+  [ STEM < "in" >"]
+
+verb9_stem13_orth=in
+verb9_stem13_pred=no-pred
+
+As mentioned on Canvas, we also made sure to change "wh_q_rel" to "which_q_rel" in
+both the eng and sje grammars for sentences 20 and 21 to translate.
+
+
+Overall, many of our sentences have worked right out of the box. Our primary
+issues have been excessive overgeneration in our grammar.
+
+
+2. In terms of overgeneration, we improved a lot of things that were overgenerating
+which we were not aware of from the LKB parses but from the mmt translations.
+
+a) As recommended we added:
+qeq :+
+       [ HARG.INSTLOC #il,
+         LARG.INSTLOC #il ].
+to handle multiple embedded clauses.
+
+b) We updated our mood-pc and tense-pc to be obligatory. They were optional
+before (which should not have been the case in general) and as a result
+we were getting translations that had only the verb stem or the stem with one
+affix as well as the correct form which is the stem plus both mood and tense
+affixes. To do this, we added tense and mood flags and copied up the inflections
+everywhere except for the while-modifier-pc and neg-aux-lex.
+
+inflected :+ [ CASE-PC-OR-PRONOUN-CASE-PC-FLAG luk,
+    NUMBER-PC-FLAG luk,
+    MOOD-PC-FLAG luk,
+    TENSE-PC-FLAG luk,
+    ...
+  ].
+
+infl-satisfied :+ [
+    MOOD-PC-FLAG na-or-+,
+    TENSE-PC-FLAG na-or-+,
+    ...
+   ].
+
+An example of the flag values being copied up in a lexical rule (which
+was added to all the appropriate rules):
+
+mood-pc-lex-rule-super := add-only-no-rels-hcons-rule & infl-lex-rule &
+  [ INFLECTED [ MOOD-PC-FLAG +,
+                INVOL-TRANS-SUBJ-CC-PC-FLAG #invol-trans-subj-cc-pc,
+                FEM-NOUN-FLAG #fem-noun,
+                NUMBER-PC-FLAG #number-pc,
+                INDEFINITENESS-PC-FLAG #indefiniteness-pc,
+                CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc,
+                VOL-TRANS-SUBJ-CC-PC-FLAG #vol-trans-subj-cc-pc,
+                VOL-TRANS-OBJ-CC-PC-FLAG #vol-trans-obj-cc-pc,
+                VOL-INTRANS-AGENT-CC-PC-FLAG #vol-intrans-agent-cc-pc,
+                CASE-PC-FLAG #case-pc,
+                INANIMATE-NOUN-FLAG #inanimate-noun,
+                INVOL-TRANS-OBJ-CC-PC-FLAG #invol-trans-obj-cc-pc,
+  **            TENSE-PC-FLAG #tense-pc,
+                INVOL-INTRANS-AGENT-CC-PC-FLAG #invol-intrans-agent-cc-pc ],
+    DTR mood-pc-rule-dtr &
+        [ INFLECTED [ INVOL-TRANS-SUBJ-CC-PC-FLAG #invol-trans-subj-cc-pc,
+                      FEM-NOUN-FLAG #fem-noun,
+                      NUMBER-PC-FLAG #number-pc,
+                      INDEFINITENESS-PC-FLAG #indefiniteness-pc,
+                      CASE-PC-OR-PRONOUN-CASE-PC-FLAG #case-pc-or-pronoun-case-pc,
+                      VOL-TRANS-SUBJ-CC-PC-FLAG #vol-trans-subj-cc-pc,
+                      VOL-TRANS-OBJ-CC-PC-FLAG #vol-trans-obj-cc-pc,
+                      VOL-INTRANS-AGENT-CC-PC-FLAG #vol-intrans-agent-cc-pc,
+                      CASE-PC-FLAG #case-pc,
+                      INANIMATE-NOUN-FLAG #inanimate-noun,
+                      INVOL-TRANS-OBJ-CC-PC-FLAG #invol-trans-obj-cc-pc,
+  **                  TENSE-PC-FLAG #tense-pc,
+                      INVOL-INTRANS-AGENT-CC-PC-FLAG #invol-intrans-agent-cc-pc ] ] ].
+
+
+The flags are set to unsatisfied (-) in the different verb types. Below is
+one example:
+
+vol-trans-verb-lex := transitive-verb-lex & vol-trans-obj-cc-pc-rule-dtr &
+  [ SYNSEM.LOCAL.CAT.HEAD.INVOL -,
+    INFLECTED [ VOL-TRANS-SUBJ-CC-PC-FLAG -,
+                VOL-TRANS-OBJ-CC-PC-FLAG -,
+                TENSE-PC-FLAG -,
+                MOOD-PC-FLAG -  ] ].
+
+This also applied to the copula which requires both of the affixes as well.
+In terms of auxiliaries, our future and past-part auxiliaries require
+the affixes as well but the neg-aux does not. So neg-aux-lex ("n55") was
+defined to have these flags already satisfied so that translations with
+n55-n2-wa wouldn't be possible. In addition, we took mood-pc-dtr and
+tense-pc-dtr off of aux-lex so that it wouldn't apply to all auxiliaries
+and we added the rule-dtrs directly to the other two auxiliaries to have
+them also be daughters of the two required position classes.
+
+neg-aux-lex := subj-raise-aux-with-pred &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CONT.HOOK.ICONS-KEY focus,
+                                             CAT.HEAD.FORM finite ],
+    INFLECTED [ TENSE-PC-FLAG +,
+                MOOD-PC-FLAG + ] ].
+
+past-part-aux-aux-lex := subj-raise-aux-no-pred & mood-pc-rule-dtr & tense-pc-rule-dtr &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM past-part,
+                                             CONT.HOOK.INDEX.E.TENSE past ] ].
+
+An example of this is sentence #1:
+
+ball-o-ek nid2-n2-wa
+dog-PL-INDF sleep-NPT-IND
+Dogs sleep
+
+This sentence allowed "nid2", "nid2-n2" when it shouldn't and now only
+contains the fully formed "nid2-n2-wa" verb.
+
+c) Pronoun updates - there was a lot of overgeneration with our pronouns.
+First, we were seeing in sentence #3 that the 2SG pronoun was being translated
+as the 2PL and 2PL pronouns. 2PL makes sense since the PER value is 2nd for both
+but we found that 3PL was because our 3pl was underspecified for person so it has
+been updated:
+
+3pl-pronoun-noun-lex := pl-pronoun-noun-lex & case-pc-rule-dtr &
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG.PER 3rd ],
+    INFLECTED [ CASE-PC-FLAG -,
+                INANIMATE-NOUN-FLAG na-or--,
+                FEM-NOUN-FLAG na-or-- ] ].
+
+The 1SG pronoun was not always taking the nominative case as expected. This was because
+we had a separate nominative rule for 1SG pronoun as it is the only PERNUM combination
+that demonstrated a nominative affix whereas all of our other pronouns and common
+nouns had a zero rule for defaulting to the nominative case. Thus, there were
+generations with "ma" and "ma-m2". We decided to remove this separate nominative
+rule and also remove the -m2 affix for 1SG and treat it like all other nouns,
+rather than an exception. As a result, only "ma" is present in the translations.
+
+;nominative-pronoun-suffix :=
+;%suffix (* -m2)
+;nominative-pronoun-lex-rule.
+
+Now the following does not overgenerate:
+
+# parses
+ma oyaa-w2 bal2-n2-wa
+1SG.NOM 2SG-ACC watch-NPT-IND
+I watch you
+
+d) Sentence #15 was producing a lot of translations when really only 1 was
+expected. We had to update the rule for predicative adjectives to only
+apply to nominative nouns, otherwise we were seeing it apply to all cases
+which is ungrammatical since the nominative or accusative case are
+required as the subject of any predicate.
+
+pred-lex-rule := infl-lex-rule & pred-pc-lex-rule-super & stative-pred-lex-rule &
+  [ SYNSEM.LOCAL.CAT [ HEAD [ MOD < >,
+                              PRD -],
+		       VAL [ SUBJ < [ LOCAL.CAT [ HEAD noun & [ CASE nom ]] ] > ] ] ].
+
+# parses
+ball-o ba32gini-i
+dog-PL hungry-AM
+The dogs are hungry
+
+^ Sentence #15 now only has one translation and it is with the nominative case on the
+subject dog.
+
+Similarly, nominal predicates were taking any case on the noun and this was
+constrained to nom_acc on the SUBJ of the mother of the n-bar rule.
+
+n-bar-predicate-rule := unary-phrase & nocoord &
+  [ SYNSEM [ LOCAL.CAT [ HEAD verb & [ FORM finite, MOD < > ],
+	  	         VAL [ COMPS < >,
+               SPEC < >,
+			       SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg1,
+					         CAT [ HEAD noun & [ CASE nom_acc ],
+				      VAL.SPR < > ] ] ] > ] ],
+             NON-LOCAL #nl ],
+    C-CONT [ HOOK [ LTOP #ltop,
+		    INDEX #index,
+		    XARG #arg1 ],
+	     RELS.LIST < arg12-ev-relation &
+		   [ PRED "_be_v_id_rel",
+		     LBL #ltop,
+		     ARG0 #index,
+		     ARG1 #arg1,
+		     ARG2 #arg2 ],
+		   quant-relation &
+		   [ PRED "exist_q_rel",
+		     ARG0 #arg2,
+		     RSTR #harg ] >,
+	     HCONS.LIST < qeq & [ HARG #harg, LARG #larg ] > ],
+    ARGS < [ SYNSEM [ LOCAL [ CAT [ HEAD noun & [ CASE nom_acc ],
+		 		    VAL.SPR cons ],
+			      CONT.HOOK [ INDEX #arg2,
+	                                  LTOP #larg ]],
+	              NON-LOCAL #nl ]] > ].
+
+This decreased our overgenerations for sentence #17 by allowing only nominative
+and accusative cases on each noun:
+
+# parses
+puusa-o ball-o-w2
+cat-PL dog-PL-ACC
+The dogs are the cats
+
+
+
+3. Residual Ambiguity:
+The majority of ambiguity that remains is expected. Sinhala has free word
+order so all test sentences demonstrate this. The sentence 17 which was
+mentioned above is an example of where both the accusative and nominative
+cases are allowed on the subject and object noun so we see multiple
+generations for that in a few sentences. In pretty much all of the test
+sentences that we were able to translate, you will find -e as a verb ending.
+This is our "focus" mood affix which we just implemented as another affix
+in the mood-pc rather than via the information structure method. Since there
+are no semantics aligned with this mood ending, anywhere that the indicative
+mood is present, there is a focus mood counterpart because there is no
+restriction on when this lexical rule can be implemented on a verb. It IS possible that
+these are not grammatical representations though because the focus
+ending, according to our sources, is supposed to be used in certain
+scenarios like wh-questions and yes-or-no questions. So the output corresponds
+to how our grammar is set up and is not spurious in that sense, but is
+something that needs to be reworked in the grammar.
+
+For sje2sin we see similar trends: word order, -e focus ending, noun cases.
+However an additional observation is that for all nouns the definite (no affix)
+and indefinite (-ek affix) are present. This is because Pite Saami is
+underspecified for definiteness
+
+so for sentence #2 below, sje2sin produces 48 translations for the
+word order and -e reasons mentioned about as well as the INDF marker
+being absent or present. Example output:
+
+ball-o-ek kaar-n-ek bal2-n2-wa
+ball-o-ek kaar-n bal2-n2-wa
+ball-o kaar-n bal2-n2-wa
+ball-o kaar-n-ek bal2-n2-wa
+
+# parses
+ball-o-ek kaar-n-ek bal2-n2-wa
+dog-PL-INDF car-PL-INDF watch-NPT-IND
+Dogs watch cars
+
+The outstanding ambiguity that we see in eng2sin has to do with wh-questions
+and negation. We saw three issues here - 1) when negation is present, the
+question markers d2 and n55d2 appear in sentences where they don't belong like
+#5 and #14. This issue was discussed in class but not resolved.
+
+#5
+ball-o kaar-n-ek bal2-n2-wa n55
+dog-PL car-PL-INDF watch-NPT-IND neg
+The dogs do not watch cars
+
+.. produces ..
+
+ball-o kaar-n-ek bal2-n2-wa n55 d2,
+ball-o kaar-n-ek bal2-n2-wa n55 n55d2
+plus more.
+
+Following your email, we adjusted the semi.vpm file to include prop << *, which
+brought sentence 5 down to 18 translations eng2sin (42 prior) and 71 sje2sin
+(168 prior). These translations include both "newei" and "n55" negatives, which
+are both acceptable.
+
+2. In sentence #11 which is a yes-or-no question (and #14 which is not):
+puusa-o-ek ball-o-ek bal2-n2-wa d2
+cat-PL-INDF dog-PL-INDF watch-NPT-IND QM
+
+.. produces ..
+
+puusa-o-ek ball-o-ek bal2-n2-wa,
+puusa-o-ek ball-o-ek bal2-n2-wa d2,
+puusa-o-ek ball-o-ek bal2-n2-wa n5dd2,
+plus more.
+
+3. In sentence #21 which is a wh-question, we implemented the wh-pronouns
+to have the explicit question marker on them. So we do not want the QM to
+also show up as a separate morpheme.
+
+# parses
+ball-o bal2-n2-e mon2wad2
+dog-PL watch-NPT-FOC what.QM
+What do the dogs watch?
+
+We observed that this is because we originally specified that our yes-or-no
+question particles (d2 and n55d2) are obligatory in constituent questions
+which is incorrect. We attempted to change this to be impossible, but did not
+see any improvement with our parses/generations and still saw the extra QM:
+
+ball-o bal2-n2-e mon2wad2.
+
+
+
+
+
+4. Documentation of your MT coverage for both eng and sje as source languages.
+
+We have 15 sentences translating for eng and 11 for sje. Of the 26 sentences,
+we skipped 2, sentences 13 and 26.
+
+Unfortunately, we could not get sentences 6-10 translating. Two of the sentences
+ran out of memory, while the other 3 contain coordination and clause phenomena
+we were unable to get working. Additionally, we could not get 22-25 to translating.
+22-24 include wh words while 25 is subordination. As previously mentioned, we did
+have 25 translating, but changes to control overgeneration resulted in 25 no longer
+translating.
+
+All sentences in eng have the correct translation present, whereas sje has one
+sentence translating that does not have the correct translation present. This
+sentence does not correctly translate sje2sin as the output is completely missing
+the d2 marker:
+
+puusa-o-ek ball-o-ek bal2-n2-wa d2
+cat-PL-INDF dog-PL-INDF watch-NPT-IND QM
+"Do cats watch dogs"
+
+As previously mentioned, this is one of the sentences with QM issues. In this case,
+ d2 is absent from the output, compared to having QMs incorrectly present as we
+have previously had.
+
+5.
+
+Last Week:
+Coverage: 76.4 (127 out of 190)
+Overgeneration: 12.7
+Average Distinct Analyses: 2.38
+
+This week:
+Coverage: 70.9 (127 out of 190)
+Overgeneration: 12.7
+Average Distinct Analyses: 2.25
+
+Sadly, our coverage decreased following our edits for overgeneration, but our
+ambiguity decreased as a result of our edits!
+
+The most ambiguous item received 8 parses. This is same sentence as last week,
+which we did not have time to fix this week.
+
+pot-2 5he-n2-wa
+book.NOM-SG hear.INVOL-NPT-IND
+`The book hears`
+
+
+When I added the mood-pc and tense-pc flags to make these required classes, it
+broke some of our subordination. Sinhala has examples of subordination with
+the particles "hinda" and "nissa" that require an "adjectival" verb. This
+essentially is the verb stem + tense, but no mood. We had originally
+implemented this such that mood was optional and the tense-pc had
+a lexical rule for NPT.ADJ (-n2) and PST.ADJ (-u) instead of making
+a zero affix rule for mood. Although I can't remember exactly why this
+decision was made, my guess is we were trying to reduce how many zero-affix
+rules we had. Since mood-pc is now obligatory, the examples that have ADJ verbs
+are not parsing because the mood flag is not satisfied. With more time, we
+would consider making the ADJ a rule in the mood position class, but for now
+these sentences remain as is and no longer parse.
+
+Example: #25 # does not parse
+puusa-a nid2-n2-wa nissa ball-a nid2-n2-wa
+cat.NOM-SG sleep-NPT-IND because dog.NOM-SG sleep-NPT-IND
+The dog sleeps because the cat sleeps
+
+
+Lastly, for sentence 14 eng2sin and 21 eng2sin/sje2sin we are seeing duplicate
+translations. We are not sure what is happening here, nor how to fix it sadly.
+
+
+
+
+
+Please edit and decide where you would like this --- I think there is overlap with your
+sections because I fixed the issue this morning.
+
+We also had "d2" and "n55d2" appearing on 5, 14, 20, 21, causing an excessive
+amount of translations. We changed WH.BOOL - to WH.BOOL + on the mother of
+insitu-int-cl and changed q-particle1-lex and q-particle2-lex to have WH.BOOL -
+values. This greatly reduced translation output for these sentences. For 5 and 21
+sje2sin and 14 eng2sin/sje2sin, it brought translation under 100 compared to
+over 200.
+
+insitu-int-cl := interrogative-clause & head-only &
+  [ C-CONT [ RELS.LIST < >,
+             HCONS.LIST < > ],
+    SYNSEM [ MODIFIED hasmod,
+             NON-LOCAL [ SLASH.LIST < >,
+                         QUE.LIST < >,
+                         REL.LIST < > ],
+             LOCAL.CAT [ VAL #val,
+                         MC bool,
+                         WH.BOOL + ] ],
+
+q-particle1-lex := qpart-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.WH.BOOL - ].
+
+q-particle2-lex := qpart-lex-item &
+  [ SYNSEM.LOCAL.CAT [ MC #mc,
+                       VAL.COMPS.FIRST.LOCAL.CAT [ MC #mc & +,
+  WH.BOOL -] ] ].
